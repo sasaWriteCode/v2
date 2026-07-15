@@ -1,0 +1,75 @@
+---
+/**
+ * PageHero — the workshop-toned page opener shared by guide-hero, hub-hero
+ * and product-hero section types (one component, three registry entries —
+ * the differences are data). Static; the optional embedded search renders
+ * the SearchBar island (the only JS this section can carry).
+ */
+import { Icon } from '@/components/global/Icon';
+import SearchBar from '@/components/islands/SearchBar';
+import type { PageHeroContent } from '@/types/sections';
+
+type Props = PageHeroContent;
+const { eyebrow, title, lede, meta, ctas, search } = Astro.props;
+---
+
+<header class="section-y-tight" style="background-image: var(--depth-glow-subtle)">
+  <div class="container">
+    {eyebrow && (
+      <p class="type-overline" style="color: var(--text-brand)">{eyebrow}</p>
+    )}
+    <h1 class="type-display-md mt-3" style="color: var(--text-primary)">
+      {title}
+    </h1>
+    {lede && (
+      <p
+        class="type-body-lg mt-4 max-w-article"
+        style="color: var(--text-secondary)"
+      >
+        {lede}
+      </p>
+    )}
+
+    {meta && meta.length > 0 && (
+      <ul class="mt-5 flex flex-wrap gap-x-5 gap-y-2">
+        {meta.map((item) => (
+          <li
+            class="type-body-sm flex items-center gap-2"
+            style="color: var(--text-secondary)"
+          >
+            {item.icon && (
+              <span style="color: var(--text-brand)">
+                <Icon name={item.icon} size={16} />
+              </span>
+            )}
+            {item.label}
+          </li>
+        ))}
+      </ul>
+    )}
+
+    {ctas && ctas.length > 0 && (
+      <div class="mt-6 flex flex-wrap gap-3">
+        {ctas.map((cta) => (
+          <a
+            href={cta.href}
+            class="type-body-sm inline-flex items-center gap-2 rounded-md px-6 py-3 font-semibold"
+            style={
+              cta.variant === 'secondary' || cta.variant === 'ghost'
+                ? 'border: 1px solid var(--border-strong); color: var(--text-primary)'
+                : 'background: var(--color-red); color: var(--color-white)'
+            }
+          >
+            {cta.label}
+          </a>
+        ))}
+      </div>
+    )}
+
+    {search && (
+      <div class="mt-6 max-w-container-narrow">
+        <SearchBar {...search} client:visible />
+      </div>
+    )}
+  </div>
+</header>

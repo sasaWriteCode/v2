@@ -1,0 +1,674 @@
+{
+  "title": "Automotive Films",
+  "defaultZone": "workshop-light",
+  "seo": {
+    "title": "Automotive Films",
+    "description": "Patented UV+420™ optical technology with multi-layer sputter engineering delivers superior heat rejection, UV & blue light protection, comfort and clarity for every drive."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Products", "href": "/products/automotive" },
+    { "label": "Automotive Films" }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "headlineLines": ["Advanced Protection.", "Every Drive. Every Day."],
+        "subhead": "Patented UV+420™ optical technology with multi-layer sputter engineering delivers superior heat rejection, UV & blue light protection, comfort and clarity for every drive.",
+        "benefits": [
+          { "icon": "sun", "label": "Blocks UV400 & HEV Blue Light" },
+          { "icon": "thermometer", "label": "Superior Heat Rejection" },
+          { "icon": "shield", "label": "Protects Interior & Skin" },
+          { "icon": "bolt", "label": "Save Energy & Fuel" },
+          { "icon": "eye", "label": "Clear Vision & Safety" }
+        ],
+        "ctas": [
+          { "label": "Find Your Film", "href": "#film-finder", "variant": "primary" },
+          { "label": "View All Benefits", "href": "#why-choose-irispro", "variant": "secondary" },
+          { "label": "Compare Films", "href": "#catalogue", "variant": "secondary" }
+        ],
+        "media": {
+          "src": "/placeholders/hero-1600x900.svg",
+          "alt": "Black sedan on a coastal highway with the UV+420™ Complete Protection shield",
+          "width": 1600,
+          "height": 900
+        }
+      }
+    },
+    {
+      "id": "protection-level",
+      "type": "series-card-set",
+      "order": 20,
+      "zone": "workshop-light",
+      "label": "Choose Your Protection Level",
+      "data": {
+        "heading": "Choose Your Protection Level",
+        "cards": [
+          {
+            "id": "essential",
+            "name": "Essential",
+            "tagline": "Reliable protection for everyday driving.",
+            "description": "Best for: Daily Drivers, City Cars, Budget Friendly",
+            "accent": "sustainability",
+            "features": [
+              "UV Protection",
+              "Heat Comfort",
+              "Glare Reduction",
+              "Interior Protection"
+            ],
+            "cta": { "label": "View Essential Series", "href": "#catalogue" }
+          },
+          {
+            "id": "advanced",
+            "name": "Advanced",
+            "tagline": "Better heat rejection and clarity. Ideal for families and long drives.",
+            "description": "Best for: Families, Frequent Drivers, Long Distance",
+            "accent": "commercial",
+            "features": [
+              "Heat Rejection",
+              "UV+420™ Protection",
+              "Glare Comfort",
+              "Signal Friendly"
+            ],
+            "cta": { "label": "View Advanced Series", "href": "#catalogue" }
+          },
+          {
+            "id": "signature",
+            "name": "Signature",
+            "tagline": "Maximum performance and protection. Premium comfort without compromise.",
+            "description": "Best for: Luxury Cars, Premium Comfort, Best Performance",
+            "accent": "automotive",
+            "badge": "MOST PREMIUM",
+            "features": [
+              "Extreme Heat Rejection",
+              "UV+420™ Complete",
+              "Superior Clarity",
+              "Interior Longevity"
+            ],
+            "cta": { "label": "View Signature Series", "href": "#catalogue" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "film-finder",
+      "type": "film-finder",
+      "order": 30,
+      "zone": "workshop-light",
+      "label": "Find Your Perfect IrisPro Film",
+      "data": {
+        "heading": "Find Your Perfect IrisPro Film",
+        "question": "Answer a few simple questions and we'll recommend the best series for you.",
+        "options": [
+          {
+            "icon": "car",
+            "label": "1. What do you drive?",
+            "description": "Select your vehicle",
+            "href": "#catalogue"
+          },
+          {
+            "icon": "shield",
+            "label": "2. What matters most?",
+            "description": "Select your priority",
+            "href": "#catalogue"
+          },
+          {
+            "icon": "wallet",
+            "label": "3. Your budget?",
+            "description": "Select your range",
+            "href": "#catalogue"
+          }
+        ]
+      }
+    },
+    {
+      "id": "catalogue",
+      "type": "product-browser",
+      "order": 40,
+      "zone": "workshop-light",
+      "label": "Product Catalogue",
+      "data": {
+        "heading": "Product Catalogue",
+        "fallbackAction": "/products/automotive",
+        "emptyLabel": "No films match the current filters. Clear a filter to see more.",
+        "filters": [
+          {
+            "param": "series",
+            "label": "Series",
+            "anyLabel": "All Series",
+            "options": [
+              { "value": "essential", "label": "Essential" },
+              { "value": "advanced", "label": "Advanced" },
+              { "value": "signature", "label": "Signature" }
+            ]
+          },
+          {
+            "param": "vlt",
+            "label": "VLT (Visible Light)",
+            "anyLabel": "All VLT",
+            "options": [
+              { "value": "84", "label": "84%" },
+              { "value": "78", "label": "78%" },
+              { "value": "76", "label": "76%" },
+              { "value": "75", "label": "75%" },
+              { "value": "70", "label": "70%" },
+              { "value": "69", "label": "69%" },
+              { "value": "65", "label": "65%" },
+              { "value": "60", "label": "60%" },
+              { "value": "57", "label": "57%" },
+              { "value": "56", "label": "56%" },
+              { "value": "30", "label": "30%" },
+              { "value": "20", "label": "20%" },
+              { "value": "15", "label": "15%" },
+              { "value": "5", "label": "5%" }
+            ]
+          },
+          {
+            "param": "irr",
+            "label": "IRR (Heat Rejection)",
+            "anyLabel": "All IRR",
+            "options": [
+              { "value": "gt99", "label": ">99%" },
+              { "value": "98", "label": "98%" },
+              { "value": "95", "label": "95%" },
+              { "value": "90", "label": "90%" }
+            ]
+          },
+          {
+            "param": "technology",
+            "label": "Technology",
+            "anyLabel": "All Technologies",
+            "options": [
+              { "value": "multi-layer-silver-sputter", "label": "Multi Layer Silver Sputter" },
+              { "value": "multi-layer-titanium-sputter", "label": "Multi Layer Titanium Sputter" },
+              { "value": "nano-titanium-sputter", "label": "Nano Titanium Sputter" },
+              { "value": "nano-carbon-ceramic", "label": "Nano Carbon Ceramic" },
+              { "value": "aluminium", "label": "Aluminium" },
+              { "value": "tpu-silver-sputter", "label": "TPU Silver Sputter (External Use)" }
+            ]
+          }
+        ],
+        "items": [
+          {
+            "product": {
+              "id": "titan-x",
+              "name": "Titan X",
+              "badge": "SIGNATURE",
+              "technology": "Multi Layer Silver Sputter",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Titan X automotive film on a black sedan",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "IRR (1400nm)", "value": ">99%" },
+                { "label": "UV400", "value": "100%" },
+                { "label": "Warranty", "value": "10 Years" }
+              ],
+              "vltOptions": ["69%", "60%", "15%"],
+              "detailsHref": "#titan-x"
+            },
+            "facets": {
+              "series": ["signature"],
+              "vlt": ["69", "60", "15"],
+              "irr": ["gt99"],
+              "technology": ["multi-layer-silver-sputter"]
+            }
+          },
+          {
+            "product": {
+              "id": "diamond-x",
+              "name": "Diamond X",
+              "badge": "SIGNATURE",
+              "technology": "Multi Layer Titanium Sputter",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Diamond X automotive film on a white coupé",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "IRR (1400nm)", "value": "98%" },
+                { "label": "UV400", "value": "100%" },
+                { "label": "Warranty", "value": "10 Years" }
+              ],
+              "vltOptions": ["65%", "30%"],
+              "detailsHref": "#diamond-x"
+            },
+            "facets": {
+              "series": ["signature"],
+              "vlt": ["65", "30"],
+              "irr": ["98"],
+              "technology": ["multi-layer-titanium-sputter"]
+            }
+          },
+          {
+            "product": {
+              "id": "raypro",
+              "name": "RayPro",
+              "badge": "SIGNATURE",
+              "technology": "Nano Titanium Sputter",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "RayPro automotive film on a grey sedan",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "IRR (1400nm)", "value": "95%" },
+                { "label": "UV400", "value": "100%" },
+                { "label": "Warranty", "value": "10 Years" }
+              ],
+              "vltOptions": ["78%", "70%", "57%", "30%", "15%"],
+              "detailsHref": "#raypro"
+            },
+            "facets": {
+              "series": ["signature"],
+              "vlt": ["78", "70", "57", "30", "15"],
+              "irr": ["95"],
+              "technology": ["nano-titanium-sputter"]
+            }
+          },
+          {
+            "product": {
+              "id": "anti-fade-90",
+              "name": "Anti Fade 90",
+              "badge": "SIGNATURE",
+              "technology": "Nano Carbon Ceramic",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Anti Fade 90 automotive film on a silver sedan",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "IRR (1400nm)", "value": "90%" },
+                { "label": "UV400", "value": "100%" },
+                { "label": "Warranty", "value": "10 Years" }
+              ],
+              "vltOptions": ["76%", "_verify", "60%", "_verify", "30%", "15%"],
+              "detailsHref": "#anti-fade-90"
+            },
+            "facets": {
+              "series": ["signature"],
+              "vlt": ["76", "60", "30", "15"],
+              "irr": ["90"],
+              "technology": ["nano-carbon-ceramic"]
+            }
+          },
+          {
+            "product": {
+              "id": "uv420-silver-black",
+              "name": "UV+420 Silver Black",
+              "badge": "PRIVACY + HEAT",
+              "technology": "Aluminium",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "UV+420 Silver Black automotive film",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "IRR (1400nm)", "value": "95%" },
+                { "label": "UV400", "value": "100%" },
+                { "label": "Warranty", "value": "7 Years" }
+              ],
+              "vltOptions": ["84%"],
+              "detailsHref": "#uv420-silver-black"
+            },
+            "facets": {
+              "vlt": ["84"],
+              "irr": ["95"],
+              "technology": ["aluminium"]
+            }
+          },
+          {
+            "product": {
+              "id": "silver-black",
+              "name": "Silver Black",
+              "badge": "PRIVACY + HEAT",
+              "technology": "Aluminium",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Silver Black automotive film",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "IRR (1400nm)", "value": "90%" },
+                { "label": "UV380", "value": "99%" },
+                { "label": "Warranty", "value": "5 Years" }
+              ],
+              "vltOptions": ["76%"],
+              "detailsHref": "#silver-black"
+            },
+            "facets": {
+              "vlt": ["76"],
+              "irr": ["90"],
+              "technology": ["aluminium"]
+            }
+          },
+          {
+            "product": {
+              "id": "titanium-hr",
+              "name": "Titanium (HR)",
+              "badge": "HEAT REJECTION",
+              "technology": "Nano Titanium Sputter",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Titanium (HR) automotive film",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "IRR (1400nm)", "value": "95%" },
+                { "label": "UV380", "value": "99%" },
+                { "label": "Warranty", "value": "7 Years" }
+              ],
+              "vltOptions": ["75%", "69%", "60%", "_verify"],
+              "detailsHref": "#titanium-hr"
+            },
+            "facets": {
+              "vlt": ["75", "69", "60"],
+              "irr": ["95"],
+              "technology": ["nano-titanium-sputter"]
+            }
+          },
+          {
+            "product": {
+              "id": "color-stable-cs",
+              "name": "Color Stable (CS)",
+              "badge": "HEAT REJECTION",
+              "technology": "Nano Carbon Ceramic",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Color Stable (CS) automotive film",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "IRR (1400nm)", "value": "90%" },
+                { "label": "UV380", "value": "99%" },
+                { "label": "Warranty", "value": "5 Years" }
+              ],
+              "vltOptions": ["70%", "_verify", "30%", "15%", "5%"],
+              "detailsHref": "#color-stable-cs"
+            },
+            "facets": {
+              "vlt": ["70", "30", "15", "5"],
+              "irr": ["90"],
+              "technology": ["nano-carbon-ceramic"]
+            }
+          },
+          {
+            "product": {
+              "id": "cs-pro",
+              "name": "CS Pro",
+              "badge": "HEAT REJECTION",
+              "technology": "Nano Carbon Ceramic",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "CS Pro automotive film",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "IRR (1400nm)", "value": "90%" },
+                { "label": "UV380", "value": "99%" },
+                { "label": "Warranty", "value": "5 Years" }
+              ],
+              "vltOptions": ["70%", "60%", "_verify", "30%", "20%", "5%"],
+              "detailsHref": "#cs-pro"
+            },
+            "facets": {
+              "vlt": ["70", "60", "30", "20", "5"],
+              "irr": ["90"],
+              "technology": ["nano-carbon-ceramic"]
+            }
+          },
+          {
+            "product": {
+              "id": "vanguard",
+              "name": "Vanguard",
+              "badge": "HEAT REJECTION + SECURITY",
+              "technology": "TPU Silver Sputter (External Use)",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Vanguard exterior automotive film",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "IRR (1400nm)", "value": "95%" },
+                { "label": "UV380", "value": "99%" },
+                { "label": "VLT", "value": "56%" },
+                { "label": "Warranty", "value": "10 Years" }
+              ],
+              "vltOptions": ["56%"],
+              "detailsHref": "#vanguard"
+            },
+            "facets": {
+              "vlt": ["56"],
+              "irr": ["95"],
+              "technology": ["tpu-silver-sputter"]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "technology",
+      "type": "tech-pillar-grid",
+      "order": 50,
+      "zone": "workshop-light",
+      "label": "Technology Behind Every Film",
+      "data": {
+        "columns": 6,
+        "pillars": [
+          {
+            "icon": "sun",
+            "title": "UV+420™ Optical Technology",
+            "description": "Blocks UV400 & HEV Blue Light"
+          },
+          {
+            "icon": "layers",
+            "title": "6-Layer Hotmelt™",
+            "description": "Stronger structure for long-lasting durability"
+          },
+          {
+            "icon": "thermometer",
+            "title": "Multi-Layer Sputter",
+            "description": "Superior heat rejection & optical clarity"
+          },
+          {
+            "icon": "award",
+            "title": "SIRIM Certified",
+            "description": "Grade A1 — Quality you can trust"
+          },
+          {
+            "icon": "check",
+            "title": "SGS Tested",
+            "description": "Independently tested for safety & performance"
+          },
+          {
+            "icon": "document",
+            "title": "eWarranty",
+            "description": "Up to 10 Years Performance Warranty"
+          }
+        ]
+      }
+    },
+    {
+      "id": "why-choose-irispro",
+      "type": "series-card-set",
+      "order": 60,
+      "zone": "workshop-light",
+      "label": "Why Choose IrisPro?",
+      "data": {
+        "cards": [
+          {
+            "id": "why-choose-irispro",
+            "name": "Why Choose IrisPro?",
+            "features": [
+              "Patented UV+420™ Complete Protection",
+              "Superior Heat Rejection up to 98% IRR (1400nm)",
+              "Protects Interior, Skin & Eyes",
+              "Save Fuel & Reduce Cooling Load",
+              "Clear Vision, Low Reflection",
+              "Long-Lasting Performance & Warranty"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "real-projects",
+      "type": "project-strip",
+      "order": 70,
+      "zone": "workshop-light",
+      "label": "Real Projects. Real Results.",
+      "data": {
+        "filters": false,
+        "scrollable": true,
+        "projects": [
+          {
+            "name": "OCBC Bank Tower",
+            "location": "Kuala Lumpur",
+            "category": "Commercial",
+            "badge": { "label": "Achieved 4 GBI Points", "tone": "achievement" },
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "OCBC Bank Tower, Kuala Lumpur",
+              "width": 560,
+              "height": 360
+            },
+            "cta": { "label": "View Case Study", "href": "#ocbc-bank-tower" }
+          },
+          {
+            "name": "Putrajaya Project",
+            "location": "_verify",
+            "category": "Government",
+            "badge": { "label": "In Progress", "tone": "progress" },
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Putrajaya Project government complex",
+              "width": 560,
+              "height": 360
+            },
+            "cta": { "label": "View Case Study", "href": "#putrajaya-project" }
+          },
+          {
+            "name": "KPJ Healthcare",
+            "location": "Hospital",
+            "category": "Healthcare",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "KPJ Healthcare hospital building",
+              "width": 560,
+              "height": 360
+            },
+            "cta": { "label": "View Case Study", "href": "#kpj-healthcare" }
+          },
+          {
+            "name": "Luxury Hotel",
+            "location": "Kuala Lumpur",
+            "category": "Hospitality",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Luxury hotel, Kuala Lumpur",
+              "width": 560,
+              "height": 360
+            },
+            "cta": { "label": "View Case Study", "href": "#luxury-hotel" }
+          },
+          {
+            "name": "Subang Airport",
+            "location": "Malaysia",
+            "category": "Transport",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Subang Airport terminal glazing",
+              "width": 560,
+              "height": 360
+            },
+            "cta": { "label": "View Case Study", "href": "#subang-airport" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta-bar",
+      "order": 80,
+      "zone": "showroom-dark",
+      "data": {
+        "headline": "Ready for Complete Protection?",
+        "subhead": "Our experts are ready to help you find the right film for your needs.",
+        "actions": [
+          {
+            "icon": "chat",
+            "title": "WhatsApp Us",
+            "description": "Get instant reply",
+            "cta": { "label": "WhatsApp Us", "href": "#whatsapp" }
+          },
+          {
+            "icon": "pin",
+            "title": "Find a Dealer",
+            "description": "Nearest to you",
+            "cta": { "label": "Find a Dealer", "href": "#dealers" }
+          },
+          {
+            "icon": "headset",
+            "title": "Request Consultation",
+            "description": "Free expert advice",
+            "cta": { "label": "Request Consultation", "href": "#consultation" }
+          },
+          {
+            "icon": "document",
+            "title": "Download Catalogue",
+            "description": "PDF Brochure",
+            "cta": { "label": "Download Catalogue", "href": "#catalogue-pdf" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "certifications",
+      "type": "certification-strip",
+      "order": 90,
+      "zone": "showroom-dark",
+      "data": {
+        "certs": [
+          { "id": "sirim", "name": "SIRIM", "label": "Certified" },
+          { "id": "sgs", "name": "SGS", "label": "Tested" },
+          { "id": "iso", "name": "ISO", "label": "_verify" },
+          { "id": "gbi", "name": "GBI", "label": "_verify" },
+          { "id": "iwfa", "name": "IWFA", "label": "_verify" },
+          { "id": "ewarranty", "name": "eWarranty", "label": "_verify" }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the automotive products screen with no expressible section field. Preserved verbatim.",
+    "hero-badge": "UV+420™ COMPLETE PROTECTION (hero shield badge)",
+    "hero-cta-subtitles": [
+      "Find Your Film — Find the perfect film for your car",
+      "View All Benefits — Why IrisPro is better",
+      "Compare Films — Find your best match"
+    ],
+    "film-finder-cta": "Find My Film",
+    "film-finder-outcome": "Get your recommended series",
+    "catalogue-compare-counter": "Compare (0)",
+    "catalogue-table-link": "View Full Comparison Table",
+    "projects-video-tile": "See How Our Films Make A Difference — Watch Video",
+    "section-numbering": "The screen numbers its bands 1–6 (1 Choose Your Protection Level, 2 Find Your Perfect IrisPro Film, 3 Product Catalogue, 4 Technology Behind Every Film, 5 Why Choose IrisPro?, 6 Real Projects. Real Results.).",
+    "filter-options-provenance": "The VLT/IRR/Technology dropdowns are closed on screen; their option lists are derived strictly from values readable on the product cards (wiring, not transcription). Products whose protection-level (Essential/Advanced) membership is not shown carry no series facet — selecting those filters yields the empty state pending a client mapping.",
+    "empty-label-provenance": "emptyLabel is UI copy not present on screen (required by the schema)."
+  }
+}

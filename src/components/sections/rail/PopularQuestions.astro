@@ -1,0 +1,36 @@
+---
+/**
+ * PopularQuestions — rail Q&A block. Native <details>/<summary>: answers
+ * are in the DOM while collapsed (they also feed the FAQPage JSON-LD).
+ * Zero JS.
+ */
+import type { RailQuestion } from '@/types/sections';
+
+interface Props {
+  heading: string;
+  questions: RailQuestion[];
+}
+const { heading, questions } = Astro.props;
+---
+
+<section
+  aria-label={heading}
+  class="rounded-lg p-5"
+  style="background: var(--surface-raised); border: 1px solid var(--border-subtle); box-shadow: var(--elevation-1)"
+>
+  <h2 class="type-heading-sm">{heading}</h2>
+  <ul class="mt-3 grid gap-2">
+    {questions.map((item) => (
+      <li>
+        <details class="guide-chapter">
+          <summary class="type-body-sm py-1 font-semibold">
+            {item.question}
+          </summary>
+          <p class="type-body-sm pb-2 pt-1" style="color: var(--text-secondary)">
+            {item.answer}
+          </p>
+        </details>
+      </li>
+    ))}
+  </ul>
+</section>

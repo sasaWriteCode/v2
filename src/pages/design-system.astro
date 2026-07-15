@@ -1,0 +1,451 @@
+---
+/**
+ * Stage 1 specimen — port of the Next.js /design-system page. All static
+ * sections render as zero-JS Astro markup (contrast ratios computed at
+ * build); only the four live demos hydrate, as client:visible islands.
+ */
+import Layout from '@/layouts/Layout.astro';
+import Section from '@/components/specimen/SpecimenSection.astro';
+import RatioBadge from '@/components/specimen/RatioBadge.astro';
+import { Zone } from '@/components/base/Zone';
+import {
+  MotionDemo,
+  ParallaxDemo,
+  RevealDemo,
+  TierIndicator,
+} from '@/components/specimen/demos';
+
+/* ── Specimen data (mirrors tokens/*.css; ratios computed at build) ── */
+
+const BRAND_SWATCHES = [
+  ['irispro-red', '#d20f18'],
+  ['red-strong', '#b10a11'],
+  ['red-deep', '#98000a'],
+  ['red-bright', '#ef2929'],
+  ['red-soft', '#ff5a5a'],
+  ['red-tint', '#fbebeb'],
+  ['irispro-black', '#0a0a0a'],
+  ['irispro-white', '#fafaf8'],
+  ['neutral-800', '#1a1a1e'],
+  ['neutral-700', '#2d2d35'],
+  ['neutral-500', '#4a4a55'],
+  ['neutral-400', '#6b6b76'],
+  ['neutral-300', '#9a9aa5'],
+  ['neutral-200', '#c8c8d0'],
+  ['neutral-100', '#f2f2f2'],
+  ['neutral-50', '#f5f3f0'],
+] as const;
+
+const ACCENTS = [
+  ['automotive', '#d20f18', '#b10a11', '#ef2929'],
+  ['residential', '#c8963e', '#8a6420', '#dbb06a'],
+  ['commercial', '#5ba3e8', '#1d6aae', '#5ba3e8'],
+  ['personal-protection', '#7b68ee', '#5240c9', '#9d8ffa'],
+  ['sustainability', '#3db87a', '#1e7a4d', '#56d695'],
+] as const;
+
+const CONTRAST_PAIRS: Array<{
+  zone: string;
+  pairs: Array<[label: string, fg: string, bg: string]>;
+}> = [
+  {
+    zone: 'Workshop (light) — on surface-base #fafaf8',
+    pairs: [
+      ['text-primary', '#0a0a0a', '#fafaf8'],
+      ['text-secondary', '#4a4a55', '#fafaf8'],
+      ['text-muted', '#6b6b76', '#fafaf8'],
+      ['text-brand (red)', '#d20f18', '#fafaf8'],
+      ['white on red CTA', '#fafaf8', '#d20f18'],
+      ['automotive-text', '#b10a11', '#fafaf8'],
+      ['residential-text', '#8a6420', '#fafaf8'],
+      ['commercial-text', '#1d6aae', '#fafaf8'],
+      ['personal-protection-text', '#5240c9', '#fafaf8'],
+      ['sustainability-text', '#1e7a4d', '#fafaf8'],
+      ['data-positive-text', '#1e7a4d', '#fafaf8'],
+      ['data-warning-text', '#8a6a10', '#fafaf8'],
+      ['data-critical-text', '#b10a11', '#fafaf8'],
+      ['data-neutral-text', '#6b6b76', '#fafaf8'],
+    ],
+  },
+  {
+    zone: 'Showroom (dark) — on surface-base-dark #0a0a0a',
+    pairs: [
+      ['text-primary', '#fafaf8', '#0a0a0a'],
+      ['text-secondary', '#c8c8d0', '#0a0a0a'],
+      ['text-muted', '#9a9aa5', '#0a0a0a'],
+      ['text-brand (red-bright)', '#ef2929', '#0a0a0a'],
+      ['red-soft on raised-dark', '#ff5a5a', '#1a1a1e'],
+      ['text-secondary on raised-dark', '#c8c8d0', '#1a1a1e'],
+      ['residential-bright', '#dbb06a', '#0a0a0a'],
+      ['commercial-bright', '#5ba3e8', '#0a0a0a'],
+      ['personal-protection-bright', '#9d8ffa', '#0a0a0a'],
+      ['sustainability-bright', '#56d695', '#0a0a0a'],
+      ['data-warning', '#f0c040', '#0a0a0a'],
+    ],
+  },
+];
+
+interface ScaleEntry {
+  name: string;
+  family: 'display' | 'ui';
+  /** clamp components in rem / vw; fixed sizes have slope 0. */
+  min: number;
+  base: number;
+  slopeVw: number;
+  max: number;
+  leading: number;
+  sample: string;
+}
+
+const TYPE_SCALE: ScaleEntry[] = [
+  { name: 'display-xl', family: 'display', min: 2.5, base: 1.6, slopeVw: 4, max: 5.25, leading: 1.05, sample: 'Complete Protection' },
+  { name: 'display-lg', family: 'display', min: 2, base: 1.35, slopeVw: 2.9, max: 4, leading: 1.08, sample: 'for Every Journey' },
+  { name: 'display-md', family: 'display', min: 1.625, base: 1.25, slopeVw: 1.9, max: 2.875, leading: 1.12, sample: 'Engineered for ASEAN Climate' },
+  { name: 'heading-lg', family: 'ui', min: 1.375, base: 1.15, slopeVw: 1, max: 2, leading: 1.2, sample: 'Nano-ceramic multilayer construction' },
+  { name: 'heading-md', family: 'ui', min: 1.125, base: 1, slopeVw: 0.55, max: 1.5, leading: 1.3, sample: 'Infrared rejection up to 97%' },
+  { name: 'heading-sm', family: 'ui', min: 1, base: 0.95, slopeVw: 0.25, max: 1.125, leading: 1.4, sample: 'Lifetime limited warranty' },
+  { name: 'body-lg', family: 'ui', min: 1.0625, base: 1, slopeVw: 0.3, max: 1.1875, leading: 1.7, sample: 'IrisPro films are engineered for tropical heat, UV intensity and the daily realities of ASEAN roads.' },
+  { name: 'body-md', family: 'ui', min: 1, base: 1, slopeVw: 0, max: 1, leading: 1.65, sample: 'Guide content, cards and tables use the UI scale with generous leading for long-form reading.' },
+  { name: 'body-sm', family: 'ui', min: 0.875, base: 0.875, slopeVw: 0, max: 0.875, leading: 1.6, sample: 'Secondary details, footnotes and helper copy.' },
+  { name: 'caption', family: 'ui', min: 0.8125, base: 0.8125, slopeVw: 0, max: 0.8125, leading: 1.5, sample: 'Fig. 1 — Spectral rejection curve' },
+  { name: 'overline', family: 'ui', min: 0.75, base: 0.75, slopeVw: 0, max: 0.75, leading: 1.3, sample: 'PERSONAL PROTECTION' },
+];
+
+function resolveClampPx(entry: ScaleEntry, viewportPx: number): number {
+  const fluid = entry.base * 16 + (entry.slopeVw / 100) * viewportPx;
+  return Math.min(entry.max * 16, Math.max(entry.min * 16, fluid));
+}
+
+const SPACING = [1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32] as const;
+
+const OVERFLOW_TEST = (['display-xl', 'display-lg', 'display-md'] as const).map(
+  (name) => {
+    const entry = TYPE_SCALE.find((e) => e.name === name)!;
+    return { name, entry, px: resolveClampPx(entry, 360) };
+  },
+);
+
+const NUMERIC_ROWS = [
+  ['Iris Ceramic 70', '97%', '70%', '10 years'],
+  ['Iris Ceramic 35', '94.5%', '35%', '10 years'],
+  ['Iris Guard 05', '88.1%', '5%', '7 years'],
+] as const;
+
+const cellStyle =
+  'padding: var(--space-2) var(--space-4); border-bottom: 1px solid var(--border-subtle); text-align: left;';
+---
+
+<Layout title="IrisPro V2 — Design System">
+  <div class="container" style="padding-block: var(--space-12)">
+    <p class="type-overline" style="color: var(--text-muted)">
+      IrisPro V2 — Stage 1 Foundation
+    </p>
+    <h1 class="type-display-lg" style="margin: var(--space-2) 0 var(--space-10)">
+      Design System
+    </h1>
+
+    <Section title="Enhancement tier">
+      <TierIndicator client:visible />
+    </Section>
+
+    <Section title="Brand core (extracted from V1)">
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: var(--space-4)"
+      >
+        {
+          BRAND_SWATCHES.map(([name, hex]) => (
+            <div style="display: grid; gap: var(--space-2)">
+              <div
+                style={`height: 4rem; border-radius: var(--radius-md); background: ${hex}; border: 1px solid var(--border-subtle)`}
+              />
+              <span class="type-caption" style="font-weight: 600">
+                {name}
+              </span>
+              <span class="type-caption numeric" style="color: var(--text-muted)">
+                {hex}
+              </span>
+            </div>
+          ))
+        }
+      </div>
+    </Section>
+
+    <Section title="Per-solution accents (DEFAULT / text-on-light / bright-on-dark)">
+      <div style="display: grid; gap: var(--space-4)">
+        {
+          ACCENTS.map(([name, raw, text, bright]) => (
+            <div style="display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center">
+              <span class="type-body-sm" style="font-weight: 600; flex: 1 0 100%">
+                {name}
+              </span>
+              <div
+                style={`flex: 1 1 10rem; min-width: 0; border-radius: var(--radius-md); background: ${raw}; padding: var(--space-3); text-align: center`}
+              >
+                <span class="type-caption numeric" style="color: #0a0a0a">
+                  {raw}
+                </span>
+              </div>
+              <div
+                style={`flex: 1 1 10rem; min-width: 0; border-radius: var(--radius-md); background: #fafaf8; border: 1px solid var(--border-subtle); padding: var(--space-3); text-align: center`}
+              >
+                <span
+                  class="type-caption numeric"
+                  style={`color: ${text}; font-weight: 600`}
+                >
+                  {text} <RatioBadge fg={text} bg="#fafaf8" />
+                </span>
+              </div>
+              <div
+                style={`flex: 1 1 10rem; min-width: 0; border-radius: var(--radius-md); background: #0a0a0a; padding: var(--space-3); text-align: center`}
+              >
+                <span
+                  class="type-caption numeric"
+                  style={`color: ${bright}; font-weight: 600`}
+                >
+                  {bright} <RatioBadge fg={bright} bg="#0a0a0a" />
+                </span>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <p
+        class="type-body-sm"
+        style="margin-top: var(--space-4); color: var(--text-muted)"
+      >
+        Raw accent values are for borders, icon fills and large graphics. Copy
+        always uses the -text variant on light and -bright on dark.
+      </p>
+    </Section>
+
+    <Section title="Contrast verification (computed at build, WCAG 2.x)">
+      <div style="display: grid; gap: var(--space-8)">
+        {
+          CONTRAST_PAIRS.map(({ zone, pairs }) => (
+            <div style="overflow-x: auto">
+              <h3 class="type-heading-sm" style="margin-bottom: var(--space-3)">
+                {zone}
+              </h3>
+              <table
+                class="type-body-sm"
+                style="border-collapse: collapse; width: 100%"
+              >
+                <thead>
+                  <tr class="type-caption" style="color: var(--text-muted)">
+                    <th style={cellStyle}>Token pairing</th>
+                    <th style={cellStyle}>Sample</th>
+                    <th style={cellStyle}>Ratio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {pairs.map(([label, fg, bg]) => (
+                    <tr>
+                      <td style={cellStyle}>{label}</td>
+                      <td style={cellStyle}>
+                        <span
+                          style={`display: inline-block; padding: var(--space-1) var(--space-3); border-radius: var(--radius-sm); background: ${bg}; color: ${fg}; border: 1px solid var(--border-subtle); font-weight: 500`}
+                        >
+                          IRR 97% · VLT 70%
+                        </span>
+                      </td>
+                      <td style={cellStyle}>
+                        <RatioBadge fg={fg} bg={bg} />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ))
+        }
+      </div>
+    </Section>
+
+    <Section title="Dual-zone token swap (pure CSS, data-zone)">
+      <div
+        style="display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr))"
+      >
+        {
+          (['showroom', 'workshop'] as const).map((zone) => (
+            <Zone zone={zone} className="rounded-lg">
+              <div
+                style="padding: var(--space-8); border-radius: var(--radius-lg); border: 1px solid var(--border-default); background-image: var(--depth-glow-subtle); display: grid; gap: var(--space-2)"
+              >
+                <span class="type-overline" style="color: var(--text-brand)">
+                  {zone}
+                </span>
+                <span class="type-heading-md" style="color: var(--text-primary)">
+                  Primary text on surface-base
+                </span>
+                <span class="type-body-md" style="color: var(--text-secondary)">
+                  Secondary text — same markup, tokens re-resolved by data-zone.
+                </span>
+                <span class="type-body-sm" style="color: var(--text-muted)">
+                  Muted text · borders and surfaces swap too.
+                </span>
+                <div
+                  style="margin-top: var(--space-3); padding: var(--space-4); background: var(--surface-raised); border-radius: var(--radius-md); box-shadow: var(--elevation-2); border: 1px solid var(--border-subtle)"
+                >
+                  <span class="type-body-sm">
+                    surface-raised —{' '}
+                    {zone === 'workshop'
+                      ? 'elevation shadow'
+                      : 'luminosity, no shadow (by rule)'}
+                  </span>
+                </div>
+              </div>
+            </Zone>
+          ))
+        }
+      </div>
+    </Section>
+
+    <Section title="Type scale — resolved at 360px and 1440px">
+      <div style="overflow-x: auto; margin-bottom: var(--space-8)">
+        <table class="type-body-sm" style="border-collapse: collapse; width: 100%">
+          <thead>
+            <tr class="type-caption" style="color: var(--text-muted)">
+              <th style={cellStyle}>Token</th>
+              <th style={cellStyle}>Family</th>
+              <th style={cellStyle}>@360px</th>
+              <th style={cellStyle}>@1440px</th>
+              <th style={cellStyle}>Leading</th>
+            </tr>
+          </thead>
+          <tbody class="numeric">
+            {
+              TYPE_SCALE.map((entry) => (
+                <tr>
+                  <td style={`${cellStyle} font-weight: 600;`}>{entry.name}</td>
+                  <td style={cellStyle}>{entry.family}</td>
+                  <td style={cellStyle}>{resolveClampPx(entry, 360).toFixed(1)}px</td>
+                  <td style={cellStyle}>{resolveClampPx(entry, 1440).toFixed(1)}px</td>
+                  <td style={cellStyle}>{entry.leading}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="type-heading-sm" style="margin-bottom: var(--space-4)">
+        Live scale (fluid — resize viewport)
+      </h3>
+      <div
+        style="display: grid; gap: var(--space-6); margin-bottom: var(--space-10)"
+      >
+        {
+          TYPE_SCALE.map((entry) => (
+            <div>
+              <span class="type-caption numeric" style="color: var(--text-muted)">
+                {entry.name}
+              </span>
+              <div class={`type-${entry.name}`}>{entry.sample}</div>
+            </div>
+          ))
+        }
+      </div>
+
+      <h3 class="type-heading-sm" style="margin-bottom: var(--space-4)">
+        360px overflow test — longest real string at each display size
+      </h3>
+      <div
+        style="width: 360px; max-width: 100%; border: 1px dashed var(--border-strong); border-radius: var(--radius-md); padding: var(--space-4); display: grid; gap: var(--space-6); overflow: visible"
+      >
+        {
+          OVERFLOW_TEST.map(({ name, entry, px }) => (
+            <div>
+              <span class="type-caption numeric" style="color: var(--text-muted)">
+                {name} @360px = {px.toFixed(0)}px
+              </span>
+              <div
+                style={`font-family: var(--font-display); font-weight: 500; font-size: ${px}px; line-height: ${entry.leading}; letter-spacing: -0.02em; overflow-wrap: break-word`}
+              >
+                Advanced Protection Engineered for ASEAN Climate
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <h3 class="type-heading-sm" style="margin: var(--space-10) 0 var(--space-4)">
+        Tabular numerals (.numeric) — spec values align
+      </h3>
+      <table class="type-body-md" style="border-collapse: collapse">
+        <thead>
+          <tr class="type-caption" style="color: var(--text-muted)">
+            <th style={cellStyle}>Film</th>
+            <th style={cellStyle}>IRR</th>
+            <th style={cellStyle}>VLT</th>
+            <th style={cellStyle}>Warranty</th>
+          </tr>
+        </thead>
+        <tbody class="numeric">
+          {
+            NUMERIC_ROWS.map(([film, irr, vlt, warranty]) => (
+              <tr>
+                <td style={cellStyle}>{film}</td>
+                <td style={cellStyle}>{irr}</td>
+                <td style={cellStyle}>{vlt}</td>
+                <td style={cellStyle}>{warranty}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </Section>
+
+    <Section title="Spacing · radius · section rhythm">
+      <div style="display: grid; gap: var(--space-2); margin-bottom: var(--space-8)">
+        {
+          SPACING.map((step) => (
+            <div style="display: flex; align-items: center; gap: var(--space-4)">
+              <span
+                class="type-caption numeric"
+                style="width: 6rem; color: var(--text-muted)"
+              >
+                space-{step} · {step * 4}px
+              </span>
+              <span
+                style={`display: inline-block; height: 0.75rem; width: var(--space-${step}); background: var(--color-red); border-radius: var(--radius-sm)`}
+              />
+            </div>
+          ))
+        }
+      </div>
+      <div
+        style="display: flex; gap: var(--space-6); flex-wrap: wrap; margin-bottom: var(--space-8)"
+      >
+        {
+          (['sm', 'md', 'lg', 'full'] as const).map((r) => (
+            <div style="text-align: center">
+              <div
+                style={`width: 5rem; height: 5rem; background: var(--surface-raised); border: 1px solid var(--border-default); box-shadow: var(--elevation-1); border-radius: var(--radius-${r})`}
+              />
+              <span class="type-caption" style="color: var(--text-muted)">
+                radius-{r}
+              </span>
+            </div>
+          ))
+        }
+      </div>
+      <p class="type-body-sm" style="color: var(--text-muted)">
+        Section rhythm: tight {`clamp(48→80px)`} · default {`clamp(64→128px)`} ·
+        loose {`clamp(80→168px)`} — fluid, tighter on mobile. Grid: 4-col mobile
+        / 8-col tablet / 12-col desktop via --grid-cols.
+      </p>
+    </Section>
+
+    <Section title="Parallax depth (live)">
+      <ParallaxDemo client:visible />
+    </Section>
+
+    <Section title="Reveal + stagger (live)">
+      <RevealDemo client:visible />
+    </Section>
+
+    <Section title="Duration × easing (live)">
+      <MotionDemo client:visible />
+    </Section>
+  </div>
+</Layout>

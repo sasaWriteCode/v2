@@ -1,0 +1,245 @@
+---
+/**
+ * Stage 2 specimen — port of the Next.js /components page. Every primitive
+ * hydrates as a client:visible island so all three tiers are inspectable
+ * at 360px / 1440px (?tier=0|1|2). Collection-shaped data (products,
+ * projects, guide chapters, certifications) flows through getCollection()
+ * so the Zod content schemas validate it at build; composition data comes
+ * from src/data/demo-data.ts.
+ *
+ * Zones are plain data-zone divs here (the React <Zone> renders exactly
+ * that) so the wrappers stay static HTML around the islands.
+ */
+import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import Spec from '@/components/specimen/SpecSection.astro';
+import { TierIndicator } from '@/components/specimen/demos';
+import { CompareDemo } from '@/components/specimen/CompareDemo';
+import { CinematicHero } from '@/components/showroom/CinematicHero';
+import { ProblemCardGrid } from '@/components/showroom/ProblemCardGrid';
+import { PrioritySelector } from '@/components/showroom/PrioritySelector';
+import { SpectrumDiagram } from '@/components/showroom/SpectrumDiagram';
+import { TechPillarGrid } from '@/components/showroom/TechPillarGrid';
+import { ProofStatBar } from '@/components/showroom/ProofStatBar';
+import { ProjectStrip } from '@/components/showroom/ProjectStrip';
+import { SeriesComparisonTable } from '@/components/workshop/SeriesComparisonTable';
+import { GuideChapterList } from '@/components/workshop/GuideChapterList';
+import { AskIrisProAI } from '@/components/workshop/AskIrisProAI';
+import { CTABar } from '@/components/global/CTABar';
+import { CertificationStrip } from '@/components/global/CertificationStrip';
+import {
+  ASK_AI,
+  CERTS,
+  CTA_ACTIONS,
+  HERO,
+  PRIORITY_OPTIONS,
+  PROBLEM_CARDS,
+  PRODUCTS,
+  PROJECTS,
+  SERIES,
+  SERIES_ROWS,
+  SPECTRUM_BANDS,
+  STATS,
+  TECH_PILLARS,
+} from '@/data/demo-data';
+
+// getCollection() returns entries ordered by id, not authoring order —
+// restore the specimen order from the source module.
+const byOrder = <T,>(order: string[], key: (item: T) => string) => (a: T, b: T) =>
+  order.indexOf(key(a)) - order.indexOf(key(b));
+
+const products = (await getCollection('product-items'))
+  .map((entry) => entry.data)
+  .sort(byOrder(PRODUCTS.map((p) => p.id), (p) => p.id));
+const projects = (await getCollection('projects'))
+  .map((entry) => entry.data)
+  .sort(byOrder(PROJECTS.map((p) => p.name), (p) => p.name));
+const guideChapters = (await getCollection('guide-chapters'))
+  .map((entry) => entry.data)
+  .sort((a, b) => a.number - b.number);
+const certs = (await getCollection('certifications'))
+  .map((entry) => entry.data)
+  .sort(byOrder(CERTS.map((c) => c.id), (c) => c.id));
+---
+
+<Layout title="IrisPro V2 — Component Primitives">
+  <div>
+    <div class="container" style="padding-block: var(--space-12)">
+      <p class="type-overline" style="color: var(--text-muted)">
+        IrisPro V2 — Stage 2
+      </p>
+      <h1 class="type-display-md" style="margin: var(--space-2) 0 var(--space-6)">
+        Component Primitives
+      </h1>
+      <p
+        class="type-body-md mb-6 max-w-article"
+        style="color: var(--text-secondary)"
+      >
+        Every primitive with realistic IrisPro data. Use the tier links below
+        (or ?tier=0|1|2 on this URL) and resize to 360px / 1440px — every
+        primitive must render complete, readable content at TIER_0.
+        Conflicting source values are logged in _conflicts.md, not resolved.
+      </p>
+      <TierIndicator client:visible />
+    </div>
+
+    {/* ════════ SHOWROOM ZONE ════════ */}
+    <div data-zone="showroom">
+      <Spec
+        id="cinematic-hero"
+        title="1 · CinematicHero"
+        note="Single h1 (line breaks presentational), parallax media, WITHOUT/WITH comparison, benefit strip wraps at 360px. Headline is the longest real string."
+      >
+        <div
+          class="overflow-hidden rounded-lg"
+          style="border: 1px solid var(--border-subtle)"
+        >
+          <CinematicHero {...HERO} client:visible />
+        </div>
+      </Spec>
+
+      <Spec
+        id="problem-card-grid"
+        title="2 · ProblemCardGrid"
+        note="6 cards, staggered reveal at TIER_1+, simultaneous at TIER_0. columns={3}."
+      >
+        <ProblemCardGrid cards={PROBLEM_CARDS} columns={3} client:visible />
+      </Spec>
+
+      <Spec
+        id="priority-selector"
+        title="3 · PrioritySelector"
+        note="Real buttons, aria-pressed, URL state (?priority=…). All six recommendations are in the DOM at load; without JS every one is visible."
+      >
+        <PrioritySelector
+          legend="What matters most to you?"
+          options={PRIORITY_OPTIONS}
+          hint="Select a priority to see the recommended IrisPro solution."
+          client:visible
+        />
+      </Spec>
+
+      <Spec
+        id="spectrum-diagram"
+        title="4 · SpectrumDiagram"
+        note="Pure SVG — band names and nm ranges are selectable text nodes. Rays stagger in at TIER_1+; fully drawn at TIER_0. Below: variant='compact' without film."
+      >
+        <div class="grid gap-10">
+          <SpectrumDiagram
+            bands={SPECTRUM_BANDS}
+            variant="full"
+            showFilm
+            title="Solar energy (full light spectrum)"
+            client:visible
+          />
+          <SpectrumDiagram
+            bands={SPECTRUM_BANDS}
+            variant="compact"
+            showFilm={false}
+            client:visible
+          />
+        </div>
+      </Spec>
+
+      <Spec
+        id="tech-pillar-grid"
+        title="5 · TechPillarGrid"
+        note="columns={5} — the “Powered by Advanced Optical Technology” band."
+      >
+        <TechPillarGrid pillars={TECH_PILLARS} columns={5} client:visible />
+      </Spec>
+
+      <Spec
+        id="proof-stat-bar"
+        title="6 · ProofStatBar"
+        note="Final values are server-rendered text; count-up runs at TIER_1+ only. Tabular numerals; footnote pattern."
+      >
+        <ProofStatBar stats={STATS} client:visible />
+      </Spec>
+
+      <Spec
+        id="project-strip"
+        title="7 · ProjectStrip"
+        note="Native horizontal scroll with snap — no JS carousel, touch never intercepted. Category filters; badge tones (achievement / progress)."
+      >
+        <ProjectStrip projects={projects} filters scrollable client:visible />
+      </Spec>
+
+      <Spec
+        id="cta-bar-showroom"
+        title="12a · CTABar (showroom)"
+        note="Depth via gradient — no shadows in the dark zone."
+      >
+        <CTABar
+          headline="Ready to experience complete protection?"
+          subhead="Talk to our experts and find the perfect IrisPro solution for your vehicle."
+          actions={CTA_ACTIONS.slice(0, 3)}
+          client:visible
+        />
+      </Spec>
+    </div>
+
+    {/* ════════ WORKSHOP ZONE ════════ */}
+    <div data-zone="workshop">
+      <Spec
+        id="series-comparison-table"
+        title="8 · SeriesComparisonTable"
+        note="Real <table> with caption + th scope. Mobile: sticky first column + horizontal scroll — never card-collapsed. Highlight column flag."
+      >
+        <SeriesComparisonTable
+          caption="Comparison of IrisPro Comfort, Plus and Signature film series"
+          series={SERIES}
+          rows={SERIES_ROWS}
+          highlight={{ columnId: 'plus', label: 'Recommended' }}
+          client:visible
+        />
+      </Spec>
+
+      <Spec
+        id="product-card"
+        title="9 · ProductCard"
+        note="Compare checkboxes feed URL-persisted state (?compare=…). VLT chips are data — Stage 3 filters on them."
+      >
+        <CompareDemo products={products} client:visible />
+      </Spec>
+
+      <Spec
+        id="guide-chapter-list"
+        title="10 · GuideChapterList"
+        note="Native <details>/<summary> — lesson content is in the DOM while collapsed (SEO-bearing). Chapter 1 starts open."
+      >
+        <GuideChapterList chapters={guideChapters} defaultOpen={1} client:visible />
+      </Spec>
+
+      <Spec
+        id="ask-irispro-ai"
+        title="11 · AskIrisProAI"
+        note="UI shell + onSubmit boundary only. Without JS the form GETs the fallback action with ?q=."
+      >
+        <div class="max-w-container-narrow">
+          <AskIrisProAI {...ASK_AI} client:visible />
+        </div>
+      </Spec>
+
+      <Spec
+        id="cta-bar-workshop"
+        title="12b · CTABar (workshop) + CertificationStrip"
+        note="Same CTABar in the light zone — elevation instead of glow. Cert marks are text placeholders until Stage 4 assets."
+      >
+        <div class="grid gap-10">
+          <CTABar
+            headline="Ready for complete protection?"
+            subhead="Our experts are ready to help you find the right film for your needs."
+            actions={CTA_ACTIONS}
+            client:visible
+          />
+          <CertificationStrip
+            certs={certs}
+            heading="Certified. Tested. Trusted globally."
+            client:visible
+          />
+        </div>
+      </Spec>
+    </div>
+  </div>
+</Layout>

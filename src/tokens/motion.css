@@ -1,0 +1,158 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   IRISPRO V2 — MOTION TOKENS + TIER ENGINE (CSS SIDE)
+   ═══════════════════════════════════════════════════════════════════════════
+
+   ██ CINEMATIC CHANGES *HOW* CONTENT APPEARS — NEVER *WHETHER* IT EXISTS. ██
+   Every tier renders identical DOM. Tiers vary opacity/transform behaviour
+   only. A component that renders content exclusively at TIER_2 is a bug.
+
+   All motion in this system touches OPACITY and TRANSFORM only. Animating
+   layout properties (width/height/top/left/margin) is forbidden everywhere.
+
+   ── The tier model ──────────────────────────────────────────────────────
+   TIER_0_STATIC     reduced-motion / saveData / 2g   → instant opacity only
+   TIER_1_MOTION     DEFAULT, incl. all mobile        → parallax, reveals,
+                                                        stagger, progress
+   TIER_2_CINEMATIC  fine pointer + ≥1024px + 4g      → + autoplay video,
+                                                        pinning, scrubbing
+
+   Two layers of truth, same decisions:
+   1. CSS-ONLY FALLBACK (this file) — media queries set the tier custom
+      properties BEFORE hydration, so first paint is already tier-correct.
+      CSS can see reduced-motion / pointer / width; it cannot see
+      saveData / effectiveType — the JS engine refines those on mount.
+   2. JS ENGINE (lib/enhancement) — sets html[data-tier="0|1|2"] on mount,
+      which overrides the media-query defaults below. SSR markup carries no
+      data-tier, so server and client first paint agree: no hydration
+      mismatch, and because tokens only affect opacity/transform, a tier
+      change causes zero layout shift.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Duration ── */
+  --duration-instant: 0ms;
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --duration-cinematic: 800ms;
+
+  /* ── Easing (expressive curve = V1's ease-out-expo, extracted) ── */
+  --ease-standard: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-decelerate: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-accelerate: cubic-bezier(0.55, 0, 0.85, 0.35);
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ── Parallax depth (translate multipliers — far moves LEAST) ── */
+  --parallax-near: 0.24;
+  --parallax-mid: 0.12;
+  --parallax-far: 0.05;
+
+  /* ── Tier knobs (defaults = TIER_1, the SSR baseline) ──
+     --motion-scale      multiplies every motion translate distance
+     --motion-duration   duration for reveals at the current tier
+     --parallax-scale    multiplies parallax shift (0 = parallax off)
+     --tier-cinematic    1 only at TIER_2 (read by JS + demos)          */
+  --motion-scale: 1;
+  --motion-duration: var(--duration-slow);
+  --parallax-scale: 1;
+  --tier-cinematic: 0;
+
+  /* Reveal geometry */
+  --reveal-distance: 1rem;
+  --reveal-stagger-step: 70ms;
+}
+
+/* ── CSS-only tier detection (pre-hydration first paint) ── */
+@media (pointer: fine) and (min-width: 1024px) {
+  html:not([data-tier]) {
+    --tier-cinematic: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-tier]) {
+    --motion-scale: 0;
+    --motion-duration: var(--duration-instant);
+    --parallax-scale: 0;
+    --tier-cinematic: 0;
+  }
+}
+
+/* ── JS tier engine overrides (set on mount; win over media queries) ── */
+html[data-tier='0'] {
+  --motion-scale: 0;
+  --motion-duration: var(--duration-instant);
+  --parallax-scale: 0;
+  --tier-cinematic: 0;
+}
+html[data-tier='1'] {
+  --motion-scale: 1;
+  --motion-duration: var(--duration-slow);
+  --parallax-scale: 1;
+  --tier-cinematic: 0;
+}
+html[data-tier='2'] {
+  --motion-scale: 1;
+  --motion-duration: var(--duration-slow);
+  --parallax-scale: 1;
+  --tier-cinematic: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   REVEAL — hidden state exists ONLY while JS is enhancing the page.
+   html[data-enhanced] is set by <EnhancementProvider> on mount, so:
+   · no JS / crawler / JS failure → content fully visible, always
+   · TIER_0 → --motion-scale:0 collapses the translate; --motion-duration
+     is 0ms, so the reveal is an instant opacity swap
+   ═══════════════════════════════════════════════════════════════════════ */
+html[data-enhanced] .reveal {
+  opacity: 0;
+  transform: translate3d(0, calc(var(--reveal-distance) * var(--motion-scale)), 0);
+  transition:
+    opacity var(--motion-duration) var(--ease-decelerate),
+    transform var(--motion-duration) var(--ease-cinematic);
+  transition-delay: calc(var(--stagger-index, 0) * var(--reveal-stagger-step) * var(--motion-scale));
+  will-change: opacity, transform;
+}
+html[data-enhanced] .reveal.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   PARALLAX
+   Preferred path: CSS scroll-driven animation (animation-timeline: view())
+   — zero main-thread cost. <Parallax> feature-detects and only attaches its
+   rAF fallback where this is unsupported. --parallax-scale zeroes both
+   paths at TIER_0. Compositor-only: translate3d, nothing else.
+   ═══════════════════════════════════════════════════════════════════════ */
+.parallax-layer {
+  --parallax-depth: var(--parallax-mid);
+  /* JS fallback writes --parallax-shift (px, rAF-throttled, passive) */
+  transform: translate3d(0, calc(var(--parallax-shift, 0px) * var(--parallax-scale)), 0);
+}
+
+@supports (animation-timeline: view()) {
+  html[data-parallax='css'] .parallax-layer {
+    animation: parallax-drift linear both;
+    animation-timeline: view();
+    /* 100px reference travel × depth × tier scale */
+    --parallax-travel: calc(100px * var(--parallax-depth) * 4 * var(--parallax-scale));
+  }
+  @keyframes parallax-drift {
+    from { transform: translate3d(0, var(--parallax-travel), 0); }
+    to   { transform: translate3d(0, calc(var(--parallax-travel) * -1), 0); }
+  }
+}
+
+/* ── Global reduced-motion hard reset (belt and braces) ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

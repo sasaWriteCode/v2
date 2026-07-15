@@ -1,0 +1,358 @@
+{
+  "title": "Automotive Guide",
+  "seo": {
+    "title": "Automotive Guide",
+    "description": "Your complete guide to understanding automotive window film. Make the right choice for comfort, protection and performance."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Knowledge Centre", "href": "/knowledge" },
+    { "label": "Automotive Guide" }
+  ],
+  "intro": [
+    {
+      "id": "guide-hero",
+      "type": "guide-hero",
+      "order": 10,
+      "data": {
+        "title": "Automotive Guide",
+        "lede": "Your complete guide to understanding automotive window film. Make the right choice for comfort, protection and performance.",
+        "meta": [
+          { "icon": "document", "label": "Scientifically Explained" },
+          { "icon": "check", "label": "Real Test & Proof" },
+          { "icon": "users", "label": "Expert Recommended" },
+          { "icon": "sun", "label": "Designed for ASEAN Climate" },
+          { "icon": "shield", "label": "Blocks UV+420 Protection" },
+          { "icon": "thermometer", "label": "Superior Heat Rejection" },
+          { "icon": "car", "label": "Enhances Comfort & Driving Safety" },
+          { "icon": "home", "label": "Protects Interior & Value" },
+          { "icon": "battery", "label": "Saves Fuel / Extends EV Range" }
+        ]
+      }
+    },
+    {
+      "id": "guide-search",
+      "type": "search-bar",
+      "order": 20,
+      "data": {
+        "label": "Search for topics, videos or questions...",
+        "placeholder": "Search for topics, videos or questions...",
+        "action": "/knowledge"
+      }
+    },
+    {
+      "id": "learning-journey",
+      "type": "chapter-card-row",
+      "order": 30,
+      "label": "Start Your Learning Journey",
+      "data": {
+        "heading": "Start Your Learning Journey",
+        "chapters": [
+          {
+            "number": 1,
+            "title": "Understanding Automotive Window Film",
+            "description": "Learn the basics and why window film is essential for your car and your lifestyle.",
+            "lessons": [
+              "What is automotive window film?",
+              "Why do cars need window film?",
+              "Why is ASEAN climate different?",
+              "Types of window film"
+            ],
+            "href": "#all-chapters"
+          },
+          {
+            "number": 2,
+            "title": "Heat & Comfort",
+            "description": "Understand solar heat, TSER and why IRR99% may still feel hot.",
+            "lessons": [
+              "Why does a car become so hot?",
+              "What is TSER?",
+              "Why can IRR 99% still feel hot?",
+              "How solar heat enters a vehicle"
+            ],
+            "href": "#all-chapters"
+          },
+          {
+            "number": 3,
+            "title": "UV & Health Protection",
+            "description": "Protect your skin, eyes and loved ones from harmful UV and blue light.",
+            "lessons": [
+              "What is UV?",
+              "What is UV400?",
+              "What is UV+420?",
+              "How UV affects skin"
+            ],
+            "href": "#all-chapters"
+          },
+          {
+            "number": 4,
+            "title": "Choosing the Right Film",
+            "description": "Find the best window film based on your needs, car type and driving lifestyle.",
+            "lessons": [
+              "Which VLT should I choose?",
+              "Best film for daily drivers",
+              "Best film for families",
+              "Best film for EV owners"
+            ],
+            "href": "#all-chapters"
+          },
+          {
+            "number": 5,
+            "title": "Technology Explained",
+            "description": "Explore the science and technologies behind high performance window film.",
+            "lessons": [
+              "Ceramic vs Sputter",
+              "Titanium vs Silver Sputter",
+              "6-Layer Hotmelt™",
+              "UV+420™ Optical Technology"
+            ],
+            "href": "#all-chapters"
+          },
+          {
+            "number": 6,
+            "title": "Real Demonstrations",
+            "description": "See real test results that prove the performance of different films.",
+            "lessons": [
+              "Heat rejection test",
+              "UV meter test",
+              "Before & after comparison",
+              "Thermal camera demonstration"
+            ],
+            "href": "#all-chapters"
+          },
+          {
+            "number": 7,
+            "title": "Customer Stories",
+            "description": "Real experiences from real customers just like you.",
+            "lessons": [
+              "Customer testimonials",
+              "Installation videos",
+              "Before & after results",
+              "Frequently asked questions"
+            ],
+            "href": "#all-chapters"
+          }
+        ]
+      }
+    }
+  ],
+  "main": [
+    {
+      "id": "all-chapters",
+      "type": "guide-chapter-list",
+      "order": 40,
+      "label": "All Chapters",
+      "data": {
+        "defaultOpen": 1,
+        "chapters": [
+          {
+            "number": 1,
+            "title": "Understanding Automotive Window Film",
+            "description": "Learn the basics and why window film is essential for your car and your lifestyle.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 1 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "What is automotive window film?",
+              "Why do cars need window film?",
+              "Why is ASEAN climate different?",
+              "Types of window film"
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Heat & Comfort",
+            "description": "Understand solar heat, TSER and why IRR99% may still feel hot.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 2 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "Why does a car become so hot?",
+              "What is TSER?",
+              "Why can IRR 99% still feel hot?",
+              "How solar heat enters a vehicle"
+            ]
+          },
+          {
+            "number": 3,
+            "title": "UV & Health Protection",
+            "description": "Protect your skin, eyes and loved ones from harmful UV and blue light.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 3 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "What is UV?",
+              "What is UV400?",
+              "What is UV+420?",
+              "How UV affects skin"
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Choosing the Right Film",
+            "description": "Find the best window film based on your needs, car type and driving lifestyle.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 4 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "Which VLT should I choose?",
+              "Best film for daily drivers",
+              "Best film for families",
+              "Best film for EV owners"
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Technology Explained",
+            "description": "Explore the science and technologies behind high performance window film.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 5 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "Ceramic vs Sputter",
+              "Titanium vs Silver Sputter",
+              "6-Layer Hotmelt™",
+              "UV+420™ Optical Technology"
+            ]
+          },
+          {
+            "number": 6,
+            "title": "Real Demonstrations",
+            "description": "See real test results that prove the performance of different films.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 6 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "Heat rejection test",
+              "UV meter test",
+              "Before & after comparison",
+              "Thermal camera demonstration"
+            ]
+          },
+          {
+            "number": 7,
+            "title": "Customer Stories",
+            "description": "Real experiences from real customers just like you.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 7 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "Customer testimonials",
+              "Installation videos",
+              "Before & after results",
+              "Frequently asked questions"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "rail": {
+    "onThisPageLabel": "On This Page",
+    "episodesHeading": "Recommended Episodes",
+    "episodes": [
+      {
+        "title": "Why IRR99% Still Feels Hot?",
+        "duration": "3:02",
+        "href": "#ep-024"
+      },
+      {
+        "title": "UV99% vs UV+420: What's the Difference?",
+        "duration": "2:45",
+        "href": "#ep-015"
+      },
+      {
+        "title": "Best Window Film for Electric Vehicles",
+        "duration": "3:10",
+        "href": "#ep-042"
+      },
+      {
+        "title": "How to Choose the Right VLT?",
+        "duration": "2:58",
+        "href": "#ep-vlt"
+      },
+      {
+        "title": "Heat Rejection Test: Ceramic vs Sputter",
+        "duration": "3:20",
+        "href": "#ep-heat-test"
+      }
+    ],
+    "questionsHeading": "Popular Questions",
+    "questions": [
+      {
+        "question": "What is the best window film for hot weather?",
+        "answer": "_verify"
+      },
+      {
+        "question": "What is UV+420 and why do I need it?",
+        "answer": "_verify"
+      },
+      {
+        "question": "How do I choose the right VLT for my car?",
+        "answer": "_verify"
+      },
+      {
+        "question": "Why is my car still hot even with IRR99% film?",
+        "answer": "_verify"
+      }
+    ],
+    "askAi": {
+      "heading": "Ask IrisPro AI",
+      "description": "Ask any question about automotive window film and get instant answers.",
+      "placeholder": "Ask anything...",
+      "suggestedQuestions": [
+        "Best film for EV",
+        "Why IRR99% still hot?",
+        "Which VLT should I choose?",
+        "How window film saves fuel?"
+      ],
+      "fallbackAction": "/knowledge"
+    }
+  },
+  "outro": [
+    {
+      "id": "technology-strip",
+      "type": "certification-strip",
+      "order": 50,
+      "zone": "showroom-dark",
+      "data": {
+        "certs": [
+          { "id": "uv420", "name": "Patented UV+420™", "label": "Complete UV & Blue Light Protection" },
+          { "id": "hotmelt", "name": "6-Layer Hotmelt™", "label": "Superior Durability" },
+          { "id": "sputter", "name": "Multi-Layer Sputter", "label": "Maximum Heat Rejection" },
+          { "id": "sirim", "name": "SIRIM Certified", "label": "Quality Assured" },
+          { "id": "warranty", "name": "Up to 10 Years Warranty", "label": "Long Lasting Protection" }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the Automotive Guide screen with no expressible section field. Preserved verbatim.",
+    "chapter-lesson-counts": "Every chapter card and accordion row states '6 Lessons' and shows 4 lesson bullets plus '+ 2 more lessons'. Only the 4 visible lessons per chapter are transcribed (28 of a claimed 42); the remaining 14 lesson titles are a client ask. The GuideChapterList component renders the count from the transcribed array, so it will read '4 lessons' until the missing titles arrive.",
+    "view-all-chapters": "View All Chapters",
+    "rail-links": ["View all episodes", "View all FAQs"],
+    "hero-chip-groups": "The hero shows two chip rows (4 credibility chips, then 5 benefit chips); PageHero has a single meta list, so the grouping is flattened.",
+    "newsletter": "Footer block: 'Newsletter — Stay updated with the latest tips, offers and new technologies.' with an email input — no section type for newsletter signup; nav/footer chrome is config, not content."
+  }
+}

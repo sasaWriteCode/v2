@@ -1,0 +1,33 @@
+---
+/**
+ * Breadcrumbs — real <nav> + <ol>; the last crumb is the current page
+ * (aria-current, no link). The matching BreadcrumbList JSON-LD is emitted
+ * by BaseLayout via lib/seo/schema.ts.
+ */
+import { NAV_STRINGS } from '@/config/navigation';
+import type { Crumb } from '@/types/sections';
+
+interface Props {
+  crumbs: Crumb[];
+}
+const { crumbs } = Astro.props;
+---
+
+<nav aria-label={NAV_STRINGS.breadcrumbsLabel} class="container">
+  <ol class="flex flex-wrap items-center gap-1 py-3">
+    {crumbs.map((crumb, i) => (
+      <li class="type-caption flex items-center gap-1" style="color: var(--text-muted)">
+        {i > 0 && <span aria-hidden="true">›</span>}
+        {crumb.href ? (
+          <a href={crumb.href} style="color: var(--text-secondary)">
+            {crumb.label}
+          </a>
+        ) : (
+          <span aria-current="page" style="color: var(--text-primary); font-weight: 600">
+            {crumb.label}
+          </span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>

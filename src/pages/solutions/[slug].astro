@@ -1,0 +1,21 @@
+---
+/**
+ * Solution pages — SolutionTemplate × solutions collection. Routes exist
+ * exactly for the authored content objects (automotive is the Stage 3
+ * fixture; Stage 4 adds the rest — zero code changes here).
+ */
+import { getCollection } from 'astro:content';
+import SolutionTemplate from '@/templates/SolutionTemplate.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('solutions');
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { content: entry.data },
+  }));
+}
+
+const { content } = Astro.props;
+---
+
+<SolutionTemplate content={content} />

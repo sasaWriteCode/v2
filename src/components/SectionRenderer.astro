@@ -1,0 +1,149 @@
+---
+/**
+ * SectionRenderer — the spine. Takes `sections[]`, sorts by `order`, groups
+ * consecutive sections into zone bands (data-zone paints surface + text via
+ * pure CSS), and renders each section through the registry.
+ *
+ * WHY THE EXPLICIT ISLAND SWITCH: Astro's compiler requires `client:*`
+ * directives to be literal attributes on statically-imported components — a
+ * component pulled from a registry object cannot hydrate (NoMatchingImport,
+ * verified against astro 7.0.9). So static sections render dynamically via
+ * the registry, and each HYDRATED type gets one literal branch below. This
+ * file is the only place that knows about the constraint; the registry
+ * remains the single source of truth for which strategy applies, and in dev
+ * a mismatch renders a loud error block instead of silently shipping the
+ * wrong thing.
+ *
+ * Unknown types: loud visible error in dev, render nothing in production —
+ * never crash the build. (The content schemas make unknown types
+ * unreachable from collections; this guards programmatic callers.)
+ */
+import { SECTION_REGISTRY } from '@/lib/sectionRegistry';
+import { CinematicHero } from '@/components/showroom/CinematicHero';
+import { ProblemCardGrid } from '@/components/showroom/ProblemCardGrid';
+import { PrioritySelector } from '@/components/showroom/PrioritySelector';
+import { SpectrumDiagram } from '@/components/showroom/SpectrumDiagram';
+import { TechPillarGrid } from '@/components/showroom/TechPillarGrid';
+import { ProofStatBar } from '@/components/showroom/ProofStatBar';
+import { ProjectStrip } from '@/components/showroom/ProjectStrip';
+import { AskIrisProAI } from '@/components/workshop/AskIrisProAI';
+import SearchBar from '@/components/islands/SearchBar';
+import ModuleBrowser from '@/components/islands/ModuleBrowser';
+import ProductBrowser from '@/components/islands/ProductBrowser';
+import type { Section, SectionZone } from '@/types/sections';
+import type { SolutionKey } from '@/types/content';
+
+interface Props {
+  sections: Section[];
+  /** Zone applied when a section carries none. */
+  defaultZone?: SectionZone;
+  /** Threaded to every section (data may override); also set as CSS vars. */
+  accent?: SolutionKey;
+}
+
+const { sections, defaultZone = 'workshop-light', accent } = Astro.props;
+
+const ordered = [...sections].sort((a, b) => a.order - b.order);
+
+/* Group consecutive same-zone sections into one band so surfaces are
+   continuous and the zone transition happens exactly where the data says. */
+interface Band {
+  zone: SectionZone;
+  sections: Section[];
+}
+const bands: Band[] = [];
+for (const section of ordered) {
+  const zone = section.zone ?? defaultZone;
+  const last = bands[bands.length - 1];
+  if (last && last.zone === zone) last.sections.push(section);
+  else bands.push({ zone, sections: [section] });
+}
+
+const zoneAttr = (zone: SectionZone) =>
+  zone === 'showroom-dark' ? 'showroom' : 'workshop';
+
+const accentStyle = accent
+  ? `--accent-current: var(--accent-${accent}); --accent-current-text: var(--accent-${accent}-text); --accent-current-bright: var(--accent-${accent}-bright);`
+  : undefined;
+---
+
+<div style={accentStyle}>
+  {
+    bands.map((band) => (
+      <div data-zone={zoneAttr(band.zone)}>
+        {band.sections.map((section) => {
+          const entry = SECTION_REGISTRY[section.type];
+          if (!entry) {
+            return import.meta.env.DEV ? (
+              <div class="container section-band">
+                <p
+                  role="alert"
+                  style="border: 2px dashed var(--color-red); color: var(--color-red); padding: var(--space-6); font-weight: 600"
+                >
+                  [SectionRenderer] Unknown section type “{section.type}” (id:
+                  {section.id}) — not in SECTION_REGISTRY. This renders as
+                  NOTHING in production.
+                </p>
+              </div>
+            ) : null;
+          }
+
+          const Component = entry.component as any;
+          const props = { accent, ...section.data };
+
+          /* Hydrated types: literal branches (see header comment). */
+          const island =
+            entry.hydration === 'none' ? null : section.type === 'cinematic-hero' ? (
+              <CinematicHero client:visible {...(props as any)} />
+            ) : section.type === 'problem-card-grid' ? (
+              <ProblemCardGrid client:visible {...(props as any)} />
+            ) : section.type === 'priority-selector' ||
+              section.type === 'protection-level-selector' ? (
+              <PrioritySelector client:visible {...(props as any)} />
+            ) : section.type === 'spectrum-diagram' ? (
+              <SpectrumDiagram client:visible {...(props as any)} />
+            ) : section.type === 'tech-pillar-grid' ? (
+              <TechPillarGrid client:visible {...(props as any)} />
+            ) : section.type === 'proof-stat-bar' ? (
+              <ProofStatBar client:visible {...(props as any)} />
+            ) : section.type === 'project-strip' ? (
+              <ProjectStrip client:visible {...(props as any)} />
+            ) : section.type === 'ask-irispro-ai' ? (
+              <AskIrisProAI client:visible {...(props as any)} />
+            ) : section.type === 'search-bar' ? (
+              <SearchBar client:visible {...(props as any)} />
+            ) : section.type === 'module-browser' ? (
+              <ModuleBrowser client:visible {...(props as any)} />
+            ) : section.type === 'product-browser' ? (
+              <ProductBrowser client:visible {...(props as any)} />
+            ) : import.meta.env.DEV ? (
+              <p
+                role="alert"
+                style="border: 2px dashed var(--color-red); color: var(--color-red); padding: var(--space-6); font-weight: 600"
+              >
+                [SectionRenderer] “{section.type}” is registered as hydrated
+                but has no literal island branch — add one (renders static in
+                production).
+              </p>
+            ) : (
+              <Component {...props} />
+            );
+
+          const body = island ?? <Component {...props} />;
+
+          /* Stable anchor id on the wrapper; band chrome adds container +
+             rhythm, full chrome lets the component own its layout. */
+          return entry.chrome === 'band' ? (
+            <div id={section.id} class="section-band">
+              <div class="container">{body}</div>
+            </div>
+          ) : (
+            <div id={section.id} class="section-full">
+              {body}
+            </div>
+          );
+        })}
+      </div>
+    ))
+  }
+</div>

@@ -1,0 +1,16 @@
+---
+/**
+ * About — EditorialTemplate once `editorial/about` is authored (Stage 4);
+ * pending shell until then.
+ */
+import { getEntry } from 'astro:content';
+import EditorialTemplate from '@/templates/EditorialTemplate.astro';
+import PendingPage from '@/components/PendingPage.astro';
+import { PRIMARY_NAV } from '@/config/navigation';
+
+const entry = await getEntry('editorial', 'about');
+const label = PRIMARY_NAV.find((item) => item.href === '/about')?.label ?? 'About';
+const crumbs = [{ label: 'Home', href: '/' }, { label }];
+---
+
+{entry ? <EditorialTemplate content={entry.data} /> : <PendingPage title={label} crumbs={crumbs} />}

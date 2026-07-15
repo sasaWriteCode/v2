@@ -1,0 +1,38 @@
+{
+  "title": "Personal Protection Solutions",
+  "accent": "personal-protection",
+  "defaultZone": "showroom-dark",
+  "seo": {
+    "title": "Personal Protection Solutions",
+    "description": "UV+420 protection for healthy skin and eyes every day."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Protection Solutions",
+      "href": "/solutions"
+    },
+    {
+      "label": "Personal Protection Solutions"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "headlineLines": [
+          "Personal Protection Solutions"
+        ],
+        "subhead": "UV+420 protection for healthy skin and eyes every day.",
+        "accent": "personal-protection"
+      }
+    }
+  ],
+  "_status": "AWAITING SOURCE — the personal-protection screen was not in the Stage 4a screenshot batch. Only the home-page solution-card copy is transcribed (as the subhead); the interim h1 is the route title (launch audit B3); the real hero headline is still needed. NOTE: the home card labels this solution 'PERSONAL CARE' while the route/tokens say 'Personal Protection' — _conflicts.md §7."
+}

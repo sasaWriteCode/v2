@@ -1,0 +1,294 @@
+{
+  "title": "Projects",
+  "defaultZone": "showroom-dark",
+  "seo": {
+    "title": "Projects",
+    "description": "Trusted by thousands of customers for automotive, residential and commercial projects across Malaysia and ASEAN."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Projects"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "headlineLines": [
+          "Real Projects.",
+          "Real Protection."
+        ],
+        "subhead": "Trusted by thousands of customers for automotive, residential and commercial projects across Malaysia and ASEAN.",
+        "media": {
+          "src": "/placeholders/hero-1600x900.svg",
+          "alt": "Protected SUV, commercial glass building and luxury residence side by side",
+          "width": 1600,
+          "height": 900
+        }
+      }
+    },
+    {
+      "id": "featured-projects",
+      "type": "project-strip",
+      "order": 20,
+      "zone": "showroom-dark",
+      "label": "Featured Projects",
+      "data": {
+        "filters": true,
+        "scrollable": true,
+        "projects": [
+          {
+            "name": "Mercedes-Benz G63",
+            "location": "Kuala Lumpur",
+            "category": "Automotive",
+            "badge": {
+              "label": "Featured",
+              "tone": "featured"
+            },
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Mercedes-Benz G63 with IrisPro Titan X film",
+              "width": 560,
+              "height": 360
+            },
+            "productsUsed": [
+              "Titan X"
+            ],
+            "benefit": "Ultimate heat rejection · Maximum UV+420 protection · Enhanced driving comfort",
+            "cta": {
+              "label": "View Case Study",
+              "href": "#mercedes-benz-g63"
+            }
+          },
+          {
+            "name": "Luxury Bungalow",
+            "location": "Johor Bahru",
+            "category": "Residential",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Luxury bungalow with IrisPro RayPro 70 film",
+              "width": 560,
+              "height": 360
+            },
+            "productsUsed": [
+              "RayPro 70"
+            ],
+            "benefit": "Excellent heat rejection · Protects interiors from fading · Natural daylight & clarity",
+            "cta": {
+              "label": "View Case Study",
+              "href": "#luxury-bungalow"
+            }
+          },
+          {
+            "name": "Corporate Office",
+            "location": "Petaling Jaya",
+            "category": "Commercial",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Corporate office tower with IrisPro Diamond X film",
+              "width": 560,
+              "height": 360
+            },
+            "productsUsed": [
+              "Diamond X"
+            ],
+            "benefit": "Lower cooling cost · Improved employee comfort · Enhanced building efficiency",
+            "cta": {
+              "label": "View Case Study",
+              "href": "#corporate-office"
+            }
+          },
+          {
+            "name": "5 Star Hotel",
+            "location": "Langkawi",
+            "category": "Commercial",
+            "badge": {
+              "label": "Featured",
+              "tone": "featured"
+            },
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Five-star lakeside hotel with IrisPro Diamond film",
+              "width": 560,
+              "height": 360
+            },
+            "productsUsed": [
+              "Diamond"
+            ],
+            "benefit": "Consistent temperature control · Premium aesthetics · UV protection for guests",
+            "cta": {
+              "label": "View Case Study",
+              "href": "#5-star-hotel"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "in-action",
+      "type": "video-carousel",
+      "order": 30,
+      "zone": "workshop-light",
+      "label": "See IrisPro In Action",
+      "data": {
+        "heading": "See IrisPro In Action",
+        "lede": "Watch how IrisPro window films deliver real performance and real results.",
+        "videos": [
+          {
+            "title": "IrisPro Titan X Installation",
+            "moduleLabel": "G63 Transformation",
+            "duration": "4:32",
+            "href": "#video-titan-x-installation",
+            "poster": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Video: IrisPro Titan X installation on a Mercedes-Benz G63",
+              "width": 448,
+              "height": 252
+            }
+          },
+          {
+            "title": "Commercial Building",
+            "moduleLabel": "Heat Rejection Test",
+            "duration": "3:58",
+            "href": "#video-commercial-building",
+            "poster": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Video: commercial building heat rejection test",
+              "width": 448,
+              "height": 252
+            }
+          },
+          {
+            "title": "RayPro for Homes",
+            "moduleLabel": "Comfort All Year Round",
+            "duration": "5:04",
+            "href": "#video-raypro-homes",
+            "poster": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Video: RayPro residential film, comfort all year round",
+              "width": 448,
+              "height": 252
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "trusted-by-thousands",
+      "type": "proof-stat-bar",
+      "order": 40,
+      "zone": "showroom-dark",
+      "label": "Trusted by Thousands. Proven by Projects.",
+      "data": {
+        "stats": [
+          {
+            "value": "20,000+",
+            "label": "Vehicles Protected"
+          },
+          {
+            "value": "8,000+",
+            "label": "Homes Protected"
+          },
+          {
+            "value": "1,000+",
+            "label": "Commercial Buildings"
+          },
+          {
+            "value": "Across ASEAN",
+            "label": "Region Wide"
+          }
+        ]
+      }
+    },
+    {
+      "id": "project-in-mind",
+      "type": "cta-bar",
+      "order": 50,
+      "zone": "workshop-light",
+      "data": {
+        "headline": "Have a Project in Mind?",
+        "subhead": "Our experts are ready to help you choose the right IrisPro solution for your needs.",
+        "actions": [
+          {
+            "icon": "headset",
+            "title": "Request Consultation",
+            "cta": {
+              "label": "Request Consultation",
+              "href": "#consultation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "become-our-partner",
+      "type": "cta-bar",
+      "order": 60,
+      "zone": "workshop-light",
+      "data": {
+        "headline": "Become Our Partner",
+        "subhead": "Join our network of authorised dealers and grow with IrisPro.",
+        "actions": [
+          {
+            "icon": "handshake",
+            "title": "Partner With Us",
+            "cta": {
+              "label": "Partner With Us",
+              "href": "#partner"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "trust-strip",
+      "type": "certification-strip",
+      "order": 70,
+      "zone": "showroom-dark",
+      "data": {
+        "certs": [
+          {
+            "id": "uv420",
+            "name": "UV+420™",
+            "label": "Patented — Complete Protection"
+          },
+          {
+            "id": "hotmelt",
+            "name": "6-Layer Hotmelt™",
+            "label": "Long Lasting Performance"
+          },
+          {
+            "id": "sirim",
+            "name": "SIRIM",
+            "label": "Certified — Quality Assured"
+          },
+          {
+            "id": "sgs",
+            "name": "SGS",
+            "label": "Tested — International Standards"
+          }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the projects screen with no expressible section field. Preserved verbatim.",
+    "hero-toggle": "The hero carries an Automotive / Residential / Commercial toggle; the project strip's category filter chips express the same filtering, derived from project categories.",
+    "filter-row": "A filter row exists on screen (All Project Types / All Categories / All Series / All Locations / Search projects… / Reset). ProjectStrip supports category chips only; the fuller faceted filter is a candidate future enhancement — logged in the Stage 4b report, not authored.",
+    "featured-link": "View all projects",
+    "videos-ctas": [
+      "View All Videos on YouTube",
+      "View More Videos"
+    ],
+    "stats-lede": "From private vehicles to iconic buildings, IrisPro is the preferred window film across Malaysia and ASEAN.",
+    "stats-cta": "See All Projects",
+    "series-label": "Project cards read 'Series: Titan X' on screen; the ProjectStrip component renders the productsUsed list with a 'Films:' prefix — flagged, not changed (Stage 4 makes no component edits)."
+  }
+}

@@ -1,0 +1,557 @@
+{
+  "title": "Building Window Films",
+  "defaultZone": "workshop-light",
+  "seo": {
+    "title": "Building Window Films",
+    "description": "IrisPro building window films combine patented UV+420™ optical technology, 6-Layer Hotmelt™ base film and multi-layer sputter engineering to deliver unmatched heat rejection, comfort and durability."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Products", "href": "/products/automotive" },
+    { "label": "Building Window Films" }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "headlineLines": ["Advanced Protection", "for Every Glass Surface"],
+        "subhead": "IrisPro building window films combine patented UV+420™ optical technology, 6-Layer Hotmelt™ base film and multi-layer sputter engineering to deliver unmatched heat rejection, comfort and durability.",
+        "media": {
+          "src": "/placeholders/hero-1600x900.svg",
+          "alt": "Split view: a cool bright living room and a commercial glass tower, joined by the UV+420™ Complete Protection shield",
+          "width": 1600,
+          "height": 900
+        },
+        "comparison": {
+          "without": {
+            "label": "For Homes",
+            "points": [
+              "Stay Cooler. Live Better.",
+              "_verify",
+              "Protect Family",
+              "Save Energy"
+            ]
+          },
+          "with": {
+            "label": "For Commercial Buildings",
+            "points": [
+              "Improve Performance. Enhance Value.",
+              "Reduce Energy Cost",
+              "Enhance Comfort",
+              "Earn GBI Points"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "film-series",
+      "type": "product-browser",
+      "order": 20,
+      "zone": "workshop-light",
+      "label": "Our Building Window Film Series",
+      "data": {
+        "heading": "Our Building Window Film Series",
+        "fallbackAction": "/products/building",
+        "emptyLabel": "No films match the current filters. Clear a filter to see more.",
+        "filters": [],
+        "items": [
+          {
+            "product": {
+              "id": "titan-x",
+              "name": "Titan X",
+              "badge": "Signature Series",
+              "technology": "Multi Layer Silver Sputter",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Titan X building film on a glass tower",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "Thickness", "value": "3 mil" },
+                { "label": "IRR (1400nm)", "value": ">99%" },
+                { "label": "BLR (400–420nm)", "value": "99%" },
+                { "label": "TSER", "value": "Up to 84%" }
+              ],
+              "vltOptions": ["69%", "15%"],
+              "compareable": false,
+              "detailsHref": "#titan-x"
+            },
+            "facets": {}
+          },
+          {
+            "product": {
+              "id": "diamond",
+              "name": "Diamond",
+              "badge": "Signature Series",
+              "technology": "Multi Layer Titanium Sputter",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Diamond building film on a commercial façade",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "Thickness", "value": "3 – 3.5 mil" },
+                { "label": "IRR (1400nm)", "value": "98%" },
+                { "label": "BLR (400–420nm)", "value": "99%" },
+                { "label": "TSER", "value": "Up to 78%" }
+              ],
+              "vltOptions": ["65%", "_verify"],
+              "compareable": false,
+              "detailsHref": "#diamond"
+            },
+            "facets": {}
+          },
+          {
+            "product": {
+              "id": "raypro",
+              "name": "RayPro",
+              "badge": "Signature Series",
+              "technology": "Nano Titanium Sputter",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "RayPro building film on an office tower",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "Thickness", "value": "2 – 3.5 mil" },
+                { "label": "IRR (1400nm)", "value": "95%" },
+                { "label": "BLR (400–420nm)", "value": "99%" },
+                { "label": "TSER", "value": "Up to 78%" }
+              ],
+              "vltOptions": ["57%", "_verify", "72%", "76%"],
+              "compareable": false,
+              "detailsHref": "#raypro"
+            },
+            "facets": {}
+          },
+          {
+            "product": {
+              "id": "anti-fade-90",
+              "name": "Anti Fade 90",
+              "badge": "Signature Series",
+              "technology": "Nano Carbon Ceramic",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Anti Fade 90 building film in a seafront living room",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "Thickness", "value": "2 mil" },
+                { "label": "IRR (1400nm)", "value": "90%" },
+                { "label": "BLR (400–420nm)", "value": "99%" },
+                { "label": "TSER", "value": "Up to 76%" }
+              ],
+              "vltOptions": ["_verify", "60%", "71%", "76%"],
+              "compareable": false,
+              "detailsHref": "#anti-fade-90"
+            },
+            "facets": {}
+          },
+          {
+            "product": {
+              "id": "uv420-silver-black",
+              "name": "UV+420 Silver Black",
+              "badge": "Privacy + Heat Series",
+              "technology": "Aluminium",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "UV+420 Silver Black building film",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "Thickness", "value": "3 mil" },
+                { "label": "IRR (1400nm)", "value": "95%" },
+                { "label": "BLR (400–420nm)", "value": "99%" },
+                { "label": "TSER", "value": "8%" }
+              ],
+              "vltOptions": ["84%"],
+              "compareable": false,
+              "detailsHref": "#uv420-silver-black"
+            },
+            "facets": {}
+          },
+          {
+            "product": {
+              "id": "silver-black",
+              "name": "Silver Black",
+              "badge": "Privacy + Heat Series",
+              "technology": "Aluminium",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Silver Black building film on a residential block",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "Thickness", "value": "2 mil" },
+                { "label": "IRR (1400nm)", "value": "90%" },
+                { "label": "UVR (380nm)", "value": "99%" },
+                { "label": "TSER", "value": "15%" }
+              ],
+              "vltOptions": ["69%"],
+              "compareable": false,
+              "detailsHref": "#silver-black"
+            },
+            "facets": {}
+          },
+          {
+            "product": {
+              "id": "titanium-hr",
+              "name": "Titanium (HR)",
+              "badge": "Heat Rejection Series",
+              "technology": "Nano Titanium Sputter",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Titanium (HR) building film on an office block",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "Thickness", "value": "2 – 3.5 mil" },
+                { "label": "IRR (1400nm)", "value": "95%" },
+                { "label": "UVR (380nm)", "value": "99%" },
+                { "label": "TSER", "value": "Up to 70%" }
+              ],
+              "vltOptions": ["56%", "60%", "69%", "75%"],
+              "compareable": false,
+              "detailsHref": "#titanium-hr"
+            },
+            "facets": {}
+          },
+          {
+            "product": {
+              "id": "color-stable-cs",
+              "name": "Color Stable (CS)",
+              "badge": "Heat Rejection Series",
+              "technology": "Nano Carbon Ceramic",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Color Stable (CS) building film in a beachfront lounge",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "Thickness", "value": "2 mil" },
+                { "label": "IRR (1400nm)", "value": "90%" },
+                { "label": "UVR (380nm)", "value": "99%" },
+                { "label": "TSER", "value": "_verify" }
+              ],
+              "vltOptions": ["_verify", "58%", "66%", "72%", "_verify"],
+              "compareable": false,
+              "detailsHref": "#color-stable-cs"
+            },
+            "facets": {}
+          },
+          {
+            "product": {
+              "id": "cs-pro",
+              "name": "CS Pro",
+              "badge": "Heat Rejection Series",
+              "technology": "Nano Carbon Ceramic",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "CS Pro building film on a poolside residence",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "Thickness", "value": "2 mil" },
+                { "label": "IRR (1400nm)", "value": "_verify" },
+                { "label": "UVR (380nm)", "value": "99%" },
+                { "label": "TSER", "value": "Up to 60%" }
+              ],
+              "vltOptions": ["_verify", "_verify", "40%", "45%", "48%", "60%"],
+              "compareable": false,
+              "detailsHref": "#cs-pro"
+            },
+            "facets": {}
+          },
+          {
+            "product": {
+              "id": "vanguard",
+              "name": "Vanguard",
+              "badge": "Heat Rejection + Security",
+              "technology": "TPU Silver Sputter (External Use)",
+              "image": {
+                "src": "/placeholders/product-560x320.svg",
+                "alt": "Vanguard exterior security film on a commercial building",
+                "width": 560,
+                "height": 320
+              },
+              "specs": [
+                { "label": "Thickness", "value": "6.5 mil" },
+                { "label": "IRR (1400nm)", "value": "95%" },
+                { "label": "UVR (380nm)", "value": "99%" },
+                { "label": "TSER", "value": "Up to 70%" },
+                { "label": "Warranty", "value": "10 Years" }
+              ],
+              "vltOptions": ["56%"],
+              "compareable": false,
+              "detailsHref": "#vanguard"
+            },
+            "facets": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "choose-right-film",
+      "type": "series-comparison-table",
+      "order": 30,
+      "zone": "workshop-light",
+      "label": "Choose the Right Film for Your Needs",
+      "data": {
+        "caption": "Choose the Right Film for Your Needs",
+        "series": [
+          { "id": "signature", "name": "Signature Series" },
+          { "id": "heat-rejection", "name": "Heat Rejection Series" },
+          { "id": "privacy", "name": "Privacy Series" },
+          { "id": "security", "name": "Security Series" }
+        ],
+        "rows": [
+          {
+            "label": "Best For",
+            "values": {
+              "signature": "Premium Homes, Offices, Hotels",
+              "heat-rejection": "Homes, Offices, Factories",
+              "privacy": "Retail, Residences, Daytime Privacy",
+              "security": "Commercial Buildings, High Risk Areas"
+            }
+          },
+          {
+            "label": "Heat Rejection (IRR 1400nm)",
+            "values": {
+              "signature": "98% – >99%",
+              "heat-rejection": "90% – 95%",
+              "privacy": "90% – 95%",
+              "security": "95%"
+            }
+          },
+          {
+            "label": "Energy Savings (TSER)",
+            "values": {
+              "signature": "Up to 84%",
+              "heat-rejection": "Up to 78%",
+              "privacy": "8% – 15%",
+              "security": "Up to 70%"
+            }
+          },
+          {
+            "label": "Privacy",
+            "values": {
+              "signature": "3",
+              "heat-rejection": "2",
+              "privacy": "5",
+              "security": "2"
+            }
+          },
+          {
+            "label": "Durability",
+            "values": {
+              "signature": "4",
+              "heat-rejection": "4",
+              "privacy": "4",
+              "security": "4"
+            }
+          },
+          {
+            "label": "VLT Options",
+            "values": {
+              "signature": "Multiple",
+              "heat-rejection": "Multiple",
+              "privacy": "Single / Limited",
+              "security": "Single"
+            }
+          },
+          {
+            "label": "Warranty",
+            "values": {
+              "signature": "7 – 10 Years",
+              "heat-rejection": "5 – 7 Years",
+              "privacy": "5 Years",
+              "security": "5 Years"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "why-irispro",
+      "type": "tech-pillar-grid",
+      "order": 40,
+      "zone": "workshop-light",
+      "label": "Why IrisPro?",
+      "data": {
+        "columns": 5,
+        "pillars": [
+          {
+            "icon": "sun",
+            "title": "Patented UV+420™",
+            "description": "Complete UV & Blue Light Protection"
+          },
+          {
+            "icon": "layers",
+            "title": "6-Layer Hotmelt™",
+            "description": "Stronger, clearer & more durable"
+          },
+          {
+            "icon": "thermometer",
+            "title": "Multi-Layer Sputter",
+            "description": "Superior heat rejection"
+          },
+          {
+            "icon": "award",
+            "title": "SIRIM Certified Grade A1",
+            "description": "Quality you can trust"
+          },
+          {
+            "icon": "document",
+            "title": "eWarranty",
+            "description": "Up to 10 Years Performance Warranty"
+          }
+        ]
+      }
+    },
+    {
+      "id": "real-projects",
+      "type": "project-strip",
+      "order": 50,
+      "zone": "workshop-light",
+      "label": "Real Projects. Real Impact.",
+      "data": {
+        "filters": false,
+        "scrollable": true,
+        "projects": [
+          {
+            "name": "OCBC Bank Tower",
+            "location": "Kuala Lumpur",
+            "category": "Commercial",
+            "badge": { "label": "Achieved 4 GBI Points", "tone": "achievement" },
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "OCBC Bank Tower, Kuala Lumpur",
+              "width": 560,
+              "height": 360
+            },
+            "cta": { "label": "View Case Study", "href": "#ocbc-bank-tower" }
+          },
+          {
+            "name": "Putrajaya Project",
+            "location": "Government Complex",
+            "category": "Government",
+            "badge": { "label": "In Progress", "tone": "progress" },
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Putrajaya Project government complex",
+              "width": 560,
+              "height": 360
+            },
+            "cta": { "label": "View Case Study", "href": "#putrajaya-project" }
+          },
+          {
+            "name": "KPJ Healthcare",
+            "location": "Hospital",
+            "category": "Healthcare",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "KPJ Healthcare hospital building",
+              "width": 560,
+              "height": 360
+            },
+            "cta": { "label": "View Case Study", "href": "#kpj-healthcare" }
+          },
+          {
+            "name": "Luxury Hotel",
+            "location": "Kuala Lumpur",
+            "category": "Hospitality",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Luxury hotel, Kuala Lumpur",
+              "width": 560,
+              "height": 360
+            },
+            "cta": { "label": "View Case Study", "href": "#luxury-hotel" }
+          },
+          {
+            "name": "Subang Airport",
+            "location": "Malaysia",
+            "category": "Transport",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Subang Airport terminal glazing",
+              "width": 560,
+              "height": 360
+            },
+            "cta": { "label": "View Case Study", "href": "#subang-airport" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "one-technology",
+      "type": "tech-pillar-grid",
+      "order": 60,
+      "zone": "showroom-dark",
+      "label": "One Technology. Complete Protection.",
+      "data": {
+        "columns": 5,
+        "pillars": [
+          { "icon": "sun", "title": "Blocks UV400 & HEV Blue Light", "description": "" },
+          { "icon": "thermometer", "title": "Superior Heat Rejection", "description": "" },
+          { "icon": "bolt", "title": "Reduces Energy Cost", "description": "" },
+          { "icon": "users", "title": "Enhances Comfort & Productivity", "description": "" },
+          { "icon": "leaf", "title": "Sustainable Building Choice", "description": "" }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta-bar",
+      "order": 70,
+      "zone": "showroom-dark",
+      "data": {
+        "headline": "One Technology. Complete Protection.",
+        "subhead": "From your home to your office, IrisPro protects every glass surface that matters.",
+        "actions": [
+          {
+            "icon": "headset",
+            "title": "Talk to Our Expert",
+            "cta": { "label": "Talk to Our Expert", "href": "#consultation" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "certifications",
+      "type": "certification-strip",
+      "order": 80,
+      "zone": "workshop-light",
+      "data": {
+        "certs": [
+          { "id": "sirim", "name": "SIRIM", "label": "Certified" },
+          { "id": "sgs", "name": "SGS", "label": "Tested & Verified" },
+          { "id": "iso", "name": "ISO", "label": "9001:2015 Quality Management" },
+          { "id": "gbi", "name": "GBI", "label": "Green Building Contribution" },
+          { "id": "iwfa", "name": "IWFA", "label": "Installation Standard" },
+          { "id": "ewarranty", "name": "eWarranty", "label": "Up to 10 Years Performance Warranty" }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the building products screen with no expressible section field. Preserved verbatim.",
+    "hero-split": "The hero is a split dual-audience layout: 'For Homes — Stay Cooler. Live Better.' and 'For Commercial Buildings — Improve Performance. Enhance Value.' with a central UV+420™ COMPLETE PROTECTION shield. The schema has one h1, so the intro band heading is the h1 and the two audience panels are expressed via the hero comparison field; the shield badge is unexpressed.",
+    "series-table-orientation": "On screen the comparison table lists series as rows and attributes as columns; the schema's table renders series as columns and attributes as rows — pure transposition, all values preserved. Privacy and Durability rows are the screen's star ratings as integers.",
+    "compare-suppressed": "Building cards show no compare checkboxes on screen; every item carries compareable: false.",
+    "thickness-label": "The mil chips are unlabelled on screen; the spec label 'Thickness' is the only added word."
+  }
+}

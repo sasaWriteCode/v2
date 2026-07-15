@@ -1,0 +1,283 @@
+{
+  "title": "Home",
+  "defaultZone": "showroom-dark",
+  "seo": {
+    "title": "The Best Tint for ASEAN",
+    "description": "Protecting People, Property and Our Future through Advanced Optical Technology."
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "headlineLines": ["Advanced Protection", "Engineered for ASEAN Climate"],
+        "subhead": "Protecting People, Property and Our Future through Advanced Optical Technology.",
+        "ctas": [
+          { "label": "Explore Solutions", "href": "/solutions", "variant": "primary" },
+          { "label": "Watch Video", "href": "#video", "variant": "secondary" }
+        ],
+        "media": {
+          "src": "/placeholders/hero-1600x900.svg",
+          "alt": "Collage of a protected car, a modern glass building and a woman enjoying sunlight safely",
+          "width": 1600,
+          "height": 900
+        }
+      }
+    },
+    {
+      "id": "choose-your-solution",
+      "type": "category-grid",
+      "order": 20,
+      "zone": "showroom-dark",
+      "label": "Choose Your Solution",
+      "data": {
+        "heading": "Choose Your Solution",
+        "categories": [
+          {
+            "icon": "car",
+            "title": "Automotive",
+            "description": "Cooler drives, superior protection and enhanced driving comfort.",
+            "href": "/solutions/automotive"
+          },
+          {
+            "icon": "home",
+            "title": "Residential",
+            "description": "More comfortable living, lower energy bills and protection for your family.",
+            "href": "/solutions/residential"
+          },
+          {
+            "icon": "building",
+            "title": "Commercial",
+            "description": "Improve comfort, increase productivity and achieve your ESG goals.",
+            "href": "/solutions/commercial"
+          },
+          {
+            "icon": "person",
+            "title": "Personal Care",
+            "description": "UV+420 protection for healthy skin and eyes every day.",
+            "href": "/solutions/personal-protection"
+          },
+          {
+            "icon": "leaf",
+            "title": "Sustainability",
+            "description": "Reduce energy consumption and protect our environment.",
+            "href": "/solutions/sustainability"
+          }
+        ]
+      }
+    },
+    {
+      "id": "protection-philosophy",
+      "type": "tech-pillar-grid",
+      "order": 30,
+      "zone": "workshop-light",
+      "label": "The IrisPro Protection Philosophy",
+      "data": {
+        "columns": 4,
+        "pillars": [
+          {
+            "icon": "users",
+            "title": "Protect People",
+            "description": "Blocks harmful UV+420, reduces heat and protects the health of your family, skin and eyes."
+          },
+          {
+            "icon": "shield",
+            "title": "Protect Property",
+            "description": "Prevents fading, cracks and damage to vehicles, interiors, furniture and valuable assets."
+          },
+          {
+            "icon": "bolt",
+            "title": "Save Energy",
+            "description": "Reduces heat gain and lowers air-conditioning usage, saving energy and costs."
+          },
+          {
+            "icon": "leaf",
+            "title": "Protect Our Future",
+            "description": "Lower energy usage means reduced carbon emissions and a better planet for generations."
+          }
+        ]
+      }
+    },
+    {
+      "id": "optical-technology",
+      "type": "tech-pillar-grid",
+      "order": 40,
+      "zone": "showroom-dark",
+      "label": "Powered by Advanced Optical Technology",
+      "data": {
+        "columns": 5,
+        "pillars": [
+          {
+            "icon": "sun",
+            "title": "Patent UV+420™",
+            "description": "Beyond UV400. Comprehensive protection against UVB, UVA, UVA1 and Blue Light (HEV).",
+            "link": { "label": "Learn More", "href": "/technologies" }
+          },
+          {
+            "icon": "layers",
+            "title": "6-Layer Hotmelt™",
+            "description": "Stronger, more durable adhesion for long-lasting performance in extreme ASEAN climate.",
+            "link": { "label": "Learn More", "href": "/technologies" }
+          },
+          {
+            "icon": "thermometer",
+            "title": "Multi-Layer Sputtering",
+            "description": "Advanced heat rejection technology without interfering with your signal and visibility.",
+            "link": { "label": "Learn More", "href": "/technologies" }
+          },
+          {
+            "icon": "document",
+            "title": "Rigorous Testing",
+            "description": "Tested to international standards for optical performance, durability and safety.",
+            "link": { "label": "Learn More", "href": "/technologies" }
+          },
+          {
+            "icon": "award",
+            "title": "Performance Warranty",
+            "description": "Backed by our industry-leading warranty for your total peace of mind.",
+            "link": { "label": "Learn More", "href": "/technologies" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "our-projects",
+      "type": "project-strip",
+      "order": 50,
+      "zone": "showroom-dark",
+      "label": "Our Projects",
+      "data": {
+        "filters": true,
+        "scrollable": true,
+        "projects": [
+          {
+            "name": "Porsche 911",
+            "location": "Kuala Lumpur",
+            "category": "Automotive",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Porsche 911 with IrisPro film",
+              "width": 560,
+              "height": 360
+            }
+          },
+          {
+            "name": "Luxury Residence",
+            "location": "Johor Bahru",
+            "category": "Residential",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Luxury residence glazing",
+              "width": 560,
+              "height": 360
+            }
+          },
+          {
+            "name": "Menara Office Tower",
+            "location": "Kuala Lumpur",
+            "category": "Commercial",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Menara office tower façade",
+              "width": 560,
+              "height": 360
+            }
+          },
+          {
+            "name": "Sunway Medical Centre",
+            "location": "Selangor",
+            "category": "Healthcare",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Sunway Medical Centre",
+              "width": 560,
+              "height": 360
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "customers",
+      "type": "testimonial-panel",
+      "order": 60,
+      "zone": "workshop-light",
+      "label": "What Our Customers Say",
+      "data": {
+        "heading": "What Our Customers Say",
+        "lede": "4.9 — Based on 2,500+ reviews",
+        "testimonials": [
+          {
+            "quote": "Huge difference in heat rejection. My car cools down faster and the interior is well protected. Worth every ringgit!",
+            "author": "Ahmad R.",
+            "context": "Kuala Lumpur",
+            "rating": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "trusted-by",
+      "type": "certification-strip",
+      "order": 70,
+      "zone": "workshop-light",
+      "label": "Trusted By",
+      "data": {
+        "heading": "Trusted By",
+        "certs": [
+          { "id": "porsche", "name": "Porsche", "label": "" },
+          { "id": "petronas", "name": "Petronas", "label": "" },
+          { "id": "sunway", "name": "Sunway", "label": "" },
+          { "id": "ijm", "name": "IJM", "label": "" },
+          { "id": "uem-sunrise", "name": "UEM Sunrise", "label": "" },
+          { "id": "kpj", "name": "KPJ", "label": "" },
+          { "id": "gamuda", "name": "Gamuda", "label": "" }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta-bar",
+      "order": 80,
+      "zone": "showroom-dark",
+      "data": {
+        "headline": "",
+        "actions": [
+          {
+            "icon": "pin",
+            "title": "Find A Dealer",
+            "description": "Locate our authorized dealers near you.",
+            "cta": { "label": "Locate Now", "href": "#dealers" }
+          },
+          {
+            "icon": "document",
+            "title": "Request Consultation",
+            "description": "Get expert advice for your needs.",
+            "cta": { "label": "Request Now", "href": "#consultation" }
+          },
+          {
+            "icon": "handshake",
+            "title": "Become A Dealer",
+            "description": "Join our network and grow with IrisPro.",
+            "cta": { "label": "Find Out More", "href": "#become-a-dealer" }
+          },
+          {
+            "icon": "headset",
+            "title": "Technical Support",
+            "description": "We're here to help. Contact us anytime.",
+            "cta": { "label": "Contact Us", "href": "#support" }
+          }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the home screen with no expressible section field. Preserved for the client / a future section type.",
+    "our-projects-lede": "Trusted by thousands across ASEAN.",
+    "our-projects-link": "View All Projects",
+    "projects-hospitality-tab": "The screen shows a 'Hospitality' filter tab, but no hospitality project card is visible in the carousel — the project it implies could not be transcribed.",
+    "cta-headline": "The home CTA band has no headline on screen; the schema requires one, so it is set to an empty string."
+  }
+}

@@ -1,0 +1,162 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   IRISPRO V2 — STAGE 2 PRIMITIVE STYLES
+   Only what Tailwind utilities can't express cleanly: the sticky comparison
+   column, native snap strips, spectrum ray staggering, and stateful controls.
+   All motion here is opacity/transform and rides the Stage 1 tier knobs.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Native horizontal snap strip (ProjectStrip, mobile tables) ──
+   Native scroll only — no JS carousel, touch is never intercepted. */
+.snap-strip {
+  display: flex;
+  gap: var(--space-4);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  padding-bottom: var(--space-3); /* keep scrollbar off content */
+  scrollbar-width: thin;
+}
+.snap-strip > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* ── SeriesComparisonTable: sticky first column + scroll affordance ── */
+.comparison-scroller {
+  position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+.comparison-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 40rem; /* forces scroll instead of crushing columns */
+}
+.comparison-table th[scope='row'],
+.comparison-table thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--surface-base);
+  text-align: left;
+  /* edge shadow so the sticky column reads as a layer while scrolled */
+  box-shadow: 1px 0 0 var(--border-subtle);
+}
+.comparison-table th,
+.comparison-table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+}
+.comparison-table tbody tr:last-child th,
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.comparison-table [data-highlighted='true'] {
+  background: var(--color-red-tint);
+}
+[data-zone='showroom'] .comparison-table [data-highlighted='true'] {
+  background: rgba(210, 15, 24, 0.12);
+}
+[data-zone='showroom'] .comparison-table th[scope='row'],
+[data-zone='showroom'] .comparison-table thead th:first-child {
+  background: var(--surface-raised);
+}
+/* Visible scroll affordance (hidden once at the end via JS-free trick is not
+   possible — keep it always-on and subtle). */
+.comparison-hint {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-1);
+  color: var(--text-muted);
+  padding: var(--space-2) var(--space-1) 0;
+}
+@media (min-width: 768px) {
+  .comparison-table { min-width: 0; }
+}
+
+/* ── SpectrumDiagram: staggered ray draw-in ──
+   Rides the standard Reveal state. No data-enhanced → fully drawn (no-JS,
+   crawlers). TIER_0 → --motion-scale 0 / duration 0 → instant + no shift. */
+.spectrum-ray {
+  transition:
+    opacity var(--motion-duration) var(--ease-decelerate),
+    transform var(--motion-duration) var(--ease-cinematic);
+  transition-delay: calc(var(--ray-index, 0) * 140ms * var(--motion-scale));
+}
+html[data-enhanced] .reveal:not(.is-revealed) .spectrum-ray {
+  opacity: 0;
+  transform: translate3d(calc(-16px * var(--motion-scale)), 0, 0);
+}
+
+/* ── PrioritySelector ── */
+.priority-option {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-3);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  cursor: pointer;
+  text-align: center;
+  transition:
+    transform var(--duration-fast) var(--ease-decelerate),
+    border-color var(--duration-fast) var(--ease-standard);
+}
+.priority-option:hover {
+  transform: translateY(calc(-2px * var(--motion-scale)));
+  border-color: var(--border-strong);
+}
+.priority-option[aria-pressed='true'] {
+  border-color: var(--color-red);
+  box-shadow: inset 0 0 0 1px var(--color-red);
+}
+/* Recommendations: all in the DOM at load. Only once JS is enhancing do we
+   collapse the non-selected ones — no JS means every recommendation reads. */
+html[data-enhanced] .priority-recommendation[data-active='false'] {
+  display: none;
+}
+
+/* ── Badges & chips ── */
+.badge {
+  display: inline-block;
+  padding: 0.125rem var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-overline);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+.badge-brand { background: var(--color-red); color: var(--color-white); }
+.badge-neutral { background: var(--color-neutral-750); color: var(--color-white); }
+.badge-progress { background: var(--data-warning); color: var(--color-black); }
+.badge-achievement { background: var(--data-positive-text); color: var(--color-white); }
+
+.chip {
+  display: inline-block;
+  padding: 0.125rem var(--space-2);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-caption);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── GuideChapterList disclosure ── */
+.guide-chapter summary {
+  list-style: none;
+  cursor: pointer;
+}
+.guide-chapter summary::-webkit-details-marker { display: none; }
+.guide-chapter .guide-caret {
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+.guide-chapter[open] .guide-caret {
+  transform: rotate(90deg);
+}

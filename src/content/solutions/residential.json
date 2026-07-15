@@ -1,0 +1,487 @@
+{
+  "title": "Residential Solutions",
+  "accent": "residential",
+  "defaultZone": "showroom-dark",
+  "seo": {
+    "title": "Residential Solutions",
+    "description": "A cooler, healthier and more comfortable home for the people who matter most. IrisPro window films are engineered for ASEAN climates to reduce heat, block harmful UV & HEV Blue Light, protect your interiors and help you save on electricity bills."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Protection Solutions", "href": "/solutions" },
+    { "label": "Residential Solutions" }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "headlineLines": ["Complete Protection", "for Your Home"],
+        "subhead": "A cooler, healthier and more comfortable home for the people who matter most. IrisPro window films are engineered for ASEAN climates to reduce heat, block harmful UV & HEV Blue Light, protect your interiors and help you save on electricity bills.",
+        "benefits": [
+          { "icon": "thermometer", "label": "Cooler Home" },
+          { "icon": "wallet", "label": "Lower Bills" },
+          { "icon": "shield", "label": "Protect Interiors" },
+          { "icon": "person", "label": "Healthier Living" }
+        ],
+        "ctas": [
+          { "label": "Find My Perfect Solution", "href": "#priority-selector", "variant": "primary" },
+          { "label": "Explore Film Series", "href": "#series", "variant": "secondary" }
+        ],
+        "media": {
+          "src": "/placeholders/hero-1600x900.svg",
+          "alt": "Bright living room by floor-to-ceiling windows, comfortable in daylight with IrisPro film",
+          "width": 1600,
+          "height": 900
+        },
+        "accent": "residential",
+        "comparison": {
+          "without": {
+            "label": "Without IrisPro",
+            "points": ["Hot & Uncomfortable"]
+          },
+          "with": {
+            "label": "With IrisPro",
+            "points": ["Cooler & Comfortable", "Fully Protected"]
+          }
+        }
+      }
+    },
+    {
+      "id": "why-protection-matters",
+      "type": "problem-card-grid",
+      "order": 20,
+      "zone": "showroom-dark",
+      "label": "Why Home Protection Matters",
+      "data": {
+        "columns": 3,
+        "cards": [
+          {
+            "icon": "sun",
+            "title": "Excessive Heat",
+            "description": "Sunlight heats up your home, making it uncomfortable."
+          },
+          {
+            "icon": "eye",
+            "title": "Harmful UV & HEV Blue Light",
+            "description": "Daily exposure affects your skin, eyes and overall well-being."
+          },
+          {
+            "icon": "home",
+            "title": "Interior Fading",
+            "description": "Furniture, flooring, curtains and artwork fade faster under UV exposure."
+          },
+          {
+            "icon": "snowflake",
+            "title": "High Energy Bills",
+            "description": "More heat entering your home means higher air-conditioning usage."
+          },
+          {
+            "icon": "star",
+            "title": "Indoor Comfort",
+            "description": "Reduce glare and hot spots for a more pleasant living space."
+          },
+          {
+            "icon": "users",
+            "title": "Family & Kids Protection",
+            "description": "Keep your loved ones safe from harmful UV & HEV exposure."
+          }
+        ]
+      }
+    },
+    {
+      "id": "priority-selector",
+      "type": "priority-selector",
+      "order": 30,
+      "zone": "showroom-dark",
+      "label": "What Matters Most To You?",
+      "data": {
+        "legend": "What Matters Most To You?",
+        "hint": "Click on the option above to get a recommended IrisPro solution that fits your needs.",
+        "options": [
+          {
+            "id": "too-hot",
+            "icon": "thermometer",
+            "label": "My Home Is Too Hot",
+            "recommendation": { "title": "_verify", "body": "_verify" }
+          },
+          {
+            "id": "electricity-bills",
+            "icon": "wallet",
+            "label": "Lower My Electricity Bills",
+            "accent": "sustainability",
+            "recommendation": { "title": "_verify", "body": "_verify" }
+          },
+          {
+            "id": "family",
+            "icon": "eye",
+            "label": "Protect My Family (Skin & Eyes)",
+            "accent": "personal-protection",
+            "recommendation": { "title": "_verify", "body": "_verify" }
+          },
+          {
+            "id": "furniture-interior",
+            "icon": "shield",
+            "label": "Protect My Furniture & Interior",
+            "recommendation": { "title": "_verify", "body": "_verify" }
+          },
+          {
+            "id": "comfort-glare",
+            "icon": "sun",
+            "label": "More Comfort & Less Glare",
+            "accent": "commercial",
+            "recommendation": { "title": "_verify", "body": "_verify" }
+          },
+          {
+            "id": "value",
+            "icon": "star",
+            "label": "Best Overall Value",
+            "recommendation": { "title": "_verify", "body": "_verify" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "how-heat-enters",
+      "type": "proof-stat-bar",
+      "order": 40,
+      "zone": "showroom-dark",
+      "label": "How Heat Enters Your Home",
+      "data": {
+        "stats": [
+          {
+            "value": "Up to 87",
+            "unit": "%",
+            "label": "of heat enters through windows & glass doors",
+            "footnote": "Source: Lawrence Berkeley National Laboratory (LBNL). Windows are the biggest contributor to indoor heat gain."
+          },
+          { "value": "53", "unit": "%", "label": "Infrared Heat (IR)" },
+          { "value": "30", "unit": "%", "label": "Visible Light (VLT)" },
+          { "value": "17", "unit": "%", "label": "UV & HEV" }
+        ]
+      }
+    },
+    {
+      "id": "how-irispro-solves",
+      "type": "tech-pillar-grid",
+      "order": 50,
+      "zone": "showroom-dark",
+      "label": "How IrisPro Solves the Problem",
+      "data": {
+        "columns": 4,
+        "pillars": [
+          {
+            "icon": "sun",
+            "title": "UV+420™ Optical Technology",
+            "description": "Blocks UVA, UVB & HEV Blue Light (380–420nm) for complete protection."
+          },
+          {
+            "icon": "layers",
+            "title": "6-Layer Hotmelt™ Technology",
+            "description": "Patented 6-layer structure for superior durability and long-term performance."
+          },
+          {
+            "icon": "thermometer",
+            "title": "Multi-layer Sputtering",
+            "description": "Reflects up to 98% of solar heat (1400nm) for maximum heat rejection."
+          },
+          {
+            "icon": "check",
+            "title": "Professional Installation",
+            "description": "Expert installation for maximum performance and warranty support."
+          }
+        ]
+      }
+    },
+    {
+      "id": "series",
+      "type": "series-card-set",
+      "order": 60,
+      "zone": "workshop-light",
+      "label": "Which Film Series Is Right for Your Home?",
+      "data": {
+        "heading": "Which Film Series Is Right for Your Home?",
+        "cards": [
+          {
+            "id": "comfort",
+            "name": "Comfort Series",
+            "tagline": "Great Comfort. Great Value.",
+            "accent": "sustainability",
+            "badge": "BEST VALUE",
+            "description": "Best for: Daily homes · Small to medium windows · Best value & comfort",
+            "features": [
+              "UV+420™ Protection",
+              "IRR up to 90%",
+              "6-Layer Hotmelt™ Technology",
+              "SIRIM Certified Grade A",
+              "5 Years Performance Warranty"
+            ],
+            "cta": { "label": "View Comfort Series", "href": "/products/building?series=comfort" }
+          },
+          {
+            "id": "plus",
+            "name": "Plus Series",
+            "tagline": "Enhanced Comfort. Better Performance.",
+            "accent": "commercial",
+            "badge": "RECOMMENDED",
+            "description": "Best for: Bigger homes · West-facing windows · Lower energy bills",
+            "features": [
+              "UV+420™ Protection",
+              "IRR up to 95% (1400nm)",
+              "6-Layer Hotmelt™ + Titanium Sputter",
+              "SIRIM Certified Grade A",
+              "7 Years Performance Warranty"
+            ],
+            "cta": { "label": "View Plus Series", "href": "/products/building?series=plus" }
+          },
+          {
+            "id": "signature",
+            "name": "Signature Series",
+            "tagline": "Maximum Performance. Ultimate Protection.",
+            "accent": "residential",
+            "badge": "PREMIUM CHOICE",
+            "description": "Best for: Luxury homes · Maximum heat rejection · Premium choice",
+            "features": [
+              "UV+420™ Protection",
+              "IRR up to 98% (1400nm)",
+              "6-Layer Hotmelt™ + Multi-layer Sputter",
+              "SIRIM Certified Grade A",
+              "10 Years Performance Warranty"
+            ],
+            "cta": { "label": "View Signature Series", "href": "/products/building?series=signature" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "why-homeowners-choose",
+      "type": "tech-pillar-grid",
+      "order": 70,
+      "zone": "workshop-light",
+      "label": "Why Homeowners Choose IrisPro",
+      "data": {
+        "columns": 6,
+        "pillars": [
+          {
+            "icon": "thermometer",
+            "title": "Cooler Home",
+            "description": "Up to 10°C* cooler indoors"
+          },
+          {
+            "icon": "wallet",
+            "title": "Lower Electricity Bills",
+            "description": "Up to 30%* energy saving"
+          },
+          {
+            "icon": "sun",
+            "title": "Blocks 99.9% UV400",
+            "description": "Protects skin & eyes"
+          },
+          {
+            "icon": "shield",
+            "title": "Protects Interiors",
+            "description": "Reduces fading & extends lifespan"
+          },
+          {
+            "icon": "eye",
+            "title": "Enhances Privacy",
+            "description": "Daytime privacy without blocking view"
+          },
+          {
+            "icon": "award",
+            "title": "Long Lasting",
+            "description": "Up to 10 years warranty"
+          }
+        ]
+      }
+    },
+    {
+      "id": "trusted-by-homes",
+      "type": "testimonial-panel",
+      "order": 80,
+      "zone": "workshop-light",
+      "label": "Trusted by Thousands of Homes",
+      "data": {
+        "heading": "Trusted by Thousands of Homes",
+        "lede": "From landed houses to high-rise residences. We protect what matters most. 4.9/5 — based on verified customer reviews.",
+        "testimonials": []
+      }
+    },
+    {
+      "id": "certifications",
+      "type": "certification-strip",
+      "order": 90,
+      "zone": "workshop-light",
+      "data": {
+        "heading": "Backed by Certifications You Can Trust",
+        "certs": [
+          { "id": "sirim", "name": "SIRIM", "label": "Grade A" },
+          { "id": "sgs", "name": "SGS", "label": "Tested" },
+          { "id": "rohs", "name": "RoHS", "label": "Compliant" },
+          { "id": "reach", "name": "REACH", "label": "Compliant" },
+          { "id": "warranty-10", "name": "10 Years", "label": "_verify" }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta-bar",
+      "order": 100,
+      "zone": "workshop-light",
+      "data": {
+        "headline": "Ready to Transform Your Home?",
+        "subhead": "Talk to our experts and get a personalized recommendation for your home.",
+        "actions": [
+          {
+            "icon": "pin",
+            "title": "Find a Dealer Near You",
+            "description": "Locate an IrisPro dealer near your location.",
+            "cta": { "label": "Find a Dealer", "href": "#dealers" }
+          },
+          {
+            "icon": "headset",
+            "title": "Request Consultation",
+            "description": "Get expert advice. Our experts will recommend the best solution for you.",
+            "cta": { "label": "Request Consultation", "href": "#consultation" }
+          },
+          {
+            "icon": "chat",
+            "title": "WhatsApp Us",
+            "description": "Quick & easy. Chat with us for quick assistance and inquiries.",
+            "cta": { "label": "WhatsApp Us", "href": "#whatsapp" }
+          },
+          {
+            "icon": "document",
+            "title": "Download Brochure",
+            "description": "Product details & performance data.",
+            "cta": { "label": "Download Brochure", "href": "#brochure" }
+          }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the canonical screen with no expressible section field. Preserved for the client / a future section type.",
+    "how-irispro-solves-intro": "IrisPro advanced window films block heat, UV & HEV at the source, keeping your home cooler, protecting your interior and reducing energy consumption.",
+    "why-homeowners-footnote": "*Results may vary based on film type, window size, orientation, building design and usage.",
+    "hero-standfirst-note": "The hero shows two paragraphs ('A cooler, healthier…' as a standfirst, then the longer paragraph); the schema has a single subhead string, so they are joined with a space."
+  },
+  "_alternates": {
+    "note": "Second residential screen ('Comfort Living. Better Protection. Smarter Choice.'). NOT rendered — see _conflicts.md §16. Client must rule which variant is canonical.",
+    "hero": {
+      "eyebrow": "Residential Solution",
+      "headlineLines": ["Comfort Living.", "Better Protection.", "Smarter Choice."],
+      "subhead": "IrisPro residential window films are engineered for ASEAN climate to keep your home cooler, protect your family, reduce energy bills and preserve the beauty of your interiors.",
+      "benefits": [
+        { "label": "Cooler Home" },
+        { "label": "UV+420™ Protection" },
+        { "label": "Save Energy & Lower Bills" },
+        { "label": "Protect Interiors" },
+        { "label": "Enhance Home Value" }
+      ],
+      "ctas": [
+        { "label": "Explore Film Series", "variant": "primary" },
+        { "label": "Find a Dealer", "variant": "secondary" }
+      ],
+      "hero-stat-overlay": [
+        "Blocks up to 98% Total Solar Energy",
+        "Blocks up to 99.9% UV400",
+        "Up to 10°C Heat Reduction*"
+      ]
+    },
+    "cert-chip-row": [
+      "SIRIM Certified Grade A1 (_verify — may read 'Grade A')",
+      "Up to 10 Years Performance Warranty",
+      "SGS Tested REACH, RoHS, VOC",
+      "eWarranty Registration",
+      "Professional Installation"
+    ],
+    "benefits": {
+      "heading": "The Benefits of Residential Window Films",
+      "cards": [
+        { "title": "Comfort Living", "description": "Reduces heat and glare, maintains a cooler indoor environment all day long." },
+        { "title": "Protect Your Family", "description": "Blocks harmful UV+420, protects skin and eyes, especially for children and the elderly." },
+        { "title": "Protect Interiors", "description": "Prevents fading, cracking and discoloration of furniture, curtains, flooring and artwork." },
+        { "title": "Save Energy & Lower Bills", "description": "Less heat means less air-conditioning usage and lower electricity bills." },
+        { "title": "Enhance Home Value", "description": "Improves overall comfort, aesthetics and long-term property value." }
+      ]
+    },
+    "series": {
+      "heading": "IrisPro Residential Film Series",
+      "cards": [
+        {
+          "name": "Comfort Series",
+          "tagline": "Everyday Comfort",
+          "features": ["6-Layer Hotmelt™", "UV+420™ Protection", "IRR up to 90%", "SIRIM Certified Grade A1 (_verify)", "5 Years Performance Warranty"],
+          "vltOptions": "70% / 50% / 35% / 20%"
+        },
+        {
+          "name": "Plus Series",
+          "tagline": "Enhanced Performance",
+          "features": ["6-Layer Hotmelt™", "Multi-Layer Titanium Sputter", "UV+420™ Protection", "IRR up to 95%", "SIRIM Certified Grade A1 (_verify)", "7 Years Performance Warranty"],
+          "vltOptions": "70% / 50% / 35% / 20%"
+        },
+        {
+          "name": "Signature Series",
+          "tagline": "Ultimate Protection",
+          "features": ["6-Layer Hotmelt™", "Multi-Layer Silver Sputter", "UV+420™ Protection", "IRR up to 98%", "SIRIM Certified Grade A1 (_verify)", "10 Years Performance Warranty"],
+          "vltOptions": "70% / 50% / 35% / 20%"
+        },
+        {
+          "name": "Specialty Series",
+          "tagline": "Tailored Solutions",
+          "features": ["High Heat Rejection", "High Privacy", "Decorative & Safety Films", "Low Reflectivity", "Custom Solutions"],
+          "cta": "View All Specifications"
+        }
+      ]
+    },
+    "why-uv420-matters": {
+      "heading": "Why UV+420™ Matters at Home",
+      "body": "UV+420™ blocks not only UVA/UVB but also harmful Blue Light (HEV) that penetrates deeper into skin and eyes.",
+      "spectrum": ["UV 100–400nm", "Visible Light 400–780nm", "Infrared 780–2500nm"],
+      "annotations": [
+        { "title": "UV+420™ Protection", "description": "Blocks Harmful UV & Blue Light" },
+        { "title": "High Heat Rejection", "description": "Rejects up to 98% of total solar energy" },
+        { "title": "Clear & Natural Light", "description": "High clarity without affecting visibility" },
+        { "title": "Interior Protection", "description": "Keeps your home cooler and interiors last longer" }
+      ]
+    },
+    "energy-saving-impact": {
+      "heading": "Energy Saving Impact",
+      "body": "Reduce your home's cooling load and contribute to a greener environment.",
+      "stats": [
+        { "value": "Up to 30", "unit": "%", "label": "Lower Cooling Cost*" },
+        { "value": "Up to 1.2", "unit": "Tons CO₂", "label": "Reduction / Year*" }
+      ],
+      "footnote": "Results may vary based on film type, glass type and environment."
+    },
+    "projects": {
+      "heading": "Our Residential Projects",
+      "items": [
+        { "name": "Bungalow House", "location": "Kuala Lumpur" },
+        { "name": "Condominium", "location": "Johor Bahru" },
+        { "name": "Landed Home", "location": "Penang" },
+        { "name": "Condominium", "location": "Selangor" }
+      ],
+      "link": "View All Projects"
+    },
+    "testimonials": {
+      "heading": "What Our Customers Say",
+      "aggregate": "4.9 — Based on 1,360+ reviews",
+      "quote": "The house is so much cooler now and our electricity bill dropped. Curtains and furniture no longer fade. Highly recommended!",
+      "author": "Ms. Elaine Tan",
+      "context": "Shah Alam, Selangor"
+    },
+    "cert-strip": {
+      "heading": "Trusted Quality. Certified Performance.",
+      "items": ["SIRIM Certified", "SGS REACH", "RoHS Compliant", "ISO 9001:2015", "GBI Green Building Index", "Asia Best Tint Brand Award"]
+    },
+    "cta": {
+      "headline": "Ready to Upgrade Your Home Comfort?",
+      "subhead": "Find a certified dealer near you or request a free consultation.",
+      "actions": ["Find a Dealer", "Request Consultation"]
+    }
+  }
+}

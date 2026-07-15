@@ -1,0 +1,38 @@
+{
+  "title": "Sustainability Solutions",
+  "accent": "sustainability",
+  "defaultZone": "showroom-dark",
+  "seo": {
+    "title": "Sustainability Solutions",
+    "description": "Reduce energy consumption and protect our environment."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Protection Solutions",
+      "href": "/solutions"
+    },
+    {
+      "label": "Sustainability Solutions"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "headlineLines": [
+          "Sustainability Solutions"
+        ],
+        "subhead": "Reduce energy consumption and protect our environment.",
+        "accent": "sustainability"
+      }
+    }
+  ],
+  "_status": "AWAITING SOURCE — the sustainability screen was not in the Stage 4a screenshot batch. Only the home-page solution-card copy is transcribed (as the subhead); the interim h1 is the route title (launch audit B3); the real hero headline is still needed. The V1 codebase has an ESG page (v1-reference/src/components/EsgSolutionPage.jsx) that may inform this page, but V2 content should be transcribed from the V2 wireframe screen when it arrives."
+}

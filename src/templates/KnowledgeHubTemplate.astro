@@ -1,0 +1,23 @@
+---
+/**
+ * KnowledgeHubTemplate — the knowledge hub + hub-like subpages. One linear
+ * sections[] flow through the renderer, workshop zone by default. The hub
+ * hero embeds the search island; the module browser owns ?module= URL
+ * state; the video carousel is a native snap strip.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SectionRenderer from '@/components/SectionRenderer.astro';
+import type { KnowledgePageContent } from '@/types/sections';
+
+interface Props {
+  content: KnowledgePageContent;
+}
+const { content } = Astro.props;
+---
+
+<BaseLayout seo={content.seo} crumbs={content.breadcrumbs}>
+  <SectionRenderer
+    sections={content.sections}
+    defaultZone={content.defaultZone ?? 'workshop-light'}
+  />
+</BaseLayout>

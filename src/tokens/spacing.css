@@ -1,0 +1,118 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   IRISPRO V2 — SPACING · RADIUS · ELEVATION · LAYOUT
+   ═══════════════════════════════════════════════════════════════════════════
+
+   4px base scale. Container widths carried over from V1
+   (--container-max 1280px, --container-narrow 860px).
+
+   ── THE ELEVATION RULE (encode it, don't rediscover it) ────────────────────
+   Drop shadows are a WORKSHOP-ZONE tool only. The showroom zone is dark and
+   cinematic: it expresses depth through LUMINOSITY (lighter raised surfaces)
+   and GRADIENT (--depth-glow-*), never through box-shadow — shadows are
+   invisible on #0a0a0a and cost paint. The --elevation-* tokens therefore
+   resolve to `none` inside [data-zone='showroom']; a component that "loses"
+   its shadow in the showroom is behaving correctly. Use surface-raised +
+   depth-glow there instead.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Spacing (4px base) ── */
+  --space-1: 0.25rem;   /*   4px */
+  --space-2: 0.5rem;    /*   8px */
+  --space-3: 0.75rem;   /*  12px */
+  --space-4: 1rem;      /*  16px */
+  --space-5: 1.25rem;   /*  20px */
+  --space-6: 1.5rem;    /*  24px */
+  --space-8: 2rem;      /*  32px */
+  --space-10: 2.5rem;   /*  40px */
+  --space-12: 3rem;     /*  48px */
+  --space-16: 4rem;     /*  64px */
+  --space-20: 5rem;     /*  80px */
+  --space-24: 6rem;     /*  96px */
+  --space-32: 8rem;     /* 128px */
+
+  /* ── Section rhythm (fluid — tighter on mobile) ── */
+  --section-y-tight: clamp(3rem, 2rem + 4vw, 5rem);       /*  48 →  80px */
+  --section-y-default: clamp(4rem, 2.5rem + 6.5vw, 8rem); /*  64 → 128px */
+  --section-y-loose: clamp(5rem, 3rem + 9vw, 10.5rem);    /*  80 → 168px */
+
+  /* ── Radius ── */
+  --radius-sm: 0.25rem;  /*  4px */
+  --radius-md: 0.5rem;   /*  8px */
+  --radius-lg: 1rem;     /* 16px */
+  --radius-full: 9999px;
+
+  /* ── Layout ── */
+  --container-max: 1280px;   /* from V1 */
+  --container-narrow: 860px; /* from V1 */
+  --measure-article: 72ch;   /* guide/article body measure */
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2rem);
+
+  /* Grid columns: 4 mobile / 8 tablet / 12 desktop */
+  --grid-cols: 4;
+}
+@media (min-width: 768px) {
+  :root { --grid-cols: 8; }
+}
+@media (min-width: 1024px) {
+  :root { --grid-cols: 12; }
+}
+
+/* ── Elevation: workshop only ── */
+:root,
+[data-zone='workshop'] {
+  --elevation-1: 0 1px 2px rgba(10, 10, 10, 0.06),
+    0 1px 3px rgba(10, 10, 10, 0.08);
+  --elevation-2: 0 2px 4px rgba(10, 10, 10, 0.05),
+    0 4px 12px rgba(10, 10, 10, 0.1);
+  --elevation-3: 0 4px 8px rgba(10, 10, 10, 0.06),
+    0 12px 32px rgba(10, 10, 10, 0.14);
+
+  /* Depth glows are a showroom tool; inert in the light zone. */
+  --depth-glow-subtle: none;
+  --depth-glow-strong: none;
+}
+
+[data-zone='showroom'] {
+  --elevation-1: none;
+  --elevation-2: none;
+  --elevation-3: none;
+
+  /* Luminosity/gradient depth (background-image values) */
+  --depth-glow-subtle: radial-gradient(
+    120% 90% at 50% 0%,
+    rgba(250, 250, 248, 0.06) 0%,
+    rgba(250, 250, 248, 0) 60%
+  );
+  --depth-glow-strong: radial-gradient(
+    130% 100% at 50% 0%,
+    rgba(210, 15, 24, 0.14) 0%,
+    rgba(250, 250, 248, 0.05) 35%,
+    rgba(250, 250, 248, 0) 70%
+  );
+}
+
+/* ── Layout utilities ── */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.measure-article {
+  max-width: var(--measure-article);
+}
+.grid-system {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols), minmax(0, 1fr));
+  gap: var(--gutter);
+}
+.section-y-tight { padding-block: var(--section-y-tight); }
+.section-y-default { padding-block: var(--section-y-default); }
+.section-y-loose { padding-block: var(--section-y-loose); }

@@ -1,0 +1,56 @@
+---
+/**
+ * LearningPath — ordered learning steps. Real <ol>, static, zero JS.
+ */
+import type { LearningPathContent } from '@/types/sections';
+
+type Props = LearningPathContent;
+const { heading, lede, steps } = Astro.props;
+---
+
+<div>
+  {heading && <h2 class="type-heading-lg">{heading}</h2>}
+  {lede && (
+    <p class="type-body-md mt-2 max-w-article" style="color: var(--text-secondary)">
+      {lede}
+    </p>
+  )}
+  <ol
+    class:list={['grid list-none gap-3 p-0', (heading || lede) && 'mt-8']}
+  >
+    {steps.map((step) => (
+      <li>
+        <div
+          class="flex items-start gap-4 rounded-lg p-5"
+          style="background: var(--surface-raised); border: 1px solid var(--border-subtle); box-shadow: var(--elevation-1)"
+        >
+          <span
+            class="numeric type-heading-md grid h-10 w-10 shrink-0 place-items-center rounded-full"
+            style="border: 1px solid var(--border-default); color: var(--text-brand)"
+          >
+            {step.number}
+          </span>
+          <div class="min-w-0">
+            <p class="type-heading-sm">
+              {step.href && step.status !== 'coming-soon' ? (
+                <a href={step.href} style="color: inherit">{step.title}</a>
+              ) : (
+                step.title
+              )}
+              {step.status === 'coming-soon' && (
+                <span class="chip ml-2 align-middle" style="color: var(--text-muted)">
+                  Coming soon
+                </span>
+              )}
+            </p>
+            {step.description && (
+              <p class="type-body-sm mt-1" style="color: var(--text-secondary)">
+                {step.description}
+              </p>
+            )}
+          </div>
+        </div>
+      </li>
+    ))}
+  </ol>
+</div>

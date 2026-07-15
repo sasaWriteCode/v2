@@ -1,0 +1,73 @@
+---
+/**
+ * VideoCarousel — video episode cards in a NATIVE scroll-snap strip.
+ * Never a JS carousel (rule 6): mobile and desktop both get native
+ * horizontal scroll via .snap-strip. Static, zero JS — cards are links;
+ * playback happens on the target page.
+ */
+import type { VideoCarouselContent } from '@/types/sections';
+
+type Props = VideoCarouselContent;
+const { heading, lede, videos } = Astro.props;
+---
+
+<div>
+  {heading && <h2 class="type-heading-lg">{heading}</h2>}
+  {lede && (
+    <p class="type-body-md mt-2 max-w-article" style="color: var(--text-secondary)">
+      {lede}
+    </p>
+  )}
+  <ul class:list={['snap-strip', (heading || lede) && 'mt-8']}>
+    {videos.map((video) => (
+      <li class="w-[16.5rem] sm:w-[19rem]">
+        <a
+          href={video.href}
+          class="grid h-full content-start overflow-hidden rounded-lg"
+          style="background: var(--surface-raised); border: 1px solid var(--border-subtle); box-shadow: var(--elevation-1); color: inherit; text-decoration: none"
+        >
+          <span class="relative block">
+            <img
+              src={video.poster.src}
+              alt={video.poster.alt}
+              width={video.poster.width}
+              height={video.poster.height}
+              loading="lazy"
+              decoding="async"
+              class="w-full object-cover"
+              style={`aspect-ratio: ${video.poster.width} / ${video.poster.height}`}
+            />
+            <span
+              aria-hidden="true"
+              class="absolute inset-0 grid place-items-center"
+              style="background: rgba(10, 10, 10, 0.2)"
+            >
+              <span
+                class="grid h-11 w-11 place-items-center rounded-full pl-1"
+                style="background: var(--color-red); color: var(--color-white)"
+              >
+                ▶
+              </span>
+            </span>
+            {video.duration && (
+              <span
+                class="type-caption numeric absolute bottom-2 right-2 rounded-sm px-1.5"
+                style="background: rgba(10, 10, 10, 0.75); color: var(--color-white)"
+              >
+                {video.duration}
+              </span>
+            )}
+          </span>
+          <span class="grid gap-1 p-4">
+            {video.moduleLabel && (
+              <span class="type-overline" style="color: var(--text-muted)">
+                {video.moduleLabel}
+              </span>
+            )}
+            <span class="type-heading-sm">{video.title}</span>
+          </span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>

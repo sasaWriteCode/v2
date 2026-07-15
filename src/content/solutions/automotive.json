@@ -1,0 +1,553 @@
+{
+  "title": "Automotive Solutions",
+  "accent": "automotive",
+  "defaultZone": "showroom-dark",
+  "seo": {
+    "title": "Automotive Solutions",
+    "description": "Driving in ASEAN means more than just reducing heat. Every journey exposes you, your family and your vehicle to intense solar heat, harmful UV, HEV Blue Light and long-term interior damage."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Protection Solutions", "href": "/solutions" },
+    { "label": "Automotive Solutions" }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "eyebrow": "_verify",
+        "headlineLines": ["Complete Protection", "for Every Journey"],
+        "subhead": "Driving in ASEAN means more than just reducing heat. Every journey exposes you, your family and your vehicle to intense solar heat, harmful UV, HEV Blue Light and long-term interior damage.",
+        "ctas": [
+          { "label": "Find My Perfect Solution", "href": "#priority-selector", "variant": "primary" },
+          { "label": "Compare Film Series", "href": "#series-comparison", "variant": "secondary" }
+        ],
+        "media": {
+          "src": "/placeholders/hero-1600x900.svg",
+          "alt": "Sedan driving under intense tropical sun, cabin views with and without IrisPro film",
+          "width": 1600,
+          "height": 900
+        },
+        "accent": "automotive",
+        "comparison": {
+          "without": {
+            "label": "Without IrisPro",
+            "points": ["Very Hot Cabin", "Uncomfortable & Unsafe"]
+          },
+          "with": {
+            "label": "With IrisPro",
+            "points": ["Cooler Cabin", "Comfortable & Protected"]
+          }
+        }
+      }
+    },
+    {
+      "id": "challenges",
+      "type": "problem-card-grid",
+      "order": 20,
+      "zone": "showroom-dark",
+      "label": "Driving in ASEAN is Different",
+      "data": {
+        "columns": 3,
+        "cards": [
+          {
+            "icon": "thermometer",
+            "title": "Extreme Cabin Heat",
+            "description": "Parked vehicles can become extremely hot under tropical sunlight."
+          },
+          {
+            "icon": "sun",
+            "title": "Harmful UV & HEV Blue Light",
+            "description": "Daily exposure affects your skin and eyes."
+          },
+          {
+            "icon": "car",
+            "title": "Interior Fading",
+            "description": "Leather, dashboard, plastic and electronics fade and age faster."
+          },
+          {
+            "icon": "snowflake",
+            "title": "High Air-conditioning Usage",
+            "description": "Higher cooling demand means more fuel or battery consumption."
+          },
+          {
+            "icon": "battery",
+            "title": "EV Battery Consumption",
+            "description": "Air-conditioning uses battery energy that could otherwise be used for driving."
+          },
+          {
+            "icon": "users",
+            "title": "Family Comfort",
+            "description": "Children and elderly passengers are more sensitive to heat and UV exposure."
+          }
+        ]
+      }
+    },
+    {
+      "id": "priority-selector",
+      "type": "priority-selector",
+      "order": 30,
+      "zone": "showroom-dark",
+      "label": "What Matters Most To You?",
+      "data": {
+        "legend": "What Matters Most To You?",
+        "hint": "Click on the icon above to find the best IrisPro solution for your needs.",
+        "options": [
+          {
+            "id": "too-hot",
+            "icon": "thermometer",
+            "label": "My Car Is Too Hot",
+            "recommendation": {
+              "title": "Maximise infrared heat rejection",
+              "body": "Films with multi-layer sputtering reflect the most solar heat. Start with the Plus Series (IRR up to 95% at 1400nm) or step up to Signature for maximum rejection.",
+              "cta": { "label": "View Plus Series", "href": "#series" }
+            }
+          },
+          {
+            "id": "skin-eye",
+            "icon": "eye",
+            "label": "I Want Better Skin & Eye Protection",
+            "accent": "personal-protection",
+            "recommendation": {
+              "title": "UV+420™ complete protection",
+              "body": "Every IrisPro series blocks UV400 and HEV Blue Light (380–420nm) at the source — the difference for skin and eyes is the UV+420™ optical layer, standard across the range.",
+              "cta": { "label": "How UV+420™ works", "href": "/technologies" }
+            }
+          },
+          {
+            "id": "ev",
+            "icon": "battery",
+            "label": "I Drive An EV",
+            "accent": "commercial",
+            "recommendation": {
+              "title": "Less air-conditioning, more range",
+              "body": "Heat rejection lowers cooling demand, which preserves battery for driving. EV owners typically choose the Plus Series for enhanced cooling with signal-friendly construction.",
+              "cta": { "label": "Best films for EVs", "href": "/products/automotive" }
+            }
+          },
+          {
+            "id": "interior",
+            "icon": "shield",
+            "label": "I Want To Protect My Car Interior",
+            "recommendation": {
+              "title": "Stop fading before it starts",
+              "body": "Blocking UV and infrared heat slows leather, trim and electronics ageing. Anti-fade constructions are available across Plus and Signature.",
+              "cta": { "label": "Interior protection films", "href": "#series" }
+            }
+          },
+          {
+            "id": "max-heat",
+            "icon": "sun",
+            "label": "I Want Maximum Heat Rejection",
+            "recommendation": {
+              "title": "Signature Series",
+              "body": "Multi-layer silver sputter construction with IRR up to 98% (1400nm) — IrisPro's maximum performance tier, with a 10-year performance warranty.",
+              "cta": { "label": "View Signature Series", "href": "#series" }
+            }
+          },
+          {
+            "id": "value",
+            "icon": "wallet",
+            "label": "I Want The Best Overall Value",
+            "accent": "sustainability",
+            "recommendation": {
+              "title": "Comfort Series",
+              "body": "Great comfort, great value: UV+420™ protection and IRR up to 90% with a 5-year performance warranty — the right fit for daily driving and families.",
+              "cta": { "label": "View Comfort Series", "href": "#series" }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "spectrum",
+      "type": "spectrum-diagram",
+      "order": 40,
+      "zone": "showroom-dark",
+      "label": "Why Does This Happen?",
+      "data": {
+        "variant": "full",
+        "showFilm": true,
+        "bands": [
+          {
+            "id": "uv",
+            "name": "UV",
+            "fromNm": 100,
+            "toNm": 400,
+            "behavior": "blocked",
+            "hue": "var(--accent-personal-protection-bright)"
+          },
+          {
+            "id": "hev",
+            "name": "HEV Blue Light",
+            "fromNm": 380,
+            "toNm": 420,
+            "behavior": "blocked",
+            "hue": "var(--accent-commercial-bright)"
+          },
+          {
+            "id": "visible",
+            "name": "Visible Light",
+            "fromNm": 400,
+            "toNm": 780,
+            "behavior": "transmitted",
+            "hue": "var(--accent-sustainability-bright)"
+          },
+          {
+            "id": "infrared",
+            "name": "Infrared Heat",
+            "fromNm": 780,
+            "toNm": 2500,
+            "behavior": "reduced",
+            "hue": "#e85d3a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "how-irispro-solves",
+      "type": "tech-pillar-grid",
+      "order": 50,
+      "zone": "showroom-dark",
+      "label": "How IrisPro Solves The Problem",
+      "data": {
+        "columns": 4,
+        "pillars": [
+          {
+            "icon": "sun",
+            "title": "UV+420™ Optical Technology",
+            "description": "Blocks UV400 & HEV Blue Light (380–420nm) for complete protection."
+          },
+          {
+            "icon": "layers",
+            "title": "6-Layer Hotmelt™ Technology",
+            "description": "Patented 6-layer structure for long-lasting durability and optimal performance."
+          },
+          {
+            "icon": "thermometer",
+            "title": "Multi-layer Sputtering",
+            "description": "Reflects up to 98% of solar heat (1400nm) for superior heat rejection."
+          },
+          {
+            "icon": "check",
+            "title": "Professional Installation",
+            "description": "Strict installation standards for maximum performance & warranty support."
+          }
+        ]
+      }
+    },
+    {
+      "id": "series",
+      "type": "series-card-set",
+      "order": 60,
+      "zone": "workshop-light",
+      "label": "Which Film Series Is Right For You?",
+      "data": {
+        "heading": "Which Film Series Is Right For You?",
+        "cards": [
+          {
+            "id": "comfort",
+            "name": "Comfort Series",
+            "tagline": "Great Comfort. Great Value.",
+            "accent": "sustainability",
+            "badge": "BEST VALUE",
+            "description": "Best for: Daily driving · Families · Great value & comfort",
+            "features": [
+              "UV+420™ Protection",
+              "IRR up to 90%",
+              "6-Layer Hotmelt™ Technology",
+              "SIRIM Certified Grade A",
+              "5 Years Performance Warranty"
+            ],
+            "cta": { "label": "View Comfort Series", "href": "/products/automotive?series=comfort" }
+          },
+          {
+            "id": "plus",
+            "name": "Plus Series",
+            "tagline": "Enhanced Comfort. Better Performance.",
+            "accent": "commercial",
+            "badge": "RECOMMENDED",
+            "description": "Best for: EV owners · Long-distance drivers · Enhanced cooling & protection",
+            "features": [
+              "UV+420™ Protection",
+              "IRR up to 95% (1400nm)",
+              "6-Layer Hotmelt™ + Titanium Sputter",
+              "SIRIM Certified Grade A",
+              "7 Years Performance Warranty"
+            ],
+            "cta": { "label": "View Plus Series", "href": "/products/automotive?series=plus" }
+          },
+          {
+            "id": "signature",
+            "name": "Signature Series",
+            "tagline": "Maximum Performance. Ultimate Protection.",
+            "accent": "automotive",
+            "badge": "PREMIUM CHOICE",
+            "description": "Best for: Luxury & premium vehicles · Maximum heat rejection · Demanding customers",
+            "features": [
+              "UV+420™ Protection",
+              "IRR up to 98% (1400nm)",
+              "6-Layer Hotmelt™ + Multi-layer Silver Sputter",
+              "SIRIM Certified Grade A",
+              "10 Years Performance Warranty"
+            ],
+            "cta": { "label": "View Signature Series", "href": "/products/automotive?series=signature" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "series-comparison",
+      "type": "series-comparison-table",
+      "order": 70,
+      "zone": "workshop-light",
+      "label": "Compare Film Series",
+      "data": {
+        "caption": "Compare Film Series",
+        "series": [
+          { "id": "comfort", "name": "Comfort Series" },
+          { "id": "plus", "name": "Plus Series" },
+          { "id": "signature", "name": "Signature Series" }
+        ],
+        "rows": [
+          {
+            "label": "UV+420™ Protection",
+            "values": { "comfort": true, "plus": true, "signature": true }
+          },
+          {
+            "label": "IRR (Heat Rejection)",
+            "values": {
+              "comfort": "Up to 90%",
+              "plus": "Up to 95% (1400nm)",
+              "signature": "Up to 98% (1400nm)"
+            }
+          },
+          {
+            "label": "Technology",
+            "values": {
+              "comfort": "6-Layer Hotmelt™",
+              "plus": "6-Layer Hotmelt™ + Titanium Sputter",
+              "signature": "6-Layer Hotmelt™ + Multi-Layer Silver Sputter"
+            }
+          },
+          {
+            "label": "SIRIM Certification",
+            "values": { "comfort": "Grade A", "plus": "Grade A", "signature": "Grade A" }
+          },
+          {
+            "label": "Warranty",
+            "values": { "comfort": "5 Years", "plus": "7 Years", "signature": "10 Years" }
+          },
+          {
+            "label": "Best For",
+            "values": {
+              "comfort": "Daily Driving / Families",
+              "plus": "EV Owners / Long Drives",
+              "signature": "Premium / Maximum Performance"
+            }
+          },
+          {
+            "label": "VLT Options",
+            "values": {
+              "comfort": "70% / 50% / 35% / 20% / 5%",
+              "plus": "70% / 50% / 35% / 20% / 5%",
+              "signature": "70% / 50% / 35% / 20% / 5%"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "proof",
+      "type": "proof-stat-bar",
+      "order": 80,
+      "zone": "workshop-light",
+      "label": "Proven Performance You Can Trust",
+      "data": {
+        "stats": [
+          {
+            "value": "Up to 10",
+            "unit": "°C",
+            "label": "Infrared Heat Reduction",
+            "footnote": "Results may vary based on film type, vehicle model, driving conditions and usage."
+          },
+          { "value": "99.99", "unit": "%", "label": "UV400 Rejection" },
+          { "value": "Up to 80", "unit": "%", "label": "Glare Reduction" },
+          { "value": "Up to 30", "unit": "%", "label": "Energy Saving" },
+          { "value": "Grade A", "label": "SIRIM Certified" }
+        ]
+      }
+    },
+    {
+      "id": "testimonials",
+      "type": "testimonial-panel",
+      "order": 90,
+      "zone": "workshop-light",
+      "label": "Real Stories. Real Results.",
+      "data": {
+        "heading": "Real Stories. Real Results.",
+        "testimonials": [
+          {
+            "quote": "The cabin stays cooler and I can feel the difference in battery efficiency.",
+            "author": "Tesla Model Y Owner",
+            "context": "Kuala Lumpur",
+            "rating": 5
+          },
+          {
+            "quote": "Excellent heat rejection. The interior no longer feels burning hot.",
+            "author": "BMW 5 Series Owner",
+            "context": "Penang",
+            "rating": 5
+          },
+          {
+            "quote": "My kids are more comfortable now. Best decision for our family.",
+            "author": "Family SUV Owner",
+            "context": "Johor Bahru",
+            "rating": 5
+          },
+          {
+            "quote": "Less aircon usage means I save more on petrol every day.",
+            "author": "Grab Driver Partner",
+            "context": "Selangor",
+            "rating": 5
+          },
+          {
+            "quote": "IrisPro is our customers' top choice. Quality and support are excellent.",
+            "author": "Dealer Partner",
+            "context": "Ipoh",
+            "rating": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta-bar",
+      "order": 100,
+      "zone": "workshop-light",
+      "data": {
+        "headline": "Ready to Experience Complete Protection?",
+        "subhead": "Talk to our experts and find the perfect IrisPro solution for your vehicle.",
+        "actions": [
+          {
+            "icon": "pin",
+            "title": "Find a Dealer Near You",
+            "description": "Locate an IrisPro dealer near your location.",
+            "cta": { "label": "Find a Dealer", "href": "#dealers" }
+          },
+          {
+            "icon": "headset",
+            "title": "Request Consultation",
+            "description": "Get expert advice. Our experts will recommend the best solution for you.",
+            "cta": { "label": "Request Consultation", "href": "#consultation" }
+          },
+          {
+            "icon": "chat",
+            "title": "WhatsApp Us",
+            "description": "Quick & easy. Chat with us for quick assistance and inquiries.",
+            "cta": { "label": "WhatsApp Us", "href": "#whatsapp" }
+          }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the canonical screen with no expressible section field. Preserved for the client / a future section type.",
+    "why-does-this-happen": "Solar energy from the sun contains UV, HEV Blue Light and Infrared Heat. Without advanced protection, your vehicle continues absorbing solar energy throughout the day.",
+    "thermal-comparison": {
+      "without": "WITHOUT IRISPRO — Surface Temp up to 68°C",
+      "with": "WITH IRISPRO — Surface Temp up to 38°C"
+    },
+    "proof-footnote-scope": "The on-screen footnote also carries the asterisk on 'Energy Saving Up to 30%*'; the schema renders one footnote per stat, so it is attached to the 10°C stat only to avoid a duplicated line."
+  },
+  "_alternates": {
+    "note": "Second automotive screen ('Complete Protection for Every Drive'). NOT rendered — see _conflicts.md §15. Client must rule which variant is canonical.",
+    "hero": {
+      "eyebrow": "Automotive Solution",
+      "headlineLines": ["Complete Protection", "for Every Drive"],
+      "subhead": "IrisPro automotive window films are engineered for ASEAN climate to deliver superior comfort, protection and performance.",
+      "benefits": [
+        { "icon": "thermometer", "label": "Superior Heat Rejection" },
+        { "icon": "sun", "label": "UV+420™ Protection" },
+        { "icon": "shield", "label": "Protects Car Interior" },
+        { "icon": "bolt", "label": "Saves Fuel & Energy" }
+      ],
+      "ctas": [
+        { "label": "Explore Film Series", "href": "#series", "variant": "primary" },
+        { "label": "Find a Dealer", "href": "#dealers", "variant": "secondary" }
+      ]
+    },
+    "challenges": {
+      "heading": "The Real Challenges of Driving in ASEAN",
+      "cards": [
+        { "title": "Extreme Heat", "description": "Cabin temperature can reach up to 70°C when parked under the sun." },
+        { "title": "Harmful UV & Blue Light", "description": "UV rays and HEV Blue Light penetrate glass and harm your skin and eyes." },
+        { "title": "Interior Fading & Damage", "description": "Dashboard, leather, and electronics fade, crack and deteriorate over time." },
+        { "title": "High Fuel / Energy Usage", "description": "More heat means your A/C works harder, consuming more fuel or battery." },
+        { "title": "Family & Health Risk", "description": "Long-term exposure to UV increases risk of skin damage and _verify" }
+      ]
+    },
+    "our-solution": {
+      "heading": "IrisPro Window Films Solve the Problem",
+      "body": "With advanced UV+420™ technology, 6-layer hotmelt structure and multi-layer sputtering, IrisPro films deliver total protection so you can drive cooler, safer and more comfortably.",
+      "bullets": [
+        "Block UV400, UVA1 (380–400nm) & HEV Blue Light (380–420nm)",
+        "Reject up to 98% of total solar energy",
+        "Keep car interior cooler and more comfortable",
+        "Protect your skin, eyes and overall health",
+        "Extend the life of your car interior",
+        "Lower A/C load and save fuel / EV energy"
+      ],
+      "how-irispro-works-annotations": [
+        { "title": "UV+420™ Protection", "description": "Blocks harmful UV & Blue Light" },
+        { "title": "High Heat Rejection", "description": "Rejects up to 98% of total solar energy" },
+        { "title": "Visible Light", "description": "Clear visibility and natural light" },
+        { "title": "Interior Protection", "description": "Keeps your car interior cooler and longer lasting" }
+      ]
+    },
+    "series-taglines": {
+      "comfort": "Essential Protection, Everyday Comfort",
+      "plus": "Enhanced Performance, Extra Protection",
+      "signature": "Ultimate Performance, Premium Experience",
+      "vltOptions": "70% / 50% / 35% / 20% / 05%",
+      "cta": "View Full Specifications"
+    },
+    "tech-pillars": [
+      { "title": "UV+420™", "description": "Patented technology that blocks UV400, UVA1 and HEV Blue Light." },
+      { "title": "6-Layer Hotmelt™", "description": "Stronger adhesion, more durable and built for extreme climate." },
+      { "title": "Multi-Layer Sputtering", "description": "Advanced heat rejection with superior clarity and stability." },
+      { "title": "IRR up to 98%", "description": "Industry-leading total solar energy rejection for maximum comfort." },
+      { "title": "Performance Warranty", "description": "Backed by up to 10 years warranty for total peace of mind." }
+    ],
+    "proven-results": {
+      "heading": "Proven Results. Real Difference.",
+      "thermal": { "without": "63.7°C Cabin Temperature", "with": "31.2°C Cabin Temperature" },
+      "stats": [
+        { "value": "Up to 32.5", "unit": "°C", "label": "Heat Reduction*" },
+        { "value": "Up to 98", "unit": "%", "label": "IRR (Total Solar Energy Rejection)*" }
+      ],
+      "footnote": "Results may vary based on film series, glass type and environment."
+    },
+    "testimonial": {
+      "quote": "The heat reduction is incredible! Car cools down much faster and the interior looks brand new even after years. Worth every ringgit.",
+      "author": "Ahmad R.",
+      "role": "Porsche Macan Owner, Kuala Lumpur",
+      "rating": 5
+    },
+    "cta": {
+      "headline": "Ready to Experience the IrisPro Difference?",
+      "subhead": "Find a certified dealer near you or request a free consultation.",
+      "actions": ["Find a Dealer", "Request Consultation"]
+    },
+    "cert-row": [
+      "SIRIM Certified",
+      "Up to 10 Years Warranty",
+      "eWarranty Registration",
+      "Professional Installation",
+      "After Sales Support"
+    ]
+  }
+}

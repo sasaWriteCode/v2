@@ -1,0 +1,33 @@
+---
+/**
+ * PendingPage — shell for routes whose content object arrives in Stage 4.
+ * The route, template wiring and navigation already work; the copy comes
+ * from config (PENDING_PAGE) + the caller's title, so nothing is hardcoded
+ * per page. Zero islands — these routes ship 0KB of JS.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { PENDING_PAGE } from '@/config/navigation';
+import type { Crumb } from '@/types/sections';
+
+interface Props {
+  title: string;
+  crumbs?: Crumb[];
+}
+const { title, crumbs } = Astro.props;
+const seo = { title, description: PENDING_PAGE.note };
+---
+
+<BaseLayout seo={seo} crumbs={crumbs}>
+  <div class="container section-y-default">
+    <p class="type-overline" style="color: var(--text-muted)">
+      {PENDING_PAGE.eyebrow}
+    </p>
+    <h1 class="type-display-md" style="margin-top: var(--space-4)">{title}</h1>
+    <p
+      class="type-body-lg max-w-article"
+      style="margin-top: var(--space-4); color: var(--text-secondary)"
+    >
+      {PENDING_PAGE.note}
+    </p>
+  </div>
+</BaseLayout>

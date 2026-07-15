@@ -1,0 +1,12 @@
+---
+/**
+ * Knowledge Centre hub — KnowledgeHubTemplate driven by `knowledge/hub`.
+ */
+import { getEntry } from 'astro:content';
+import KnowledgeHubTemplate from '@/templates/KnowledgeHubTemplate.astro';
+
+const hub = await getEntry('knowledge', 'hub');
+if (!hub) throw new Error('knowledge/hub content object is missing');
+---
+
+<KnowledgeHubTemplate content={hub.data} />

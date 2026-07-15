@@ -1,0 +1,16 @@
+---
+/**
+ * Technologies — EditorialTemplate once `editorial/technologies` is
+ * authored (Stage 4); pending shell until then.
+ */
+import { getEntry } from 'astro:content';
+import EditorialTemplate from '@/templates/EditorialTemplate.astro';
+import PendingPage from '@/components/PendingPage.astro';
+import { PRIMARY_NAV } from '@/config/navigation';
+
+const entry = await getEntry('editorial', 'technologies');
+const label = PRIMARY_NAV.find((item) => item.href === '/technologies')?.label ?? 'Technologies';
+const crumbs = [{ label: 'Home', href: '/' }, { label }];
+---
+
+{entry ? <EditorialTemplate content={entry.data} /> : <PendingPage title={label} crumbs={crumbs} />}

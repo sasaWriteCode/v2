@@ -1,0 +1,31 @@
+---
+/**
+ * ProductGridTemplate — the 2 product-grid pages (automotive, building).
+ * One linear sections[] flow; the product-browser section is the heaviest
+ * island on the site (filters + compare, URL state, no-JS GET fallback).
+ * Product ItemList JSON-LD is derived from the product-browser section's
+ * data — pure content, no template knowledge of specific products.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SectionRenderer from '@/components/SectionRenderer.astro';
+import { productListSchema } from '@/lib/seo/schema';
+import type { ProductPageContent } from '@/types/sections';
+
+interface Props {
+  content: ProductPageContent;
+}
+const { content } = Astro.props;
+
+const products = content.sections
+  .filter((section) => section.type === 'product-browser')
+  .flatMap((section) => section.data.items.map((item) => item.product));
+
+const jsonLd = products.length > 0 ? [productListSchema(products)] : [];
+---
+
+<BaseLayout seo={content.seo} crumbs={content.breadcrumbs} jsonLd={jsonLd}>
+  <SectionRenderer
+    sections={content.sections}
+    defaultZone={content.defaultZone ?? 'workshop-light'}
+  />
+</BaseLayout>

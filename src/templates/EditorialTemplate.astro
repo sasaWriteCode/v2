@@ -1,0 +1,22 @@
+---
+/**
+ * EditorialTemplate — Home, Technologies, Projects, About. Deliberately the
+ * thinnest one: BaseLayout + the section renderer, nothing else. All
+ * structure lives in the content object; resist adding opinion here.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SectionRenderer from '@/components/SectionRenderer.astro';
+import type { EditorialPageContent } from '@/types/sections';
+
+interface Props {
+  content: EditorialPageContent;
+}
+const { content } = Astro.props;
+---
+
+<BaseLayout seo={content.seo} crumbs={content.breadcrumbs}>
+  <SectionRenderer
+    sections={content.sections}
+    defaultZone={content.defaultZone ?? 'showroom-dark'}
+  />
+</BaseLayout>

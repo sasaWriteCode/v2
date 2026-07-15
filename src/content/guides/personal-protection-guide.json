@@ -1,0 +1,536 @@
+{
+  "title": "Personal Protection",
+  "seo": {
+    "title": "Personal Protection Guide",
+    "description": "From your morning drive to your office and home, prolonged exposure to UV and high-energy visible (HEV) blue light may contribute to premature skin ageing, pigmentation and eye damage. IrisPro helps reduce this exposure wherever you spend your day."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Knowledge Centre", "href": "/knowledge" },
+    { "label": "Personal Protection" }
+  ],
+  "intro": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "eyebrow": "Personal Protection",
+        "headlineLines": [
+          "Every Day, Your Skin",
+          "and Eyes Are Exposed",
+          "to Invisible Risks."
+        ],
+        "subhead": "From your morning drive to your office and home, prolonged exposure to UV and high-energy visible (HEV) blue light may contribute to premature skin ageing, pigmentation and eye damage. IrisPro helps reduce this exposure wherever you spend your day.",
+        "ctas": [
+          { "label": "Start Learning", "href": "#why-protection-matters", "variant": "primary" },
+          { "label": "Explore UV+420™", "href": "#uv420-technology", "variant": "secondary" }
+        ],
+        "media": {
+          "src": "/placeholders/hero-1600x900.svg",
+          "alt": "Father and daughter in a car protected by the UV+420™ Complete Protection shield",
+          "width": 1600,
+          "height": 900
+        },
+        "accent": "personal-protection"
+      }
+    },
+    {
+      "id": "benefit-band",
+      "type": "tech-pillar-grid",
+      "order": 20,
+      "zone": "showroom-dark",
+      "label": "Protection Benefits",
+      "data": {
+        "columns": 5,
+        "pillars": [
+          {
+            "icon": "sun",
+            "title": "Reduces UV Exposure",
+            "description": "UVA · UVB · UVA1"
+          },
+          {
+            "icon": "shield",
+            "title": "Blocks HEV Blue Light",
+            "description": "380 – 420nm"
+          },
+          {
+            "icon": "person",
+            "title": "Protects Skin",
+            "description": "Helps reduce pigmentation & premature ageing"
+          },
+          {
+            "icon": "eye",
+            "title": "Protects Eyes",
+            "description": "Helps reduce eye fatigue & cataract risk"
+          },
+          {
+            "icon": "users",
+            "title": "Protects Family",
+            "description": "Protection for every moment of your day"
+          }
+        ]
+      }
+    },
+    {
+      "id": "why-protection-matters",
+      "type": "learning-path",
+      "order": 30,
+      "label": "Why Personal Protection Matters",
+      "data": {
+        "heading": "Why Personal Protection Matters",
+        "lede": "We spend up to 80–90% of our time indoors or in vehicles near windows. Protection should be everywhere.",
+        "steps": [
+          { "number": 1, "title": "Morning", "description": "Sunlight exposure begins" },
+          { "number": 2, "title": "Drive to work", "description": "Longer hours in the sun" },
+          { "number": 3, "title": "Office", "description": "Near windows all day" },
+          { "number": 4, "title": "Lunch", "description": "Outdoor exposure" },
+          { "number": 5, "title": "Drive Home", "description": "Evening sun exposure" },
+          { "number": 6, "title": "Home", "description": "UV & HEV through windows" }
+        ]
+      }
+    },
+    {
+      "id": "understanding-sunlight",
+      "type": "series-comparison-table",
+      "order": 40,
+      "label": "Understanding Sunlight",
+      "data": {
+        "caption": "Understanding Sunlight",
+        "series": [
+          { "id": "uvb", "name": "UVB" },
+          { "id": "uva", "name": "UVA" },
+          { "id": "uva1", "name": "UVA1" },
+          { "id": "hev", "name": "HEV Blue Light" },
+          { "id": "visible", "name": "Visible Light" },
+          { "id": "ir", "name": "IR" }
+        ],
+        "rows": [
+          {
+            "label": "Range",
+            "values": {
+              "uvb": "280–315nm",
+              "uva": "_verify",
+              "uva1": "380–400nm",
+              "hev": "_verify",
+              "visible": "_verify",
+              "ir": "780–2500nm"
+            }
+          },
+          {
+            "label": "Effect",
+            "values": {
+              "uvb": "Causes sunburn",
+              "uva": "_verify",
+              "uva1": "_verify",
+              "hev": "_verify",
+              "visible": "Light we can see",
+              "ir": "_verify"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "how-uv-affects",
+      "type": "series-card-set",
+      "order": 50,
+      "label": "How UV Affects Your Body",
+      "data": {
+        "heading": "How UV Affects Your Body",
+        "lede": "Prolonged exposure may contribute to long-term damage. Prevention is better than cure.",
+        "cards": [
+          {
+            "id": "skin",
+            "name": "Skin",
+            "features": [
+              "Sunburn",
+              "Pigmentation",
+              "Dark spots",
+              "Wrinkles",
+              "Premature skin ageing"
+            ]
+          },
+          {
+            "id": "eyes",
+            "name": "Eyes",
+            "features": [
+              "Eye fatigue",
+              "Glare discomfort",
+              "UV exposure",
+              "Cataract risk",
+              "Protection for children"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "why-asean",
+      "type": "tech-pillar-grid",
+      "order": 60,
+      "label": "Why ASEAN Needs Better Protection",
+      "data": {
+        "columns": 5,
+        "pillars": [
+          { "icon": "sun", "title": "Strong year-round sunlight", "description": "" },
+          { "icon": "thermometer", "title": "High UV Index (8–11+)", "description": "" },
+          { "icon": "car", "title": "Long driving hours", "description": "" },
+          { "icon": "building", "title": "Large glass buildings", "description": "" },
+          { "icon": "leaf", "title": "Hot & humid climate", "description": "" }
+        ]
+      }
+    },
+    {
+      "id": "who-needs-protection",
+      "type": "tech-pillar-grid",
+      "order": 70,
+      "label": "Who Needs Personal Protection?",
+      "data": {
+        "columns": 4,
+        "pillars": [
+          {
+            "icon": "person",
+            "title": "Children",
+            "description": "Developing eyes and sensitive skin need extra protection."
+          },
+          {
+            "icon": "person",
+            "title": "Women",
+            "description": "Concerned about pigmentation, melasma and premature ageing."
+          },
+          {
+            "icon": "person",
+            "title": "Men",
+            "description": "Long driving hours, outdoor work, heat exposure."
+          },
+          {
+            "icon": "users",
+            "title": "Seniors",
+            "description": "Long-term protection for eyes and skin health."
+          }
+        ]
+      }
+    },
+    {
+      "id": "protection-throughout-day",
+      "type": "tech-pillar-grid",
+      "order": 80,
+      "label": "Protection Throughout Your Day",
+      "data": {
+        "columns": 3,
+        "pillars": [
+          {
+            "icon": "car",
+            "title": "Automotive",
+            "description": "Protect while driving"
+          },
+          {
+            "icon": "building",
+            "title": "Office",
+            "description": "Protect while working"
+          },
+          {
+            "icon": "home",
+            "title": "Home",
+            "description": "Protect while resting"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uv420-technology",
+      "type": "learning-path",
+      "order": 90,
+      "label": "IrisPro UV+420™ Technology",
+      "data": {
+        "heading": "IrisPro UV+420™ Technology",
+        "lede": "Complete protection beyond UV400. Engineered for ASEAN & Equator climate.",
+        "steps": [
+          {
+            "number": 1,
+            "title": "UV+420™",
+            "description": "Blocks UV up to 420nm"
+          },
+          {
+            "number": 2,
+            "title": "6-Layer Hotmelt™",
+            "description": "Integrated protection in one strong base film"
+          },
+          {
+            "number": 3,
+            "title": "Multi-Layer Sputter",
+            "description": "High performance heat rejection"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uv420-capabilities",
+      "type": "tech-pillar-grid",
+      "order": 100,
+      "label": "UV+420™ Capabilities",
+      "data": {
+        "columns": 4,
+        "pillars": [
+          {
+            "icon": "sun",
+            "title": "Blocks UV400",
+            "description": "100% protection up to 400nm"
+          },
+          {
+            "icon": "shield",
+            "title": "Blocks HEV Blue Light 380–420nm",
+            "description": "Helps reduce eye strain & skin stress"
+          },
+          {
+            "icon": "thermometer",
+            "title": "High Heat Rejection",
+            "description": "Reduces heat, improves comfort, saves energy"
+          },
+          {
+            "icon": "eye",
+            "title": "Clear Visibility",
+            "description": "High clarity, no signal interference, no haze"
+          }
+        ]
+      }
+    },
+    {
+      "id": "prevention",
+      "type": "learning-path",
+      "order": 110,
+      "label": "Prevention Is Better Than Cure",
+      "data": {
+        "heading": "Prevention Is Better Than Cure",
+        "lede": "Protect today for a healthier tomorrow.",
+        "steps": [
+          { "number": 1, "title": "Before damage occurs" },
+          { "number": 2, "title": "Protect" },
+          { "number": 3, "title": "Skin" },
+          { "number": 4, "title": "Eyes" },
+          { "number": 5, "title": "Family" },
+          { "number": 6, "title": "Interior" },
+          { "number": 7, "title": "Future" }
+        ]
+      }
+    },
+    {
+      "id": "learning-journey",
+      "type": "article-grid",
+      "order": 120,
+      "label": "Learning Journey",
+      "data": {
+        "heading": "Learning Journey",
+        "lede": "Explore our video modules to understand and protect better.",
+        "articles": [
+          {
+            "title": "Understanding UV",
+            "category": "Module 1",
+            "description": "What is UV and how it affects us",
+            "href": "#module-1"
+          },
+          {
+            "title": "UV400",
+            "category": "Module 2",
+            "description": "Why UV400 protection matters",
+            "href": "#module-2"
+          },
+          {
+            "title": "UV+420™",
+            "category": "Module 3",
+            "description": "Beyond UV400 for complete protection",
+            "href": "#module-3"
+          },
+          {
+            "title": "HEV Blue Light",
+            "category": "Module 4",
+            "description": "The invisible light that affects you",
+            "href": "#module-4"
+          },
+          {
+            "title": "Skin Ageing",
+            "category": "Module 5",
+            "description": "How sunlight may cause ageing",
+            "href": "#module-5"
+          },
+          {
+            "title": "Eye Protection",
+            "category": "Module 6",
+            "description": "Protect your eyes every day",
+            "href": "#module-6"
+          },
+          {
+            "title": "Children",
+            "category": "Module 7",
+            "description": "Protect their future from harm",
+            "href": "#module-7"
+          },
+          {
+            "title": "Family Protection",
+            "category": "Module 7",
+            "description": "Complete protection for your loved ones",
+            "href": "#module-8"
+          }
+        ]
+      }
+    },
+    {
+      "id": "faq",
+      "type": "article-grid",
+      "order": 130,
+      "label": "Frequently Asked Questions",
+      "data": {
+        "heading": "Frequently Asked Questions",
+        "articles": [
+          {
+            "title": "Can UV rays pass through glass?",
+            "description": "_verify",
+            "href": "#faq"
+          },
+          {
+            "title": "Can I still get pigmentation in a car?",
+            "description": "_verify",
+            "href": "#faq"
+          },
+          {
+            "title": "Does office glass block UV?",
+            "description": "_verify",
+            "href": "#faq"
+          },
+          {
+            "title": "Does blue light from the sun affect skin?",
+            "description": "_verify",
+            "href": "#faq"
+          },
+          {
+            "title": "How does UV+420™ differ from UV99%?",
+            "description": "_verify",
+            "href": "#faq"
+          },
+          {
+            "title": "Why is UV400 protection important?",
+            "description": "_verify",
+            "href": "#faq"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ask-irispro-ai",
+      "type": "ask-irispro-ai",
+      "order": 140,
+      "zone": "showroom-dark",
+      "label": "Ask IrisPro AI",
+      "data": {
+        "heading": "Ask IrisPro AI",
+        "description": "Get personalised answers and recommendations.",
+        "suggestedQuestions": [],
+        "fallbackAction": "/knowledge"
+      }
+    },
+    {
+      "id": "protect-with-irispro",
+      "type": "category-grid",
+      "order": 150,
+      "label": "Protect with IrisPro",
+      "data": {
+        "heading": "Protect with IrisPro",
+        "lede": "Wherever you are, whatever you do, we help protect what matters most.",
+        "categories": [
+          {
+            "icon": "car",
+            "title": "Automotive Protection",
+            "href": "/solutions/automotive"
+          },
+          {
+            "icon": "building",
+            "title": "Commercial Protection",
+            "href": "/solutions/commercial"
+          },
+          {
+            "icon": "home",
+            "title": "Residential Protection",
+            "href": "/solutions/residential"
+          }
+        ]
+      }
+    },
+    {
+      "id": "closing-statement",
+      "type": "testimonial-panel",
+      "order": 160,
+      "zone": "showroom-dark",
+      "data": {
+        "heading": "IrisPro protects more than glass. We help protect the people behind it.",
+        "testimonials": []
+      }
+    },
+    {
+      "id": "closing-tiles",
+      "type": "tech-pillar-grid",
+      "order": 170,
+      "zone": "showroom-dark",
+      "data": {
+        "columns": 4,
+        "pillars": [
+          {
+            "icon": "person",
+            "title": "Protect Your Skin",
+            "description": "Reduce UV exposure"
+          },
+          {
+            "icon": "eye",
+            "title": "Protect Your Eyes",
+            "description": "Reduce eye strain & long-term risk"
+          },
+          {
+            "icon": "users",
+            "title": "Protect Your Family",
+            "description": "Every day, everywhere"
+          },
+          {
+            "icon": "leaf",
+            "title": "Protect Your Future",
+            "description": "Prevention today, healthier tomorrow"
+          }
+        ]
+      }
+    }
+  ],
+  "main": [],
+  "rail": {},
+  "outro": [
+    {
+      "id": "technology-strip",
+      "type": "certification-strip",
+      "order": 180,
+      "zone": "showroom-dark",
+      "data": {
+        "certs": [
+          { "id": "uv420", "name": "UV+420™ Technology", "label": "Complete UV & HEV protection" },
+          { "id": "hotmelt", "name": "6-Layer Hotmelt™", "label": "Strong. Durable. Long lasting" },
+          { "id": "sputter", "name": "Multi-Layer Sputter", "label": "Superior heat rejection" },
+          { "id": "sirim", "name": "SIRIM Certified", "label": "Quality you can trust" },
+          { "id": "warranty", "name": "Up to 10 Years Warranty", "label": "Long lasting protection" }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the Personal Protection screen with no expressible section field. Preserved verbatim.",
+    "block-numbering": "The screen numbers its blocks 01–12; block headings are preserved in section labels.",
+    "hero-badge": "UV+420™ COMPLETE PROTECTION (hero shield badge)",
+    "sunlight-footer": "All these rays are present every day in ASEAN climate.",
+    "sunlight-header-bands": "The table sits under a banner strip reading SUNLIGHT with UV / VISIBLE LIGHT / INFRARED groupings.",
+    "asean-caption": "ASEAN sunshine is beautiful, but the exposure is real.",
+    "day-tagline": "One Technology. Complete Protection Everywhere.",
+    "prevention-footer": "Help reduce unnecessary exposure to harmful solar radiation. A small step today can make a big difference for life.",
+    "learning-journey-cta": "View All Videos",
+    "faq-link": "View All FAQs",
+    "ask-ai-sample": "Sample exchange shown on screen — User: 'My child sits near the window every day.' AI: 'I recommend these videos and solutions to help protect your child from UV & HEV exposure.' CTA: 'Ask Now'",
+    "solutions-cta": "Explore All Solutions",
+    "module-numbering": "The last two Learning Journey cards BOTH read 'Module 7' (Children; Family Protection) — transcribed as shown, likely a Module 8 misprint; see _conflicts.md §38."
+  }
+}

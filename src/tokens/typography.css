@@ -1,0 +1,156 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   IRISPRO V2 — TYPOGRAPHY TOKENS
+   ═══════════════════════════════════════════════════════════════════════════
+
+   Families extracted from V1 (src/styles/global.css + index.html):
+     display → 'Playfair Display' (V1 --font-display)
+     ui      → 'Inter'            (V1 --font-body)
+     (Montserrat is also loaded in V1 and used ad-hoc with !important on the
+      products/projects/support pages; V2 consolidates the utility zone on
+      Inter — flagged in the Stage 1 report.)
+
+   Two fluid scales, clamp()-based, resolved between 360px and 1440px
+   viewports. Every clamp is linear-interpolated so nothing jumps.
+
+   DISPLAY — cinematic hero headlines. Tight leading, negative tracking.
+   Sized so the real longest string —
+   "Advanced Protection Engineered for ASEAN Climate" —
+   sets 3–4 lines at 360px with zero horizontal overflow (verified on the
+   /design-system route at 360px).
+
+   UI — body, tables, cards, guide content. Generous leading.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Families ── */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, sans-serif;
+
+  /* ── Display scale (hero/cinematic) ── */
+  --text-display-xl: clamp(2.5rem, 1.6rem + 4vw, 5.25rem);     /* 40 → 84px */
+  --leading-display-xl: 1.05;
+  --tracking-display-xl: -0.02em;
+
+  --text-display-lg: clamp(2rem, 1.35rem + 2.9vw, 4rem);       /* 32 → 64px */
+  --leading-display-lg: 1.08;
+  --tracking-display-lg: -0.015em;
+
+  --text-display-md: clamp(1.625rem, 1.25rem + 1.9vw, 2.875rem); /* 26 → 46px */
+  --leading-display-md: 1.12;
+  --tracking-display-md: -0.01em;
+
+  /* ── UI scale ── */
+  --text-heading-lg: clamp(1.375rem, 1.15rem + 1vw, 2rem);     /* 22 → 32px */
+  --leading-heading-lg: 1.2;
+  --tracking-heading-lg: -0.01em;
+
+  --text-heading-md: clamp(1.125rem, 1rem + 0.55vw, 1.5rem);   /* 18 → 24px */
+  --leading-heading-md: 1.3;
+  --tracking-heading-md: -0.005em;
+
+  --text-heading-sm: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);  /* 16 → 18px */
+  --leading-heading-sm: 1.4;
+  --tracking-heading-sm: 0em;
+
+  --text-body-lg: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);   /* 17 → 19px */
+  --leading-body-lg: 1.7;
+
+  --text-body-md: 1rem;                                        /* 16px */
+  --leading-body-md: 1.65;
+
+  --text-body-sm: 0.875rem;                                    /* 14px */
+  --leading-body-sm: 1.6;
+
+  --text-caption: 0.8125rem;                                   /* 13px */
+  --leading-caption: 1.5;
+
+  --text-overline: 0.75rem;                                    /* 12px */
+  --leading-overline: 1.3;
+  --tracking-overline: 0.15em;
+}
+
+/* ── Composed type utilities ──
+   Prefer the Tailwind theme entries (text-display-xl etc.); these classes
+   exist for non-Tailwind contexts and the /design-system specimen. */
+
+.type-display-xl,
+.type-display-lg,
+.type-display-md {
+  font-family: var(--font-display);
+  font-weight: 500;
+  overflow-wrap: break-word; /* the 360px no-overflow guarantee */
+}
+.type-display-xl {
+  font-size: var(--text-display-xl);
+  line-height: var(--leading-display-xl);
+  letter-spacing: var(--tracking-display-xl);
+}
+.type-display-lg {
+  font-size: var(--text-display-lg);
+  line-height: var(--leading-display-lg);
+  letter-spacing: var(--tracking-display-lg);
+}
+.type-display-md {
+  font-size: var(--text-display-md);
+  line-height: var(--leading-display-md);
+  letter-spacing: var(--tracking-display-md);
+}
+
+.type-heading-lg,
+.type-heading-md,
+.type-heading-sm {
+  font-family: var(--font-ui);
+  font-weight: 600;
+}
+.type-heading-lg {
+  font-size: var(--text-heading-lg);
+  line-height: var(--leading-heading-lg);
+  letter-spacing: var(--tracking-heading-lg);
+}
+.type-heading-md {
+  font-size: var(--text-heading-md);
+  line-height: var(--leading-heading-md);
+  letter-spacing: var(--tracking-heading-md);
+}
+.type-heading-sm {
+  font-size: var(--text-heading-sm);
+  line-height: var(--leading-heading-sm);
+}
+
+.type-body-lg {
+  font-family: var(--font-ui);
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body-lg);
+}
+.type-body-md {
+  font-family: var(--font-ui);
+  font-size: var(--text-body-md);
+  line-height: var(--leading-body-md);
+}
+.type-body-sm {
+  font-family: var(--font-ui);
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-body-sm);
+}
+.type-caption {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  line-height: var(--leading-caption);
+}
+.type-overline {
+  font-family: var(--font-ui);
+  font-size: var(--text-overline);
+  line-height: var(--leading-overline);
+  letter-spacing: var(--tracking-overline);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ── Tabular numerals ──
+   For spec tables and stat callouts: IRR %, VLT %, warranty years must
+   align vertically. Apply to <td>/stat values holding numbers. */
+.numeric {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: 'tnum' 1, 'lnum' 1;
+}

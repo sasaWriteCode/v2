@@ -1,0 +1,121 @@
+---
+/**
+ * MobileNav — burger button + native <dialog>, vanilla script (~1KB).
+ *
+ * DELIBERATE DEVIATION from the Stage 3 brief's "island with client:idle"
+ * hint: a React island here would load the ~57KB (gzip) React runtime on
+ * every route for a menu toggle, putting otherwise-0KB editorial routes at
+ * ~62KB — a direct violation of the "editorial routes at or near 0KB"
+ * acceptance criterion and rule 8 (islands are earned). Native <dialog>
+ * gives the required focus trap and Esc-to-close for free; the script only
+ * wires open/close and the body scroll lock. Works identically at TIER_0.
+ * No-JS: the menu button is inert, and every destination repeats in the
+ * footer as plain links — nobody is stranded.
+ */
+import { NAV_CTA, NAV_STRINGS, PRIMARY_NAV } from '@/config/navigation';
+---
+
+<button
+  type="button"
+  data-mobile-nav-open
+  aria-label={NAV_STRINGS.openMenuLabel}
+  aria-haspopup="dialog"
+  class="grid h-10 w-10 place-items-center rounded-md"
+  style="border: 1px solid var(--border-default); color: var(--text-primary); background: transparent"
+>
+  <span aria-hidden="true" class="grid gap-1">
+    <span style="width: 1.1rem; height: 2px; background: currentColor"></span>
+    <span style="width: 1.1rem; height: 2px; background: currentColor"></span>
+    <span style="width: 1.1rem; height: 2px; background: currentColor"></span>
+  </span>
+</button>
+
+<dialog data-mobile-nav class="mobile-nav-dialog" aria-label={NAV_STRINGS.primaryNavLabel}>
+  <div class="grid content-start gap-6 p-6" style="min-height: 100%">
+    <div class="flex items-center justify-between">
+      <span class="type-heading-sm">Menu</span>
+      <button
+        type="button"
+        data-mobile-nav-close
+        aria-label={NAV_STRINGS.closeMenuLabel}
+        autofocus
+        class="grid h-10 w-10 place-items-center rounded-md"
+        style="border: 1px solid var(--border-default); color: var(--text-primary); background: transparent"
+      >
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+
+    <nav aria-label={NAV_STRINGS.primaryNavLabel}>
+      <ul class="grid gap-1">
+        {PRIMARY_NAV.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="type-body-md block rounded-md px-3 py-2 font-semibold"
+              style="color: var(--text-primary); text-decoration: none"
+            >
+              {item.label}
+            </a>
+            {item.children && (
+              <ul class="grid gap-0.5 pl-3">
+                {item.children.map((child) => (
+                  <li>
+                    <a
+                      href={child.href}
+                      class="type-body-sm block rounded-md px-3 py-1.5"
+                      style="color: var(--text-secondary); text-decoration: none"
+                    >
+                      {child.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <a
+      href={NAV_CTA.href}
+      class="type-body-sm rounded-md px-5 py-3 text-center font-semibold"
+      style="background: var(--color-red); color: var(--color-white); text-decoration: none"
+    >
+      {NAV_CTA.label}
+    </a>
+  </div>
+</dialog>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('[data-mobile-nav]');
+  const openBtn = document.querySelector<HTMLButtonElement>('[data-mobile-nav-open]');
+
+  if (dialog && openBtn) {
+    const lock = (on: boolean) => {
+      document.documentElement.style.overflow = on ? 'hidden' : '';
+    };
+    // Explicit close paths unlock immediately; the dialog's close event
+    // repeats the cleanup for native paths (Esc) — the unlock never
+    // depends on a single mechanism.
+    const hide = () => {
+      lock(false);
+      dialog.close();
+    };
+
+    openBtn.addEventListener('click', () => {
+      dialog.showModal(); // native focus trap + Esc-to-close
+      lock(true);
+    });
+    dialog
+      .querySelector('[data-mobile-nav-close]')
+      ?.addEventListener('click', hide);
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) hide(); // backdrop
+    });
+    dialog.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', hide);
+    });
+    dialog.addEventListener('close', () => lock(false));
+  }
+</script>

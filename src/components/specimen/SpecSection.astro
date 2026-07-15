@@ -1,0 +1,29 @@
+---
+/** /components spec-section wrapper (port of the page-local <Spec>). */
+interface Props {
+  id: string;
+  title: string;
+  note?: string;
+}
+const { id, title, note } = Astro.props;
+---
+
+<section
+  id={id}
+  class="section-y-tight"
+  style="border-top: 1px solid var(--border-subtle)"
+>
+  <div class="container">
+    <h2 class="type-heading-lg">{title}</h2>
+    {
+      note && (
+        <p class="type-body-sm mb-6 mt-1" style="color: var(--text-muted)">
+          {note}
+        </p>
+      )
+    }
+    <div class={note ? undefined : 'mt-6'}>
+      <slot />
+    </div>
+  </div>
+</section>

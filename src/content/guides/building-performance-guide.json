@@ -1,0 +1,409 @@
+{
+  "title": "Building Performance Guide",
+  "seo": {
+    "title": "Building Performance Guide",
+    "description": "Learn how high-performance window films improve energy efficiency, employee wellbeing, sustainability and long-term building value."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Knowledge Centre", "href": "/knowledge" },
+    { "label": "Building Performance Guide" }
+  ],
+  "intro": [
+    {
+      "id": "guide-hero",
+      "type": "guide-hero",
+      "order": 10,
+      "data": {
+        "title": "Building Performance Guide",
+        "lede": "Learn how high-performance window films improve energy efficiency, employee wellbeing, sustainability and long-term building value.",
+        "ctas": [
+          { "label": "Start Learning", "href": "#learning-journey", "variant": "primary" },
+          { "label": "Request Building Assessment", "href": "#assessment", "variant": "secondary" }
+        ]
+      }
+    },
+    {
+      "id": "hero-stats",
+      "type": "proof-stat-bar",
+      "order": 20,
+      "zone": "showroom-dark",
+      "label": "Building Performance Outcomes",
+      "data": {
+        "stats": [
+          {
+            "value": "Up to 30",
+            "unit": "%",
+            "label": "Lower Energy — Cooling Load Reduction"
+          },
+          {
+            "value": "Up to 30",
+            "unit": "%",
+            "label": "Lower Electricity Bills — Energy Savings"
+          },
+          {
+            "value": "Better Comfort",
+            "label": "Glare Reduction & Workplace Wellness"
+          },
+          {
+            "value": "Up to 4",
+            "unit": "Points",
+            "label": "GBI Contribution — Achieved by IrisPro Projects"
+          },
+          {
+            "value": "Lower Emissions",
+            "label": "Carbon Reduction — Support Net Zero Goals"
+          },
+          {
+            "value": "Reduce Fading",
+            "label": "Protect Assets — Extend Asset Life"
+          }
+        ]
+      }
+    },
+    {
+      "id": "learning-journey",
+      "type": "learning-path",
+      "order": 30,
+      "label": "Your Learning Journey",
+      "data": {
+        "heading": "Your Learning Journey",
+        "steps": [
+          { "number": 1, "title": "Why Commercial Buildings Need Window Film" },
+          { "number": 2, "title": "Employee Comfort & Wellbeing" },
+          { "number": 3, "title": "Energy Saving" },
+          { "number": 4, "title": "ESG & Sustainability" },
+          { "number": 5, "title": "ROI & Financial Benefits" },
+          { "number": 6, "title": "Protect Building Assets" },
+          { "number": 7, "title": "Choosing the Right Commercial Film" },
+          { "number": 8, "title": "Technology Explained" },
+          { "number": 9, "title": "Commercial Case Studies" },
+          { "number": 10, "title": "Frequently Asked Questions" },
+          { "number": 11, "title": "Download Centre" },
+          { "number": 12, "title": "Speak to a Consultant" }
+        ]
+      }
+    },
+    {
+      "id": "business-objectives",
+      "type": "learning-path",
+      "order": 40,
+      "label": "Our 5 Business Objectives",
+      "data": {
+        "heading": "Our 5 Business Objectives",
+        "steps": [
+          {
+            "number": 1,
+            "title": "Reduce Operating Cost",
+            "description": "Lower energy consumption, reduce electricity bills and extend HVAC system life."
+          },
+          {
+            "number": 2,
+            "title": "Improve Employee Wellbeing",
+            "description": "Enhance comfort, reduce glare, protect skin & eyes and improve productivity."
+          },
+          {
+            "number": 3,
+            "title": "ESG & Sustainability",
+            "description": "Reduce carbon emissions, support sustainability goals and responsible building performance."
+          },
+          {
+            "number": 4,
+            "title": "Green Building Certification",
+            "description": "Contribute to GBI points and other green building certifications to unlock value and recognition."
+          },
+          {
+            "number": 5,
+            "title": "Return on Investment",
+            "description": "Lower operating cost, quick payback and long-term financial benefits."
+          }
+        ]
+      }
+    },
+    {
+      "id": "how-film-improves",
+      "type": "learning-path",
+      "order": 50,
+      "label": "How Window Film Improves Building Performance",
+      "data": {
+        "heading": "How Window Film Improves Building Performance",
+        "steps": [
+          { "number": 1, "title": "Solar Energy", "description": "From Sun" },
+          { "number": 2, "title": "Solar Heat", "description": "Enters Through Glass" },
+          { "number": 3, "title": "Increases Indoor Temperature" },
+          { "number": 4, "title": "Higher Cooling Demand" },
+          { "number": 5, "title": "Higher Electricity Consumption" },
+          { "number": 6, "title": "Higher Operating Costs" }
+        ]
+      }
+    },
+    {
+      "id": "complete-protection",
+      "type": "tech-pillar-grid",
+      "order": 60,
+      "label": "IrisPro Delivers Complete Protection",
+      "data": {
+        "columns": 6,
+        "pillars": [
+          {
+            "icon": "sun",
+            "title": "Blocks UV+420™",
+            "description": "Protects skin, eyes & interiors"
+          },
+          {
+            "icon": "thermometer",
+            "title": "Superior Heat Rejection",
+            "description": "Keep buildings cooler"
+          },
+          {
+            "icon": "eye",
+            "title": "Glare Reduction",
+            "description": "Better visual comfort & productivity"
+          },
+          {
+            "icon": "bolt",
+            "title": "Energy Efficiency",
+            "description": "Lower cooling load & bills"
+          },
+          {
+            "icon": "building",
+            "title": "Interior Protection",
+            "description": "Preserve assets & building value"
+          },
+          {
+            "icon": "check",
+            "title": "Long-Term Performance",
+            "description": "Reliable & durable"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gbi-credits",
+      "type": "tech-pillar-grid",
+      "order": 70,
+      "label": "GBI Contribution",
+      "data": {
+        "columns": 4,
+        "pillars": [
+          {
+            "icon": "bolt",
+            "title": "EE — Energy Efficiency",
+            "description": "Reduce cooling load & energy use"
+          },
+          {
+            "icon": "users",
+            "title": "IEQ — Indoor Environmental Quality",
+            "description": "Improve visual comfort & wellbeing"
+          },
+          {
+            "icon": "layers",
+            "title": "MR — Materials & Resources",
+            "description": "Support sustainable building strategies"
+          },
+          {
+            "icon": "star",
+            "title": "IN — Innovation",
+            "description": "Innovative solution for existing building upgrades"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gbi-claim",
+      "type": "cta-bar",
+      "order": 80,
+      "data": {
+        "headline": "GBI Contribution",
+        "subhead": "IrisPro window films can contribute up to 4 GBI Points*. *Points achieved are subject to project design, documentation and GBI assessment.",
+        "actions": [
+          {
+            "icon": "leaf",
+            "title": "Learn More About GBI",
+            "cta": { "label": "Learn More About GBI", "href": "#gbi" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-studies",
+      "type": "project-strip",
+      "order": 90,
+      "label": "Featured Case Studies",
+      "data": {
+        "filters": false,
+        "scrollable": true,
+        "projects": [
+          {
+            "name": "OCBC Bank Tower",
+            "location": "Kuala Lumpur",
+            "category": "Commercial",
+            "badge": { "label": "Achieved 4 GBI Points", "tone": "achievement" },
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "OCBC Bank Tower, Kuala Lumpur",
+              "width": 560,
+              "height": 360
+            },
+            "benefit": "Premium office tower installation contributing to 4 GBI Points.",
+            "cta": { "label": "View Case Study", "href": "#ocbc-bank-tower" }
+          },
+          {
+            "name": "Putrajaya Project",
+            "location": "Government Complex",
+            "category": "Government",
+            "badge": { "label": "In Progress", "tone": "progress" },
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Putrajaya Project government complex",
+              "width": 560,
+              "height": 360
+            },
+            "benefit": "Large scale government buildings installation ongoing.",
+            "cta": { "label": "View Case Study", "href": "#putrajaya-project" }
+          },
+          {
+            "name": "KPJ Healthcare",
+            "location": "Hospital",
+            "category": "Healthcare",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "KPJ Healthcare hospital building",
+              "width": 560,
+              "height": 360
+            },
+            "benefit": "Improved comfort for patients & staff while reducing cooling cost.",
+            "cta": { "label": "View Case Study", "href": "#kpj-healthcare" }
+          },
+          {
+            "name": "Luxury Hotel",
+            "location": "Kuala Lumpur",
+            "category": "Hospitality",
+            "image": {
+              "src": "/placeholders/project-560x360.svg",
+              "alt": "Luxury hotel, Kuala Lumpur",
+              "width": 560,
+              "height": 360
+            },
+            "benefit": "Enhanced guest comfort, privacy & energy efficiency.",
+            "cta": { "label": "View Case Study", "href": "#luxury-hotel" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "roi-calculator",
+      "type": "series-card-set",
+      "order": 100,
+      "label": "Estimate Your Savings with Our ROI Calculator",
+      "data": {
+        "heading": "Estimate Your Savings with Our ROI Calculator",
+        "lede": "Get an estimate of potential energy savings, cost reduction and payback period for your building.",
+        "cards": [
+          {
+            "id": "roi-inputs",
+            "name": "Estimate Your Savings",
+            "description": "Calculator inputs and their defaults:",
+            "features": [
+              "Building Type: Office Building",
+              "Glass Area (m²): 1,000",
+              "Electricity Tariff (RM/kWh): 0.60",
+              "Operating Hours / Day: 12"
+            ],
+            "cta": { "label": "Try ROI Calculator", "href": "#roi-calculator" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "roi-outputs",
+      "type": "proof-stat-bar",
+      "order": 110,
+      "label": "Estimated Savings",
+      "data": {
+        "stats": [
+          {
+            "value": "28",
+            "unit": "%",
+            "label": "Estimated Cooling Load Reduction"
+          },
+          {
+            "value": "RM 62,400",
+            "label": "Estimated Electricity Savings Per Year"
+          },
+          {
+            "value": "38,720",
+            "unit": "kg CO₂",
+            "label": "Estimated Carbon Reduction Per Year"
+          },
+          {
+            "value": "2.1",
+            "unit": "Years",
+            "label": "Estimated Payback Period"
+          }
+        ]
+      }
+    },
+    {
+      "id": "technology-strip",
+      "type": "certification-strip",
+      "order": 120,
+      "zone": "showroom-dark",
+      "data": {
+        "certs": [
+          { "id": "uv420", "name": "Patented UV+420™", "label": "Complete UV & Blue Light Protection" },
+          { "id": "hotmelt", "name": "6-Layer Hotmelt™", "label": "Superior Durability" },
+          { "id": "sputter", "name": "Multi-Layer Sputter", "label": "Maximum Heat Rejection" },
+          { "id": "sirim", "name": "SIRIM Certified", "label": "Quality Assured" },
+          { "id": "warranty", "name": "Up to 10 Years Warranty", "label": "Long Lasting Protection" }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta-bar",
+      "order": 130,
+      "zone": "showroom-dark",
+      "data": {
+        "headline": "Ready to Improve Your Building Performance?",
+        "subhead": "Our specialists are ready to help you achieve lower energy cost, better comfort and higher building value.",
+        "actions": [
+          {
+            "icon": "pin",
+            "title": "Request Site Assessment",
+            "description": "On-site evaluation by our experts",
+            "cta": { "label": "Request Site Assessment", "href": "#assessment" }
+          },
+          {
+            "icon": "bolt",
+            "title": "Request Energy Evaluation",
+            "description": "Understand your energy saving potential",
+            "cta": { "label": "Request Energy Evaluation", "href": "#energy-evaluation" }
+          },
+          {
+            "icon": "document",
+            "title": "Download Catalogue",
+            "description": "Get our commercial solution brochure",
+            "cta": { "label": "Download Catalogue", "href": "#catalogue" }
+          },
+          {
+            "icon": "headset",
+            "title": "Talk to a Consultant",
+            "description": "Speak with our building performance specialist",
+            "cta": { "label": "Talk to a Consultant", "href": "#consultant" }
+          }
+        ]
+      }
+    }
+  ],
+  "main": [],
+  "rail": {},
+  "outro": [],
+  "_unplaced": {
+    "note": "Copy from the Building Performance Guide screen with no expressible section field. Preserved verbatim.",
+    "structure": "This guide has 12 chapters with NO lesson bullets or lesson counts on screen (unlike the automotive/residential 7×6 structure) — nothing invented; see _conflicts.md §34. All sections are in intro[]; main/rail/outro are empty (the GuideTemplate two-column region renders as a small empty stub).",
+    "gbi-footnote-join": "The GBI claim and its footnote ('*Points achieved are subject to…') are joined in one subhead so the qualifier stays adjacent to the claim.",
+    "roi-calculator": "The ROI calculator is an interactive island per the Stage 3 hydration policy; its input labels, defaults and output labels/values are authored as content (series-card-set + proof-stat-bar). The island itself is a reported schema gap.",
+    "newsletter": "Footer block: 'Newsletter — Stay updated with the latest insights, projects and technologies.' with an email input — footer chrome, no section type."
+  }
+}

@@ -1,0 +1,16 @@
+---
+/**
+ * Solutions landing — EditorialTemplate when the `editorial/solutions`
+ * content object exists (Stage 4); pending shell until then.
+ */
+import { getEntry } from 'astro:content';
+import EditorialTemplate from '@/templates/EditorialTemplate.astro';
+import PendingPage from '@/components/PendingPage.astro';
+import { PRIMARY_NAV } from '@/config/navigation';
+
+const entry = await getEntry('editorial', 'solutions');
+const label = PRIMARY_NAV.find((item) => item.href === '/solutions')?.label ?? 'Solutions';
+const crumbs = [{ label: 'Home', href: '/' }, { label }];
+---
+
+{entry ? <EditorialTemplate content={entry.data} /> : <PendingPage title={label} crumbs={crumbs} />}

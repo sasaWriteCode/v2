@@ -1,0 +1,37 @@
+---
+/**
+ * Knowledge Centre subpages — template chosen by CONTENT TYPE:
+ *   guides collection    → GuideTemplate
+ *   knowledge collection → KnowledgeHubTemplate (hub-like subpages;
+ *                          `hub` itself is /knowledge)
+ * Stage 4 adds entries to either collection; routing needs no changes.
+ */
+import { getCollection } from 'astro:content';
+import GuideTemplate from '@/templates/GuideTemplate.astro';
+import KnowledgeHubTemplate from '@/templates/KnowledgeHubTemplate.astro';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  const knowledge = await getCollection('knowledge');
+  return [
+    ...guides.map((entry) => ({
+      params: { slug: entry.id },
+      props: { kind: 'guide' as const, guide: entry.data, hub: undefined },
+    })),
+    ...knowledge
+      .filter((entry) => entry.id !== 'hub')
+      .map((entry) => ({
+        params: { slug: entry.id },
+        props: { kind: 'hub' as const, guide: undefined, hub: entry.data },
+      })),
+  ];
+}
+
+const { kind, guide, hub } = Astro.props;
+---
+
+{kind === 'guide' && guide ? (
+  <GuideTemplate content={guide} />
+) : (
+  <KnowledgeHubTemplate content={hub!} />
+)}

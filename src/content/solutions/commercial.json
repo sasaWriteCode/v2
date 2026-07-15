@@ -1,0 +1,38 @@
+{
+  "title": "Commercial Solutions",
+  "accent": "commercial",
+  "defaultZone": "showroom-dark",
+  "seo": {
+    "title": "Commercial Solutions",
+    "description": "Improve comfort, increase productivity and achieve your ESG goals."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Protection Solutions",
+      "href": "/solutions"
+    },
+    {
+      "label": "Commercial Solutions"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "headlineLines": [
+          "Commercial Solutions"
+        ],
+        "subhead": "Improve comfort, increase productivity and achieve your ESG goals.",
+        "accent": "commercial"
+      }
+    }
+  ],
+  "_status": "AWAITING SOURCE — the commercial solution screen was not in the Stage 4a screenshot batch. Only the home-page solution-card copy is transcribed (as the subhead); the interim h1 is the route title (launch audit B3); the real hero headline is still needed. Author fully when the screen arrives in the next batch."
+}

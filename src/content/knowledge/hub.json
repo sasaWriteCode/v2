@@ -1,0 +1,300 @@
+{
+  "title": "Knowledge Centre",
+  "defaultZone": "workshop-light",
+  "seo": {
+    "title": "IrisPro Knowledge Centre",
+    "description": "Learn. Compare. Protect. The most comprehensive window film learning centre for ASEAN climate."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Knowledge Centre" }
+  ],
+  "sections": [
+    {
+      "id": "hub-hero",
+      "type": "hub-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "title": "IrisPro Knowledge Centre",
+        "lede": "Learn. Compare. Protect. The most comprehensive window film learning centre for ASEAN climate.",
+        "meta": [
+          { "icon": "sun", "label": "Complete UV+420 Protection" },
+          { "icon": "thermometer", "label": "Superior Heat Rejection" },
+          { "icon": "leaf", "label": "Energy Saving & Efficient" },
+          { "icon": "shield", "label": "Protects Health & Interiors" },
+          { "icon": "award", "label": "Long Lasting Performance" }
+        ],
+        "search": {
+          "label": "Search for topics, videos or questions...",
+          "placeholder": "Search for topics, videos or questions...",
+          "action": "/knowledge"
+        },
+        "ctas": [
+          { "label": "What is TSER?", "href": "/knowledge/learn-the-basics", "variant": "ghost" },
+          { "label": "UV vs UV+420", "href": "/knowledge/technology-explained", "variant": "ghost" },
+          { "label": "Why IRR99% Still Hot?", "href": "/knowledge/learn-the-basics", "variant": "ghost" },
+          { "label": "Best Tint for EV?", "href": "/knowledge/automotive", "variant": "ghost" }
+        ]
+      }
+    },
+    {
+      "id": "explore-by-category",
+      "type": "category-grid",
+      "order": 20,
+      "zone": "workshop-light",
+      "label": "Explore by Category",
+      "data": {
+        "heading": "Explore by Category",
+        "categories": [
+          { "icon": "document", "title": "Learn the Basics", "href": "/knowledge/learn-the-basics" },
+          { "icon": "layers", "title": "Technology Explained", "href": "/knowledge/technology-explained" },
+          { "icon": "car", "title": "Automotive Guide", "href": "/knowledge/automotive" },
+          { "icon": "home", "title": "Residential Guide", "href": "/knowledge/residential-guide" },
+          { "icon": "building", "title": "Commercial Guide", "href": "/knowledge/building-performance-guide" },
+          { "icon": "shield", "title": "Health & Protection", "href": "/knowledge/personal-protection-guide" },
+          { "icon": "leaf", "title": "Sustainability & ESG", "href": "/knowledge" },
+          { "icon": "check", "title": "Myth vs Fact", "href": "/knowledge" },
+          { "icon": "play", "title": "Video Library", "href": "/knowledge" }
+        ]
+      }
+    },
+    {
+      "id": "most-popular-videos",
+      "type": "video-carousel",
+      "order": 30,
+      "zone": "workshop-light",
+      "label": "Most Popular Videos",
+      "data": {
+        "heading": "Most Popular Videos",
+        "videos": [
+          {
+            "title": "Why IRR99% Still Feels Hot?",
+            "moduleLabel": "Ep. 024 · 45K views",
+            "duration": "2:58",
+            "href": "#ep-024",
+            "poster": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Video: Why IRR99% Still Feels Hot?",
+              "width": 448,
+              "height": 252
+            }
+          },
+          {
+            "title": "UV99% vs UV+420: What's the Difference?",
+            "moduleLabel": "Ep. 015 · 32K views",
+            "duration": "3:12",
+            "href": "#ep-015",
+            "poster": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Video: UV99% vs UV+420: What's the Difference?",
+              "width": 448,
+              "height": 252
+            }
+          },
+          {
+            "title": "What is TSER? The Key to Real Comfort",
+            "moduleLabel": "Ep. 011 · 28K views",
+            "duration": "2:45",
+            "href": "#ep-011",
+            "poster": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Video: What is TSER? The Key to Real Comfort",
+              "width": 448,
+              "height": 252
+            }
+          },
+          {
+            "title": "Ceramic vs Sputter: Which is Better?",
+            "moduleLabel": "Ep. 036 · 27K views",
+            "duration": "3:08",
+            "href": "#ep-036",
+            "poster": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Video: Ceramic vs Sputter: Which is Better?",
+              "width": 448,
+              "height": 252
+            }
+          },
+          {
+            "title": "Best Window Film for Electric Vehicles",
+            "moduleLabel": "Ep. 042 · 25K views",
+            "duration": "3:22",
+            "href": "#ep-042",
+            "poster": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Video: Best Window Film for Electric Vehicles",
+              "width": 448,
+              "height": 252
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "learning-path",
+      "type": "learning-path",
+      "order": 40,
+      "zone": "workshop-light",
+      "label": "Learning Path",
+      "data": {
+        "heading": "Learning Path",
+        "steps": [
+          {
+            "number": 1,
+            "title": "Beginner",
+            "description": "Learn the basics of window film and how it works.",
+            "href": "/knowledge/learn-the-basics"
+          },
+          {
+            "number": 2,
+            "title": "Understand Specifications",
+            "description": "Learn key terms and measurements.",
+            "href": "/knowledge/learn-the-basics"
+          },
+          {
+            "number": 3,
+            "title": "Understand Technologies",
+            "description": "Discover the different types of window film technologies.",
+            "href": "/knowledge/technology-explained"
+          },
+          {
+            "number": 4,
+            "title": "Choose the Right Film",
+            "description": "Find the best film for your needs.",
+            "href": "/knowledge/automotive"
+          },
+          {
+            "number": 5,
+            "title": "Advanced Knowledge",
+            "description": "Deep dive into performance and tests.",
+            "href": "/knowledge/technology-explained"
+          },
+          {
+            "number": 6,
+            "title": "Become an Expert",
+            "description": "Professional training for installers & dealers.",
+            "href": "/knowledge"
+          }
+        ]
+      }
+    },
+    {
+      "id": "latest-articles",
+      "type": "article-grid",
+      "order": 50,
+      "zone": "workshop-light",
+      "label": "Latest Articles & Lessons",
+      "data": {
+        "heading": "Latest Articles & Lessons",
+        "articles": [
+          {
+            "title": "How UV Damages Your Skin",
+            "category": "Lesson",
+            "readTime": "Ep. 063 · 3 min read",
+            "description": "Understand how UVA1 and HEV penetrate deep into the skin and cause long term damage.",
+            "href": "#ep-063"
+          },
+          {
+            "title": "6-Layer Hotmelt™ Technology",
+            "category": "Technology",
+            "readTime": "Ep. 028 · 6 min read",
+            "description": "Why IrisPro's 6-Layer Hotmelt base film delivers superior durability and protection.",
+            "href": "#ep-028"
+          },
+          {
+            "title": "Which VLT Should I Choose?",
+            "category": "Guide",
+            "readTime": "Ep. 040 · 4 min read",
+            "description": "A complete guide to choosing the right VLT for day and night comfort.",
+            "href": "#ep-040"
+          },
+          {
+            "title": "Is Darker Film Always Better?",
+            "category": "Myth vs Fact",
+            "readTime": "Ep. 019 · 4 min read",
+            "description": "The truth about VLT, heat rejection and visibility.",
+            "href": "#ep-019"
+          },
+          {
+            "title": "How Window Film Saves Electricity",
+            "category": "Save Energy",
+            "readTime": "Ep. 031 · 5 min read",
+            "description": "Reduce cooling cost and improve energy efficiency for homes and buildings.",
+            "href": "#ep-031"
+          }
+        ]
+      }
+    },
+    {
+      "id": "browse-by-episode",
+      "type": "module-browser",
+      "order": 60,
+      "zone": "workshop-light",
+      "label": "Browse by Episode",
+      "data": {
+        "heading": "Browse by Episode",
+        "allLabel": "All Modules",
+        "modules": [
+          { "id": "module-1", "number": 1, "title": "Module 1 – Window Film Basics", "description": "4 Episodes", "episodes": [] },
+          { "id": "module-2", "number": 2, "title": "Module 2 – Understanding Specifications", "description": "10 Episodes", "episodes": [] },
+          { "id": "module-3", "number": 3, "title": "Module 3 – Window Film Technologies", "description": "9 Episodes", "episodes": [] },
+          { "id": "module-4", "number": 4, "title": "Module 4 – Buying Guide", "description": "9 Episodes", "episodes": [] },
+          { "id": "module-5", "number": 5, "title": "Module 5 – Health & Protection", "description": "7 Episodes", "episodes": [] },
+          { "id": "module-6", "number": 6, "title": "Module 6 – Energy Saving & Sustainability", "description": "6 Episodes", "episodes": [] },
+          { "id": "module-7", "number": 7, "title": "Module 7 – Myth vs Fact", "description": "12 Episodes", "episodes": [] },
+          { "id": "module-8", "number": 8, "title": "Module 8 – Real Projects & Case Studies", "description": "15 Episodes", "episodes": [] },
+          { "id": "module-9", "number": 9, "title": "Module 9 – Product Academy", "description": "12 Episodes", "episodes": [] },
+          { "id": "module-10", "number": 10, "title": "Module 10 – Installation Academy", "description": "10 Episodes", "episodes": [] }
+        ]
+      }
+    },
+    {
+      "id": "ask-irispro-ai",
+      "type": "ask-irispro-ai",
+      "order": 70,
+      "zone": "showroom-dark",
+      "label": "Ask IrisPro AI",
+      "data": {
+        "heading": "Ask IrisPro AI",
+        "description": "Your smart assistant for all window film questions.",
+        "placeholder": "Ask anything about window film...",
+        "suggestedQuestions": [
+          "Which film is best for my Tesla?",
+          "Why UV99% is not enough?",
+          "What is TSER and why is it important?",
+          "Will window film help reduce electricity bills?",
+          "What VLT should I choose for my home?"
+        ],
+        "fallbackAction": "/knowledge"
+      }
+    },
+    {
+      "id": "trusted-stats",
+      "type": "proof-stat-bar",
+      "order": 80,
+      "zone": "showroom-dark",
+      "label": "Trusted by Thousands. Proven by Projects.",
+      "data": {
+        "stats": [
+          { "value": "20,000+", "label": "Vehicles Protected" },
+          { "value": "8,000+", "label": "Homes Protected" },
+          { "value": "1,000+", "label": "Commercial Buildings" },
+          { "value": "Across ASEAN", "label": "Region Wide" },
+          { "value": "10+", "label": "Years of Excellence" }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the hub screen with no expressible section field. Preserved verbatim.",
+    "category-carousel": "Explore by Category is a carousel with paging arrows — nine cards are visible; more may exist off-screen (flagged in the Stage 4d report).",
+    "videos-link": "View all videos",
+    "learning-path-link": "Start your learning journey",
+    "articles-link": "View all articles",
+    "episodes-links": ["View all episodes"],
+    "episode-filters": "Browse by Episode also shows All Topics / All Durations / Newest controls; the module-browser type expresses the module filter only.",
+    "video-metadata": "Episode numbers and view counts have no dedicated fields; they are joined into each video's moduleLabel string (e.g. 'Ep. 024 · 45K views').",
+    "module-episodes": "The module list shows episode COUNTS only — no episode titles are visible on the hub; counts are preserved in each module's description."
+  }
+}

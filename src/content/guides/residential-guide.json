@@ -1,0 +1,394 @@
+{
+  "title": "Residential Guide",
+  "seo": {
+    "title": "Residential Guide",
+    "description": "Everything you need to know about window film for your home. Stay cooler. Protect your family. Save energy."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Knowledge Centre", "href": "/knowledge" },
+    { "label": "Residential Guide" }
+  ],
+  "intro": [
+    {
+      "id": "guide-hero",
+      "type": "guide-hero",
+      "order": 10,
+      "data": {
+        "title": "Residential Guide",
+        "lede": "Everything you need to know about window film for your home. Stay cooler. Protect your family. Save energy.",
+        "meta": [
+          { "icon": "thermometer", "label": "Reduce Heat — Up to 90%" },
+          { "icon": "shield", "label": "Block UV+420 — Protects Health" },
+          { "icon": "home", "label": "Protect Interior & Furnishings" },
+          { "icon": "sun", "label": "Reduce Glare — Improve Comfort" },
+          { "icon": "bolt", "label": "Save Energy — Lower Bills" },
+          { "icon": "eye", "label": "Enhance Privacy — Day & Night" }
+        ]
+      }
+    },
+    {
+      "id": "guide-search",
+      "type": "search-bar",
+      "order": 20,
+      "data": {
+        "label": "Search for topics, videos or questions...",
+        "placeholder": "Search for topics, videos or questions...",
+        "action": "/knowledge"
+      }
+    },
+    {
+      "id": "learning-journey",
+      "type": "chapter-card-row",
+      "order": 30,
+      "label": "Start Your Learning Journey",
+      "data": {
+        "heading": "Start Your Learning Journey",
+        "chapters": [
+          {
+            "number": 1,
+            "title": "Understanding Residential Window Film",
+            "description": "Learn the basics and why window film is essential for every home.",
+            "lessons": [
+              "What is window film?",
+              "Why homes need window film?",
+              "Benefits for homeowners",
+              "Common types of window film"
+            ],
+            "href": "#all-chapters"
+          },
+          {
+            "number": 2,
+            "title": "Heat & Comfort At Home",
+            "description": "Understand how solar heat enters your home and how window film keeps it cooler.",
+            "lessons": [
+              "How heat enters through glass",
+              "What is TSER?",
+              "Why IRR99% still feels hot?",
+              "Indoor temperature comparison"
+            ],
+            "href": "#all-chapters"
+          },
+          {
+            "number": 3,
+            "title": "UV & Health Protection",
+            "description": "Protect your family, skin, eyes and loved ones from harmful UV & blue light.",
+            "lessons": [
+              "What is UV?",
+              "What is UV400?",
+              "What is UV+420?",
+              "How UV affects skin & eyes"
+            ],
+            "href": "#all-chapters"
+          },
+          {
+            "number": 4,
+            "title": "Choosing The Right Film",
+            "description": "Find the best window film based on your home needs and lifestyle.",
+            "lessons": [
+              "Which VLT should I choose?",
+              "Best film for west facing house",
+              "Best film for high rise unit",
+              "Privacy vs visibility"
+            ],
+            "href": "#all-chapters"
+          },
+          {
+            "number": 5,
+            "title": "Technology Explained",
+            "description": "Explore the science and technologies behind high performance window films.",
+            "lessons": [
+              "Ceramic vs Sputter",
+              "Titanium vs Silver Sputter",
+              "6-Layer Hotmelt™",
+              "UV+420™ Optical Technology"
+            ],
+            "href": "#all-chapters"
+          },
+          {
+            "number": 6,
+            "title": "Real Demonstrations",
+            "description": "See real test results that prove the performance of different films.",
+            "lessons": [
+              "Heat rejection test",
+              "UV meter test",
+              "Before & after comparison",
+              "Thermal camera test"
+            ],
+            "href": "#all-chapters"
+          },
+          {
+            "number": 7,
+            "title": "Customer Stories",
+            "description": "Real experiences from homeowners just like you.",
+            "lessons": [
+              "Homeowner testimonials",
+              "Before & after results",
+              "Interior protection stories",
+              "Frequently asked questions"
+            ],
+            "href": "#all-chapters"
+          }
+        ]
+      }
+    }
+  ],
+  "main": [
+    {
+      "id": "all-chapters",
+      "type": "guide-chapter-list",
+      "order": 40,
+      "label": "All Chapters",
+      "data": {
+        "defaultOpen": 1,
+        "chapters": [
+          {
+            "number": 1,
+            "title": "Understanding Residential Window Film",
+            "description": "Learn the basics and why window film is essential for every home.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 1 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "What is window film?",
+              "Why homes need window film?",
+              "Benefits for homeowners",
+              "Common types of window film"
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Heat & Comfort At Home",
+            "description": "Understand how solar heat enters your home and how window film keeps it cooler.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 2 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "How heat enters through glass",
+              "What is TSER?",
+              "Why IRR99% still feels hot?",
+              "Indoor temperature comparison"
+            ]
+          },
+          {
+            "number": 3,
+            "title": "UV & Health Protection",
+            "description": "Protect your family, skin, eyes and loved ones from harmful UV & blue light.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 3 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "What is UV?",
+              "What is UV400?",
+              "What is UV+420?",
+              "How UV affects skin & eyes"
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Choosing The Right Film",
+            "description": "Find the best window film based on your home needs and lifestyle.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 4 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "Which VLT should I choose?",
+              "Best film for west facing house",
+              "Best film for high rise unit",
+              "Privacy vs visibility"
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Technology Explained",
+            "description": "Explore the science and technologies behind high performance window films.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 5 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "Ceramic vs Sputter",
+              "Titanium vs Silver Sputter",
+              "6-Layer Hotmelt™",
+              "UV+420™ Optical Technology"
+            ]
+          },
+          {
+            "number": 6,
+            "title": "Real Demonstrations",
+            "description": "See real test results that prove the performance of different films.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 6 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "Heat rejection test",
+              "UV meter test",
+              "Before & after comparison",
+              "Thermal camera test"
+            ]
+          },
+          {
+            "number": 7,
+            "title": "Customer Stories",
+            "description": "Real experiences from homeowners just like you.",
+            "thumbnail": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Chapter 7 video",
+              "width": 448,
+              "height": 252
+            },
+            "lessons": [
+              "Homeowner testimonials",
+              "Before & after results",
+              "Interior protection stories",
+              "Frequently asked questions"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "rail": {
+    "onThisPageLabel": "On This Page",
+    "episodesHeading": "Recommended Episodes",
+    "episodes": [
+      {
+        "title": "Why IRR99% Still Feels Hot?",
+        "duration": "3:02",
+        "href": "#ep-024"
+      },
+      {
+        "title": "UV99% vs UV+420: What's the Difference?",
+        "duration": "2:45",
+        "href": "#ep-015"
+      },
+      {
+        "title": "Best Window Film for Homes",
+        "duration": "3:05",
+        "href": "#ep-homes"
+      },
+      {
+        "title": "How to Choose the Right VLT?",
+        "duration": "2:58",
+        "href": "#ep-vlt"
+      },
+      {
+        "title": "Heat Rejection Test: Ceramic vs Sputter",
+        "duration": "3:20",
+        "href": "#ep-heat-test"
+      }
+    ],
+    "questionsHeading": "Popular Questions",
+    "questions": [
+      {
+        "question": "Which window film is best for west facing house?",
+        "answer": "_verify"
+      },
+      {
+        "question": "How much heat can window film really reduce?",
+        "answer": "_verify"
+      },
+      {
+        "question": "Is dark film always better for homes?",
+        "answer": "_verify"
+      },
+      {
+        "question": "Can window film help reduce electricity bills?",
+        "answer": "_verify"
+      },
+      {
+        "question": "Does window film affect natural light?",
+        "answer": "_verify"
+      }
+    ],
+    "askAi": {
+      "heading": "Ask IrisPro AI",
+      "description": "Ask any question about residential window film and get instant answers.",
+      "placeholder": "Ask anything...",
+      "suggestedQuestions": [
+        "Best film for west facing house",
+        "How much energy can I save?",
+        "What VLT is best for living room?"
+      ],
+      "fallbackAction": "/knowledge"
+    }
+  },
+  "outro": [
+    {
+      "id": "why-homeowners",
+      "type": "tech-pillar-grid",
+      "order": 50,
+      "label": "Why Homeowners Choose IrisPro",
+      "data": {
+        "columns": 5,
+        "pillars": [
+          {
+            "icon": "sun",
+            "title": "Blocks UV+420",
+            "description": "Protects family from harmful UV & blue light."
+          },
+          {
+            "icon": "thermometer",
+            "title": "Reduce Heat",
+            "description": "Up to 90% — keep your home cooler & comfortable."
+          },
+          {
+            "icon": "bolt",
+            "title": "Save Energy",
+            "description": "Lower electricity bills with better heat control."
+          },
+          {
+            "icon": "shield",
+            "title": "Protect Interiors",
+            "description": "Prevents fading on furniture, floor, curtain & artworks."
+          },
+          {
+            "icon": "eye",
+            "title": "Enhance Privacy",
+            "description": "Enjoy natural light without compromising privacy."
+          }
+        ]
+      }
+    },
+    {
+      "id": "technology-strip",
+      "type": "certification-strip",
+      "order": 60,
+      "zone": "showroom-dark",
+      "data": {
+        "certs": [
+          { "id": "uv420", "name": "Patented UV+420™", "label": "Complete UV & Blue Light Protection" },
+          { "id": "hotmelt", "name": "6-Layer Hotmelt™", "label": "Superior Durability" },
+          { "id": "sputter", "name": "Multi-Layer Sputter", "label": "Maximum Heat Rejection" },
+          { "id": "sirim", "name": "SIRIM Certified", "label": "Quality Assured" },
+          { "id": "warranty", "name": "Up to 10 Years Warranty", "label": "Long Lasting Protection" }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the Residential Guide screen with no expressible section field. Preserved verbatim.",
+    "chapter-lesson-counts": "Every chapter card and accordion row states '6 Lessons' and shows 4 lesson bullets plus '+ 2 more lessons'. Only the 4 visible lessons per chapter are transcribed (28 of a claimed 42); the remaining 14 lesson titles are a client ask.",
+    "view-all-chapters": "View All Chapters",
+    "rail-links": ["View all episodes", "View all FAQs"],
+    "hero-chip-pairs": "Hero benefit chips are two-part on screen (e.g. 'Reduce Heat / Up to 90%'); BenefitItem-style meta has a single label, so pairs are joined with an em dash.",
+    "newsletter": "Footer block: 'Newsletter — Stay updated with the latest tips, offers and new technologies.' with an email input — footer chrome, no section type."
+  }
+}

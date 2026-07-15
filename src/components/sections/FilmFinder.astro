@@ -1,0 +1,51 @@
+---
+/**
+ * FilmFinder — the guided "help me choose" selector. Pure link cards driven
+ * by data: zero JS, every option is a real <a>. Static.
+ */
+import { Icon } from '@/components/global/Icon';
+import type { FilmFinderContent } from '@/types/sections';
+
+type Props = FilmFinderContent;
+const { heading, lede, question, options } = Astro.props;
+---
+
+<div
+  class="rounded-lg p-6 sm:p-8"
+  style="border: 1px solid var(--border-subtle); background-image: var(--depth-glow-subtle)"
+>
+  {heading && <h2 class="type-heading-lg">{heading}</h2>}
+  {lede && (
+    <p class="type-body-md mt-2 max-w-article" style="color: var(--text-secondary)">
+      {lede}
+    </p>
+  )}
+  <p
+    class:list={['type-heading-md', heading || lede ? 'mt-6' : undefined]}
+  >
+    {question}
+  </p>
+  <ul class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    {options.map((option) => (
+      <li>
+        <a
+          href={option.href}
+          class="grid h-full content-start gap-2 rounded-md p-4"
+          style="background: var(--surface-raised); border: 1px solid var(--border-default); color: inherit; text-decoration: none"
+        >
+          {option.icon && (
+            <span style="color: var(--text-brand)">
+              <Icon name={option.icon} size={22} />
+            </span>
+          )}
+          <span class="type-body-sm font-semibold">{option.label}</span>
+          {option.description && (
+            <span class="type-caption" style="color: var(--text-muted)">
+              {option.description}
+            </span>
+          )}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>

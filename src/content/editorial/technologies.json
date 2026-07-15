@@ -1,0 +1,348 @@
+{
+  "title": "Technologies",
+  "defaultZone": "showroom-dark",
+  "seo": {
+    "title": "Technologies",
+    "description": "Engineered for ASEAN & Equator climates, IRISPRO combines patented UV+420™ technology, 6-Layer Hotmelt™ structure and multi-layer sputtering to deliver superior protection and lasting comfort."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Technologies" }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "headlineLines": [
+          "Advanced Technology.",
+          "Complete Protection.",
+          "Proven Performance."
+        ],
+        "subhead": "Engineered for ASEAN & Equator climates, IRISPRO combines patented UV+420™ technology, 6-Layer Hotmelt™ structure and multi-layer sputtering to deliver superior protection and lasting comfort.",
+        "benefits": [
+          { "icon": "sun", "label": "Complete UV Protection" },
+          { "icon": "thermometer", "label": "Superior Heat Rejection" },
+          { "icon": "shield", "label": "Long Lasting Durability" },
+          { "icon": "eye", "label": "Clear View Comfort" }
+        ],
+        "media": {
+          "src": "/placeholders/hero-1600x900.svg",
+          "alt": "Exploded film-layer diagram over a car on a mountain road at sunrise",
+          "width": 1600,
+          "height": 900
+        }
+      }
+    },
+    {
+      "id": "film-construction",
+      "type": "learning-path",
+      "order": 20,
+      "zone": "showroom-dark",
+      "label": "Film Construction",
+      "data": {
+        "steps": [
+          { "number": 1, "title": "Hard Coat" },
+          { "number": 2, "title": "6-Layer Base Film" },
+          { "number": 3, "title": "Henkel Adhesive" },
+          { "number": 4, "title": "Multi-Layer Sputter" },
+          { "number": 5, "title": "Henkel Adhesive" },
+          { "number": 6, "title": "Release Liner" }
+        ]
+      }
+    },
+    {
+      "id": "uv420-spectrum",
+      "type": "spectrum-diagram",
+      "order": 30,
+      "zone": "showroom-dark",
+      "label": "Patent 1 — UV+420™ Optical Technology",
+      "data": {
+        "title": "Solar Energy (Full Light Spectrum)",
+        "variant": "full",
+        "showFilm": true,
+        "bands": [
+          {
+            "id": "uv",
+            "name": "UV",
+            "fromNm": 100,
+            "toNm": 400,
+            "behavior": "blocked",
+            "annotation": "Blocks 99.99% UV400",
+            "hue": "var(--accent-personal-protection-bright)"
+          },
+          {
+            "id": "hev",
+            "name": "HEV Blue Light",
+            "fromNm": 380,
+            "toNm": 420,
+            "behavior": "blocked",
+            "annotation": "Blocks up to 100% HEV Blue Light",
+            "hue": "var(--accent-commercial-bright)"
+          },
+          {
+            "id": "visible",
+            "name": "Visible Light",
+            "fromNm": 420,
+            "toNm": 780,
+            "behavior": "transmitted",
+            "annotation": "Allows Beneficial Visible Light",
+            "hue": "var(--accent-sustainability-bright)"
+          },
+          {
+            "id": "infrared",
+            "name": "Infrared Heat",
+            "fromNm": 780,
+            "toNm": 2500,
+            "behavior": "reduced",
+            "annotation": "Reduces Infrared Heat",
+            "hue": "#e85d3a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "uv420-capabilities",
+      "type": "tech-pillar-grid",
+      "order": 40,
+      "zone": "showroom-dark",
+      "label": "UV+420™ Capabilities",
+      "data": {
+        "columns": 4,
+        "pillars": [
+          {
+            "icon": "shield",
+            "title": "Blocks UV400 (UVA1 + UVB)",
+            "description": "100%"
+          },
+          {
+            "icon": "sun",
+            "title": "Blocks HEV Blue Light 380–430nm",
+            "description": "Up to 100% (_verify — wavelength reads 380–430nm here but 380–420nm everywhere else)"
+          },
+          {
+            "icon": "eye",
+            "title": "Protects Eyes",
+            "description": "& Reduces Cataract Risk"
+          },
+          {
+            "icon": "person",
+            "title": "Protects Skin",
+            "description": "& Prevents Premature Aging"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hotmelt-layers",
+      "type": "learning-path",
+      "order": 50,
+      "zone": "workshop-light",
+      "label": "Patent 2 — 6-Layer Hotmelt™ Technology",
+      "data": {
+        "heading": "6-Layer Hotmelt™ Technology",
+        "lede": "Stronger, more durable, built to last. 6 layers of advanced materials are hotmelted into one integrated base film for superior durability, optical clarity and long-term performance.",
+        "steps": [
+          { "number": 1, "title": "Anti-Aging Outer Layer" },
+          { "number": 2, "title": "UV+420™ / UV380 Layer" },
+          { "number": 3, "title": "Chip Dye Colour Layer" },
+          { "number": 4, "title": "Titanium Oxide Inorganic Ceramic Heat Rejection Layer" },
+          { "number": 5, "title": "UV+420™ / UV380 Layer" },
+          { "number": 6, "title": "Anti-Aging Outer Layer" }
+        ]
+      }
+    },
+    {
+      "id": "why-hotmelt",
+      "type": "series-card-set",
+      "order": 60,
+      "zone": "workshop-light",
+      "label": "Why Hotmelt Technology?",
+      "data": {
+        "cards": [
+          {
+            "id": "why-hotmelt",
+            "name": "Why Hotmelt Technology?",
+            "tagline": "Hotmelt into One",
+            "description": "Integrated. Durable. Reliable.",
+            "features": [
+              "Stronger structure, less prone to delamination",
+              "Superior UV, heat & color stability",
+              "Better durability in harsh climate",
+              "Crystal clear visibility"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "sputter-layer-comparison",
+      "type": "series-comparison-table",
+      "order": 70,
+      "zone": "workshop-light",
+      "label": "Multi-Layer Sputtering Technology",
+      "data": {
+        "caption": "Layer Comparison",
+        "series": [
+          { "id": "single", "name": "Single Layer", "tagline": "Basic Performance" },
+          { "id": "six", "name": "6-Layer", "tagline": "Better Performance" },
+          { "id": "twelve", "name": "12-Layer", "tagline": "High Performance" },
+          { "id": "eighteen", "name": "18-Layer", "tagline": "Maximum Performance" }
+        ],
+        "rows": [
+          {
+            "label": "Rating",
+            "values": { "single": "1", "six": "2", "twelve": "4", "eighteen": "5" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sputter-materials",
+      "type": "series-comparison-table",
+      "order": 80,
+      "zone": "workshop-light",
+      "label": "Sputter Materials",
+      "data": {
+        "caption": "Sputter materials — Reflectivity and Heat Rejection",
+        "series": [
+          { "id": "silver", "name": "Silver", "tagline": "Highest Heat Reflectivity" },
+          { "id": "titanium", "name": "Titanium" },
+          { "id": "nicr", "name": "NiCr" },
+          { "id": "ss", "name": "SS" },
+          { "id": "aluminium", "name": "Aluminium" }
+        ],
+        "rows": [
+          {
+            "label": "Reflectivity",
+            "values": {
+              "silver": "5",
+              "titanium": "4",
+              "nicr": "3",
+              "ss": "3",
+              "aluminium": "3"
+            }
+          },
+          {
+            "label": "Heat Rejection",
+            "values": {
+              "silver": "Excellent",
+              "titanium": "Very Good",
+              "nicr": "Good",
+              "ss": "Fair",
+              "aluminium": "Fair"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "precision-manufacturing",
+      "type": "learning-path",
+      "order": 90,
+      "zone": "workshop-light",
+      "label": "Precision Manufacturing",
+      "data": {
+        "heading": "Precision Manufacturing",
+        "lede": "From raw material to premium film. IRISPRO uses advanced manufacturing process and strict quality control to ensure consistent performance in every roll.",
+        "steps": [
+          { "number": 1, "title": "Raw Material Selection" },
+          { "number": 2, "title": "Precision Coating" },
+          { "number": 3, "title": "Vacuum Sputtering" },
+          { "number": 4, "title": "Hotmelt Lamination" },
+          { "number": 5, "title": "Quality Inspection" },
+          { "number": 6, "title": "Slitting & Packaging" }
+        ]
+      }
+    },
+    {
+      "id": "installation-system",
+      "type": "tech-pillar-grid",
+      "order": 100,
+      "zone": "workshop-light",
+      "label": "Professional Installation System",
+      "data": {
+        "columns": 5,
+        "pillars": [
+          { "icon": "award", "title": "IWFA Installation Standard", "description": "" },
+          { "icon": "shield", "title": "Dust-Free Environment", "description": "" },
+          { "icon": "check", "title": "Precision Cutting", "description": "" },
+          { "icon": "layers", "title": "Professional Tools", "description": "" },
+          { "icon": "document", "title": "Warranty Support", "description": "" }
+        ]
+      }
+    },
+    {
+      "id": "technology-advantage",
+      "type": "tech-pillar-grid",
+      "order": 110,
+      "zone": "workshop-light",
+      "label": "The IrisPro Technology Advantage",
+      "data": {
+        "columns": 6,
+        "pillars": [
+          {
+            "icon": "sun",
+            "title": "Complete UV & HEV Protection",
+            "description": "Blocks UV400 & HEV Blue Light at the source."
+          },
+          {
+            "icon": "thermometer",
+            "title": "Superior Heat Rejection",
+            "description": "IRR up to 98% (1400nm) for cooler cabin."
+          },
+          {
+            "icon": "layers",
+            "title": "Long Lasting Durability",
+            "description": "6-Layer Hotmelt structure for long-term performance."
+          },
+          {
+            "icon": "eye",
+            "title": "Clear View Comfort",
+            "description": "High clarity, low reflection, better driving experience."
+          },
+          {
+            "icon": "users",
+            "title": "Health & Skin Protection",
+            "description": "Protects you and your loved ones every day."
+          },
+          {
+            "icon": "bolt",
+            "title": "Energy & Cost Saving",
+            "description": "Lower cooling demand, save energy."
+          }
+        ]
+      }
+    },
+    {
+      "id": "certifications",
+      "type": "certification-strip",
+      "order": 120,
+      "zone": "workshop-light",
+      "data": {
+        "heading": "Certified. Tested. Trusted Globally.",
+        "certs": [
+          { "id": "sirim", "name": "SIRIM", "label": "Certified" },
+          { "id": "sgs", "name": "SGS", "label": "Tested" },
+          { "id": "rohs", "name": "RoHS", "label": "Compliant" },
+          { "id": "reach", "name": "REACH", "label": "Compliant" },
+          { "id": "iwfa", "name": "IWFA", "label": "Installation Standard" },
+          { "id": "ewarranty", "name": "eWarranty", "label": "Up to 10 Years Performance Warranty" }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the technologies screen with no expressible section field. Preserved verbatim for the client / a future prose section type.",
+    "patent-1-intro": "Patent 1 — UV+420™ Optical Technology. Complete protection for your skin & eyes. IRISPRO blocks UV400 (UVA1 380–400nm) and HEV Blue Light (380–420nm) at the source, helping protect your skin, eyes and health.",
+    "sputtering-intro": "Multi-Layer Sputtering Technology. Reflect more heat. Stay cooler. Multi-layer sputtering reflects up to 98% of solar heat (IRR up to 1400nm) for maximum heat rejection without compromising visibility.",
+    "sputter-badge": "SILVER SPUTTER — Highest Heat Reflectivity (placed as the Silver column tagline in the materials table)",
+    "installation-intro": "Professional Installation System. Technology is only as good as the installation. We follow IWFA installation standards to ensure optimal performance, clarity and long-term warranty support.",
+    "installation-callout": "INSTALLATION MAKES THE DIFFERENCE",
+    "manufacturing-strip": "STRICT QUALITY CONTROL | CONSISTENT PERFORMANCE | BUILT FOR ASEAN CLIMATE",
+    "page-footnote": "*Performance may vary based on film type, glass type, usage pattern, building design and climate.",
+    "section-numbering": "The screen numbers its sections 01–05 (01 Patent 1 UV+420™, 02 Patent 2 6-Layer Hotmelt™, 03 Multi-Layer Sputtering, 04 Precision Manufacturing, 05 Professional Installation System)."
+  }
+}

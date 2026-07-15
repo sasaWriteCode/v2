@@ -1,17 +1,12 @@
 ---
+/**
+ * Home — EditorialTemplate driven by the `editorial/home` content object.
+ */
+import { getEntry } from 'astro:content';
+import EditorialTemplate from '@/templates/EditorialTemplate.astro';
 
+const home = await getEntry('editorial', 'home');
+if (!home) throw new Error('editorial/home content object is missing');
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<EditorialTemplate content={home.data} />

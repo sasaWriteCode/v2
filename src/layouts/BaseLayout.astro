@@ -1,0 +1,81 @@
+---
+/**
+ * BaseLayout — the site shell for all Stage 3 routes: metadata + canonical,
+ * JSON-LD (Organization always, BreadcrumbList when crumbs exist, plus any
+ * page-supplied schemas), sticky Header, Breadcrumbs, main landmark,
+ * Footer. Specimen routes (/design-system, /components) keep the plain
+ * Layout.astro without site chrome.
+ */
+import '@/styles/global.css';
+import Header from '@/components/nav/Header.astro';
+import Footer from '@/components/nav/Footer.astro';
+import Breadcrumbs from '@/components/nav/Breadcrumbs.astro';
+import { NAV_STRINGS } from '@/config/navigation';
+import { buildMeta } from '@/lib/seo/metadata';
+import { breadcrumbSchema, organizationSchema } from '@/lib/seo/schema';
+import type { Crumb, PageSeo } from '@/types/sections';
+
+interface Props {
+  seo: PageSeo;
+  crumbs?: Crumb[];
+  /** Extra JSON-LD blocks (FAQPage, Product ItemList…). */
+  jsonLd?: Record<string, unknown>[];
+}
+
+const { seo, crumbs, jsonLd = [] } = Astro.props;
+const meta = buildMeta(seo, Astro.url.pathname);
+
+const schemas = [
+  organizationSchema(),
+  ...(crumbs && crumbs.length > 0 ? [breadcrumbSchema(crumbs)] : []),
+  ...jsonLd,
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{meta.title}</title>
+    <meta name="description" content={meta.description} />
+    <link rel="canonical" href={meta.canonical} />
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={meta.canonical} />
+    {/* Brand fonts (extracted from V1); runtime <link> keeps builds
+        network-independent until self-hosting lands. Loaded non-render-
+        blocking (launch audit B1): the stylesheet cost ~0.8s of LCP on
+        simulated 4G. Text paints in the fallback stack immediately and
+        swaps in place (display=swap). */}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    {schemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
+  </head>
+  <body>
+    <a href="#main" class="skip-link">{NAV_STRINGS.skipToContent}</a>
+    <Header />
+    {crumbs && crumbs.length > 0 && <Breadcrumbs crumbs={crumbs} />}
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

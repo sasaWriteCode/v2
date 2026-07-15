@@ -1,0 +1,109 @@
+/* IrisPro V2 — global stylesheet. Token files are the source of truth. */
+@import 'tailwindcss';
+@import '../tokens/colors.css';
+@import '../tokens/typography.css';
+@import '../tokens/spacing.css';
+@import '../tokens/motion.css';
+@import '../components/primitives.css';
+
+@config '../../tailwind.config.ts';
+
+/* ── Base ── */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Native scroll is sacred — never smooth-scroll-jack, never intercept. */
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: var(--font-ui);
+  font-size: var(--text-body-md);
+  line-height: var(--leading-body-md);
+  background-color: var(--surface-base);
+  color: var(--text-primary);
+  overflow-x: clip;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Focus-visible rings (both zones, always visible) ── */
+:focus-visible {
+  outline: 2px solid var(--text-brand);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+[data-zone='showroom'] :focus-visible {
+  outline-color: var(--color-white);
+}
+
+/* ── Skip-to-content ── */
+.skip-link {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 100;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-black);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  transform: translateY(-200%);
+  /* transform-only motion; instantly visible on focus */
+  transition: transform var(--duration-fast) var(--ease-decelerate);
+}
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/* ── Selection ── */
+::selection {
+  background: var(--color-red);
+  color: var(--color-white);
+}
+
+/* ── Stage 3: section renderer chrome ──
+   Band sections get container + rhythm from the renderer; full sections
+   (heroes) own their layout. Both carry the stable anchor id, offset so
+   anchored scrolls clear the sticky header. */
+.section-band,
+.section-full {
+  scroll-margin-top: calc(var(--header-height, 4rem) + var(--space-4));
+}
+.section-band {
+  padding-block: var(--section-y-tight);
+}
+
+/* ── Stage 3: sticky header ──
+   position: sticky only — never listens to scroll, never re-times it. */
+.site-header {
+  --header-height: 4rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--surface-base);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* ── Stage 3: mobile nav dialog ── */
+.mobile-nav-dialog {
+  border: none;
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+  padding: 0;
+  width: min(20rem, 85vw);
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0 0 0 auto;
+  background: var(--surface-base);
+  color: var(--text-primary);
+}
+.mobile-nav-dialog::backdrop {
+  background: rgba(10, 10, 10, 0.55);
+}

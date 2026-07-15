@@ -1,0 +1,77 @@
+---
+/**
+ * GuideTemplate — the 4 knowledge-centre guides. Workshop zone throughout:
+ * a library, not a film.
+ *
+ * Structure (named slots, each still order-sorted data):
+ *   intro[]  — full-width (hero, search, chapter card row)
+ *   main[] + rail — the two-column region. The rail is AFTER main in DOM
+ *   order, so on mobile it renders below the chapter list (it never
+ *   disappears); ≥lg it becomes the right column.
+ *   outro[]  — full-width (CTA bar, certification strip)
+ *
+ * "On This Page" is a real <nav> with real anchors, derived from labelled
+ * sections; hydration only adds the scroll-spy highlight. FAQPage JSON-LD
+ * comes from the rail questions.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SectionRenderer from '@/components/SectionRenderer.astro';
+import OnThisPage from '@/components/islands/OnThisPage';
+import EpisodeList from '@/components/sections/rail/EpisodeList.astro';
+import PopularQuestions from '@/components/sections/rail/PopularQuestions.astro';
+import { AskIrisProAI } from '@/components/workshop/AskIrisProAI';
+import { faqSchema } from '@/lib/seo/schema';
+import type { GuidePageContent } from '@/types/sections';
+
+interface Props {
+  content: GuidePageContent;
+}
+const { content } = Astro.props;
+const { intro, main, rail, outro } = content;
+
+const onThisPageItems = [...intro, ...main]
+  .filter((section) => section.label)
+  .sort((a, b) => a.order - b.order)
+  .map((section) => ({ id: section.id, label: section.label! }));
+
+/* FAQPage JSON-LD only carries questions with real answers — placeholder
+   "_verify" answers awaiting the client must not ship as structured data
+   (launch audit B4). The on-page FAQ block still renders every question. */
+const answeredQuestions = (rail.questions ?? []).filter(
+  (q) => q.answer !== '_verify',
+);
+const jsonLd = answeredQuestions.length > 0 ? [faqSchema(answeredQuestions)] : [];
+---
+
+<BaseLayout seo={content.seo} crumbs={content.breadcrumbs} jsonLd={jsonLd}>
+  <SectionRenderer sections={intro} defaultZone="workshop-light" />
+
+  <div data-zone="workshop">
+    <div class="container grid gap-10 lg:grid-cols-[minmax(0,8fr)_minmax(0,4fr)]">
+      <div class="min-w-0">
+        <SectionRenderer sections={main} defaultZone="workshop-light" />
+      </div>
+
+      {/* Rail: after main in the DOM — below the chapter list on mobile,
+          right column on desktop. */}
+      <aside class="grid content-start gap-5 pb-10 lg:pt-10">
+        {rail.onThisPageLabel && onThisPageItems.length > 0 && (
+          <OnThisPage
+            heading={rail.onThisPageLabel}
+            items={onThisPageItems}
+            client:visible
+          />
+        )}
+        {rail.episodesHeading && rail.episodes && rail.episodes.length > 0 && (
+          <EpisodeList heading={rail.episodesHeading} episodes={rail.episodes} />
+        )}
+        {rail.questionsHeading && rail.questions && rail.questions.length > 0 && (
+          <PopularQuestions heading={rail.questionsHeading} questions={rail.questions} />
+        )}
+        {rail.askAi && <AskIrisProAI {...rail.askAi} client:visible />}
+      </aside>
+    </div>
+  </div>
+
+  <SectionRenderer sections={outro} defaultZone="workshop-light" />
+</BaseLayout>

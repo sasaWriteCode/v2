@@ -1,0 +1,340 @@
+{
+  "title": "About Us",
+  "defaultZone": "showroom-dark",
+  "seo": {
+    "title": "About Us",
+    "description": "IrisPro is a protection technology company founded in Malaysia, engineered for the intense sun and unique climate of ASEAN. We create high-performance window film solutions that protect people, interiors and building value—every day."
+  },
+  "breadcrumbs": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About Us"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "headlineLines": [
+          "More Than Window Film.",
+          "We Protect What Matters."
+        ],
+        "subhead": "IrisPro is a protection technology company founded in Malaysia, engineered for the intense sun and unique climate of ASEAN. We create high-performance window film solutions that protect people, interiors and building value—every day.",
+        "benefits": [
+          {
+            "icon": "users",
+            "label": "Health — For People"
+          },
+          {
+            "icon": "home",
+            "label": "Comfort — For Life"
+          },
+          {
+            "icon": "building",
+            "label": "Performance — For Buildings"
+          },
+          {
+            "icon": "leaf",
+            "label": "Sustainability — For Our Future"
+          }
+        ],
+        "media": {
+          "src": "/placeholders/hero-1600x900.svg",
+          "alt": "Sunset city skyline reflected in a protected office-tower façade",
+          "width": 1600,
+          "height": 900
+        }
+      }
+    },
+    {
+      "id": "our-story-video",
+      "type": "video-carousel",
+      "order": 20,
+      "zone": "workshop-light",
+      "label": "Our Story",
+      "data": {
+        "videos": [
+          {
+            "title": "Our Journey",
+            "moduleLabel": "Watch Our Story",
+            "href": "#video-our-journey",
+            "poster": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Video: the IrisPro journey — headquarters building",
+              "width": 448,
+              "height": 252
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "our-story-stats",
+      "type": "proof-stat-bar",
+      "order": 30,
+      "zone": "workshop-light",
+      "data": {
+        "stats": [
+          {
+            "value": "10+",
+            "label": "Years of Expertise"
+          },
+          {
+            "value": "1,000,000+",
+            "label": "Vehicles & Buildings Protected"
+          },
+          {
+            "value": "500+",
+            "label": "Partners & Dealers Across ASEAN"
+          },
+          {
+            "value": "20+",
+            "label": "Countries & Growing"
+          }
+        ]
+      }
+    },
+    {
+      "id": "why-irispro",
+      "type": "tech-pillar-grid",
+      "order": 40,
+      "zone": "workshop-light",
+      "label": "Why IrisPro",
+      "data": {
+        "columns": 6,
+        "pillars": [
+          {
+            "icon": "sun",
+            "title": "Engineered for ASEAN Climate",
+            "description": "Developed to withstand extreme heat, high UV and humidity."
+          },
+          {
+            "icon": "layers",
+            "title": "Patented Technologies",
+            "description": "UV+420™ and 6-Layer Hotmelt™ for complete protection."
+          },
+          {
+            "icon": "shield",
+            "title": "Superior Performance",
+            "description": "Excellent heat rejection, UV protection and optical clarity."
+          },
+          {
+            "icon": "check",
+            "title": "Proven & Trusted",
+            "description": "Certified, tested and trusted by thousands of customers."
+          },
+          {
+            "icon": "award",
+            "title": "Award Winning Quality",
+            "description": "Recognised by industry leaders for innovation and excellence."
+          },
+          {
+            "icon": "leaf",
+            "title": "Sustainable Choice",
+            "description": "Contributing to energy efficiency and a better environment."
+          }
+        ]
+      }
+    },
+    {
+      "id": "patented-technology",
+      "type": "category-grid",
+      "order": 50,
+      "zone": "showroom-dark",
+      "label": "Our Patented Technology",
+      "data": {
+        "heading": "Our Patented Technology",
+        "lede": "Innovation is at the heart of everything we do. Our patented UV+420™ Optical Solar Film and 6-Layer Hotmelt™ Base Film deliver complete protection beyond UV380, blocking harmful UV and HEV blue light while rejecting solar heat effectively.",
+        "categories": [
+          {
+            "icon": "sun",
+            "title": "UV+420™ Optical Technology",
+            "description": "Blocks UV400 and HEV Blue Light 380–420nm for better skin and eye protection.",
+            "href": "/technologies"
+          },
+          {
+            "icon": "layers",
+            "title": "6-Layer Hotmelt™ Base Film",
+            "description": "Stronger, clearer and more durable with advanced protection in one integrated film.",
+            "href": "/technologies"
+          }
+        ]
+      }
+    },
+    {
+      "id": "milestones",
+      "type": "learning-path",
+      "order": 60,
+      "zone": "workshop-light",
+      "label": "Our Milestones",
+      "data": {
+        "heading": "Our Milestones",
+        "steps": [
+          {
+            "number": 2014,
+            "title": "IrisPro was founded in Malaysia."
+          },
+          {
+            "number": 2016,
+            "title": "Launched UV+380 technology."
+          },
+          {
+            "number": 2018,
+            "title": "Introduced 6-Layer Hotmelt™ technology."
+          },
+          {
+            "number": 2020,
+            "title": "Expanded to commercial and architectural market."
+          },
+          {
+            "number": 2022,
+            "title": "Achieved SIRIM certification."
+          },
+          {
+            "number": 2023,
+            "title": "Awarded Asia Automotive Award – Asia Best Tint Brand."
+          },
+          {
+            "number": 2024,
+            "title": "Growing across ASEAN and beyond."
+          }
+        ]
+      }
+    },
+    {
+      "id": "awards",
+      "type": "tech-pillar-grid",
+      "order": 70,
+      "zone": "workshop-light",
+      "label": "Awards & Recognition",
+      "data": {
+        "columns": 4,
+        "pillars": [
+          {
+            "icon": "award",
+            "title": "Asia Automotive Award",
+            "description": "Asia Best Tint Brand"
+          },
+          {
+            "icon": "award",
+            "title": "Architect",
+            "description": "Best Product Award"
+          },
+          {
+            "icon": "award",
+            "title": "SIRIM",
+            "description": "Certified"
+          },
+          {
+            "icon": "award",
+            "title": "Malaysia Prestige",
+            "description": "Brand Award"
+          }
+        ]
+      }
+    },
+    {
+      "id": "trusted-by",
+      "type": "certification-strip",
+      "order": 80,
+      "zone": "workshop-light",
+      "data": {
+        "heading": "Trusted By",
+        "certs": [
+          {
+            "id": "tenaga-nasional",
+            "name": "Tenaga Nasional",
+            "label": ""
+          },
+          {
+            "id": "motorola",
+            "name": "Motorola",
+            "label": ""
+          },
+          {
+            "id": "malaysia-airports",
+            "name": "Malaysia Airports",
+            "label": ""
+          },
+          {
+            "id": "honeywell",
+            "name": "Honeywell",
+            "label": ""
+          },
+          {
+            "id": "faber-castell",
+            "name": "Faber-Castell",
+            "label": ""
+          },
+          {
+            "id": "wct",
+            "name": "WCT",
+            "label": ""
+          },
+          {
+            "id": "sime-darby-property",
+            "name": "Sime Darby Property",
+            "label": ""
+          },
+          {
+            "id": "kpj",
+            "name": "KPJ",
+            "label": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "our-promise",
+      "type": "tech-pillar-grid",
+      "order": 90,
+      "zone": "showroom-dark",
+      "label": "Our Promise",
+      "data": {
+        "columns": 4,
+        "pillars": [
+          {
+            "icon": "users",
+            "title": "Protect People",
+            "description": "Health & Wellbeing"
+          },
+          {
+            "icon": "shield",
+            "title": "Protect Interiors",
+            "description": "Lasting Value"
+          },
+          {
+            "icon": "building",
+            "title": "Protect Buildings",
+            "description": "Better Performance"
+          },
+          {
+            "icon": "leaf",
+            "title": "Protect Our Future",
+            "description": "Sustainable Tomorrow"
+          }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the about screen with no expressible section field. Preserved verbatim for the client / a future prose section type.",
+    "our-story-prose": [
+      "IrisPro was born from one simple belief:",
+      "Protection should be better, longer lasting and made for ASEAN.",
+      "We saw a need for window films that truly block harmful UV, reduce heat effectively and stand strong in our hot, humid climate.",
+      "Through continuous research, advanced materials and strict quality control, we developed patented technologies that deliver complete protection beyond what ordinary films can do.",
+      "Today, IrisPro is trusted by homeowners, businesses, architects and institutions across the region to create cooler, safer and more sustainable environments."
+    ],
+    "patented-technology-cta": "Discover Our Technology",
+    "our-promise-body": "We are committed to creating innovative protection solutions that improve lives, enhance comfort and build a sustainable future for generations to come.",
+    "milestone-2024-plus": "The final milestone reads '2024+' on screen; LearningStep.number is numeric, so the '+' cannot be expressed — preserved here.",
+    "hero-benefit-pairs": "Hero benefit chips are two-part on screen (Health / For People etc.); BenefitItem has a single label, so the pairs are joined with an em dash."
+  }
+}

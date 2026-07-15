@@ -1,0 +1,171 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   IRISPRO V2 — COLOR TOKENS
+   ═══════════════════════════════════════════════════════════════════════════
+
+   Brand core extracted from V1 (src/styles/global.css):
+     --irispro-red        #d20f18   (105 occurrences across V1 CSS — canonical)
+     --irispro-deep-red   #98000a
+     --irispro-bright-red #ef2929
+     --iris-black         #0a0a0a
+     --iris-white         #fafaf8
+     Neutral ramp: #1a1a1e, #222228, #2d2d35, #4a4a55, #8a8a95, #c8c8d0,
+                   #f2f2f2, #f5f3f0
+
+   Per-solution accents: V1 does NOT define these (flagged in the Stage 1
+   report). The values below are mapped from colors that already exist in the
+   V1 codebase — sustainability green (#3db87a) is genuinely in use on the V1
+   ESG page; the others are provisional mappings from V1's functional/accent
+   palette, awaiting brand confirmation:
+     automotive           → brand red      #d20f18 (flagship = brand)
+     residential          → V1 gold        #c8963e
+     commercial           → V1 blue-light  #5ba3e8
+     personal-protection  → V1 uv          #7b68ee
+     sustainability       → V1 protect     #3db87a (in use on V1 ESG page)
+
+   ── WCAG CONTRAST — VERIFIED RATIOS (WCAG 2.x relative luminance) ──────────
+   AA body ≥ 4.5:1 · AA large/graphics ≥ 3:1
+
+   LIGHT ZONE (on surface-base #fafaf8):
+     #0a0a0a text-primary ......... 18.94  AA ✓
+     #4a4a55 text-secondary ........ 8.37  AA ✓
+     #6b6b76 text-muted ............ 5.04  AA ✓
+     #d20f18 red text .............. 5.26  AA ✓
+     #b10a11 red-strong text ....... 6.88  AA ✓
+     #fafaf8 white on red CTA ...... 5.26  AA ✓
+     #8a6420 residential text ...... 5.12  AA ✓
+     #1d6aae commercial text ....... 5.39  AA ✓
+     #5240c9 personal-prot. text ... 6.85  AA ✓
+     #1e7a4d sustainability text ... 5.09  AA ✓
+     #8a6a10 data-warning text ..... 4.84  AA ✓
+     #6b6b76 data-neutral text ..... 5.04  AA ✓
+
+   DARK ZONE (on surface-base-dark #0a0a0a / raised-dark #1a1a1e):
+     #fafaf8 text-primary ......... 18.94 / 16.60  AA ✓
+     #c8c8d0 text-secondary ....... 11.91 / 10.43  AA ✓
+     #9a9aa5 text-muted ............ 7.11 /  6.23  AA ✓
+     #ef2929 red text on base ...... 4.73  AA ✓ (on raised-dark 4.15 —
+             large text/graphics only; use #ff5a5a for body red, 6.47)
+     #dbb06a residential bright .... 9.83  AA ✓
+     #5ba3e8 commercial bright ..... 7.40  AA ✓
+     #9d8ffa personal-prot bright .. 7.30  AA ✓
+     #56d695 sustainability bright  10.79  AA ✓
+
+   RAW ACCENT VALUES (#c8963e 2.55, #5ba3e8 2.56, #3db87a 2.41, #f0c040 1.63
+   on light) FAIL AA for text — they are for borders, icon fills and large
+   graphics on light surfaces only. Always use the -text variant for copy on
+   light, the -bright variant on dark.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Brand core (literal, extracted from V1) ── */
+  --color-red: #d20f18;
+  --color-red-strong: #b10a11;   /* body-red text on light, hover state   */
+  --color-red-deep: #98000a;     /* pressed states, deep gradients        */
+  --color-red-bright: #ef2929;   /* red text/graphics on dark base        */
+  --color-red-soft: #ff5a5a;     /* body-red text on raised dark surfaces */
+  --color-red-tint: #fbebeb;     /* red-tinted background wash (from V1)  */
+
+  --color-black: #0a0a0a;
+  --color-white: #fafaf8;
+  --color-white-pure: #ffffff;
+
+  /* Neutral ramp (extracted from V1, two AA-driven additions) */
+  --color-neutral-900: #0a0a0a;
+  --color-neutral-800: #1a1a1e;
+  --color-neutral-750: #222228;
+  --color-neutral-700: #2d2d35;
+  --color-neutral-500: #4a4a55;
+  --color-neutral-400: #6b6b76;  /* added: AA muted text on light (5.04) */
+  --color-neutral-350: #8a8a95;
+  --color-neutral-300: #9a9aa5;  /* added: AA muted text on dark (7.11)  */
+  --color-neutral-200: #c8c8d0;
+  --color-neutral-100: #f2f2f2;
+  --color-neutral-50: #f5f3f0;
+
+  /* ── Per-solution accents ──
+     DEFAULT: borders, icon fills, large graphics (3:1 on its zone only)
+     -text:   AA body copy on LIGHT surfaces
+     -bright: AA body copy on DARK surfaces */
+  --accent-automotive: #d20f18;
+  --accent-automotive-text: #b10a11;
+  --accent-automotive-bright: #ef2929;
+
+  --accent-residential: #c8963e;
+  --accent-residential-text: #8a6420;
+  --accent-residential-bright: #dbb06a;
+
+  --accent-commercial: #5ba3e8;
+  --accent-commercial-text: #1d6aae;
+  --accent-commercial-bright: #5ba3e8;
+
+  --accent-personal-protection: #7b68ee;
+  --accent-personal-protection-text: #5240c9;
+  --accent-personal-protection-bright: #9d8ffa;
+
+  --accent-sustainability: #3db87a;
+  --accent-sustainability-text: #1e7a4d;
+  --accent-sustainability-bright: #56d695;
+
+  /* ── Data colors (spec tables, stat callouts) ──
+     -text passes AA on light; DEFAULT passes AA on dark */
+  --data-positive: #3db87a;
+  --data-positive-text: #1e7a4d;
+  --data-warning: #f0c040;
+  --data-warning-text: #8a6a10;
+  --data-critical: #ef2929;
+  --data-critical-text: #b10a11;
+  --data-neutral: #9a9aa5;
+  --data-neutral-text: #6b6b76;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   DUAL-ZONE SEMANTIC TOKENS — pure CSS swap via data-zone, no JS.
+   Wrap any subtree in <Zone zone="showroom|workshop"> (or set data-zone
+   directly) and every semantic token below re-resolves.
+   Default (:root) = workshop/light so unzoned content is always readable.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+:root,
+[data-zone='workshop'] {
+  color-scheme: light;
+
+  --surface-base: #fafaf8;
+  --surface-raised: #ffffff;
+  --surface-sunken: #f2f2f2;
+
+  --text-primary: #0a0a0a;      /* 18.94 on base */
+  --text-secondary: #4a4a55;    /*  8.37 on base */
+  --text-muted: #6b6b76;        /*  5.04 on base */
+  --text-inverse: #fafaf8;
+  --text-brand: #d20f18;        /*  5.26 on base */
+  --text-accent: var(--text-brand);
+
+  --border-subtle: rgba(10, 10, 10, 0.08);
+  --border-default: rgba(10, 10, 10, 0.16);
+  --border-strong: rgba(10, 10, 10, 0.36);
+}
+
+[data-zone='showroom'] {
+  color-scheme: dark;
+
+  --surface-base: #0a0a0a;
+  --surface-raised: #1a1a1e;
+  --surface-sunken: #000000;
+
+  --text-primary: #fafaf8;      /* 18.94 on base */
+  --text-secondary: #c8c8d0;    /* 11.91 on base */
+  --text-muted: #9a9aa5;        /*  7.11 on base */
+  --text-inverse: #0a0a0a;
+  --text-brand: #ef2929;        /*  4.73 on base; #ff5a5a on raised */
+  --text-accent: var(--text-brand);
+
+  --border-subtle: rgba(250, 250, 248, 0.1);
+  --border-default: rgba(250, 250, 248, 0.2);
+  --border-strong: rgba(250, 250, 248, 0.42);
+}
+
+/* Zones paint their own surface + text so nesting works out of the box. */
+[data-zone] {
+  background-color: var(--surface-base);
+  color: var(--text-primary);
+}

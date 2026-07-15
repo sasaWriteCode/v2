@@ -1,0 +1,52 @@
+---
+/**
+ * Header — sticky (position: sticky only — it never listens to or re-times
+ * scroll). Desktop: inline nav from src/config/navigation.ts. Mobile: the
+ * MobileNav native-dialog component (vanilla ~1KB script — see its header
+ * for why it is deliberately NOT a React island).
+ */
+import MobileNav from '@/components/nav/MobileNav.astro';
+import { BRAND, NAV_CTA, NAV_STRINGS, PRIMARY_NAV } from '@/config/navigation';
+---
+
+<header class="site-header">
+  <div class="container flex items-center justify-between gap-4" style="height: var(--header-height)">
+    <a href={BRAND.href} class="flex items-baseline gap-2" style="text-decoration: none">
+      <span class="type-heading-md" style="color: var(--text-primary); font-weight: 700">
+        {BRAND.name}
+      </span>
+      <span class="type-caption hidden sm:inline" style="color: var(--text-muted)">
+        {BRAND.tagline}
+      </span>
+    </a>
+
+    <nav aria-label={NAV_STRINGS.primaryNavLabel} class="hidden lg:block">
+      <ul class="flex items-center gap-5">
+        {PRIMARY_NAV.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="type-body-sm font-medium"
+              style="color: var(--text-secondary); text-decoration: none"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a
+        href={NAV_CTA.href}
+        class="type-body-sm hidden rounded-md px-4 py-2 font-semibold sm:inline-block"
+        style="background: var(--color-red); color: var(--color-white); text-decoration: none"
+      >
+        {NAV_CTA.label}
+      </a>
+      <span class="lg:hidden">
+        <MobileNav />
+      </span>
+    </div>
+  </div>
+</header>

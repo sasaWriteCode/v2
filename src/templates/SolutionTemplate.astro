@@ -1,0 +1,26 @@
+---
+/**
+ * SolutionTemplate — the 5 solution pages. Pure composition: every section,
+ * its order, its presence and the showroom→workshop transition come from
+ * the content object. The accent key is threaded to every section by the
+ * renderer (and exposed as --accent-current* CSS vars); sustainability has
+ * no comparison table and personal-protection has no project strip — this
+ * file cannot tell and must never care.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SectionRenderer from '@/components/SectionRenderer.astro';
+import type { SolutionPageContent } from '@/types/sections';
+
+interface Props {
+  content: SolutionPageContent;
+}
+const { content } = Astro.props;
+---
+
+<BaseLayout seo={content.seo} crumbs={content.breadcrumbs}>
+  <SectionRenderer
+    sections={content.sections}
+    defaultZone={content.defaultZone ?? 'showroom-dark'}
+    accent={content.accent}
+  />
+</BaseLayout>

@@ -1,0 +1,391 @@
+{
+  "title": "Technology Explained",
+  "defaultZone": "workshop-light",
+  "seo": {
+    "title": "Technology Explained",
+    "description": "Understand the science behind superior window film performance and what makes IrisPro different."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Knowledge Centre", "href": "/knowledge" },
+    { "label": "Technology Explained" }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hub-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "title": "Technology Explained",
+        "lede": "Understand the science behind superior window film performance and what makes IrisPro different.",
+        "meta": [
+          { "icon": "sun", "label": "Science Backed Technologies" },
+          { "icon": "document", "label": "Lab Tested Performance" },
+          { "icon": "thermometer", "label": "Engineered for ASEAN Climate" },
+          { "icon": "shield", "label": "Patented Innovations" }
+        ]
+      }
+    },
+    {
+      "id": "film-layers",
+      "type": "learning-path",
+      "order": 20,
+      "zone": "showroom-dark",
+      "label": "Film Construction",
+      "data": {
+        "steps": [
+          { "number": 1, "title": "Hard Coat", "description": "Scratch Resistance" },
+          { "number": 2, "title": "6-Layer Hotmelt™", "description": "Superior Protection" },
+          { "number": 3, "title": "Advanced Adhesive", "description": "Strong & Durable Bond" },
+          { "number": 4, "title": "Multi-Layer Sputter", "description": "Maximum Heat Rejection" },
+          { "number": 5, "title": "Adhesive Layer", "description": "Optical Clarity" },
+          { "number": 6, "title": "Release Liner", "description": "Easy Installation" }
+        ]
+      }
+    },
+    {
+      "id": "all-technologies",
+      "type": "article-grid",
+      "order": 30,
+      "zone": "workshop-light",
+      "label": "All Technologies",
+      "data": {
+        "heading": "All Technologies",
+        "articles": [
+          {
+            "title": "6-Layer Hotmelt™ Technology",
+            "category": "01",
+            "readTime": "2:45",
+            "description": "Our patented 6-layer hotmelt base film delivers superior durability, UV protection and optical clarity.",
+            "href": "#technology-01"
+          },
+          {
+            "title": "Multi-Layer Sputter Technology",
+            "category": "02",
+            "readTime": "3:12",
+            "description": "Advanced sputtering technology reflects heat across a wide spectrum for maximum IR rejection.",
+            "href": "#technology-02"
+          },
+          {
+            "title": "UV+420™ Optical Technology",
+            "category": "03",
+            "readTime": "2:18",
+            "description": "Blocks harmful UV400 and HEV blue light (380–420nm) for complete protection.",
+            "href": "#technology-03"
+          },
+          {
+            "title": "Titanium Oxide Inorganic Ceramic",
+            "category": "04",
+            "readTime": "2:36",
+            "description": "High performance ceramic particles reject heat by absorbing and dissipating infrared energy.",
+            "href": "#technology-04"
+          },
+          {
+            "title": "Nano Ceramic Technology",
+            "category": "05",
+            "readTime": "2:42",
+            "description": "Nano-sized ceramic particles provide excellent heat rejection without interfering with signals.",
+            "href": "#technology-05"
+          },
+          {
+            "title": "Chip Dye Technology",
+            "category": "06",
+            "readTime": "2:15",
+            "description": "High stability chip dye delivers long-lasting color without fading or turning purple.",
+            "href": "#technology-06"
+          },
+          {
+            "title": "Premium Adhesive System",
+            "category": "07",
+            "readTime": "1:58",
+            "description": "High-performance adhesive ensures bubble-free installation and long-term durability.",
+            "href": "#technology-07"
+          },
+          {
+            "title": "Hard Coat Protection",
+            "category": "08",
+            "readTime": "1:58",
+            "description": "Special hard coat layer resists scratches and protects the film surface for years.",
+            "href": "#technology-08"
+          }
+        ]
+      }
+    },
+    {
+      "id": "test-reports",
+      "type": "cta-bar",
+      "order": 40,
+      "zone": "workshop-light",
+      "data": {
+        "headline": "All technologies are lab tested and performance proven for the toughest climate in ASEAN.",
+        "actions": [
+          {
+            "icon": "document",
+            "title": "View Test Reports",
+            "cta": { "label": "View Test Reports", "href": "#test-reports" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "how-it-works",
+      "type": "spectrum-diagram",
+      "order": 50,
+      "zone": "showroom-dark",
+      "label": "How IrisPro Technology Works",
+      "data": {
+        "title": "How IrisPro Technology Works",
+        "variant": "full",
+        "showFilm": true,
+        "bands": [
+          {
+            "id": "uv",
+            "name": "UV",
+            "fromNm": 100,
+            "toNm": 400,
+            "behavior": "blocked",
+            "hue": "var(--accent-personal-protection-bright)"
+          },
+          {
+            "id": "visible",
+            "name": "Visible Light",
+            "fromNm": 400,
+            "toNm": 780,
+            "behavior": "transmitted",
+            "hue": "var(--accent-sustainability-bright)"
+          },
+          {
+            "id": "infrared-nir",
+            "name": "Infrared (NIR)",
+            "fromNm": 780,
+            "toNm": 2500,
+            "behavior": "reduced",
+            "hue": "#e85d3a"
+          },
+          {
+            "id": "infrared-mir-fir",
+            "name": "Infrared (MIR & FIR)",
+            "fromNm": 2500,
+            "toNm": 1000000,
+            "behavior": "reduced",
+            "hue": "#e85d3a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "technology-outcomes",
+      "type": "tech-pillar-grid",
+      "order": 60,
+      "zone": "showroom-dark",
+      "label": "Technology Outcomes",
+      "data": {
+        "columns": 6,
+        "pillars": [
+          { "icon": "sun", "title": "Blocks Harmful UV", "description": "Protects Skin & Eyes" },
+          { "icon": "thermometer", "title": "Rejects Heat", "description": "Keeps You Cooler" },
+          { "icon": "eye", "title": "Reduces Glare", "description": "Improves Comfort" },
+          { "icon": "shield", "title": "_verify", "description": "_verify" },
+          { "icon": "home", "title": "Protects Interiors", "description": "Prevents Fading" },
+          { "icon": "check", "title": "Enhances Privacy", "description": "Adds Safety" }
+        ]
+      }
+    },
+    {
+      "id": "technology-comparison",
+      "type": "series-comparison-table",
+      "order": 70,
+      "zone": "workshop-light",
+      "label": "Technology Comparison",
+      "data": {
+        "caption": "Technology Comparison",
+        "series": [
+          { "id": "dyed", "name": "Dyed Film" },
+          { "id": "ceramic", "name": "Ceramic Film" },
+          { "id": "titanium", "name": "Titanium Film" },
+          { "id": "silver-sputter", "name": "Silver Sputter Film" },
+          { "id": "irispro", "name": "IrisPro Multi-Layer Sputter" }
+        ],
+        "rows": [
+          {
+            "label": "UV Protection",
+            "values": {
+              "dyed": "2",
+              "ceramic": "4",
+              "titanium": "3",
+              "silver-sputter": "5",
+              "irispro": "5"
+            }
+          },
+          {
+            "label": "Heat Rejection (IRR)",
+            "values": {
+              "dyed": "1",
+              "ceramic": "4",
+              "titanium": "4",
+              "silver-sputter": "5",
+              "irispro": "5"
+            }
+          },
+          {
+            "label": "Durability",
+            "values": {
+              "dyed": "_verify",
+              "ceramic": "4",
+              "titanium": "3",
+              "silver-sputter": "4",
+              "irispro": "5"
+            }
+          },
+          {
+            "label": "Signal Friendly",
+            "values": {
+              "dyed": "_verify",
+              "ceramic": "_verify",
+              "titanium": "_verify",
+              "silver-sputter": "_verify",
+              "irispro": "5"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "recommended-videos",
+      "type": "video-carousel",
+      "order": 80,
+      "zone": "workshop-light",
+      "label": "Recommended Videos",
+      "data": {
+        "heading": "Recommended Videos",
+        "videos": [
+          {
+            "title": "How Sputter Technology Works",
+            "duration": "3:08",
+            "href": "#video-sputter",
+            "poster": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Video: How Sputter Technology Works",
+              "width": 448,
+              "height": 252
+            }
+          },
+          {
+            "title": "6-Layer Hotmelt™ Explained",
+            "duration": "2:56",
+            "href": "#video-hotmelt",
+            "poster": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Video: 6-Layer Hotmelt™ Explained",
+              "width": 448,
+              "height": 252
+            }
+          },
+          {
+            "title": "UV+420™ Technology In Action",
+            "duration": "2:42",
+            "href": "#video-uv420",
+            "poster": {
+              "src": "/placeholders/video-448x252.svg",
+              "alt": "Video: UV+420™ Technology In Action",
+              "width": 448,
+              "height": 252
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "related-categories",
+      "type": "category-grid",
+      "order": 90,
+      "zone": "workshop-light",
+      "label": "Related Categories",
+      "data": {
+        "heading": "Related Categories",
+        "categories": [
+          { "icon": "document", "title": "Learn the Basics", "href": "/knowledge/learn-the-basics" },
+          { "icon": "car", "title": "Automotive Guide", "href": "/knowledge/automotive" },
+          { "icon": "home", "title": "Residential Guide", "href": "/knowledge/residential-guide" },
+          { "icon": "building", "title": "Commercial Guide", "href": "/knowledge/building-performance-guide" },
+          { "icon": "shield", "title": "Health & Protection", "href": "/knowledge/personal-protection-guide" },
+          { "icon": "leaf", "title": "Sustainability", "href": "/knowledge" },
+          { "icon": "check", "title": "Myth vs Fact", "href": "/knowledge" }
+        ]
+      }
+    },
+    {
+      "id": "certified",
+      "type": "certification-strip",
+      "order": 100,
+      "zone": "workshop-light",
+      "data": {
+        "heading": "Technology Certified. Performance Proven.",
+        "certs": [
+          { "id": "sirim", "name": "SIRIM", "label": "Certified" },
+          { "id": "sgs", "name": "SGS", "label": "Tested" },
+          { "id": "rohs", "name": "RoHS", "label": "Compliant" },
+          { "id": "reach", "name": "REACH", "label": "Compliant" }
+        ]
+      }
+    },
+    {
+      "id": "talk-to-expert",
+      "type": "cta-bar",
+      "order": 110,
+      "zone": "workshop-light",
+      "data": {
+        "headline": "Have Questions About Technology?",
+        "subhead": "Our experts are ready to help you understand and choose the right solution.",
+        "actions": [
+          {
+            "icon": "headset",
+            "title": "Talk to an Expert",
+            "cta": { "label": "Talk to an Expert", "href": "#consultation" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "ask-irispro-ai",
+      "type": "ask-irispro-ai",
+      "order": 120,
+      "zone": "showroom-dark",
+      "label": "Ask IrisPro AI",
+      "data": {
+        "heading": "Ask IrisPro AI",
+        "description": "Get instant answers about our technologies.",
+        "placeholder": "Ask anything...",
+        "suggestedQuestions": [],
+        "fallbackAction": "/knowledge"
+      }
+    },
+    {
+      "id": "technology-strip",
+      "type": "certification-strip",
+      "order": 130,
+      "zone": "showroom-dark",
+      "data": {
+        "certs": [
+          { "id": "uv420", "name": "Patented UV+420™", "label": "Complete UV & Blue Light Protection" },
+          { "id": "hotmelt", "name": "6-Layer Hotmelt™", "label": "Superior Durability" },
+          { "id": "sputter", "name": "Multi-Layer Sputter", "label": "Maximum Heat Rejection" },
+          { "id": "sirim", "name": "SIRIM", "label": "Certified — Quality Assured" },
+          { "id": "warranty", "name": "10+ Years Warranty", "label": "Long Lasting Protection" }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the Technology Explained screen with no expressible section field. Preserved verbatim.",
+    "tab-bar": "Overview / All Technologies / How It Works / Comparison / FAQs / Related Videos",
+    "technology-filters": "All / Film Structure / Heat Rejection / UV Protection / Materials / Coating / Manufacturing",
+    "technology-card-cta": "Learn More (per-card CTA label)",
+    "comparison-link": "View Full Comparison",
+    "spectrum-caption": "A caption strip under the diagram reads '…Technology — Complete Protection Across the Spectrum' (first word garbled — _verify).",
+    "learning-progress": "Rail widget: 'Learning Progress — 20% Complete — Complete all lessons in this section to earn your IrisPro Technology Certificate. — Continue Learning'. Dynamic, out of scope for content.",
+    "certified-lede": "IrisPro technologies are tested by international labs and deliver real results you can trust.",
+    "outcome-bullet-4": "The fourth outcome bullet in 'How IrisPro Technology Works' is garbled in the source (reads like 'Protects Interiors / Improves…') — set to _verify rather than guessed."
+  }
+}

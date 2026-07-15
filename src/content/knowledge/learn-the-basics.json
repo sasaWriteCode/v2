@@ -1,0 +1,311 @@
+{
+  "title": "Learn the Basics",
+  "defaultZone": "workshop-light",
+  "seo": {
+    "title": "Learn the Basics",
+    "description": "Start your journey to understand how window film works and why it is essential for life in ASEAN."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Knowledge Centre", "href": "/knowledge" },
+    { "label": "Learn the Basics" }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hub-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "data": {
+        "title": "Learn the Basics",
+        "lede": "Start your journey to understand how window film works and why it is essential for life in ASEAN.",
+        "meta": [
+          { "icon": "document", "label": "Easy to Understand" },
+          { "icon": "users", "label": "Expert Explained" },
+          { "icon": "play", "label": "2–4 mins per lesson" }
+        ]
+      }
+    },
+    {
+      "id": "spectrum",
+      "type": "spectrum-diagram",
+      "order": 20,
+      "zone": "showroom-dark",
+      "label": "The Sunlight Spectrum",
+      "data": {
+        "variant": "full",
+        "showFilm": true,
+        "bands": [
+          {
+            "id": "uv",
+            "name": "UV",
+            "fromNm": 100,
+            "toNm": 400,
+            "behavior": "blocked",
+            "annotation": "Blocks Harmful UV — Protects Skin & Eyes",
+            "hue": "var(--accent-personal-protection-bright)"
+          },
+          {
+            "id": "visible",
+            "name": "Visible Light",
+            "fromNm": 400,
+            "toNm": 780,
+            "behavior": "transmitted",
+            "annotation": "Reduces Glare — Improves Comfort",
+            "hue": "var(--accent-sustainability-bright)"
+          },
+          {
+            "id": "infrared-nir",
+            "name": "Infrared (NIR)",
+            "fromNm": 780,
+            "toNm": 2500,
+            "behavior": "reduced",
+            "annotation": "Rejects Heat — Keeps You Cooler",
+            "hue": "#e85d3a"
+          },
+          {
+            "id": "infrared-mir-fir",
+            "name": "Infrared (MIR & FIR)",
+            "fromNm": 2500,
+            "toNm": 1000000,
+            "behavior": "reduced",
+            "annotation": "Protects Interiors — Prevents Fading",
+            "hue": "#e85d3a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "introduction",
+      "type": "series-card-set",
+      "order": 30,
+      "zone": "workshop-light",
+      "label": "Introduction",
+      "data": {
+        "cards": [
+          {
+            "id": "why-understand-basics",
+            "name": "Why understand window film basics?",
+            "description": "Window film is more than just a product. It is science, technology and protection. Understanding the basics helps you make the right choice for your health, comfort and investment.",
+            "features": [
+              "Protects you from harmful UV and heat",
+              "Improves comfort and energy efficiency",
+              "Protects your car, home and business",
+              "Good tint is an investment, not an expense"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "all-lessons",
+      "type": "article-grid",
+      "order": 40,
+      "zone": "workshop-light",
+      "label": "All Lessons",
+      "data": {
+        "heading": "All Lessons",
+        "lede": "8 Lessons",
+        "articles": [
+          {
+            "title": "What is Window Film?",
+            "category": "01",
+            "readTime": "02:18",
+            "description": "Learn what window film is, how it works and the many benefits it brings.",
+            "href": "#lesson-01"
+          },
+          {
+            "title": "Why Window Film?",
+            "category": "02",
+            "readTime": "02:45",
+            "description": "Discover why window film is essential for vehicles, homes and buildings in ASEAN.",
+            "href": "#lesson-02"
+          },
+          {
+            "title": "Why ASEAN Climate is Different?",
+            "category": "03",
+            "readTime": "03:10",
+            "description": "Understand the intense sun, high heat and humidity that make protection critical.",
+            "href": "#lesson-03"
+          },
+          {
+            "title": "How Window Film Works",
+            "category": "04",
+            "readTime": "03:02",
+            "description": "See how window film blocks heat, filters light and protects your surroundings.",
+            "href": "#lesson-04"
+          },
+          {
+            "title": "The Sunlight Spectrum Explained",
+            "category": "05",
+            "readTime": "03:30",
+            "description": "Understand UV, visible light and infrared energy and their impact on you.",
+            "href": "#lesson-05"
+          },
+          {
+            "title": "What is TSER?",
+            "category": "06",
+            "readTime": "03:08",
+            "description": "The total solar energy rejected and why it matters more than you think.",
+            "href": "#lesson-06"
+          },
+          {
+            "title": "The True Cause of Interior Fading",
+            "category": "07",
+            "readTime": "02:54",
+            "description": "It's not just UV. Learn what really causes fading, cracking and damage.",
+            "href": "#lesson-07"
+          },
+          {
+            "title": "Window Film Protects What Matters",
+            "category": "08",
+            "readTime": "03:20",
+            "description": "From your skin and eyes to your car interior and home furnishings.",
+            "href": "#lesson-08"
+          }
+        ]
+      }
+    },
+    {
+      "id": "faq",
+      "type": "article-grid",
+      "order": 50,
+      "zone": "workshop-light",
+      "label": "Frequently Asked Questions",
+      "data": {
+        "heading": "Frequently Asked Questions",
+        "articles": [
+          {
+            "title": "What is the main function of window film?",
+            "description": "_verify",
+            "href": "#faq"
+          },
+          {
+            "title": "Does window film make the room darker?",
+            "description": "_verify",
+            "href": "#faq"
+          },
+          {
+            "title": "Can window film block 100% of UV?",
+            "description": "_verify",
+            "href": "#faq"
+          },
+          {
+            "title": "Is window film worth the investment?",
+            "description": "_verify",
+            "href": "#faq"
+          }
+        ]
+      }
+    },
+    {
+      "id": "continue-journey",
+      "type": "tech-pillar-grid",
+      "order": 60,
+      "zone": "workshop-light",
+      "label": "Continue Your Learning Journey",
+      "data": {
+        "columns": 3,
+        "pillars": [
+          {
+            "icon": "layers",
+            "title": "Explore Technologies",
+            "description": "Understand how different technologies work."
+          },
+          {
+            "icon": "search",
+            "title": "Find Your Perfect Film",
+            "description": "Get guide on choosing the right film for your needs."
+          },
+          {
+            "icon": "play",
+            "title": "Watch Real Results",
+            "description": "See real project case studies and performance tests."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ask-irispro-ai",
+      "type": "ask-irispro-ai",
+      "order": 70,
+      "zone": "showroom-dark",
+      "label": "Ask IrisPro AI",
+      "data": {
+        "heading": "Ask IrisPro AI",
+        "description": "Your smart assistant for all window film questions.",
+        "placeholder": "Type your question here...",
+        "suggestedQuestions": [],
+        "fallbackAction": "/knowledge"
+      }
+    },
+    {
+      "id": "need-help",
+      "type": "cta-bar",
+      "order": 80,
+      "zone": "workshop-light",
+      "data": {
+        "headline": "Need Help?",
+        "subhead": "Can't find what you're looking for? Our experts are here to help.",
+        "actions": [
+          {
+            "icon": "chat",
+            "title": "Ask IrisPro AI",
+            "cta": { "label": "Ask IrisPro AI", "href": "#ask-irispro-ai" }
+          },
+          {
+            "icon": "headset",
+            "title": "WhatsApp Us",
+            "cta": { "label": "WhatsApp Us", "href": "#whatsapp" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "related-categories",
+      "type": "category-grid",
+      "order": 90,
+      "zone": "workshop-light",
+      "label": "Related Categories",
+      "data": {
+        "heading": "Related Categories",
+        "categories": [
+          { "icon": "layers", "title": "Technology Explained", "href": "/knowledge/technology-explained" },
+          { "icon": "car", "title": "Automotive Guide", "href": "/knowledge/automotive" },
+          { "icon": "home", "title": "Residential Guide", "href": "/knowledge/residential-guide" },
+          { "icon": "building", "title": "Commercial Guide", "href": "/knowledge/building-performance-guide" },
+          { "icon": "shield", "title": "Health & Protection", "href": "/knowledge/personal-protection-guide" },
+          { "icon": "leaf", "title": "Sustainability", "href": "/knowledge" },
+          { "icon": "check", "title": "Myth vs Fact", "href": "/knowledge" },
+          { "icon": "play", "title": "Video Library", "href": "/knowledge" }
+        ]
+      }
+    },
+    {
+      "id": "technology-strip",
+      "type": "certification-strip",
+      "order": 100,
+      "zone": "showroom-dark",
+      "data": {
+        "certs": [
+          { "id": "uv420", "name": "UV+420™", "label": "Patented — Complete UV & Blue Light Protection" },
+          { "id": "hotmelt", "name": "6-Layer Hotmelt™", "label": "Superior Durability" },
+          { "id": "sputter", "name": "Multi-Layer Sputter", "label": "Maximum Heat Rejection" },
+          { "id": "sirim", "name": "SIRIM", "label": "Certified — Quality Assured" },
+          { "id": "warranty", "name": "10+ Years Warranty", "label": "Long Lasting Protection" }
+        ]
+      }
+    }
+  ],
+  "_unplaced": {
+    "note": "Copy from the Learn the Basics screen with no expressible section field. Preserved verbatim.",
+    "tab-bar": "Overview / All Lessons / FAQ / Resources / Related Videos",
+    "lessons-sort": "Sort by: Recommended",
+    "lesson-cta": "Watch Lesson (per-card CTA label; article cards render as whole-card links)",
+    "faq-link": "View all FAQs",
+    "intro-video": "The Introduction block includes an untitled video (no caption visible) — flagged, not invented.",
+    "learning-progress": "Rail widget: 'Learning Progress — 0% Complete — Complete all lessons to get your IrisPro Basics Certificate. — Start Learning Journey'. Progress state is dynamic and out of scope for content.",
+    "spectrum-behaviors": "The band behaviors (blocked/transmitted/reduced) are derived from the hero's outcome bullets, not explicit on the diagram — flagged for confirmation.",
+    "mir-fir-display": "The fourth band reads '2500nm – 1mm' on screen; toNm is numeric so it is stored as 1000000 (renders 2500–1000000nm) — display limitation flagged."
+  }
+}

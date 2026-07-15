@@ -1,0 +1,22 @@
+---
+/** WCAG ratio badge — computed at build time (port of <RatioBadge>). */
+import { contrastRatio, wcagVerdict } from '@/lib/contrast';
+
+interface Props {
+  fg: string;
+  bg: string;
+}
+const { fg, bg } = Astro.props;
+const ratio = contrastRatio(fg, bg);
+const verdict = wcagVerdict(ratio);
+const tone =
+  verdict === 'AA'
+    ? 'var(--data-positive-text)'
+    : verdict === 'AA-large'
+      ? 'var(--data-warning-text)'
+      : 'var(--data-critical-text)';
+---
+
+<span class="type-caption numeric" style={`color: ${tone}; font-weight: 600`}>
+  {ratio.toFixed(2)}:1 {verdict}
+</span>

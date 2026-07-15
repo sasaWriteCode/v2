@@ -1,0 +1,17 @@
+---
+/** /design-system section wrapper (port of the page-local <Section>). */
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<section
+  class="section-y-tight"
+  style="border-top: 1px solid var(--border-subtle)"
+>
+  <h2 class="type-heading-lg" style="margin-bottom: var(--space-8)">
+    {title}
+  </h2>
+  <slot />
+</section>

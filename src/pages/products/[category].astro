@@ -1,0 +1,20 @@
+---
+/**
+ * Product-grid pages — ProductGridTemplate × products collection
+ * (automotive is the Stage 3 fixture; building arrives in Stage 4).
+ */
+import { getCollection } from 'astro:content';
+import ProductGridTemplate from '@/templates/ProductGridTemplate.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('products');
+  return entries.map((entry) => ({
+    params: { category: entry.id },
+    props: { content: entry.data },
+  }));
+}
+
+const { content } = Astro.props;
+---
+
+<ProductGridTemplate content={content} />
