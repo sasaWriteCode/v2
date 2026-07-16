@@ -27,7 +27,7 @@
         ],
         "subhead": "Trusted by thousands of customers for automotive, residential and commercial projects across Malaysia and ASEAN.",
         "media": {
-          "src": "/placeholders/hero-1600x900.svg",
+          "src": "/images/split-media-building.png",
           "alt": "Protected SUV, commercial glass building and luxury residence side by side",
           "width": 1600,
           "height": 900
@@ -53,7 +53,7 @@
               "tone": "featured"
             },
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/family-car.png",
               "alt": "Mercedes-Benz G63 with IrisPro Titan X film",
               "width": 560,
               "height": 360
@@ -72,7 +72,7 @@
             "location": "Johor Bahru",
             "category": "Residential",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/residential-glass-2.png",
               "alt": "Luxury bungalow with IrisPro RayPro 70 film",
               "width": 560,
               "height": 360
@@ -91,7 +91,7 @@
             "location": "Petaling Jaya",
             "category": "Commercial",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building-panel.png",
               "alt": "Corporate office tower with IrisPro Diamond X film",
               "width": 560,
               "height": 360
@@ -114,7 +114,7 @@
               "tone": "featured"
             },
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building-2.png",
               "alt": "Five-star lakeside hotel with IrisPro Diamond film",
               "width": 560,
               "height": 360
@@ -147,7 +147,7 @@
             "duration": "4:32",
             "href": "#video-titan-x-installation",
             "poster": {
-              "src": "/placeholders/video-448x252.svg",
+              "src": "/images/calm-ending.png",
               "alt": "Video: IrisPro Titan X installation on a Mercedes-Benz G63",
               "width": 448,
               "height": 252
@@ -159,7 +159,7 @@
             "duration": "3:58",
             "href": "#video-commercial-building",
             "poster": {
-              "src": "/placeholders/video-448x252.svg",
+              "src": "/images/calm-ending.png",
               "alt": "Video: commercial building heat rejection test",
               "width": 448,
               "height": 252
@@ -171,7 +171,7 @@
             "duration": "5:04",
             "href": "#video-raypro-homes",
             "poster": {
-              "src": "/placeholders/video-448x252.svg",
+              "src": "/images/iris-comfort.png",
               "alt": "Video: RayPro residential film, comfort all year round",
               "width": 448,
               "height": 252

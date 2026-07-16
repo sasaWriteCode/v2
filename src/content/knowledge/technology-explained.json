@@ -265,7 +265,7 @@
             "duration": "3:08",
             "href": "#video-sputter",
             "poster": {
-              "src": "/placeholders/video-448x252.svg",
+              "src": "/images/calm-ending.png",
               "alt": "Video: How Sputter Technology Works",
               "width": 448,
               "height": 252
@@ -276,7 +276,7 @@
             "duration": "2:56",
             "href": "#video-hotmelt",
             "poster": {
-              "src": "/placeholders/video-448x252.svg",
+              "src": "/images/calm-ending.png",
               "alt": "Video: 6-Layer Hotmelt™ Explained",
               "width": 448,
               "height": 252
@@ -287,7 +287,7 @@
             "duration": "2:42",
             "href": "#video-uv420",
             "poster": {
-              "src": "/placeholders/video-448x252.svg",
+              "src": "/images/calm-ending.png",
               "alt": "Video: UV+420™ Technology In Action",
               "width": 448,
               "height": 252

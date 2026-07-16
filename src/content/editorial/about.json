@@ -45,7 +45,7 @@
           }
         ],
         "media": {
-          "src": "/placeholders/hero-1600x900.svg",
+          "src": "/images/history_page_hero.png",
           "alt": "Sunset city skyline reflected in a protected office-tower façade",
           "width": 1600,
           "height": 900
@@ -65,7 +65,7 @@
             "moduleLabel": "Watch Our Story",
             "href": "#video-our-journey",
             "poster": {
-              "src": "/placeholders/video-448x252.svg",
+              "src": "/images/calm-ending.png",
               "alt": "Video: the IrisPro journey — headquarters building",
               "width": 448,
               "height": 252

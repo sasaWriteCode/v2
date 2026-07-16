@@ -29,7 +29,7 @@
           { "icon": "eye", "label": "Clear View Comfort" }
         ],
         "media": {
-          "src": "/placeholders/hero-1600x900.svg",
+          "src": "/images/hero-sunlight.png",
           "alt": "Exploded film-layer diagram over a car on a mountain road at sunrise",
           "width": 1600,
           "height": 900

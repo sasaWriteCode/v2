@@ -19,7 +19,7 @@
           { "label": "Watch Video", "href": "#video", "variant": "secondary" }
         ],
         "media": {
-          "src": "/placeholders/hero-1600x900.svg",
+          "src": "/images/hero-family-car.png",
           "alt": "Collage of a protected car, a modern glass building and a woman enjoying sunlight safely",
           "width": 1600,
           "height": 900
@@ -157,7 +157,7 @@
             "location": "Kuala Lumpur",
             "category": "Automotive",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/family-car.png",
               "alt": "Porsche 911 with IrisPro film",
               "width": 560,
               "height": 360
@@ -168,7 +168,7 @@
             "location": "Johor Bahru",
             "category": "Residential",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/residential-glass.png",
               "alt": "Luxury residence glazing",
               "width": 560,
               "height": 360
@@ -179,7 +179,7 @@
             "location": "Kuala Lumpur",
             "category": "Commercial",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building.png",
               "alt": "Menara office tower façade",
               "width": 560,
               "height": 360
@@ -190,7 +190,7 @@
             "location": "Selangor",
             "category": "Healthcare",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building-2.png",
               "alt": "Sunway Medical Centre",
               "width": 560,
               "height": 360

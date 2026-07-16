@@ -26,7 +26,7 @@
           { "label": "Compare Film Series", "href": "#series-comparison", "variant": "secondary" }
         ],
         "media": {
-          "src": "/placeholders/hero-1600x900.svg",
+          "src": "/images/hot-car-exterior.png",
           "alt": "Sedan driving under intense tropical sun, cabin views with and without IrisPro film",
           "width": 1600,
           "height": 900

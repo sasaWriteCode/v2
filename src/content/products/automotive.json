@@ -32,7 +32,7 @@
           { "label": "Compare Films", "href": "#catalogue", "variant": "secondary" }
         ],
         "media": {
-          "src": "/placeholders/hero-1600x900.svg",
+          "src": "/images/hero-family-car.png",
           "alt": "Black sedan on a coastal highway with the UV+420™ Complete Protection shield",
           "width": 1600,
           "height": 900
@@ -200,7 +200,7 @@
               "badge": "SIGNATURE",
               "technology": "Multi Layer Silver Sputter",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/automotive-tint.png",
                 "alt": "Titan X automotive film on a black sedan",
                 "width": 560,
                 "height": 320
@@ -227,7 +227,7 @@
               "badge": "SIGNATURE",
               "technology": "Multi Layer Titanium Sputter",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/automotive-tint.png",
                 "alt": "Diamond X automotive film on a white coupé",
                 "width": 560,
                 "height": 320
@@ -254,7 +254,7 @@
               "badge": "SIGNATURE",
               "technology": "Nano Titanium Sputter",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/automotive-tint.png",
                 "alt": "RayPro automotive film on a grey sedan",
                 "width": 560,
                 "height": 320
@@ -281,7 +281,7 @@
               "badge": "SIGNATURE",
               "technology": "Nano Carbon Ceramic",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/automotive-tint.png",
                 "alt": "Anti Fade 90 automotive film on a silver sedan",
                 "width": 560,
                 "height": 320
@@ -308,7 +308,7 @@
               "badge": "PRIVACY + HEAT",
               "technology": "Aluminium",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/automotive-tint.png",
                 "alt": "UV+420 Silver Black automotive film",
                 "width": 560,
                 "height": 320
@@ -334,7 +334,7 @@
               "badge": "PRIVACY + HEAT",
               "technology": "Aluminium",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/automotive-tint.png",
                 "alt": "Silver Black automotive film",
                 "width": 560,
                 "height": 320
@@ -360,7 +360,7 @@
               "badge": "HEAT REJECTION",
               "technology": "Nano Titanium Sputter",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/automotive-tint.png",
                 "alt": "Titanium (HR) automotive film",
                 "width": 560,
                 "height": 320
@@ -386,7 +386,7 @@
               "badge": "HEAT REJECTION",
               "technology": "Nano Carbon Ceramic",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/automotive-tint.png",
                 "alt": "Color Stable (CS) automotive film",
                 "width": 560,
                 "height": 320
@@ -412,7 +412,7 @@
               "badge": "HEAT REJECTION",
               "technology": "Nano Carbon Ceramic",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/automotive-tint.png",
                 "alt": "CS Pro automotive film",
                 "width": 560,
                 "height": 320
@@ -438,7 +438,7 @@
               "badge": "HEAT REJECTION + SECURITY",
               "technology": "TPU Silver Sputter (External Use)",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/automotive-tint.png",
                 "alt": "Vanguard exterior automotive film",
                 "width": 560,
                 "height": 320
@@ -542,7 +542,7 @@
             "category": "Commercial",
             "badge": { "label": "Achieved 4 GBI Points", "tone": "achievement" },
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building.png",
               "alt": "OCBC Bank Tower, Kuala Lumpur",
               "width": 560,
               "height": 360
@@ -555,7 +555,7 @@
             "category": "Government",
             "badge": { "label": "In Progress", "tone": "progress" },
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building-2.png",
               "alt": "Putrajaya Project government complex",
               "width": 560,
               "height": 360
@@ -567,7 +567,7 @@
             "location": "Hospital",
             "category": "Healthcare",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building-panel.png",
               "alt": "KPJ Healthcare hospital building",
               "width": 560,
               "height": 360
@@ -579,7 +579,7 @@
             "location": "Kuala Lumpur",
             "category": "Hospitality",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/split-media-building.png",
               "alt": "Luxury hotel, Kuala Lumpur",
               "width": 560,
               "height": 360
@@ -591,7 +591,7 @@
             "location": "Malaysia",
             "category": "Transport",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building.png",
               "alt": "Subang Airport terminal glazing",
               "width": 560,
               "height": 360

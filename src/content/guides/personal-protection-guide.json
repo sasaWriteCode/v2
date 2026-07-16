@@ -28,7 +28,7 @@
           { "label": "Explore UV+420™", "href": "#uv420-technology", "variant": "secondary" }
         ],
         "media": {
-          "src": "/placeholders/hero-1600x900.svg",
+          "src": "/images/hero-sunlight.png",
           "alt": "Father and daughter in a car protected by the UV+420™ Complete Protection shield",
           "width": 1600,
           "height": 900

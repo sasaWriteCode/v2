@@ -31,7 +31,7 @@
           { "label": "Explore Film Series", "href": "#series", "variant": "secondary" }
         ],
         "media": {
-          "src": "/placeholders/hero-1600x900.svg",
+          "src": "/images/residential-glass-panel.png",
           "alt": "Bright living room by floor-to-ceiling windows, comfortable in daylight with IrisPro film",
           "width": 1600,
           "height": 900

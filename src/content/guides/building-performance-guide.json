@@ -240,7 +240,7 @@
             "category": "Commercial",
             "badge": { "label": "Achieved 4 GBI Points", "tone": "achievement" },
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building.png",
               "alt": "OCBC Bank Tower, Kuala Lumpur",
               "width": 560,
               "height": 360
@@ -254,7 +254,7 @@
             "category": "Government",
             "badge": { "label": "In Progress", "tone": "progress" },
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building-2.png",
               "alt": "Putrajaya Project government complex",
               "width": 560,
               "height": 360
@@ -267,7 +267,7 @@
             "location": "Hospital",
             "category": "Healthcare",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building-panel.png",
               "alt": "KPJ Healthcare hospital building",
               "width": 560,
               "height": 360
@@ -280,7 +280,7 @@
             "location": "Kuala Lumpur",
             "category": "Hospitality",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/split-media-building.png",
               "alt": "Luxury hotel, Kuala Lumpur",
               "width": 560,
               "height": 360

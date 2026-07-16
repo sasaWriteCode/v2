@@ -20,7 +20,7 @@
         "headlineLines": ["Advanced Protection", "for Every Glass Surface"],
         "subhead": "IrisPro building window films combine patented UV+420™ optical technology, 6-Layer Hotmelt™ base film and multi-layer sputter engineering to deliver unmatched heat rejection, comfort and durability.",
         "media": {
-          "src": "/placeholders/hero-1600x900.svg",
+          "src": "/images/commercial-building-panel.png",
           "alt": "Split view: a cool bright living room and a commercial glass tower, joined by the UV+420™ Complete Protection shield",
           "width": 1600,
           "height": 900
@@ -66,7 +66,7 @@
               "badge": "Signature Series",
               "technology": "Multi Layer Silver Sputter",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/sputtered_film_roll.png",
                 "alt": "Titan X building film on a glass tower",
                 "width": 560,
                 "height": 320
@@ -90,7 +90,7 @@
               "badge": "Signature Series",
               "technology": "Multi Layer Titanium Sputter",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/tinted_film_roll.png",
                 "alt": "Diamond building film on a commercial façade",
                 "width": 560,
                 "height": 320
@@ -114,7 +114,7 @@
               "badge": "Signature Series",
               "technology": "Nano Titanium Sputter",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/sputtered_film_roll.png",
                 "alt": "RayPro building film on an office tower",
                 "width": 560,
                 "height": 320
@@ -138,7 +138,7 @@
               "badge": "Signature Series",
               "technology": "Nano Carbon Ceramic",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/tinted_film_roll.png",
                 "alt": "Anti Fade 90 building film in a seafront living room",
                 "width": 560,
                 "height": 320
@@ -162,7 +162,7 @@
               "badge": "Privacy + Heat Series",
               "technology": "Aluminium",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/sputtered_film_roll.png",
                 "alt": "UV+420 Silver Black building film",
                 "width": 560,
                 "height": 320
@@ -186,7 +186,7 @@
               "badge": "Privacy + Heat Series",
               "technology": "Aluminium",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/tinted_film_roll.png",
                 "alt": "Silver Black building film on a residential block",
                 "width": 560,
                 "height": 320
@@ -210,7 +210,7 @@
               "badge": "Heat Rejection Series",
               "technology": "Nano Titanium Sputter",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/sputtered_film_roll.png",
                 "alt": "Titanium (HR) building film on an office block",
                 "width": 560,
                 "height": 320
@@ -234,7 +234,7 @@
               "badge": "Heat Rejection Series",
               "technology": "Nano Carbon Ceramic",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/tinted_film_roll.png",
                 "alt": "Color Stable (CS) building film in a beachfront lounge",
                 "width": 560,
                 "height": 320
@@ -258,7 +258,7 @@
               "badge": "Heat Rejection Series",
               "technology": "Nano Carbon Ceramic",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/sputtered_film_roll.png",
                 "alt": "CS Pro building film on a poolside residence",
                 "width": 560,
                 "height": 320
@@ -282,7 +282,7 @@
               "badge": "Heat Rejection + Security",
               "technology": "TPU Silver Sputter (External Use)",
               "image": {
-                "src": "/placeholders/product-560x320.svg",
+                "src": "/images/tinted_film_roll.png",
                 "alt": "Vanguard exterior security film on a commercial building",
                 "width": 560,
                 "height": 320
@@ -437,7 +437,7 @@
             "category": "Commercial",
             "badge": { "label": "Achieved 4 GBI Points", "tone": "achievement" },
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building.png",
               "alt": "OCBC Bank Tower, Kuala Lumpur",
               "width": 560,
               "height": 360
@@ -450,7 +450,7 @@
             "category": "Government",
             "badge": { "label": "In Progress", "tone": "progress" },
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building-2.png",
               "alt": "Putrajaya Project government complex",
               "width": 560,
               "height": 360
@@ -462,7 +462,7 @@
             "location": "Hospital",
             "category": "Healthcare",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building-panel.png",
               "alt": "KPJ Healthcare hospital building",
               "width": 560,
               "height": 360
@@ -474,7 +474,7 @@
             "location": "Kuala Lumpur",
             "category": "Hospitality",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/split-media-building.png",
               "alt": "Luxury hotel, Kuala Lumpur",
               "width": 560,
               "height": 360
@@ -486,7 +486,7 @@
             "location": "Malaysia",
             "category": "Transport",
             "image": {
-              "src": "/placeholders/project-560x360.svg",
+              "src": "/images/commercial-building.png",
               "alt": "Subang Airport terminal glazing",
               "width": 560,
               "height": 360
