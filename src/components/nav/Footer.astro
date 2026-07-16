@@ -11,8 +11,16 @@ import { BRAND, FOOTER_LEGAL, FOOTER_NAV, NAV_STRINGS } from '@/config/navigatio
   <div class="container section-y-tight">
     <div class="grid gap-10 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)]">
       <div>
-        <p class="type-heading-md" style="font-weight: 700">{BRAND.name}</p>
-        <p class="type-body-sm mt-2" style="color: var(--text-secondary)">
+        <a href={BRAND.href} class="inline-block" aria-label="IrisPro Home">
+          <img
+            src="/IP-Logo-White.png"
+            alt="IrisPro Logo"
+            height="32"
+            width="74"
+            class="h-8 w-auto object-contain"
+          />
+        </a>
+        <p class="type-body-sm mt-3" style="color: var(--text-secondary)">
           {BRAND.tagline}
         </p>
       </div>

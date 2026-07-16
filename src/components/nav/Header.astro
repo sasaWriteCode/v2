@@ -11,11 +11,15 @@ import { BRAND, NAV_CTA, NAV_STRINGS, PRIMARY_NAV } from '@/config/navigation';
 
 <header class="site-header">
   <div class="container flex items-center justify-between gap-4" style="height: var(--header-height)">
-    <a href={BRAND.href} class="flex items-baseline gap-2" style="text-decoration: none">
-      <span class="type-heading-md" style="color: var(--text-primary); font-weight: 700">
-        {BRAND.name}
-      </span>
-      <span class="type-caption hidden sm:inline" style="color: var(--text-muted)">
+    <a href={BRAND.href} class="flex items-center gap-2.5" style="text-decoration: none" aria-label="IrisPro Home">
+      <img
+        src="/irispro-logo.png"
+        alt="IrisPro Logo"
+        height="32"
+        width="74"
+        class="h-8 w-auto object-contain"
+      />
+      <span class="type-caption hidden sm:inline" style="color: var(--text-muted); border-left: 1px solid var(--border-subtle); padding-left: 0.75rem;">
         {BRAND.tagline}
       </span>
     </a>
