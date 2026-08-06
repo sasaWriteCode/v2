@@ -22,11 +22,12 @@ import PopularQuestions from '@/components/sections/rail/PopularQuestions.astro'
 import { AskIrisProAI } from '@/components/workshop/AskIrisProAI';
 import { faqSchema } from '@/lib/seo/schema';
 import type { GuidePageContent } from '@/types/sections';
+import { resolvePathsInObject } from '@/lib/paths';
 
 interface Props {
   content: GuidePageContent;
 }
-const { content } = Astro.props;
+const content = resolvePathsInObject(Astro.props.content);
 const { intro, main, rail, outro } = content;
 
 const onThisPageItems = [...intro, ...main]

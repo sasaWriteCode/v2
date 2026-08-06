@@ -6,6 +6,7 @@
  */
 import { NAV_STRINGS } from '@/config/navigation';
 import type { Crumb } from '@/types/sections';
+import { resolveUrl } from '@/lib/paths';
 
 interface Props {
   crumbs: Crumb[];
@@ -19,7 +20,7 @@ const { crumbs } = Astro.props;
       <li class="type-caption flex items-center gap-1" style="color: var(--text-muted)">
         {i > 0 && <span aria-hidden="true">›</span>}
         {crumb.href ? (
-          <a href={crumb.href} style="color: var(--text-secondary)">
+          <a href={resolveUrl(crumb.href)} style="color: var(--text-secondary)">
             {crumb.label}
           </a>
         ) : (

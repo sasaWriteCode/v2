@@ -8,11 +8,12 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import SectionRenderer from '@/components/SectionRenderer.astro';
 import type { KnowledgePageContent } from '@/types/sections';
+import { resolvePathsInObject } from '@/lib/paths';
 
 interface Props {
   content: KnowledgePageContent;
 }
-const { content } = Astro.props;
+const content = resolvePathsInObject(Astro.props.content);
 ---
 
 <BaseLayout seo={content.seo} crumbs={content.breadcrumbs}>

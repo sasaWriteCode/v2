@@ -18,6 +18,7 @@
 
 import { useEffect, useState } from 'react';
 import { useEnhancementTier } from '@/lib/enhancement/useEnhancementTier';
+import { resolveUrl } from '@/lib/paths';
 
 interface MediaBaseProps {
   alt: string;
@@ -66,10 +67,10 @@ function Picture({
     // display:contents so the img participates directly in the parent's
     // layout — h-full/w-full classes on Media then behave as expected.
     <picture style={{ display: 'contents' }}>
-      {avifSrc && <source srcSet={avifSrc} type="image/avif" sizes={sizes} />}
-      {webpSrc && <source srcSet={webpSrc} type="image/webp" sizes={sizes} />}
+      {avifSrc && <source srcSet={resolveUrl(avifSrc)} type="image/avif" sizes={sizes} />}
+      {webpSrc && <source srcSet={resolveUrl(webpSrc)} type="image/webp" sizes={sizes} />}
       <img
-        src={src}
+        src={resolveUrl(src)}
         alt={alt}
         width={width}
         height={height}
@@ -119,7 +120,7 @@ export function Media(props: MediaProps) {
       <video
         width={width}
         height={height}
-        poster={props.src}
+        poster={resolveUrl(props.src)}
         autoPlay={isCinematic}
         controls={!isCinematic}
         muted
@@ -130,7 +131,7 @@ export function Media(props: MediaProps) {
         className={className}
         style={{ aspectRatio: `${width} / ${height}` }}
       >
-        <source src={video} type={videoType} />
+        <source src={resolveUrl(video)} type={videoType} />
       </video>
     );
   }

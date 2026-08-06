@@ -10,11 +10,12 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import SectionRenderer from '@/components/SectionRenderer.astro';
 import { productListSchema } from '@/lib/seo/schema';
 import type { ProductPageContent } from '@/types/sections';
+import { resolvePathsInObject } from '@/lib/paths';
 
 interface Props {
   content: ProductPageContent;
 }
-const { content } = Astro.props;
+const content = resolvePathsInObject(Astro.props.content);
 
 const products = content.sections
   .filter((section) => section.type === 'product-browser')

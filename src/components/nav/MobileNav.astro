@@ -13,6 +13,7 @@
  * footer as plain links — nobody is stranded.
  */
 import { NAV_CTA, NAV_STRINGS, PRIMARY_NAV } from '@/config/navigation';
+import { resolveUrl } from '@/lib/paths';
 ---
 
 <button
@@ -51,7 +52,7 @@ import { NAV_CTA, NAV_STRINGS, PRIMARY_NAV } from '@/config/navigation';
         {PRIMARY_NAV.map((item) => (
           <li>
             <a
-              href={item.href}
+              href={resolveUrl(item.href)}
               class="type-body-md block rounded-md px-3 py-2 font-semibold"
               style="color: var(--text-primary); text-decoration: none"
             >
@@ -62,7 +63,7 @@ import { NAV_CTA, NAV_STRINGS, PRIMARY_NAV } from '@/config/navigation';
                 {item.children.map((child) => (
                   <li>
                     <a
-                      href={child.href}
+                      href={resolveUrl(child.href)}
                       class="type-body-sm block rounded-md px-3 py-1.5"
                       style="color: var(--text-secondary); text-decoration: none"
                     >
@@ -78,7 +79,7 @@ import { NAV_CTA, NAV_STRINGS, PRIMARY_NAV } from '@/config/navigation';
     </nav>
 
     <a
-      href={NAV_CTA.href}
+      href={resolveUrl(NAV_CTA.href)}
       class="type-body-sm rounded-md px-5 py-3 text-center font-semibold"
       style="background: var(--color-red); color: var(--color-white); text-decoration: none"
     >

@@ -8,7 +8,8 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   // Provisional domain — v1 only evidences ewarranty.irispro.com; the
   // marketing domain needs client confirmation (see README).
-  site: 'https://www.irispro.com',
+  site: 'https://sasaWriteCode.github.io',
+  base: '/v2',
   integrations: [react()],
 
   vite: {

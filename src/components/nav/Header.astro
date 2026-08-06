@@ -7,13 +7,14 @@
  */
 import MobileNav from '@/components/nav/MobileNav.astro';
 import { BRAND, NAV_CTA, NAV_STRINGS, PRIMARY_NAV } from '@/config/navigation';
+import { resolveUrl } from '@/lib/paths';
 ---
 
 <header class="site-header">
   <div class="container flex items-center justify-between gap-4" style="height: var(--header-height)">
-    <a href={BRAND.href} class="flex items-center gap-2.5" style="text-decoration: none" aria-label="IrisPro Home">
+    <a href={resolveUrl(BRAND.href)} class="flex items-center gap-2.5" style="text-decoration: none" aria-label="IrisPro Home">
       <img
-        src="/irispro-logo.png"
+        src={resolveUrl('/irispro-logo.png')}
         alt="IrisPro Logo"
         style="height: 28px; width: auto; display: block; object-fit: contain;"
       />
@@ -27,7 +28,7 @@ import { BRAND, NAV_CTA, NAV_STRINGS, PRIMARY_NAV } from '@/config/navigation';
         {PRIMARY_NAV.map((item) => (
           <li>
             <a
-              href={item.href}
+              href={resolveUrl(item.href)}
               class="type-body-sm font-medium"
               style="color: var(--text-secondary); text-decoration: none"
             >
@@ -40,7 +41,7 @@ import { BRAND, NAV_CTA, NAV_STRINGS, PRIMARY_NAV } from '@/config/navigation';
 
     <div class="flex items-center gap-3">
       <a
-        href={NAV_CTA.href}
+        href={resolveUrl(NAV_CTA.href)}
         class="type-body-sm hidden rounded-md px-4 py-2 font-semibold sm:inline-block"
         style="background: var(--color-red); color: var(--color-white); text-decoration: none"
       >
