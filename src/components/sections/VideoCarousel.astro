@@ -5,6 +5,7 @@
  * horizontal scroll via .snap-strip. Static, zero JS — cards are links;
  * playback happens on the target page.
  */
+import ImageOrPlaceholder from '@/components/base/ImageOrPlaceholder.astro';
 import type { VideoCarouselContent } from '@/types/sections';
 
 type Props = VideoCarouselContent;
@@ -27,15 +28,12 @@ const { heading, lede, videos } = Astro.props;
           style="background: var(--surface-raised); border: 1px solid var(--border-subtle); box-shadow: var(--elevation-1); color: inherit; text-decoration: none"
         >
           <span class="relative block">
-            <img
+            <ImageOrPlaceholder
               src={video.poster.src}
               alt={video.poster.alt}
               width={video.poster.width}
               height={video.poster.height}
-              loading="lazy"
-              decoding="async"
               class="w-full object-cover"
-              style={`aspect-ratio: ${video.poster.width} / ${video.poster.height}`}
             />
             <span
               aria-hidden="true"

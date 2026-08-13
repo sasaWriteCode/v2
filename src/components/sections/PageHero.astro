@@ -21,6 +21,7 @@ const { eyebrow, title, lede, meta, ctas, search } = Astro.props;
     <h1 class="type-display-md mt-3" style="color: var(--text-primary)">
       {title}
     </h1>
+    <span class="accent-rule" aria-hidden="true"></span>
     {lede && (
       <p
         class="type-body-lg mt-4 max-w-article"
@@ -53,7 +54,7 @@ const { eyebrow, title, lede, meta, ctas, search } = Astro.props;
         {ctas.map((cta) => (
           <a
             href={cta.href}
-            class="type-body-sm inline-flex items-center gap-2 rounded-md px-6 py-3 font-semibold"
+            class="btn-press type-body-sm inline-flex items-center gap-2 rounded-md px-6 py-3 font-semibold"
             style={
               cta.variant === 'secondary' || cta.variant === 'ghost'
                 ? 'border: 1px solid var(--border-strong); color: var(--text-primary)'

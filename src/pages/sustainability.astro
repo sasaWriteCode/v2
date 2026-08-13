@@ -1,0 +1,17 @@
+---
+/**
+ * Sustainability (top-level showcase) — EDUCATIONAL page: what
+ * sustainability & ESG mean and how solar films contribute. The
+ * client-facing ESG *solution* pitch lives at /solutions/sustainability —
+ * the two pages deliberately answer different questions (client ruling,
+ * 2026-08-12).
+ */
+import { getEntry } from 'astro:content';
+import EditorialTemplate from '@/templates/EditorialTemplate.astro';
+import PendingPage from '@/components/PendingPage.astro';
+
+const entry = await getEntry('editorial', 'sustainability');
+const crumbs = [{ label: 'Home', href: '/' }, { label: 'Sustainability' }];
+---
+
+{entry ? <EditorialTemplate content={entry.data} /> : <PendingPage title="Sustainability" crumbs={crumbs} />}

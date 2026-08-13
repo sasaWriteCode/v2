@@ -52,6 +52,59 @@ interface MediaVideoProps extends MediaBaseProps {
 
 export type MediaProps = MediaImageProps | MediaVideoProps;
 
+/**
+ * Placeholder convention (pre-launch): content authors set
+ * `src: "placeholder:<short-hint>"` while real photography is pending.
+ * The alt text carries the full art-direction brief ("what image should
+ * go here"), and we render it visibly inside a layout-stable box (the
+ * width/height aspect ratio is preserved, so swapping in the real image
+ * later causes zero layout shift).
+ */
+export const isPlaceholderSrc = (src: string) => src.startsWith('placeholder:');
+
+export function MediaPlaceholder({
+  src,
+  alt,
+  width,
+  height,
+  className,
+}: Pick<MediaImageProps, 'src' | 'alt' | 'width' | 'height' | 'className'>) {
+  const hint = src.slice('placeholder:'.length).trim();
+  return (
+    <div
+      role="img"
+      aria-label={alt}
+      className={className}
+      style={{
+        aspectRatio: `${width} / ${height}`,
+        display: 'grid',
+        placeItems: 'center',
+        padding: '1rem',
+        background:
+          'repeating-linear-gradient(45deg, var(--surface-raised, #f4f4f4) 0 12px, transparent 12px 24px)',
+        border: '2px dashed var(--border-default, #c8c8c8)',
+        borderRadius: 'var(--radius-md, 8px)',
+        boxSizing: 'border-box',
+      }}
+    >
+      <span
+        style={{
+          maxWidth: '36ch',
+          textAlign: 'center',
+          fontSize: '0.8rem',
+          lineHeight: 1.45,
+          color: 'var(--text-muted, #777)',
+        }}
+      >
+        <strong style={{ display: 'block', letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: '0.7rem' }}>
+          📷 Image slot{hint ? `: ${hint}` : ''}
+        </strong>
+        {alt}
+      </span>
+    </div>
+  );
+}
+
 function Picture({
   src,
   avifSrc,
@@ -63,6 +116,11 @@ function Picture({
   priority,
   className,
 }: MediaImageProps) {
+  if (isPlaceholderSrc(src)) {
+    return (
+      <MediaPlaceholder src={src} alt={alt} width={width} height={height} className={className} />
+    );
+  }
   return (
     // display:contents so the img participates directly in the parent's
     // layout — h-full/w-full classes on Media then behave as expected.

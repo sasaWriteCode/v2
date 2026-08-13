@@ -1,13 +1,10 @@
 /**
  * IrisPro V2 — the single source of truth for site navigation.
  *
- * ⚠ CONFLICT NOTICE (see _conflicts.md §9–§12): the reference screens
- * disagree on IA, nav labels ("Learning Centre" vs "Knowledge Centre"),
- * product-area naming ("Products" vs "Protection Series") and the primary
- * CTA ("Find A Dealer" / "Request Consultation" / "Request Building
- * Assessment"). The values below are PROVISIONAL DEFAULTS per the Stage 3
- * brief — "Knowledge Centre" and "Request Consultation" — pending client
- * ruling. Change them here, nowhere else.
+ * IA confirmed by the client (2026-08-12) from the approved site structure:
+ * EN-only site; "Knowledge Centre" and "Request Consultation" ruled in;
+ * E-Warranty is an external header button to ewarranty.irispro.com
+ * (opens a new tab). Change nav here, nowhere else.
  */
 
 import type { CtaLink } from '@/types/content';
@@ -17,11 +14,13 @@ export interface NavItem {
   href: string;
   /** Sub-items — rendered in the footer and mobile nav (full IA). */
   children?: NavItem[];
+  /** External destination — render with target="_blank" rel="noopener". */
+  external?: boolean;
 }
 
 export const BRAND = {
   name: 'IrisPro',
-  tagline: 'The Best Tint for ASEAN',
+  tagline: 'Patented UV+420 Optical Solar Film',
   href: '/',
 } as const;
 
@@ -38,33 +37,53 @@ export const PRIMARY_NAV: NavItem[] = [
     ],
   },
   {
-    // "Products" vs "Protection Series" — provisional: Products (§11)
     label: 'Products',
-    href: '/products/automotive',
+    href: '/products/building',
     children: [
+      { label: 'Building Window Films', href: '/products/building' },
+      { label: 'Building Films — For Homes', href: '/products/building-homes' },
+      {
+        label: 'Building Films — For Commercial',
+        href: '/products/building-commercial',
+      },
       { label: 'Automotive Films', href: '/products/automotive' },
-      { label: 'Building Films', href: '/products/building' },
     ],
   },
+  { label: 'Sustainability', href: '/sustainability' },
   { label: 'Technologies', href: '/technologies' },
   { label: 'Projects', href: '/projects' },
   {
-    // "Learning Centre" vs "Knowledge Centre" — provisional: Knowledge Centre (§10)
     label: 'Knowledge Centre',
     href: '/knowledge',
     children: [
       { label: 'Learn the Basics', href: '/knowledge/learn-the-basics' },
       { label: 'Technology Explained', href: '/knowledge/technology-explained' },
       { label: 'Automotive Guide', href: '/knowledge/automotive' },
+      { label: 'Residential Guide', href: '/knowledge/residential-guide' },
+      { label: 'Commercial Guide', href: '/knowledge/commercial-guide' },
+      { label: 'Health & Protection', href: '/knowledge/health-and-protection' },
+      { label: 'Sustainability & ESG', href: '/knowledge/sustainability-esg' },
+      { label: 'Myth vs Fact', href: '/knowledge/myth-vs-fact' },
+      { label: 'Video Library', href: '/knowledge/video-library' },
     ],
   },
   { label: 'About', href: '/about' },
 ];
 
-/** Primary header CTA — provisional default per the Stage 3 brief (§12). */
+/**
+ * E-Warranty — external system, always opens in a new tab.
+ * Rendered as a secondary header button next to the primary CTA.
+ */
+export const NAV_EWARRANTY: NavItem = {
+  label: 'E-Warranty',
+  href: 'https://ewarranty.irispro.com/#/login',
+  external: true,
+};
+
+/** Primary header CTA — confirmed: consultation form lives on /contact. */
 export const NAV_CTA: CtaLink = {
   label: 'Request Consultation',
-  href: '#consultation',
+  href: '/contact',
   variant: 'primary',
 };
 
@@ -86,7 +105,7 @@ export const FOOTER_NAV: FooterGroup[] = [
     heading: 'Knowledge Centre',
     items: [
       { label: 'Knowledge Centre', href: '/knowledge' },
-      ...(PRIMARY_NAV[4].children ?? []),
+      ...(PRIMARY_NAV[5].children ?? []),
     ],
   },
   {
@@ -95,18 +114,14 @@ export const FOOTER_NAV: FooterGroup[] = [
       { label: 'About', href: '/about' },
       { label: 'Projects', href: '/projects' },
       { label: 'Technologies', href: '/technologies' },
-    ],
-  },
-  {
-    heading: 'Development',
-    items: [
-      { label: 'Design system', href: '/design-system' },
-      { label: 'Component primitives', href: '/components' },
+      { label: 'Sustainability', href: '/sustainability' },
+      { label: 'Contact', href: '/contact' },
+      NAV_EWARRANTY,
     ],
   },
 ];
 
-export const FOOTER_LEGAL = `© ${new Date().getFullYear()} IrisPro. All rights reserved.`;
+export const FOOTER_LEGAL = `© ${new Date().getFullYear()} IrisPro Sdn. Bhd. All rights reserved.`;
 
 /** Copy for routes whose content object has not been supplied yet. */
 export const PENDING_PAGE = {

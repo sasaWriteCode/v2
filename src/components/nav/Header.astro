@@ -5,44 +5,66 @@
  * MobileNav native-dialog component (vanilla ~1KB script — see its header
  * for why it is deliberately NOT a React island).
  */
-import MobileNav from '@/components/nav/MobileNav.astro';
-import { BRAND, NAV_CTA, NAV_STRINGS, PRIMARY_NAV } from '@/config/navigation';
-import { resolveUrl } from '@/lib/paths';
+import MobileNav from "@/components/nav/MobileNav.astro";
+import {
+  BRAND,
+  NAV_CTA,
+  NAV_EWARRANTY,
+  NAV_STRINGS,
+  PRIMARY_NAV,
+} from "@/config/navigation";
+import { resolveUrl } from "@/lib/paths";
 ---
 
 <header class="site-header">
-  <div class="container flex items-center justify-between gap-4" style="height: var(--header-height)">
-    <a href={resolveUrl(BRAND.href)} class="flex items-center gap-2.5" style="text-decoration: none" aria-label="IrisPro Home">
+  <div
+    class="container flex items-center justify-between gap-4"
+    style="height: var(--header-height)"
+  >
+    <a
+      href={resolveUrl(BRAND.href)}
+      class="flex items-center gap-2.5"
+      style="text-decoration: none"
+      aria-label="IrisPro Home"
+    >
       <img
-        src={resolveUrl('/irispro-logo.png')}
+        src={resolveUrl("/irispro-logo.png")}
         alt="IrisPro Logo"
         style="height: 28px; width: auto; display: block; object-fit: contain;"
       />
-      <span class="type-caption hidden sm:inline" style="color: var(--text-muted); border-left: 1px solid var(--border-subtle); padding-left: 0.75rem;">
-        {BRAND.tagline}
-      </span>
     </a>
 
     <nav aria-label={NAV_STRINGS.primaryNavLabel} class="hidden lg:block">
       <ul class="flex items-center gap-5">
-        {PRIMARY_NAV.map((item) => (
-          <li>
-            <a
-              href={resolveUrl(item.href)}
-              class="type-body-sm font-medium"
-              style="color: var(--text-secondary); text-decoration: none"
-            >
-              {item.label}
-            </a>
-          </li>
-        ))}
+        {
+          PRIMARY_NAV.map((item) => (
+            <li>
+              <a
+                href={resolveUrl(item.href)}
+                class="type-body-sm font-medium"
+                style="color: var(--text-secondary); text-decoration: none"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
 
     <div class="flex items-center gap-3">
       <a
+        href={NAV_EWARRANTY.href}
+        target="_blank"
+        rel="noopener"
+        class="btn-press type-body-sm hidden rounded-md px-4 py-2 font-semibold sm:inline-block"
+        style="border: 1px solid var(--border-subtle); color: var(--text-secondary); text-decoration: none"
+      >
+        {NAV_EWARRANTY.label}
+      </a>
+      <a
         href={resolveUrl(NAV_CTA.href)}
-        class="type-body-sm hidden rounded-md px-4 py-2 font-semibold sm:inline-block"
+        class="btn-press type-body-sm hidden rounded-md px-4 py-2 font-semibold sm:inline-block"
         style="background: var(--color-red); color: var(--color-white); text-decoration: none"
       >
         {NAV_CTA.label}

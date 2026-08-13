@@ -70,7 +70,7 @@
           {
             "name": "Luxury Bungalow",
             "location": "Johor Bahru",
-            "category": "Residential",
+            "category": "Building",
             "image": {
               "src": "/images/residential-glass-2.png",
               "alt": "Luxury bungalow with IrisPro RayPro 70 film",
@@ -89,7 +89,7 @@
           {
             "name": "Corporate Office",
             "location": "Petaling Jaya",
-            "category": "Commercial",
+            "category": "Building",
             "image": {
               "src": "/images/commercial-building-panel.png",
               "alt": "Corporate office tower with IrisPro Diamond X film",
@@ -108,7 +108,7 @@
           {
             "name": "5 Star Hotel",
             "location": "Langkawi",
-            "category": "Commercial",
+            "category": "Building",
             "badge": {
               "label": "Featured",
               "tone": "featured"
@@ -221,7 +221,7 @@
             "title": "Request Consultation",
             "cta": {
               "label": "Request Consultation",
-              "href": "#consultation"
+              "href": "/contact"
             }
           }
         ]

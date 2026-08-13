@@ -1,0 +1,137 @@
+{
+  "title": "Protection Solutions",
+  "defaultZone": "workshop-light",
+  "seo": {
+    "title": "Protection Solutions",
+    "description": "Complete protection, better comfort and a greener future — IrisPro protection solutions for automotive, residential, commercial, personal protection and sustainability, engineered for ASEAN climate."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Protection Solutions" }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "label": "Solutions hub hero",
+      "data": {
+        "eyebrow": "Protection Solutions",
+        "headlineLines": ["Complete Protection.", "Better Comfort.", "A Greener Future."],
+        "subhead": "IrisPro provides advanced protection solutions for people, properties and the planet — engineered for the intense sun and unique climate of ASEAN.",
+        "benefits": [
+          { "icon": "users", "label": "Protect People" },
+          { "icon": "shield", "label": "Protect Property" },
+          { "icon": "thermometer", "label": "Improve Comfort" },
+          { "icon": "bolt", "label": "Save Energy" },
+          { "icon": "leaf", "label": "Protect Our Future" }
+        ],
+        "media": {
+          "src": "placeholder:solutions-hub-hero",
+          "alt": "Triptych composition: a premium car on the road, a modern residence, and a glass commercial tower under bright ASEAN sun — one protection technology across all three.",
+          "width": 1600,
+          "height": 900
+        }
+      }
+    },
+    {
+      "id": "solutions-by-environment",
+      "type": "category-grid",
+      "order": 20,
+      "label": "The five solution pages",
+      "data": {
+        "heading": "Solutions by Environment",
+        "lede": "Wherever the sun reaches you — on the road, at home, at work — there is an IrisPro solution engineered for it.",
+        "categories": [
+          {
+            "icon": "car",
+            "title": "Automotive Solutions",
+            "description": "Cooler cabin, UV+420™ protection for skin and eyes, protected interiors and lower fuel or battery consumption.",
+            "href": "/solutions/automotive"
+          },
+          {
+            "icon": "home",
+            "title": "Residential Solutions",
+            "description": "Comfortable homes, lower electricity bills, protected family and interiors — healthier living every day.",
+            "href": "/solutions/residential"
+          },
+          {
+            "icon": "building",
+            "title": "Commercial Solutions",
+            "description": "Reduce HVAC load and operating cost, improve employee comfort and productivity, support ESG and building value.",
+            "href": "/solutions/commercial"
+          },
+          {
+            "icon": "person",
+            "title": "Personal Protection",
+            "description": "Protect your skin and eyes from UV and HEV blue light — every day, everywhere you drive, live and work.",
+            "href": "/solutions/personal-protection"
+          },
+          {
+            "icon": "leaf",
+            "title": "Sustainability Solutions",
+            "description": "Lower energy use, reduced carbon emissions and green building contribution — better planet tomorrow.",
+            "href": "/solutions/sustainability"
+          }
+        ]
+      }
+    },
+    {
+      "id": "protection-philosophy",
+      "type": "tech-pillar-grid",
+      "order": 30,
+      "label": "The IrisPro protection philosophy — 4 layers of value",
+      "data": {
+        "columns": 4,
+        "pillars": [
+          {
+            "icon": "users",
+            "title": "Protect People",
+            "description": "Blocks harmful UV+420, reduces heat and protects the health of your family, skin and eyes."
+          },
+          {
+            "icon": "shield",
+            "title": "Protect Property",
+            "description": "Prevents fading, cracks and damage to vehicles, interiors, furniture and valuable assets."
+          },
+          {
+            "icon": "bolt",
+            "title": "Save Energy",
+            "description": "Reduces heat gain and lowers air-conditioning usage, saving energy and costs."
+          },
+          {
+            "icon": "leaf",
+            "title": "Protect Our Future",
+            "description": "Lower energy usage means reduced carbon emissions and a better planet for generations."
+          }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta-bar",
+      "order": 40,
+      "zone": "showroom-dark",
+      "label": "Hub closing CTA",
+      "data": {
+        "headline": "Not Sure Where to Start?",
+        "subhead": "Tell us your priority and we'll recommend the right protection solution for you.",
+        "actions": [
+          {
+            "icon": "chat",
+            "title": "Talk to Our Experts",
+            "description": "Free consultation, no obligation.",
+            "cta": { "label": "Request Consultation", "href": "/contact" }
+          },
+          {
+            "icon": "pin",
+            "title": "Find a Dealer",
+            "description": "Locate an authorised IrisPro dealer near you.",
+            "cta": { "label": "Find a Dealer", "href": "/contact#dealer-heading" }
+          }
+        ]
+      }
+    }
+  ]
+}

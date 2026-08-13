@@ -155,6 +155,7 @@ export interface TechPillar {
   title: string;
   description: string;
   link?: CtaLink;
+  image?: string | MediaContent;
 }
 
 /* ── 6. ProofStatBar ── */

@@ -23,16 +23,23 @@ const BADGE_TONE: Record<string, string> = {
 };
 
 export function ProjectStrip({
+  heading = 'Our Projects',
+  subhead = 'Trusted by thousands across ASEAN.',
+  lede,
   projects,
   filters = false,
   scrollable = true,
 }: {
+  heading?: string;
+  subhead?: string;
+  lede?: string;
   projects: ProjectItem[];
   /** Show category tabs derived from project.category. */
   filters?: boolean;
   /** false = wrap into a grid instead of a snap strip. */
   scrollable?: boolean;
 }) {
+  const subtitle = subhead || lede;
   const categories = [
     ALL,
     ...Array.from(new Set(projects.map((p) => p.category).filter(Boolean))),
@@ -43,6 +50,20 @@ export function ProjectStrip({
 
   return (
     <div>
+      {(heading || subtitle) && (
+        <div className="mb-6 space-y-2">
+          {heading && (
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight" style={{ color: 'var(--text-primary, #fafaf8)' }}>
+              {heading}
+            </h2>
+          )}
+          {subtitle && (
+            <p className="text-base sm:text-lg font-medium" style={{ color: 'var(--text-secondary, #c8c8d0)' }}>
+              {subtitle}
+            </p>
+          )}
+        </div>
+      )}
       {filters && categories.length > 2 && (
         <div
           role="group"

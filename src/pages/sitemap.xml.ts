@@ -7,6 +7,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { SITE } from '@/config/site';
+import { BUILDING_VIEWS } from '@/lib/productViews';
 
 export const GET: APIRoute = async () => {
   const [solutions, guides, knowledge, products] = await Promise.all([
@@ -19,12 +20,15 @@ export const GET: APIRoute = async () => {
   const paths = [
     '/',
     '/solutions/',
+    '/sustainability/',
     '/technologies/',
     '/projects/',
     '/about/',
+    '/contact/',
     '/knowledge/',
     ...solutions.map((entry) => `/solutions/${entry.id}/`),
     ...products.map((entry) => `/products/${entry.id}/`),
+    ...BUILDING_VIEWS.map((view) => `/products/${view.id}/`),
     ...guides.map((entry) => `/knowledge/${entry.id}/`),
     ...knowledge.filter((entry) => entry.id !== 'hub').map((entry) => `/knowledge/${entry.id}/`),
   ];

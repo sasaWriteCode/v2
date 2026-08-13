@@ -1,0 +1,99 @@
+{
+  "title": "Sustainability & ESG",
+  "defaultZone": "workshop-light",
+  "seo": {
+    "title": "Sustainability & ESG — Knowledge Centre",
+    "description": "Learn how solar heat, energy use and carbon emissions connect — and how window film contributes to sustainability goals, ESG reporting and green building certifications."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Knowledge Centre", "href": "/knowledge" },
+    { "label": "Sustainability & ESG" }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hub-hero",
+      "order": 10,
+      "data": {
+        "eyebrow": "Knowledge Centre",
+        "title": "Sustainability & ESG",
+        "lede": "Understand the link between solar heat, cooling energy and carbon emissions — and what ESG and green building certifications actually measure.",
+        "meta": [
+          { "icon": "leaf", "label": "Energy & Climate Basics" },
+          { "icon": "building", "label": "Green Building & GBI" },
+          { "icon": "document", "label": "Practical, Not Preachy" }
+        ]
+      }
+    },
+    {
+      "id": "articles",
+      "type": "article-grid",
+      "order": 20,
+      "label": "Article slots — final list & copy pending client",
+      "data": {
+        "heading": "Articles & Lessons",
+        "lede": "Structure ready — final article list and copy to be confirmed with the client.",
+        "articles": [
+          {
+            "title": "What ESG Actually Means (In Plain English)",
+            "href": "/knowledge/sustainability-esg",
+            "category": "Basics",
+            "description": "Content slot: intro article defining Environmental, Social, Governance with everyday examples.",
+            "image": { "src": "placeholder:esg-basics", "alt": "Simple explanatory visual: green city or infographic-style photo for an ESG basics article.", "width": 560, "height": 320 }
+          },
+          {
+            "title": "How Cooling Drives Your Carbon Footprint in ASEAN",
+            "href": "/knowledge/sustainability-esg",
+            "category": "Energy",
+            "description": "Content slot: article connecting air-conditioning load, electricity and CO₂ in tropical climates.",
+            "image": { "src": "placeholder:cooling-carbon", "alt": "Air-conditioning condenser units on a building wall under harsh tropical sun.", "width": 560, "height": 320 }
+          },
+          {
+            "title": "GBI & Green Building Certifications, Explained",
+            "href": "/knowledge/sustainability-esg",
+            "category": "Green Building",
+            "description": "Content slot: how window film contributes points (EE, IEQ, MR, IN categories).",
+            "image": { "src": "placeholder:gbi-explained", "alt": "Certified green commercial building exterior with visible landscaping or certification plaque.", "width": 560, "height": 320 }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta-bar",
+      "order": 30,
+      "data": {
+        "headline": "See Sustainability in Action",
+        "actions": [
+          {
+            "icon": "leaf",
+            "title": "Our Sustainability Commitment",
+            "description": "How IrisPro approaches energy, emissions and impact.",
+            "cta": { "label": "Visit Sustainability", "href": "/sustainability" }
+          },
+          {
+            "icon": "bolt",
+            "title": "Sustainability Solutions",
+            "description": "ESG-ready films for vehicles, homes and buildings.",
+            "cta": { "label": "Explore Solutions", "href": "/solutions/sustainability" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "related-categories",
+      "type": "category-grid",
+      "order": 40,
+      "data": {
+        "heading": "Related Categories",
+        "categories": [
+          { "icon": "document", "title": "Learn the Basics", "href": "/knowledge/learn-the-basics" },
+          { "icon": "layers", "title": "Technology Explained", "href": "/knowledge/technology-explained" },
+          { "icon": "building", "title": "Commercial Guide", "href": "/knowledge/commercial-guide" },
+          { "icon": "check", "title": "Myth vs Fact", "href": "/knowledge/myth-vs-fact" }
+        ]
+      }
+    }
+  ]
+}

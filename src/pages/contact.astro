@@ -1,0 +1,211 @@
+---
+/**
+ * Contact — consultation form + dealer info (client ruling 2026-08-12).
+ * Every "Request Consultation" CTA site-wide lands here.
+ *
+ * ⚠ FORM BACKEND PENDING: the form is semantic, accessible and ships 0KB
+ * JS, but `FORM_ACTION` below is a stub. Wire it to the chosen form
+ * service (Formspree / Web3Forms / custom endpoint) before launch.
+ * ⚠ CONTACT DETAILS: phone / WhatsApp / email / address are placeholders
+ * marked "_verify" — swap in real values from the client.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { NAV_EWARRANTY } from '@/config/navigation';
+
+const FORM_ACTION = '#'; // TODO(launch): real form endpoint
+
+const seo = {
+  title: 'Contact Us — Request Consultation',
+  description:
+    'Request a free consultation with IrisPro experts, find an authorised dealer near you, or reach us on WhatsApp for quick assistance.',
+};
+const crumbs = [{ label: 'Home', href: '/' }, { label: 'Contact' }];
+
+const CHANNELS = [
+  {
+    title: 'WhatsApp Us',
+    detail: 'Quick & easy — chat with us for fast assistance and inquiries.',
+    cta: { label: 'Chat on WhatsApp', href: 'https://wa.me/60000000000' }, // _verify number
+    external: true,
+  },
+  {
+    title: 'Call Us',
+    detail: '+60 0-0000 0000 (Mon–Fri, 9am–6pm) — _verify',
+    cta: { label: 'Call Now', href: 'tel:+60000000000' }, // _verify number
+    external: false,
+  },
+  {
+    title: 'Email',
+    detail: 'hello@irispro.com — _verify address',
+    cta: { label: 'Write to Us', href: 'mailto:hello@irispro.com' }, // _verify
+    external: false,
+  },
+  {
+    title: 'E-Warranty',
+    detail: 'Register or check your IrisPro performance warranty online.',
+    cta: { label: 'Open E-Warranty Portal', href: NAV_EWARRANTY.href },
+    external: true,
+  },
+];
+
+const DEALER_REGIONS = [
+  { region: 'Kuala Lumpur & Selangor', note: 'Authorised dealers list — content pending from client' },
+  { region: 'Penang & Northern Region', note: 'Authorised dealers list — content pending from client' },
+  { region: 'Johor & Southern Region', note: 'Authorised dealers list — content pending from client' },
+  { region: 'East Malaysia', note: 'Authorised dealers list — content pending from client' },
+];
+---
+
+<BaseLayout seo={seo} crumbs={crumbs}>
+  <div class="container section-y-default">
+    <p class="type-overline" style="color: var(--text-muted)">Contact IrisPro</p>
+    <h1 class="type-display-md" style="margin-top: var(--space-4)">
+      Request a Consultation
+    </h1>
+    <p class="type-body-lg max-w-article" style="margin-top: var(--space-4); color: var(--text-secondary)">
+      Tell us about your vehicle, home or building — our experts will recommend
+      the right protection solution for your needs. No obligation, no pressure.
+    </p>
+
+    <div class="mt-10 grid gap-10 lg:grid-cols-[3fr_2fr]">
+      {/* ── Consultation form ── */}
+      <form
+        method="post"
+        action={FORM_ACTION}
+        class="grid content-start gap-5 rounded-lg p-6"
+        style="background: var(--surface-raised); border: 1px solid var(--border-subtle)"
+        aria-label="Consultation request form"
+      >
+        <div class="grid gap-5 sm:grid-cols-2">
+          <label class="grid gap-1.5">
+            <span class="type-body-sm font-semibold">Full name</span>
+            <input
+              type="text"
+              name="name"
+              required
+              autocomplete="name"
+              class="rounded-md px-3 py-2.5"
+              style="border: 1px solid var(--border-default); background: var(--surface-base)"
+            />
+          </label>
+          <label class="grid gap-1.5">
+            <span class="type-body-sm font-semibold">Phone / WhatsApp</span>
+            <input
+              type="tel"
+              name="phone"
+              required
+              autocomplete="tel"
+              class="rounded-md px-3 py-2.5"
+              style="border: 1px solid var(--border-default); background: var(--surface-base)"
+            />
+          </label>
+        </div>
+
+        <label class="grid gap-1.5">
+          <span class="type-body-sm font-semibold">Email <span style="color: var(--text-muted)">(optional)</span></span>
+          <input
+            type="email"
+            name="email"
+            autocomplete="email"
+            class="rounded-md px-3 py-2.5"
+            style="border: 1px solid var(--border-default); background: var(--surface-base)"
+          />
+        </label>
+
+        <fieldset class="grid gap-2" style="border: 0; padding: 0; margin: 0">
+          <legend class="type-body-sm font-semibold" style="padding: 0">
+            What do you need protection for?
+          </legend>
+          <div class="flex flex-wrap gap-x-6 gap-y-2">
+            {['Automotive', 'Residential', 'Commercial', 'Not sure yet'].map((option) => (
+              <label class="flex items-center gap-2">
+                <input type="radio" name="segment" value={option} required />
+                <span class="type-body-sm">{option}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
+        <label class="grid gap-1.5">
+          <span class="type-body-sm font-semibold">Location <span style="color: var(--text-muted)">(city / state)</span></span>
+          <input
+            type="text"
+            name="location"
+            autocomplete="address-level2"
+            class="rounded-md px-3 py-2.5"
+            style="border: 1px solid var(--border-default); background: var(--surface-base)"
+          />
+        </label>
+
+        <label class="grid gap-1.5">
+          <span class="type-body-sm font-semibold">Tell us more <span style="color: var(--text-muted)">(optional)</span></span>
+          <textarea
+            name="message"
+            rows="4"
+            class="rounded-md px-3 py-2.5"
+            style="border: 1px solid var(--border-default); background: var(--surface-base)"
+            placeholder="Vehicle model, window sizes, building type, or anything else that helps us prepare."></textarea>
+        </label>
+
+        <button
+          type="submit"
+          class="btn-press type-body-sm rounded-md px-6 py-3 font-semibold"
+          style="background: var(--color-red); color: var(--color-white); border: 0; cursor: pointer; justify-self: start"
+        >
+          Request Consultation
+        </button>
+        <p class="type-caption" style="color: var(--text-muted)">
+          By submitting, you agree to be contacted by IrisPro or an authorised
+          dealer regarding your inquiry. We never share your details with third
+          parties.
+        </p>
+      </form>
+
+      {/* ── Direct channels ── */}
+      <aside class="grid content-start gap-4" aria-label="Other ways to reach us">
+        {CHANNELS.map((channel) => (
+          <div
+            class="rounded-lg p-5"
+            style="border: 1px solid var(--border-subtle); background: var(--surface-raised)"
+          >
+            <h2 class="type-heading-sm">{channel.title}</h2>
+            <p class="type-body-sm mt-1" style="color: var(--text-secondary)">
+              {channel.detail}
+            </p>
+            <a
+              href={channel.cta.href}
+              target={channel.external ? '_blank' : undefined}
+              rel={channel.external ? 'noopener' : undefined}
+              class="type-body-sm mt-3 inline-block font-semibold"
+              style="color: var(--color-red)"
+            >
+              {channel.cta.label} →
+            </a>
+          </div>
+        ))}
+      </aside>
+    </div>
+
+    {/* ── Dealer info ── */}
+    <section class="mt-14" aria-labelledby="dealer-heading">
+      <h2 id="dealer-heading" class="type-heading-lg">Find an Authorised Dealer</h2>
+      <p class="type-body-md max-w-article mt-2" style="color: var(--text-secondary)">
+        IrisPro films are installed exclusively by trained, authorised dealers —
+        that is how we back every installation with the eWarranty. Dealer
+        listings by region are being compiled; in the meantime, request a
+        consultation above and we will connect you with the nearest dealer.
+      </p>
+      <ul class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {DEALER_REGIONS.map((entry) => (
+          <li
+            class="rounded-lg p-5"
+            style="border: 1px dashed var(--border-default); background: var(--surface-raised)"
+          >
+            <h3 class="type-body-md font-semibold">{entry.region}</h3>
+            <p class="type-body-sm mt-1" style="color: var(--text-muted)">{entry.note}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</BaseLayout>

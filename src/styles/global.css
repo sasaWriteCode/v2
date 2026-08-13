@@ -80,6 +80,49 @@ video {
   padding-block: var(--section-y-tight);
 }
 
+/* ── Master shell (2026-08-13): interior pages share one scale ──
+   The homepage keeps the full cinematic hero; every other page renders
+   the SAME hero content one step smaller — display-lg type, default
+   rhythm instead of loose — so interiors read as chapters, not covers.
+   Pure CSS keyed off <main data-shell="interior"> (BaseLayout). */
+main[data-shell='interior'] .section-full .type-display-xl {
+  font-size: var(--text-display-lg);
+  line-height: var(--leading-display-lg);
+  letter-spacing: var(--tracking-display-lg);
+}
+main[data-shell='interior'] .section-full .section-y-loose {
+  padding-block: var(--section-y-default);
+}
+
+/* ── Master shell: pressable feedback ──
+   Buttons must feel like they hear the press (transform-only, GPU;
+   160ms ease-out in, instant-feel). Motion-sensitive users opt out. */
+.btn-press {
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.btn-press:active {
+  transform: scale(0.97);
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-press,
+  .btn-press:active {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* ── Master shell: brand accent rule ──
+   The short red tick under interior page titles (brand guideline's
+   underline motif). Applied by PageHero; exact logo red — graphic use. */
+.accent-rule {
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-top: var(--space-4, 1rem);
+  border-radius: 999px;
+  background: var(--color-red-brand);
+}
+
 /* ── Stage 3: sticky header ──
    position: sticky only — never listens to scroll, never re-times it. */
 .site-header {

@@ -10,6 +10,7 @@ import '@/styles/global.css';
 import Header from '@/components/nav/Header.astro';
 import Footer from '@/components/nav/Footer.astro';
 import Breadcrumbs from '@/components/nav/Breadcrumbs.astro';
+import PreFooterCTA from '@/components/global/PreFooterCTA.astro';
 import { NAV_STRINGS } from '@/config/navigation';
 import { buildMeta } from '@/lib/seo/metadata';
 import { breadcrumbSchema, organizationSchema } from '@/lib/seo/schema';
@@ -24,6 +25,16 @@ interface Props {
 
 const { seo, crumbs, jsonLd = [] } = Astro.props;
 const meta = buildMeta(seo, Astro.url.pathname);
+
+/* Master shell (client ruling 2026-08-13): every page EXCEPT the homepage
+   shares the interior treatment — compact hero scale (CSS, keyed off
+   data-shell) and the PreFooterCTA conversion strip. /contact skips the
+   strip (it is the strip's destination). */
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isHome = path === (base || '/') || path === base;
+const isContact = path === `${base}/contact`;
+const shell = isHome ? 'home' : 'interior';
 
 const schemas = [
   organizationSchema(),
@@ -54,14 +65,14 @@ const schemas = [
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
       />
     </noscript>
@@ -73,9 +84,10 @@ const schemas = [
     <a href="#main" class="skip-link">{NAV_STRINGS.skipToContent}</a>
     <Header />
     {crumbs && crumbs.length > 0 && <Breadcrumbs crumbs={crumbs} />}
-    <main id="main">
+    <main id="main" data-shell={shell}>
       <slot />
     </main>
+    {shell === 'interior' && !isContact && <PreFooterCTA />}
     <Footer />
   </body>
 </html>

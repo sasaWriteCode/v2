@@ -2,6 +2,7 @@
 /**
  * ArticleGrid — article link-cards. Static, zero JS.
  */
+import ImageOrPlaceholder from '@/components/base/ImageOrPlaceholder.astro';
 import type { ArticleGridContent } from '@/types/sections';
 
 type Props = ArticleGridContent;
@@ -29,15 +30,12 @@ const { heading, lede, articles } = Astro.props;
           style="background: var(--surface-raised); border: 1px solid var(--border-subtle); box-shadow: var(--elevation-1); color: inherit; text-decoration: none"
         >
           {article.image && (
-            <img
+            <ImageOrPlaceholder
               src={article.image.src}
               alt={article.image.alt}
               width={article.image.width}
               height={article.image.height}
-              loading="lazy"
-              decoding="async"
               class="w-full object-cover"
-              style={`aspect-ratio: ${article.image.width} / ${article.image.height}`}
             />
           )}
           <span class="grid gap-2 p-5">

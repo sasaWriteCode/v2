@@ -1,0 +1,112 @@
+{
+  "title": "Video Library",
+  "defaultZone": "workshop-light",
+  "seo": {
+    "title": "Video Library — Knowledge Centre",
+    "description": "Watch IrisPro explainers, real demonstrations, installation walkthroughs and project stories — the fastest way to understand window film performance."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Knowledge Centre", "href": "/knowledge" },
+    { "label": "Video Library" }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hub-hero",
+      "order": 10,
+      "data": {
+        "eyebrow": "Knowledge Centre",
+        "title": "Video Library",
+        "lede": "Explainers, live demonstrations and real project stories. Video content is being produced with the client — the shelf structure below is ready to fill.",
+        "meta": [
+          { "icon": "play", "label": "Watch & Learn" },
+          { "icon": "thermometer", "label": "Real Demonstrations" },
+          { "icon": "star", "label": "Project Stories" }
+        ]
+      }
+    },
+    {
+      "id": "explainers",
+      "type": "video-carousel",
+      "order": 20,
+      "label": "Video slots — real videos pending from client",
+      "data": {
+        "heading": "Explainers",
+        "lede": "Short, clear answers to the most-asked questions.",
+        "videos": [
+          {
+            "title": "Video slot: Why IRR99% Still Feels Hot?",
+            "href": "/knowledge/video-library",
+            "duration": "—",
+            "poster": { "src": "placeholder:video-irr99", "alt": "Thumbnail brief: thermal imagery of a hot cabin with bold title text.", "width": 560, "height": 320 }
+          },
+          {
+            "title": "Video slot: UV99% vs UV+420 — What's the Difference?",
+            "href": "/knowledge/video-library",
+            "duration": "—",
+            "poster": { "src": "placeholder:video-uv420", "alt": "Thumbnail brief: split-face/spectrum visual contrasting UV400 vs UV+420 protection.", "width": 560, "height": 320 }
+          },
+          {
+            "title": "Video slot: What is TSER? The Key to Real Comfort",
+            "href": "/knowledge/video-library",
+            "duration": "—",
+            "poster": { "src": "placeholder:video-tser", "alt": "Thumbnail brief: colourful solar spectrum graphic with TSER percentage callout.", "width": 560, "height": 320 }
+          }
+        ]
+      }
+    },
+    {
+      "id": "demonstrations",
+      "type": "video-carousel",
+      "order": 30,
+      "label": "Video slots — real videos pending from client",
+      "data": {
+        "heading": "Real Demonstrations",
+        "lede": "Heat lamps, UV meters and thermal cameras — performance you can see.",
+        "videos": [
+          {
+            "title": "Video slot: Heat Rejection Test — Ceramic vs Sputter",
+            "href": "/knowledge/video-library",
+            "duration": "—",
+            "poster": { "src": "placeholder:video-heat-test", "alt": "Thumbnail brief: heat-lamp demo rig with two film samples and temperature readouts.", "width": 560, "height": 320 }
+          },
+          {
+            "title": "Video slot: Before & After — Cabin Temperature",
+            "href": "/knowledge/video-library",
+            "duration": "—",
+            "poster": { "src": "placeholder:video-before-after", "alt": "Thumbnail brief: split thermal image of car cabin with and without IrisPro film.", "width": 560, "height": 320 }
+          },
+          {
+            "title": "Video slot: Professional Installation Walkthrough",
+            "href": "/knowledge/video-library",
+            "duration": "—",
+            "poster": { "src": "placeholder:video-installation", "alt": "Thumbnail brief: installer applying film to a car or building window, mid-squeegee.", "width": 560, "height": 320 }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta-bar",
+      "order": 40,
+      "data": {
+        "headline": "Prefer to Talk It Through?",
+        "actions": [
+          {
+            "icon": "chat",
+            "title": "Request Consultation",
+            "description": "Our experts will walk you through everything the videos cover.",
+            "cta": { "label": "Request Now", "href": "/contact" }
+          },
+          {
+            "icon": "document",
+            "title": "Learn the Basics",
+            "description": "Prefer reading? Start with the fundamentals.",
+            "cta": { "label": "Start Learning", "href": "/knowledge/learn-the-basics" }
+          }
+        ]
+      }
+    }
+  ]
+}

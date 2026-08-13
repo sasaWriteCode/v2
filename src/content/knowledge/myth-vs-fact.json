@@ -1,0 +1,107 @@
+{
+  "title": "Myth vs Fact",
+  "defaultZone": "workshop-light",
+  "seo": {
+    "title": "Myth vs Fact — Knowledge Centre",
+    "description": "Common window film myths, tested against the facts — darker isn't always cooler, IRR99% can still feel hot, and UV400 isn't the whole story."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Knowledge Centre", "href": "/knowledge" },
+    { "label": "Myth vs Fact" }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hub-hero",
+      "order": 10,
+      "data": {
+        "eyebrow": "Knowledge Centre",
+        "title": "Myth vs Fact",
+        "lede": "The window film industry is full of half-truths. We put the most common claims to the test — with physics, lab data and real measurements.",
+        "meta": [
+          { "icon": "check", "label": "Fact-Checked Claims" },
+          { "icon": "search", "label": "Lab-Tested Answers" },
+          { "icon": "document", "label": "3–5 min reads" }
+        ]
+      }
+    },
+    {
+      "id": "myths",
+      "type": "article-grid",
+      "order": 20,
+      "label": "Myth/Fact card slots — final list & verdict copy pending client",
+      "data": {
+        "heading": "Popular Myths, Tested",
+        "lede": "Structure ready — verdict copy to be written with the client's technical team.",
+        "articles": [
+          {
+            "title": "“Darker film is always cooler.”",
+            "href": "/knowledge/myth-vs-fact",
+            "category": "Myth",
+            "description": "Content slot: VLT vs IRR explained — darkness controls light, not heat rejection.",
+            "image": { "src": "placeholder:myth-darker-film", "alt": "Side-by-side of a very dark tinted car window vs a lighter premium film with a thermometer overlay.", "width": 560, "height": 320 }
+          },
+          {
+            "title": "“IRR 99% means the cabin never gets hot.”",
+            "href": "/knowledge/myth-vs-fact",
+            "category": "Myth",
+            "description": "Content slot: why spot IRR at one wavelength ≠ total solar energy rejected (TSER).",
+            "image": { "src": "placeholder:myth-irr99", "alt": "Thermal camera image of a car dashboard in the sun, showing heat despite tinting.", "width": 560, "height": 320 }
+          },
+          {
+            "title": "“UV400 protection is complete protection.”",
+            "href": "/knowledge/myth-vs-fact",
+            "category": "Myth",
+            "description": "Content slot: HEV blue light (380–420nm) passes UV400 films — what UV+420™ adds.",
+            "image": { "src": "placeholder:myth-uv400", "alt": "Light spectrum diagram photo/visual highlighting the 380–420nm HEV band beyond UV400.", "width": 560, "height": 320 }
+          },
+          {
+            "title": "“Ceramic film is always better than sputtered film.”",
+            "href": "/knowledge/myth-vs-fact",
+            "category": "Myth",
+            "description": "Content slot: honest comparison of ceramic vs multi-layer sputter technologies.",
+            "image": { "src": "placeholder:myth-ceramic-sputter", "alt": "Macro shot of film layers or rolls of different film technologies side by side.", "width": 560, "height": 320 }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta-bar",
+      "order": 30,
+      "data": {
+        "headline": "Still Unsure What's True?",
+        "subhead": "Ask our experts — we answer with data, not sales talk.",
+        "actions": [
+          {
+            "icon": "chat",
+            "title": "Request Consultation",
+            "description": "Get a straight answer for your specific situation.",
+            "cta": { "label": "Ask Us", "href": "/contact" }
+          },
+          {
+            "icon": "layers",
+            "title": "Technology Explained",
+            "description": "The science behind every claim we make.",
+            "cta": { "label": "Learn the Science", "href": "/knowledge/technology-explained" }
+          }
+        ]
+      }
+    },
+    {
+      "id": "related-categories",
+      "type": "category-grid",
+      "order": 40,
+      "data": {
+        "heading": "Related Categories",
+        "categories": [
+          { "icon": "document", "title": "Learn the Basics", "href": "/knowledge/learn-the-basics" },
+          { "icon": "car", "title": "Automotive Guide", "href": "/knowledge/automotive" },
+          { "icon": "home", "title": "Residential Guide", "href": "/knowledge/residential-guide" },
+          { "icon": "play", "title": "Video Library", "href": "/knowledge/video-library" }
+        ]
+      }
+    }
+  ]
+}

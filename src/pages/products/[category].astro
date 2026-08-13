@@ -1,17 +1,30 @@
 ---
 /**
- * Product-grid pages — ProductGridTemplate × products collection
- * (automotive is the Stage 3 fixture; building arrives in Stage 4).
+ * Product-grid pages — ProductGridTemplate × products collection, plus the
+ * two DERIVED building-audience views (For Homes / For Commercial). The
+ * derived views share one data source — content/products/building.json —
+ * filtered by `facets.audience` at build time (see lib/productViews.ts).
  */
 import { getCollection } from 'astro:content';
 import ProductGridTemplate from '@/templates/ProductGridTemplate.astro';
+import { BUILDING_VIEWS, deriveBuildingView } from '@/lib/productViews';
 
 export async function getStaticPaths() {
   const entries = await getCollection('products');
-  return entries.map((entry) => ({
-    params: { category: entry.id },
-    props: { content: entry.data },
-  }));
+  const building = entries.find((entry) => entry.id === 'building');
+
+  return [
+    ...entries.map((entry) => ({
+      params: { category: entry.id },
+      props: { content: entry.data },
+    })),
+    ...(building
+      ? BUILDING_VIEWS.map((view) => ({
+          params: { category: view.id },
+          props: { content: deriveBuildingView(building.data, view) },
+        }))
+      : []),
+  ];
 }
 
 const { content } = Astro.props;

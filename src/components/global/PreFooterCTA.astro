@@ -1,0 +1,56 @@
+---
+/**
+ * PreFooterCTA — the master-shell conversion strip (client request
+ * 2026-08-13): every interior page ends the same way — a slim dark band
+ * with the three standing actions — so no journey dead-ends at the footer.
+ * Rendered by BaseLayout on all pages EXCEPT the homepage (which owns its
+ * own cinematic ending) and /contact (it IS the destination).
+ *
+ * Deliberately compact — page content keeps its own cta-bar sections for
+ * the big pitch; this strip is the consistent safety net, not a billboard.
+ * Static, zero JS. Dark via data-zone (tokens repaint themselves).
+ */
+import { NAV_EWARRANTY } from '@/config/navigation';
+import { resolveUrl } from '@/lib/paths';
+---
+
+<aside data-zone="showroom" aria-label="Get in touch with IrisPro">
+  <div
+    class="container flex flex-wrap items-center justify-between gap-x-10 gap-y-5"
+    style="padding-block: var(--space-10, 2.5rem)"
+  >
+    <div>
+      <p class="type-heading-md" style="color: var(--text-primary)">
+        Protection starts with a conversation.
+      </p>
+      <p class="type-body-sm mt-1" style="color: var(--text-secondary)">
+        Free consultation · Authorised dealers across Malaysia · Up to 10-year performance warranty
+      </p>
+    </div>
+    <div class="flex flex-wrap items-center gap-3">
+      <a
+        href={resolveUrl('/contact')}
+        class="btn-press type-body-sm rounded-md px-5 py-2.5 font-semibold"
+        style="background: var(--color-red); color: var(--color-white); text-decoration: none"
+      >
+        Request Consultation
+      </a>
+      <a
+        href={resolveUrl('/contact#dealer-heading')}
+        class="btn-press type-body-sm rounded-md px-5 py-2.5 font-semibold"
+        style="border: 1px solid var(--border-strong); color: var(--text-primary); text-decoration: none"
+      >
+        Find a Dealer
+      </a>
+      <a
+        href={NAV_EWARRANTY.href}
+        target="_blank"
+        rel="noopener"
+        class="btn-press type-body-sm rounded-md px-5 py-2.5 font-semibold"
+        style="border: 1px solid var(--border-strong); color: var(--text-primary); text-decoration: none"
+      >
+        {NAV_EWARRANTY.label} ↗
+      </a>
+    </div>
+  </div>
+</aside>

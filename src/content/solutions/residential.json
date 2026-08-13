@@ -338,13 +338,13 @@
             "icon": "pin",
             "title": "Find a Dealer Near You",
             "description": "Locate an IrisPro dealer near your location.",
-            "cta": { "label": "Find a Dealer", "href": "#dealers" }
+            "cta": { "label": "Find a Dealer", "href": "/contact#dealer-heading" }
           },
           {
             "icon": "headset",
             "title": "Request Consultation",
             "description": "Get expert advice. Our experts will recommend the best solution for you.",
-            "cta": { "label": "Request Consultation", "href": "#consultation" }
+            "cta": { "label": "Request Consultation", "href": "/contact" }
           },
           {
             "icon": "chat",

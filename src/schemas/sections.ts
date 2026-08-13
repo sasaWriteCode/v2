@@ -73,6 +73,7 @@ import type {
   SeriesComparisonTableContent,
   SolutionPageContent,
   TechPillarGridContent,
+  PhilosophyFlowContent,
   TestimonialItem,
   TestimonialPanelContent,
   VideoCarouselContent,
@@ -113,12 +114,21 @@ export const techPillarGridContentSchema = z.object({
     .optional(),
 }) satisfies z.ZodType<TechPillarGridContent>;
 
+export const philosophyFlowContentSchema = z.object({
+  heading: z.string().optional(),
+  lede: z.string().optional(),
+  steps: z.array(techPillarSchema),
+}) satisfies z.ZodType<PhilosophyFlowContent>;
+
 export const proofStatBarContentSchema = z.object({
   stats: z.array(statItemSchema),
   variant: z.enum(['light', 'dark']).optional(),
 }) satisfies z.ZodType<ProofStatBarContent>;
 
 export const projectStripContentSchema = z.object({
+  heading: z.string().optional(),
+  subhead: z.string().optional(),
+  lede: z.string().optional(),
   projects: z.array(projectItemSchema),
   filters: z.boolean().optional(),
   scrollable: z.boolean().optional(),
@@ -214,6 +224,8 @@ export const categoryItemSchema = z.object({
   description: z.string().optional(),
   href: z.string(),
   count: z.string().optional(),
+  image: z.union([z.string(), mediaContentSchema]).optional(),
+  iconColor: z.string().optional(),
 }) satisfies z.ZodType<CategoryItem>;
 
 export const categoryGridContentSchema = z.object({
@@ -368,6 +380,7 @@ export const sectionSchema = z.discriminatedUnion('type', [
   sectionVariant('protection-level-selector', prioritySelectorContentSchema),
   sectionVariant('spectrum-diagram', spectrumDiagramSectionSchema),
   sectionVariant('tech-pillar-grid', techPillarGridContentSchema),
+  sectionVariant('philosophy-flow', philosophyFlowContentSchema),
   sectionVariant('proof-stat-bar', proofStatBarContentSchema),
   sectionVariant('project-strip', projectStripContentSchema),
   sectionVariant('series-card-set', seriesCardSetContentSchema),

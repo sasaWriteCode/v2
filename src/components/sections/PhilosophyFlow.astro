@@ -1,0 +1,186 @@
+---
+/**
+ * PhilosophyFlow — the protection philosophy as a step-to-step JOURNEY
+ * (client request 2026-08-12): a winding dashed "road" connects the value
+ * pillars in order, each a numbered milestone. Static .astro, zero JS.
+ *
+ * Desktop (lg+): four milestones alternate high/low along an S-curve dashed
+ * road (SVG, stretch-scaled horizontally; node centers sit at 12.5% /
+ * 37.5% / 62.5% / 87.5% of the row — the same centers the CSS grid gives
+ * equal columns — so path and nodes stay aligned at any width).
+ * Mobile: a vertical roadmap — dashed spine on the left, milestones down
+ * the line. Zone-agnostic via semantic tokens; road + numbers use the
+ * exact brand red (--color-red-brand, graphic accent only).
+ */
+import { Icon } from '@/components/global/Icon';
+import type { PhilosophyFlowContent } from '@/types/sections';
+
+type Props = PhilosophyFlowContent;
+const { heading, lede, steps } = Astro.props;
+
+const pad = (n: number) => String(n + 1).padStart(2, '0');
+---
+
+<div>
+  {heading && <h2 class="type-heading-lg text-center">{heading}</h2>}
+  {lede && (
+    <p class="type-body-md mx-auto mt-2 max-w-article text-center" style="color: var(--text-secondary)">
+      {lede}
+    </p>
+  )}
+
+  <ol class:list={['philosophy-flow', (heading || lede) && 'mt-10']}>
+    {/* The road — desktop only; equal-column node centers, S-curve between. */}
+    <svg
+      class="flow-road"
+      viewBox="0 0 1200 176"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M 150 36 C 250 36 350 108 450 108 C 550 108 650 36 750 36 C 850 36 950 108 1050 108"
+        fill="none"
+        stroke="var(--color-red-brand)"
+        stroke-width="2.5"
+        stroke-dasharray="8 8"
+        stroke-linecap="round"
+        vector-effect="non-scaling-stroke"
+      />
+      {/* direction chevrons at the midpoint of each leg */}
+      <g fill="var(--color-red-brand)">
+        <path d="M 296 68 l 12 6 l -12 6 z" />
+        <path d="M 596 80 l 12 -6 l -12 -6 z" transform="translate(0 -2)" />
+        <path d="M 896 68 l 12 6 l -12 6 z" />
+      </g>
+    </svg>
+
+    {steps.map((step, i) => (
+      <li class:list={['flow-step', i % 2 === 1 && 'is-low']}>
+        <span class="flow-node">
+          <span class="flow-number type-caption" aria-hidden="true">{pad(i)}</span>
+          <Icon name={step.icon} size={26} />
+        </span>
+        <div class="flow-copy">
+          <h3 class="type-heading-sm">{step.title}</h3>
+          <p class="type-body-sm" style="color: var(--text-secondary)">{step.description}</p>
+        </div>
+      </li>
+    ))}
+  </ol>
+</div>
+
+<style>
+  .philosophy-flow {
+    position: relative;
+    display: grid;
+    gap: 2.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .flow-road {
+    display: none;
+  }
+
+  .flow-node {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    flex: none;
+    border-radius: var(--radius-full, 999px);
+    background: var(--surface-raised);
+    border: 2px solid var(--color-red-brand);
+    color: var(--text-primary);
+    box-shadow: var(--elevation-1);
+  }
+
+  .flow-number {
+    position: absolute;
+    top: -0.55rem;
+    right: -0.55rem;
+    display: grid;
+    place-items: center;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    padding: 0 0.3rem;
+    border-radius: var(--radius-full, 999px);
+    background: var(--color-red-brand);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── Mobile: vertical roadmap ── */
+  .flow-step {
+    position: relative;
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    padding-left: 0.25rem;
+  }
+
+  /* dashed spine segment linking to the next milestone */
+  .flow-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: calc(0.25rem + 2rem);
+    top: 4.25rem;
+    bottom: -2rem;
+    border-left: 2px dashed var(--color-red-brand);
+    transform: translateX(-1px);
+  }
+
+  .flow-copy {
+    padding-top: 0.35rem;
+  }
+
+  /* ── Desktop: the winding road ── */
+  @media (min-width: 64rem) {
+    .philosophy-flow {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .flow-road {
+      display: block;
+      position: absolute;
+      inset: 0.5rem 0 auto 0;
+      width: 100%;
+      height: 11rem;
+      pointer-events: none;
+    }
+
+    .flow-step {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-left: 0;
+    }
+
+    .flow-step::after {
+      display: none;
+    }
+
+    /* milestones ride the curve: node centers at y≈36px (high) / 108px
+       (low) inside the 176px road box — matched to the SVG path above */
+    .flow-step .flow-node {
+      margin-top: 0.25rem; /* center ≈ 36px + road top offset */
+    }
+    .flow-step.is-low .flow-node {
+      margin-top: 4.75rem; /* center ≈ 108px */
+    }
+
+    /* reserve the road's vertical space above the copy */
+    .flow-step .flow-copy {
+      margin-top: 5.75rem;
+    }
+    .flow-step.is-low .flow-copy {
+      margin-top: 1.25rem;
+    }
+  }
+</style>

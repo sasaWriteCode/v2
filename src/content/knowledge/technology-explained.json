@@ -308,8 +308,8 @@
           { "icon": "document", "title": "Learn the Basics", "href": "/knowledge/learn-the-basics" },
           { "icon": "car", "title": "Automotive Guide", "href": "/knowledge/automotive" },
           { "icon": "home", "title": "Residential Guide", "href": "/knowledge/residential-guide" },
-          { "icon": "building", "title": "Commercial Guide", "href": "/knowledge/building-performance-guide" },
-          { "icon": "shield", "title": "Health & Protection", "href": "/knowledge/personal-protection-guide" },
+          { "icon": "building", "title": "Commercial Guide", "href": "/knowledge/commercial-guide" },
+          { "icon": "shield", "title": "Health & Protection", "href": "/knowledge/health-and-protection" },
           { "icon": "leaf", "title": "Sustainability", "href": "/knowledge" },
           { "icon": "check", "title": "Myth vs Fact", "href": "/knowledge" }
         ]
@@ -342,7 +342,7 @@
           {
             "icon": "headset",
             "title": "Talk to an Expert",
-            "cta": { "label": "Talk to an Expert", "href": "#consultation" }
+            "cta": { "label": "Talk to an Expert", "href": "/contact" }
           }
         ]
       }

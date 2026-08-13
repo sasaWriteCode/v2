@@ -6,8 +6,13 @@
     "description": "Learn. Compare. Protect. The most comprehensive window film learning centre for ASEAN climate."
   },
   "breadcrumbs": [
-    { "label": "Home", "href": "/" },
-    { "label": "Knowledge Centre" }
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Knowledge Centre"
+    }
   ],
   "sections": [
     {
@@ -19,11 +24,26 @@
         "title": "IrisPro Knowledge Centre",
         "lede": "Learn. Compare. Protect. The most comprehensive window film learning centre for ASEAN climate.",
         "meta": [
-          { "icon": "sun", "label": "Complete UV+420 Protection" },
-          { "icon": "thermometer", "label": "Superior Heat Rejection" },
-          { "icon": "leaf", "label": "Energy Saving & Efficient" },
-          { "icon": "shield", "label": "Protects Health & Interiors" },
-          { "icon": "award", "label": "Long Lasting Performance" }
+          {
+            "icon": "sun",
+            "label": "Complete UV+420 Protection"
+          },
+          {
+            "icon": "thermometer",
+            "label": "Superior Heat Rejection"
+          },
+          {
+            "icon": "leaf",
+            "label": "Energy Saving & Efficient"
+          },
+          {
+            "icon": "shield",
+            "label": "Protects Health & Interiors"
+          },
+          {
+            "icon": "award",
+            "label": "Long Lasting Performance"
+          }
         ],
         "search": {
           "label": "Search for topics, videos or questions...",
@@ -31,10 +51,26 @@
           "action": "/knowledge"
         },
         "ctas": [
-          { "label": "What is TSER?", "href": "/knowledge/learn-the-basics", "variant": "ghost" },
-          { "label": "UV vs UV+420", "href": "/knowledge/technology-explained", "variant": "ghost" },
-          { "label": "Why IRR99% Still Hot?", "href": "/knowledge/learn-the-basics", "variant": "ghost" },
-          { "label": "Best Tint for EV?", "href": "/knowledge/automotive", "variant": "ghost" }
+          {
+            "label": "What is TSER?",
+            "href": "/knowledge/learn-the-basics",
+            "variant": "ghost"
+          },
+          {
+            "label": "UV vs UV+420",
+            "href": "/knowledge/technology-explained",
+            "variant": "ghost"
+          },
+          {
+            "label": "Why IRR99% Still Hot?",
+            "href": "/knowledge/learn-the-basics",
+            "variant": "ghost"
+          },
+          {
+            "label": "Best Tint for EV?",
+            "href": "/knowledge/automotive",
+            "variant": "ghost"
+          }
         ]
       }
     },
@@ -47,15 +83,51 @@
       "data": {
         "heading": "Explore by Category",
         "categories": [
-          { "icon": "document", "title": "Learn the Basics", "href": "/knowledge/learn-the-basics" },
-          { "icon": "layers", "title": "Technology Explained", "href": "/knowledge/technology-explained" },
-          { "icon": "car", "title": "Automotive Guide", "href": "/knowledge/automotive" },
-          { "icon": "home", "title": "Residential Guide", "href": "/knowledge/residential-guide" },
-          { "icon": "building", "title": "Commercial Guide", "href": "/knowledge/building-performance-guide" },
-          { "icon": "shield", "title": "Health & Protection", "href": "/knowledge/personal-protection-guide" },
-          { "icon": "leaf", "title": "Sustainability & ESG", "href": "/knowledge" },
-          { "icon": "check", "title": "Myth vs Fact", "href": "/knowledge" },
-          { "icon": "play", "title": "Video Library", "href": "/knowledge" }
+          {
+            "icon": "document",
+            "title": "Learn the Basics",
+            "href": "/knowledge/learn-the-basics"
+          },
+          {
+            "icon": "layers",
+            "title": "Technology Explained",
+            "href": "/knowledge/technology-explained"
+          },
+          {
+            "icon": "car",
+            "title": "Automotive Guide",
+            "href": "/knowledge/automotive"
+          },
+          {
+            "icon": "home",
+            "title": "Residential Guide",
+            "href": "/knowledge/residential-guide"
+          },
+          {
+            "icon": "building",
+            "title": "Commercial Guide",
+            "href": "/knowledge/commercial-guide"
+          },
+          {
+            "icon": "shield",
+            "title": "Health & Protection",
+            "href": "/knowledge/health-and-protection"
+          },
+          {
+            "icon": "leaf",
+            "title": "Sustainability & ESG",
+            "href": "/knowledge/sustainability-esg"
+          },
+          {
+            "icon": "check",
+            "title": "Myth vs Fact",
+            "href": "/knowledge/myth-vs-fact"
+          },
+          {
+            "icon": "play",
+            "title": "Video Library",
+            "href": "/knowledge/video-library"
+          }
         ]
       }
     },
@@ -236,16 +308,76 @@
         "heading": "Browse by Episode",
         "allLabel": "All Modules",
         "modules": [
-          { "id": "module-1", "number": 1, "title": "Module 1 – Window Film Basics", "description": "4 Episodes", "episodes": [] },
-          { "id": "module-2", "number": 2, "title": "Module 2 – Understanding Specifications", "description": "10 Episodes", "episodes": [] },
-          { "id": "module-3", "number": 3, "title": "Module 3 – Window Film Technologies", "description": "9 Episodes", "episodes": [] },
-          { "id": "module-4", "number": 4, "title": "Module 4 – Buying Guide", "description": "9 Episodes", "episodes": [] },
-          { "id": "module-5", "number": 5, "title": "Module 5 – Health & Protection", "description": "7 Episodes", "episodes": [] },
-          { "id": "module-6", "number": 6, "title": "Module 6 – Energy Saving & Sustainability", "description": "6 Episodes", "episodes": [] },
-          { "id": "module-7", "number": 7, "title": "Module 7 – Myth vs Fact", "description": "12 Episodes", "episodes": [] },
-          { "id": "module-8", "number": 8, "title": "Module 8 – Real Projects & Case Studies", "description": "15 Episodes", "episodes": [] },
-          { "id": "module-9", "number": 9, "title": "Module 9 – Product Academy", "description": "12 Episodes", "episodes": [] },
-          { "id": "module-10", "number": 10, "title": "Module 10 – Installation Academy", "description": "10 Episodes", "episodes": [] }
+          {
+            "id": "module-1",
+            "number": 1,
+            "title": "Module 1 – Window Film Basics",
+            "description": "4 Episodes",
+            "episodes": []
+          },
+          {
+            "id": "module-2",
+            "number": 2,
+            "title": "Module 2 – Understanding Specifications",
+            "description": "10 Episodes",
+            "episodes": []
+          },
+          {
+            "id": "module-3",
+            "number": 3,
+            "title": "Module 3 – Window Film Technologies",
+            "description": "9 Episodes",
+            "episodes": []
+          },
+          {
+            "id": "module-4",
+            "number": 4,
+            "title": "Module 4 – Buying Guide",
+            "description": "9 Episodes",
+            "episodes": []
+          },
+          {
+            "id": "module-5",
+            "number": 5,
+            "title": "Module 5 – Health & Protection",
+            "description": "7 Episodes",
+            "episodes": []
+          },
+          {
+            "id": "module-6",
+            "number": 6,
+            "title": "Module 6 – Energy Saving & Sustainability",
+            "description": "6 Episodes",
+            "episodes": []
+          },
+          {
+            "id": "module-7",
+            "number": 7,
+            "title": "Module 7 – Myth vs Fact",
+            "description": "12 Episodes",
+            "episodes": []
+          },
+          {
+            "id": "module-8",
+            "number": 8,
+            "title": "Module 8 – Real Projects & Case Studies",
+            "description": "15 Episodes",
+            "episodes": []
+          },
+          {
+            "id": "module-9",
+            "number": 9,
+            "title": "Module 9 – Product Academy",
+            "description": "12 Episodes",
+            "episodes": []
+          },
+          {
+            "id": "module-10",
+            "number": 10,
+            "title": "Module 10 – Installation Academy",
+            "description": "10 Episodes",
+            "episodes": []
+          }
         ]
       }
     },
@@ -277,11 +409,26 @@
       "label": "Trusted by Thousands. Proven by Projects.",
       "data": {
         "stats": [
-          { "value": "20,000+", "label": "Vehicles Protected" },
-          { "value": "8,000+", "label": "Homes Protected" },
-          { "value": "1,000+", "label": "Commercial Buildings" },
-          { "value": "Across ASEAN", "label": "Region Wide" },
-          { "value": "10+", "label": "Years of Excellence" }
+          {
+            "value": "20,000+",
+            "label": "Vehicles Protected"
+          },
+          {
+            "value": "8,000+",
+            "label": "Homes Protected"
+          },
+          {
+            "value": "1,000+",
+            "label": "Commercial Buildings"
+          },
+          {
+            "value": "Across ASEAN",
+            "label": "Region Wide"
+          },
+          {
+            "value": "10+",
+            "label": "Years of Excellence"
+          }
         ]
       }
     }
@@ -292,7 +439,9 @@
     "videos-link": "View all videos",
     "learning-path-link": "Start your learning journey",
     "articles-link": "View all articles",
-    "episodes-links": ["View all episodes"],
+    "episodes-links": [
+      "View all episodes"
+    ],
     "episode-filters": "Browse by Episode also shows All Topics / All Durations / Newest controls; the module-browser type expresses the module filter only.",
     "video-metadata": "Episode numbers and view counts have no dedicated fields; they are joined into each video's moduleLabel string (e.g. 'Ep. 024 · 45K views').",
     "module-episodes": "The module list shows episode COUNTS only — no episode titles are visible on the hub; counts are preserved in each module's description."

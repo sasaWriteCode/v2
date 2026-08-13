@@ -1,13 +1,21 @@
 {
-  "title": "Personal Protection",
+  "title": "Health & Protection",
   "seo": {
-    "title": "Personal Protection Guide",
+    "title": "Health & Protection Guide",
     "description": "From your morning drive to your office and home, prolonged exposure to UV and high-energy visible (HEV) blue light may contribute to premature skin ageing, pigmentation and eye damage. IrisPro helps reduce this exposure wherever you spend your day."
   },
   "breadcrumbs": [
-    { "label": "Home", "href": "/" },
-    { "label": "Knowledge Centre", "href": "/knowledge" },
-    { "label": "Personal Protection" }
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Knowledge Centre",
+      "href": "/knowledge"
+    },
+    {
+      "label": "Personal Protection"
+    }
   ],
   "intro": [
     {
@@ -24,8 +32,16 @@
         ],
         "subhead": "From your morning drive to your office and home, prolonged exposure to UV and high-energy visible (HEV) blue light may contribute to premature skin ageing, pigmentation and eye damage. IrisPro helps reduce this exposure wherever you spend your day.",
         "ctas": [
-          { "label": "Start Learning", "href": "#why-protection-matters", "variant": "primary" },
-          { "label": "Explore UV+420™", "href": "#uv420-technology", "variant": "secondary" }
+          {
+            "label": "Start Learning",
+            "href": "#why-protection-matters",
+            "variant": "primary"
+          },
+          {
+            "label": "Explore UV+420™",
+            "href": "#uv420-technology",
+            "variant": "secondary"
+          }
         ],
         "media": {
           "src": "/images/hero-sunlight.png",
@@ -82,12 +98,36 @@
         "heading": "Why Personal Protection Matters",
         "lede": "We spend up to 80–90% of our time indoors or in vehicles near windows. Protection should be everywhere.",
         "steps": [
-          { "number": 1, "title": "Morning", "description": "Sunlight exposure begins" },
-          { "number": 2, "title": "Drive to work", "description": "Longer hours in the sun" },
-          { "number": 3, "title": "Office", "description": "Near windows all day" },
-          { "number": 4, "title": "Lunch", "description": "Outdoor exposure" },
-          { "number": 5, "title": "Drive Home", "description": "Evening sun exposure" },
-          { "number": 6, "title": "Home", "description": "UV & HEV through windows" }
+          {
+            "number": 1,
+            "title": "Morning",
+            "description": "Sunlight exposure begins"
+          },
+          {
+            "number": 2,
+            "title": "Drive to work",
+            "description": "Longer hours in the sun"
+          },
+          {
+            "number": 3,
+            "title": "Office",
+            "description": "Near windows all day"
+          },
+          {
+            "number": 4,
+            "title": "Lunch",
+            "description": "Outdoor exposure"
+          },
+          {
+            "number": 5,
+            "title": "Drive Home",
+            "description": "Evening sun exposure"
+          },
+          {
+            "number": 6,
+            "title": "Home",
+            "description": "UV & HEV through windows"
+          }
         ]
       }
     },
@@ -99,12 +139,30 @@
       "data": {
         "caption": "Understanding Sunlight",
         "series": [
-          { "id": "uvb", "name": "UVB" },
-          { "id": "uva", "name": "UVA" },
-          { "id": "uva1", "name": "UVA1" },
-          { "id": "hev", "name": "HEV Blue Light" },
-          { "id": "visible", "name": "Visible Light" },
-          { "id": "ir", "name": "IR" }
+          {
+            "id": "uvb",
+            "name": "UVB"
+          },
+          {
+            "id": "uva",
+            "name": "UVA"
+          },
+          {
+            "id": "uva1",
+            "name": "UVA1"
+          },
+          {
+            "id": "hev",
+            "name": "HEV Blue Light"
+          },
+          {
+            "id": "visible",
+            "name": "Visible Light"
+          },
+          {
+            "id": "ir",
+            "name": "IR"
+          }
         ],
         "rows": [
           {
@@ -174,11 +232,31 @@
       "data": {
         "columns": 5,
         "pillars": [
-          { "icon": "sun", "title": "Strong year-round sunlight", "description": "" },
-          { "icon": "thermometer", "title": "High UV Index (8–11+)", "description": "" },
-          { "icon": "car", "title": "Long driving hours", "description": "" },
-          { "icon": "building", "title": "Large glass buildings", "description": "" },
-          { "icon": "leaf", "title": "Hot & humid climate", "description": "" }
+          {
+            "icon": "sun",
+            "title": "Strong year-round sunlight",
+            "description": ""
+          },
+          {
+            "icon": "thermometer",
+            "title": "High UV Index (8–11+)",
+            "description": ""
+          },
+          {
+            "icon": "car",
+            "title": "Long driving hours",
+            "description": ""
+          },
+          {
+            "icon": "building",
+            "title": "Large glass buildings",
+            "description": ""
+          },
+          {
+            "icon": "leaf",
+            "title": "Hot & humid climate",
+            "description": ""
+          }
         ]
       }
     },
@@ -306,13 +384,34 @@
         "heading": "Prevention Is Better Than Cure",
         "lede": "Protect today for a healthier tomorrow.",
         "steps": [
-          { "number": 1, "title": "Before damage occurs" },
-          { "number": 2, "title": "Protect" },
-          { "number": 3, "title": "Skin" },
-          { "number": 4, "title": "Eyes" },
-          { "number": 5, "title": "Family" },
-          { "number": 6, "title": "Interior" },
-          { "number": 7, "title": "Future" }
+          {
+            "number": 1,
+            "title": "Before damage occurs"
+          },
+          {
+            "number": 2,
+            "title": "Protect"
+          },
+          {
+            "number": 3,
+            "title": "Skin"
+          },
+          {
+            "number": 4,
+            "title": "Eyes"
+          },
+          {
+            "number": 5,
+            "title": "Family"
+          },
+          {
+            "number": 6,
+            "title": "Interior"
+          },
+          {
+            "number": 7,
+            "title": "Future"
+          }
         ]
       }
     },
@@ -509,11 +608,31 @@
       "zone": "showroom-dark",
       "data": {
         "certs": [
-          { "id": "uv420", "name": "UV+420™ Technology", "label": "Complete UV & HEV protection" },
-          { "id": "hotmelt", "name": "6-Layer Hotmelt™", "label": "Strong. Durable. Long lasting" },
-          { "id": "sputter", "name": "Multi-Layer Sputter", "label": "Superior heat rejection" },
-          { "id": "sirim", "name": "SIRIM Certified", "label": "Quality you can trust" },
-          { "id": "warranty", "name": "Up to 10 Years Warranty", "label": "Long lasting protection" }
+          {
+            "id": "uv420",
+            "name": "UV+420™ Technology",
+            "label": "Complete UV & HEV protection"
+          },
+          {
+            "id": "hotmelt",
+            "name": "6-Layer Hotmelt™",
+            "label": "Strong. Durable. Long lasting"
+          },
+          {
+            "id": "sputter",
+            "name": "Multi-Layer Sputter",
+            "label": "Superior heat rejection"
+          },
+          {
+            "id": "sirim",
+            "name": "SIRIM Certified",
+            "label": "Quality you can trust"
+          },
+          {
+            "id": "warranty",
+            "name": "Up to 10 Years Warranty",
+            "label": "Long lasting protection"
+          }
         ]
       }
     }

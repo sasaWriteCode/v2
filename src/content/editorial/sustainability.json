@@ -1,0 +1,189 @@
+{
+  "title": "Sustainability",
+  "defaultZone": "workshop-light",
+  "seo": {
+    "title": "Sustainability & ESG",
+    "description": "Understand what sustainability and ESG mean for your daily life — and how reducing solar heat in vehicles, homes and buildings lowers energy use, cuts carbon emissions and builds a greener future."
+  },
+  "breadcrumbs": [
+    { "label": "Home", "href": "/" },
+    { "label": "Sustainability" }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "type": "cinematic-hero",
+      "order": 10,
+      "zone": "showroom-dark",
+      "label": "Sustainability showcase hero",
+      "data": {
+        "eyebrow": "Sustainability & ESG",
+        "headlineLines": ["Better Protection Today.", "A Sustainable Tomorrow."],
+        "subhead": "Sustainability is more than a buzzword — it is how the energy we use every day shapes our climate, our costs and our quality of life. Learn what ESG means and how one small change to your glass can make a measurable difference.",
+        "benefits": [
+          { "icon": "bolt", "label": "Lower Energy Consumption" },
+          { "icon": "leaf", "label": "Reduce Carbon Emissions" },
+          { "icon": "users", "label": "Better Comfort & Well-being" },
+          { "icon": "shield", "label": "Protect Our Future" }
+        ],
+        "ctas": [
+          { "label": "See the Impact Chain", "href": "#impact-chain", "variant": "primary" },
+          { "label": "Explore Sustainability Solutions", "href": "/solutions/sustainability", "variant": "secondary" }
+        ],
+        "media": {
+          "src": "placeholder:sustainability-hero",
+          "alt": "Wide split scene: an EV on a green hillside road, a modern home and a glass office tower under bright tropical sun — conveying mobility + buildings + environment together.",
+          "width": 1600,
+          "height": 900
+        }
+      }
+    },
+    {
+      "id": "what-is-esg",
+      "type": "tech-pillar-grid",
+      "order": 20,
+      "label": "What ESG means",
+      "data": {
+        "columns": 3,
+        "pillars": [
+          {
+            "icon": "leaf",
+            "title": "Environmental",
+            "description": "How our energy use, emissions and waste affect the planet. Cooling is one of the largest energy loads in ASEAN — reducing solar heat gain directly reduces electricity and fuel demand."
+          },
+          {
+            "icon": "users",
+            "title": "Social",
+            "description": "How choices affect people — health, comfort and well-being. Blocking UV and HEV blue light protects skin and eyes; cooler cabins and rooms reduce heat stress for families and employees."
+          },
+          {
+            "icon": "building",
+            "title": "Governance",
+            "description": "How organisations commit to responsible, measurable practices. Energy-efficiency upgrades like window film contribute to ESG reporting and green building certifications such as GBI."
+          }
+        ]
+      }
+    },
+    {
+      "id": "impact-stats",
+      "type": "proof-stat-bar",
+      "order": 30,
+      "label": "Sustainability impact at a glance",
+      "data": {
+        "variant": "dark",
+        "stats": [
+          { "value": "30", "unit": "%", "label": "Lower cooling energy consumption", "footnote": "Up to — varies by film type, glass and building design" },
+          { "value": "1.2", "unit": "tons", "label": "CO₂ reduction per year, per building", "footnote": "Up to — indicative estimate" },
+          { "value": "10", "unit": "°C", "label": "Heat reduction for improved comfort", "footnote": "Up to — varies by conditions" },
+          { "value": "99.9", "unit": "%", "label": "UV400 rejection protecting people & interiors" }
+        ]
+      }
+    },
+    {
+      "id": "impact-chain",
+      "type": "tech-pillar-grid",
+      "order": 40,
+      "label": "The sustainability impact chain",
+      "data": {
+        "columns": 6,
+        "pillars": [
+          { "icon": "sun", "title": "Solar Heat Reduced", "description": "Advanced films reject heat at the glass, before it enters." },
+          { "icon": "snowflake", "title": "Less Air-Conditioning", "description": "Cooler interiors need less cooling to stay comfortable." },
+          { "icon": "battery", "title": "Less Energy Used", "description": "Lower battery, fuel or electricity demand for cooling." },
+          { "icon": "wallet", "title": "Lower Operating Cost", "description": "Savings on electricity and fuel, month after month." },
+          { "icon": "recycle", "title": "Reduced Emissions", "description": "Less energy means a smaller carbon footprint." },
+          { "icon": "leaf", "title": "A Greener Future", "description": "Small changes at scale add up for the next generation." }
+        ]
+      }
+    },
+    {
+      "id": "where-it-applies",
+      "type": "category-grid",
+      "order": 50,
+      "label": "Where sustainable protection applies",
+      "data": {
+        "heading": "Where It Applies in Your Life",
+        "lede": "The same principle — reject solar heat at the glass — works across everything with windows.",
+        "categories": [
+          { "icon": "battery", "title": "EV Vehicles", "description": "Less battery used for cooling; more retained for driving.", "href": "/solutions/sustainability" },
+          { "icon": "car", "title": "Petrol / Hybrid Vehicles", "description": "Lower cooling load on the engine; potential fuel savings.", "href": "/solutions/automotive" },
+          { "icon": "home", "title": "Homes", "description": "Cooler rooms, lower electricity bills, better living comfort.", "href": "/solutions/residential" },
+          { "icon": "building", "title": "Commercial Buildings", "description": "Lower HVAC load, stronger ESG performance, GBI contribution.", "href": "/solutions/commercial" }
+        ]
+      }
+    },
+    {
+      "id": "learn-more",
+      "type": "article-grid",
+      "order": 60,
+      "label": "Educational articles",
+      "data": {
+        "heading": "Learn More in the Knowledge Centre",
+        "lede": "Deepen your understanding of sustainability, ESG and how window technology contributes.",
+        "articles": [
+          {
+            "title": "Sustainability & ESG, Explained Simply",
+            "href": "/knowledge/sustainability-esg",
+            "description": "What ESG actually measures, and why energy efficiency is the easiest first step.",
+            "category": "Sustainability & ESG",
+            "image": {
+              "src": "placeholder:esg-explained-card",
+              "alt": "Illustrative photo of a green city skyline or a hand holding a small plant against glass buildings.",
+              "width": 560,
+              "height": 320
+            }
+          },
+          {
+            "title": "How Window Film Saves Electricity",
+            "href": "/knowledge/sustainability-esg",
+            "description": "The physics of solar heat gain — and where your cooling energy really goes.",
+            "category": "Save Energy",
+            "image": {
+              "src": "placeholder:save-electricity-card",
+              "alt": "Interior shot of a bright living room or office with air-conditioning unit and sunlight through large windows.",
+              "width": 560,
+              "height": 320
+            }
+          },
+          {
+            "title": "Green Building Certifications & Your Property",
+            "href": "/knowledge/commercial-guide",
+            "description": "How GBI points and energy upgrades affect long-term building value.",
+            "category": "Commercial Guide",
+            "image": {
+              "src": "placeholder:green-building-card",
+              "alt": "Exterior of a modern certified green commercial building with visible greenery/landscaping.",
+              "width": 560,
+              "height": 320
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta-bar",
+      "order": 70,
+      "zone": "showroom-dark",
+      "label": "Closing call to action",
+      "data": {
+        "headline": "Small Changes Today. Big Impact Tomorrow.",
+        "subhead": "Choose a cooler, smarter and more sustainable way to live, drive and work.",
+        "actions": [
+          {
+            "icon": "leaf",
+            "title": "Explore Sustainability Solutions",
+            "description": "ESG-ready protection for vehicles, homes and buildings.",
+            "cta": { "label": "Explore Solutions", "href": "/solutions/sustainability" }
+          },
+          {
+            "icon": "chat",
+            "title": "Request Consultation",
+            "description": "Talk to our experts about your energy-saving goals.",
+            "cta": { "label": "Request Now", "href": "/contact" }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -6,9 +6,17 @@
     "description": "IrisPro building window films combine patented UV+420™ optical technology, 6-Layer Hotmelt™ base film and multi-layer sputter engineering to deliver unmatched heat rejection, comfort and durability."
   },
   "breadcrumbs": [
-    { "label": "Home", "href": "/" },
-    { "label": "Products", "href": "/products/automotive" },
-    { "label": "Building Window Films" }
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Products",
+      "href": "/products/automotive"
+    },
+    {
+      "label": "Building Window Films"
+    }
   ],
   "sections": [
     {
@@ -17,7 +25,10 @@
       "order": 10,
       "zone": "showroom-dark",
       "data": {
-        "headlineLines": ["Advanced Protection", "for Every Glass Surface"],
+        "headlineLines": [
+          "Advanced Protection",
+          "for Every Glass Surface"
+        ],
         "subhead": "IrisPro building window films combine patented UV+420™ optical technology, 6-Layer Hotmelt™ base film and multi-layer sputter engineering to deliver unmatched heat rejection, comfort and durability.",
         "media": {
           "src": "/images/commercial-building-panel.png",
@@ -72,16 +83,36 @@
                 "height": 320
               },
               "specs": [
-                { "label": "Thickness", "value": "3 mil" },
-                { "label": "IRR (1400nm)", "value": ">99%" },
-                { "label": "BLR (400–420nm)", "value": "99%" },
-                { "label": "TSER", "value": "Up to 84%" }
+                {
+                  "label": "Thickness",
+                  "value": "3 mil"
+                },
+                {
+                  "label": "IRR (1400nm)",
+                  "value": ">99%"
+                },
+                {
+                  "label": "BLR (400–420nm)",
+                  "value": "99%"
+                },
+                {
+                  "label": "TSER",
+                  "value": "Up to 84%"
+                }
               ],
-              "vltOptions": ["69%", "15%"],
+              "vltOptions": [
+                "69%",
+                "15%"
+              ],
               "compareable": false,
               "detailsHref": "#titan-x"
             },
-            "facets": {}
+            "facets": {
+              "audience": [
+                "homes",
+                "commercial"
+              ]
+            }
           },
           {
             "product": {
@@ -96,16 +127,36 @@
                 "height": 320
               },
               "specs": [
-                { "label": "Thickness", "value": "3 – 3.5 mil" },
-                { "label": "IRR (1400nm)", "value": "98%" },
-                { "label": "BLR (400–420nm)", "value": "99%" },
-                { "label": "TSER", "value": "Up to 78%" }
+                {
+                  "label": "Thickness",
+                  "value": "3 – 3.5 mil"
+                },
+                {
+                  "label": "IRR (1400nm)",
+                  "value": "98%"
+                },
+                {
+                  "label": "BLR (400–420nm)",
+                  "value": "99%"
+                },
+                {
+                  "label": "TSER",
+                  "value": "Up to 78%"
+                }
               ],
-              "vltOptions": ["65%", "_verify"],
+              "vltOptions": [
+                "65%",
+                "_verify"
+              ],
               "compareable": false,
               "detailsHref": "#diamond"
             },
-            "facets": {}
+            "facets": {
+              "audience": [
+                "homes",
+                "commercial"
+              ]
+            }
           },
           {
             "product": {
@@ -120,16 +171,38 @@
                 "height": 320
               },
               "specs": [
-                { "label": "Thickness", "value": "2 – 3.5 mil" },
-                { "label": "IRR (1400nm)", "value": "95%" },
-                { "label": "BLR (400–420nm)", "value": "99%" },
-                { "label": "TSER", "value": "Up to 78%" }
+                {
+                  "label": "Thickness",
+                  "value": "2 – 3.5 mil"
+                },
+                {
+                  "label": "IRR (1400nm)",
+                  "value": "95%"
+                },
+                {
+                  "label": "BLR (400–420nm)",
+                  "value": "99%"
+                },
+                {
+                  "label": "TSER",
+                  "value": "Up to 78%"
+                }
               ],
-              "vltOptions": ["57%", "_verify", "72%", "76%"],
+              "vltOptions": [
+                "57%",
+                "_verify",
+                "72%",
+                "76%"
+              ],
               "compareable": false,
               "detailsHref": "#raypro"
             },
-            "facets": {}
+            "facets": {
+              "audience": [
+                "homes",
+                "commercial"
+              ]
+            }
           },
           {
             "product": {
@@ -144,16 +217,38 @@
                 "height": 320
               },
               "specs": [
-                { "label": "Thickness", "value": "2 mil" },
-                { "label": "IRR (1400nm)", "value": "90%" },
-                { "label": "BLR (400–420nm)", "value": "99%" },
-                { "label": "TSER", "value": "Up to 76%" }
+                {
+                  "label": "Thickness",
+                  "value": "2 mil"
+                },
+                {
+                  "label": "IRR (1400nm)",
+                  "value": "90%"
+                },
+                {
+                  "label": "BLR (400–420nm)",
+                  "value": "99%"
+                },
+                {
+                  "label": "TSER",
+                  "value": "Up to 76%"
+                }
               ],
-              "vltOptions": ["_verify", "60%", "71%", "76%"],
+              "vltOptions": [
+                "_verify",
+                "60%",
+                "71%",
+                "76%"
+              ],
               "compareable": false,
               "detailsHref": "#anti-fade-90"
             },
-            "facets": {}
+            "facets": {
+              "audience": [
+                "homes",
+                "commercial"
+              ]
+            }
           },
           {
             "product": {
@@ -168,16 +263,35 @@
                 "height": 320
               },
               "specs": [
-                { "label": "Thickness", "value": "3 mil" },
-                { "label": "IRR (1400nm)", "value": "95%" },
-                { "label": "BLR (400–420nm)", "value": "99%" },
-                { "label": "TSER", "value": "8%" }
+                {
+                  "label": "Thickness",
+                  "value": "3 mil"
+                },
+                {
+                  "label": "IRR (1400nm)",
+                  "value": "95%"
+                },
+                {
+                  "label": "BLR (400–420nm)",
+                  "value": "99%"
+                },
+                {
+                  "label": "TSER",
+                  "value": "8%"
+                }
               ],
-              "vltOptions": ["84%"],
+              "vltOptions": [
+                "84%"
+              ],
               "compareable": false,
               "detailsHref": "#uv420-silver-black"
             },
-            "facets": {}
+            "facets": {
+              "audience": [
+                "homes",
+                "commercial"
+              ]
+            }
           },
           {
             "product": {
@@ -192,16 +306,35 @@
                 "height": 320
               },
               "specs": [
-                { "label": "Thickness", "value": "2 mil" },
-                { "label": "IRR (1400nm)", "value": "90%" },
-                { "label": "UVR (380nm)", "value": "99%" },
-                { "label": "TSER", "value": "15%" }
+                {
+                  "label": "Thickness",
+                  "value": "2 mil"
+                },
+                {
+                  "label": "IRR (1400nm)",
+                  "value": "90%"
+                },
+                {
+                  "label": "UVR (380nm)",
+                  "value": "99%"
+                },
+                {
+                  "label": "TSER",
+                  "value": "15%"
+                }
               ],
-              "vltOptions": ["69%"],
+              "vltOptions": [
+                "69%"
+              ],
               "compareable": false,
               "detailsHref": "#silver-black"
             },
-            "facets": {}
+            "facets": {
+              "audience": [
+                "homes",
+                "commercial"
+              ]
+            }
           },
           {
             "product": {
@@ -216,16 +349,38 @@
                 "height": 320
               },
               "specs": [
-                { "label": "Thickness", "value": "2 – 3.5 mil" },
-                { "label": "IRR (1400nm)", "value": "95%" },
-                { "label": "UVR (380nm)", "value": "99%" },
-                { "label": "TSER", "value": "Up to 70%" }
+                {
+                  "label": "Thickness",
+                  "value": "2 – 3.5 mil"
+                },
+                {
+                  "label": "IRR (1400nm)",
+                  "value": "95%"
+                },
+                {
+                  "label": "UVR (380nm)",
+                  "value": "99%"
+                },
+                {
+                  "label": "TSER",
+                  "value": "Up to 70%"
+                }
               ],
-              "vltOptions": ["56%", "60%", "69%", "75%"],
+              "vltOptions": [
+                "56%",
+                "60%",
+                "69%",
+                "75%"
+              ],
               "compareable": false,
               "detailsHref": "#titanium-hr"
             },
-            "facets": {}
+            "facets": {
+              "audience": [
+                "homes",
+                "commercial"
+              ]
+            }
           },
           {
             "product": {
@@ -240,16 +395,39 @@
                 "height": 320
               },
               "specs": [
-                { "label": "Thickness", "value": "2 mil" },
-                { "label": "IRR (1400nm)", "value": "90%" },
-                { "label": "UVR (380nm)", "value": "99%" },
-                { "label": "TSER", "value": "_verify" }
+                {
+                  "label": "Thickness",
+                  "value": "2 mil"
+                },
+                {
+                  "label": "IRR (1400nm)",
+                  "value": "90%"
+                },
+                {
+                  "label": "UVR (380nm)",
+                  "value": "99%"
+                },
+                {
+                  "label": "TSER",
+                  "value": "_verify"
+                }
               ],
-              "vltOptions": ["_verify", "58%", "66%", "72%", "_verify"],
+              "vltOptions": [
+                "_verify",
+                "58%",
+                "66%",
+                "72%",
+                "_verify"
+              ],
               "compareable": false,
               "detailsHref": "#color-stable-cs"
             },
-            "facets": {}
+            "facets": {
+              "audience": [
+                "homes",
+                "commercial"
+              ]
+            }
           },
           {
             "product": {
@@ -264,16 +442,40 @@
                 "height": 320
               },
               "specs": [
-                { "label": "Thickness", "value": "2 mil" },
-                { "label": "IRR (1400nm)", "value": "_verify" },
-                { "label": "UVR (380nm)", "value": "99%" },
-                { "label": "TSER", "value": "Up to 60%" }
+                {
+                  "label": "Thickness",
+                  "value": "2 mil"
+                },
+                {
+                  "label": "IRR (1400nm)",
+                  "value": "_verify"
+                },
+                {
+                  "label": "UVR (380nm)",
+                  "value": "99%"
+                },
+                {
+                  "label": "TSER",
+                  "value": "Up to 60%"
+                }
               ],
-              "vltOptions": ["_verify", "_verify", "40%", "45%", "48%", "60%"],
+              "vltOptions": [
+                "_verify",
+                "_verify",
+                "40%",
+                "45%",
+                "48%",
+                "60%"
+              ],
               "compareable": false,
               "detailsHref": "#cs-pro"
             },
-            "facets": {}
+            "facets": {
+              "audience": [
+                "homes",
+                "commercial"
+              ]
+            }
           },
           {
             "product": {
@@ -288,19 +490,41 @@
                 "height": 320
               },
               "specs": [
-                { "label": "Thickness", "value": "6.5 mil" },
-                { "label": "IRR (1400nm)", "value": "95%" },
-                { "label": "UVR (380nm)", "value": "99%" },
-                { "label": "TSER", "value": "Up to 70%" },
-                { "label": "Warranty", "value": "10 Years" }
+                {
+                  "label": "Thickness",
+                  "value": "6.5 mil"
+                },
+                {
+                  "label": "IRR (1400nm)",
+                  "value": "95%"
+                },
+                {
+                  "label": "UVR (380nm)",
+                  "value": "99%"
+                },
+                {
+                  "label": "TSER",
+                  "value": "Up to 70%"
+                },
+                {
+                  "label": "Warranty",
+                  "value": "10 Years"
+                }
               ],
-              "vltOptions": ["56%"],
+              "vltOptions": [
+                "56%"
+              ],
               "compareable": false,
               "detailsHref": "#vanguard"
             },
-            "facets": {}
+            "facets": {
+              "audience": [
+                "commercial"
+              ]
+            }
           }
-        ]
+        ],
+        "compareHint": "Tick “Compare” on any two films to see a side-by-side specification table."
       }
     },
     {
@@ -312,10 +536,22 @@
       "data": {
         "caption": "Choose the Right Film for Your Needs",
         "series": [
-          { "id": "signature", "name": "Signature Series" },
-          { "id": "heat-rejection", "name": "Heat Rejection Series" },
-          { "id": "privacy", "name": "Privacy Series" },
-          { "id": "security", "name": "Security Series" }
+          {
+            "id": "signature",
+            "name": "Signature Series"
+          },
+          {
+            "id": "heat-rejection",
+            "name": "Heat Rejection Series"
+          },
+          {
+            "id": "privacy",
+            "name": "Privacy Series"
+          },
+          {
+            "id": "security",
+            "name": "Security Series"
+          }
         ],
         "rows": [
           {
@@ -435,27 +671,39 @@
             "name": "OCBC Bank Tower",
             "location": "Kuala Lumpur",
             "category": "Commercial",
-            "badge": { "label": "Achieved 4 GBI Points", "tone": "achievement" },
+            "badge": {
+              "label": "Achieved 4 GBI Points",
+              "tone": "achievement"
+            },
             "image": {
               "src": "/images/commercial-building.png",
               "alt": "OCBC Bank Tower, Kuala Lumpur",
               "width": 560,
               "height": 360
             },
-            "cta": { "label": "View Case Study", "href": "#ocbc-bank-tower" }
+            "cta": {
+              "label": "View Case Study",
+              "href": "#ocbc-bank-tower"
+            }
           },
           {
             "name": "Putrajaya Project",
             "location": "Government Complex",
             "category": "Government",
-            "badge": { "label": "In Progress", "tone": "progress" },
+            "badge": {
+              "label": "In Progress",
+              "tone": "progress"
+            },
             "image": {
               "src": "/images/commercial-building-2.png",
               "alt": "Putrajaya Project government complex",
               "width": 560,
               "height": 360
             },
-            "cta": { "label": "View Case Study", "href": "#putrajaya-project" }
+            "cta": {
+              "label": "View Case Study",
+              "href": "#putrajaya-project"
+            }
           },
           {
             "name": "KPJ Healthcare",
@@ -467,7 +715,10 @@
               "width": 560,
               "height": 360
             },
-            "cta": { "label": "View Case Study", "href": "#kpj-healthcare" }
+            "cta": {
+              "label": "View Case Study",
+              "href": "#kpj-healthcare"
+            }
           },
           {
             "name": "Luxury Hotel",
@@ -479,7 +730,10 @@
               "width": 560,
               "height": 360
             },
-            "cta": { "label": "View Case Study", "href": "#luxury-hotel" }
+            "cta": {
+              "label": "View Case Study",
+              "href": "#luxury-hotel"
+            }
           },
           {
             "name": "Subang Airport",
@@ -491,7 +745,10 @@
               "width": 560,
               "height": 360
             },
-            "cta": { "label": "View Case Study", "href": "#subang-airport" }
+            "cta": {
+              "label": "View Case Study",
+              "href": "#subang-airport"
+            }
           }
         ]
       }
@@ -505,11 +762,31 @@
       "data": {
         "columns": 5,
         "pillars": [
-          { "icon": "sun", "title": "Blocks UV400 & HEV Blue Light", "description": "" },
-          { "icon": "thermometer", "title": "Superior Heat Rejection", "description": "" },
-          { "icon": "bolt", "title": "Reduces Energy Cost", "description": "" },
-          { "icon": "users", "title": "Enhances Comfort & Productivity", "description": "" },
-          { "icon": "leaf", "title": "Sustainable Building Choice", "description": "" }
+          {
+            "icon": "sun",
+            "title": "Blocks UV400 & HEV Blue Light",
+            "description": ""
+          },
+          {
+            "icon": "thermometer",
+            "title": "Superior Heat Rejection",
+            "description": ""
+          },
+          {
+            "icon": "bolt",
+            "title": "Reduces Energy Cost",
+            "description": ""
+          },
+          {
+            "icon": "users",
+            "title": "Enhances Comfort & Productivity",
+            "description": ""
+          },
+          {
+            "icon": "leaf",
+            "title": "Sustainable Building Choice",
+            "description": ""
+          }
         ]
       }
     },
@@ -525,7 +802,10 @@
           {
             "icon": "headset",
             "title": "Talk to Our Expert",
-            "cta": { "label": "Talk to Our Expert", "href": "#consultation" }
+            "cta": {
+              "label": "Talk to Our Expert",
+              "href": "/contact"
+            }
           }
         ]
       }
@@ -537,12 +817,36 @@
       "zone": "workshop-light",
       "data": {
         "certs": [
-          { "id": "sirim", "name": "SIRIM", "label": "Certified" },
-          { "id": "sgs", "name": "SGS", "label": "Tested & Verified" },
-          { "id": "iso", "name": "ISO", "label": "9001:2015 Quality Management" },
-          { "id": "gbi", "name": "GBI", "label": "Green Building Contribution" },
-          { "id": "iwfa", "name": "IWFA", "label": "Installation Standard" },
-          { "id": "ewarranty", "name": "eWarranty", "label": "Up to 10 Years Performance Warranty" }
+          {
+            "id": "sirim",
+            "name": "SIRIM",
+            "label": "Certified"
+          },
+          {
+            "id": "sgs",
+            "name": "SGS",
+            "label": "Tested & Verified"
+          },
+          {
+            "id": "iso",
+            "name": "ISO",
+            "label": "9001:2015 Quality Management"
+          },
+          {
+            "id": "gbi",
+            "name": "GBI",
+            "label": "Green Building Contribution"
+          },
+          {
+            "id": "iwfa",
+            "name": "IWFA",
+            "label": "Installation Standard"
+          },
+          {
+            "id": "ewarranty",
+            "name": "eWarranty",
+            "label": "Up to 10 Years Performance Warranty"
+          }
         ]
       }
     }

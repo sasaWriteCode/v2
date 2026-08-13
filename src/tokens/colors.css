@@ -57,7 +57,13 @@
    ═══════════════════════════════════════════════════════════════════════ */
 
 :root {
-  /* ── Brand core (literal, extracted from V1) ── */
+  /* ── Brand core ──
+     --color-red-brand is the EXACT logo red (sampled from the official
+     wordmark PNG, Brand Guidelines 2026). It measures 4.41:1 against
+     white — just under WCAG AA for small text — so INTERACTIVE surfaces
+     (buttons with white labels) keep the slightly darker --color-red
+     (5.49:1). Use -brand for graphic accents, rules, icons, large type. */
+  --color-red-brand: #ea2227;
   --color-red: #d20f18;
   --color-red-strong: #b10a11;   /* body-red text on light, hover state   */
   --color-red-deep: #98000a;     /* pressed states, deep gradients        */

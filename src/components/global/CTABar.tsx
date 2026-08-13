@@ -47,7 +47,7 @@ export function CTABar({
             <li key={action.title}>
               <a
                 href={action.cta.href}
-                className="flex h-full items-start gap-3 rounded-md p-4"
+                className="btn-press flex h-full items-start gap-3 rounded-md p-4"
                 style={{
                   border: '1px solid var(--border-default)',
                   background: 'var(--surface-raised)',

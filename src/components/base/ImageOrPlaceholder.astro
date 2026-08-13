@@ -1,0 +1,49 @@
+---
+/**
+ * ImageOrPlaceholder — static (.astro) counterpart of the placeholder
+ * convention in base/Media.tsx: `src: "placeholder:<short-hint>"` renders
+ * a layout-stable dashed box whose visible text (the alt) is the
+ * art-direction brief for the pending photo. Real srcs render a plain
+ * lazy <img>. Used by the .astro sections that don't go through Media.tsx.
+ */
+import { resolveUrl } from '@/lib/paths';
+
+interface Props {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  class?: string;
+}
+
+const { src, alt, width, height, class: className } = Astro.props;
+const isPlaceholder = src.startsWith('placeholder:');
+const hint = isPlaceholder ? src.slice('placeholder:'.length).trim() : '';
+---
+
+{isPlaceholder ? (
+  <div
+    role="img"
+    aria-label={alt}
+    class={className}
+    style={`aspect-ratio: ${width} / ${height}; display: grid; place-items: center; padding: 1rem; box-sizing: border-box; background: repeating-linear-gradient(45deg, var(--surface-raised, #f4f4f4) 0 12px, transparent 12px 24px); border: 2px dashed var(--border-default, #c8c8c8); border-radius: var(--radius-md, 8px);`}
+  >
+    <span style="max-width: 36ch; text-align: center; font-size: 0.8rem; line-height: 1.45; color: var(--text-muted, #777)">
+      <strong style="display: block; letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.7rem">
+        📷 Image slot{hint ? `: ${hint}` : ''}
+      </strong>
+      {alt}
+    </span>
+  </div>
+) : (
+  <img
+    src={resolveUrl(src)}
+    alt={alt}
+    width={width}
+    height={height}
+    loading="lazy"
+    decoding="async"
+    class={className}
+    style={`aspect-ratio: ${width} / ${height}`}
+  />
+)}

@@ -1,13 +1,21 @@
 {
-  "title": "Building Performance Guide",
+  "title": "Commercial Guide",
   "seo": {
-    "title": "Building Performance Guide",
+    "title": "Commercial Guide",
     "description": "Learn how high-performance window films improve energy efficiency, employee wellbeing, sustainability and long-term building value."
   },
   "breadcrumbs": [
-    { "label": "Home", "href": "/" },
-    { "label": "Knowledge Centre", "href": "/knowledge" },
-    { "label": "Building Performance Guide" }
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Knowledge Centre",
+      "href": "/knowledge"
+    },
+    {
+      "label": "Building Performance Guide"
+    }
   ],
   "intro": [
     {
@@ -18,8 +26,16 @@
         "title": "Building Performance Guide",
         "lede": "Learn how high-performance window films improve energy efficiency, employee wellbeing, sustainability and long-term building value.",
         "ctas": [
-          { "label": "Start Learning", "href": "#learning-journey", "variant": "primary" },
-          { "label": "Request Building Assessment", "href": "#assessment", "variant": "secondary" }
+          {
+            "label": "Start Learning",
+            "href": "#learning-journey",
+            "variant": "primary"
+          },
+          {
+            "label": "Request Building Assessment",
+            "href": "#assessment",
+            "variant": "secondary"
+          }
         ]
       }
     },
@@ -69,18 +85,54 @@
       "data": {
         "heading": "Your Learning Journey",
         "steps": [
-          { "number": 1, "title": "Why Commercial Buildings Need Window Film" },
-          { "number": 2, "title": "Employee Comfort & Wellbeing" },
-          { "number": 3, "title": "Energy Saving" },
-          { "number": 4, "title": "ESG & Sustainability" },
-          { "number": 5, "title": "ROI & Financial Benefits" },
-          { "number": 6, "title": "Protect Building Assets" },
-          { "number": 7, "title": "Choosing the Right Commercial Film" },
-          { "number": 8, "title": "Technology Explained" },
-          { "number": 9, "title": "Commercial Case Studies" },
-          { "number": 10, "title": "Frequently Asked Questions" },
-          { "number": 11, "title": "Download Centre" },
-          { "number": 12, "title": "Speak to a Consultant" }
+          {
+            "number": 1,
+            "title": "Why Commercial Buildings Need Window Film"
+          },
+          {
+            "number": 2,
+            "title": "Employee Comfort & Wellbeing"
+          },
+          {
+            "number": 3,
+            "title": "Energy Saving"
+          },
+          {
+            "number": 4,
+            "title": "ESG & Sustainability"
+          },
+          {
+            "number": 5,
+            "title": "ROI & Financial Benefits"
+          },
+          {
+            "number": 6,
+            "title": "Protect Building Assets"
+          },
+          {
+            "number": 7,
+            "title": "Choosing the Right Commercial Film"
+          },
+          {
+            "number": 8,
+            "title": "Technology Explained"
+          },
+          {
+            "number": 9,
+            "title": "Commercial Case Studies"
+          },
+          {
+            "number": 10,
+            "title": "Frequently Asked Questions"
+          },
+          {
+            "number": 11,
+            "title": "Download Centre"
+          },
+          {
+            "number": 12,
+            "title": "Speak to a Consultant"
+          }
         ]
       }
     },
@@ -128,12 +180,32 @@
       "data": {
         "heading": "How Window Film Improves Building Performance",
         "steps": [
-          { "number": 1, "title": "Solar Energy", "description": "From Sun" },
-          { "number": 2, "title": "Solar Heat", "description": "Enters Through Glass" },
-          { "number": 3, "title": "Increases Indoor Temperature" },
-          { "number": 4, "title": "Higher Cooling Demand" },
-          { "number": 5, "title": "Higher Electricity Consumption" },
-          { "number": 6, "title": "Higher Operating Costs" }
+          {
+            "number": 1,
+            "title": "Solar Energy",
+            "description": "From Sun"
+          },
+          {
+            "number": 2,
+            "title": "Solar Heat",
+            "description": "Enters Through Glass"
+          },
+          {
+            "number": 3,
+            "title": "Increases Indoor Temperature"
+          },
+          {
+            "number": 4,
+            "title": "Higher Cooling Demand"
+          },
+          {
+            "number": 5,
+            "title": "Higher Electricity Consumption"
+          },
+          {
+            "number": 6,
+            "title": "Higher Operating Costs"
+          }
         ]
       }
     },
@@ -220,7 +292,10 @@
           {
             "icon": "leaf",
             "title": "Learn More About GBI",
-            "cta": { "label": "Learn More About GBI", "href": "#gbi" }
+            "cta": {
+              "label": "Learn More About GBI",
+              "href": "#gbi"
+            }
           }
         ]
       }
@@ -238,7 +313,10 @@
             "name": "OCBC Bank Tower",
             "location": "Kuala Lumpur",
             "category": "Commercial",
-            "badge": { "label": "Achieved 4 GBI Points", "tone": "achievement" },
+            "badge": {
+              "label": "Achieved 4 GBI Points",
+              "tone": "achievement"
+            },
             "image": {
               "src": "/images/commercial-building.png",
               "alt": "OCBC Bank Tower, Kuala Lumpur",
@@ -246,13 +324,19 @@
               "height": 360
             },
             "benefit": "Premium office tower installation contributing to 4 GBI Points.",
-            "cta": { "label": "View Case Study", "href": "#ocbc-bank-tower" }
+            "cta": {
+              "label": "View Case Study",
+              "href": "#ocbc-bank-tower"
+            }
           },
           {
             "name": "Putrajaya Project",
             "location": "Government Complex",
             "category": "Government",
-            "badge": { "label": "In Progress", "tone": "progress" },
+            "badge": {
+              "label": "In Progress",
+              "tone": "progress"
+            },
             "image": {
               "src": "/images/commercial-building-2.png",
               "alt": "Putrajaya Project government complex",
@@ -260,7 +344,10 @@
               "height": 360
             },
             "benefit": "Large scale government buildings installation ongoing.",
-            "cta": { "label": "View Case Study", "href": "#putrajaya-project" }
+            "cta": {
+              "label": "View Case Study",
+              "href": "#putrajaya-project"
+            }
           },
           {
             "name": "KPJ Healthcare",
@@ -273,7 +360,10 @@
               "height": 360
             },
             "benefit": "Improved comfort for patients & staff while reducing cooling cost.",
-            "cta": { "label": "View Case Study", "href": "#kpj-healthcare" }
+            "cta": {
+              "label": "View Case Study",
+              "href": "#kpj-healthcare"
+            }
           },
           {
             "name": "Luxury Hotel",
@@ -286,7 +376,10 @@
               "height": 360
             },
             "benefit": "Enhanced guest comfort, privacy & energy efficiency.",
-            "cta": { "label": "View Case Study", "href": "#luxury-hotel" }
+            "cta": {
+              "label": "View Case Study",
+              "href": "#luxury-hotel"
+            }
           }
         ]
       }
@@ -310,7 +403,10 @@
               "Electricity Tariff (RM/kWh): 0.60",
               "Operating Hours / Day: 12"
             ],
-            "cta": { "label": "Try ROI Calculator", "href": "#roi-calculator" }
+            "cta": {
+              "label": "Try ROI Calculator",
+              "href": "#roi-calculator"
+            }
           }
         ]
       }
@@ -351,11 +447,31 @@
       "zone": "showroom-dark",
       "data": {
         "certs": [
-          { "id": "uv420", "name": "Patented UV+420™", "label": "Complete UV & Blue Light Protection" },
-          { "id": "hotmelt", "name": "6-Layer Hotmelt™", "label": "Superior Durability" },
-          { "id": "sputter", "name": "Multi-Layer Sputter", "label": "Maximum Heat Rejection" },
-          { "id": "sirim", "name": "SIRIM Certified", "label": "Quality Assured" },
-          { "id": "warranty", "name": "Up to 10 Years Warranty", "label": "Long Lasting Protection" }
+          {
+            "id": "uv420",
+            "name": "Patented UV+420™",
+            "label": "Complete UV & Blue Light Protection"
+          },
+          {
+            "id": "hotmelt",
+            "name": "6-Layer Hotmelt™",
+            "label": "Superior Durability"
+          },
+          {
+            "id": "sputter",
+            "name": "Multi-Layer Sputter",
+            "label": "Maximum Heat Rejection"
+          },
+          {
+            "id": "sirim",
+            "name": "SIRIM Certified",
+            "label": "Quality Assured"
+          },
+          {
+            "id": "warranty",
+            "name": "Up to 10 Years Warranty",
+            "label": "Long Lasting Protection"
+          }
         ]
       }
     },
@@ -372,25 +488,37 @@
             "icon": "pin",
             "title": "Request Site Assessment",
             "description": "On-site evaluation by our experts",
-            "cta": { "label": "Request Site Assessment", "href": "#assessment" }
+            "cta": {
+              "label": "Request Site Assessment",
+              "href": "#assessment"
+            }
           },
           {
             "icon": "bolt",
             "title": "Request Energy Evaluation",
             "description": "Understand your energy saving potential",
-            "cta": { "label": "Request Energy Evaluation", "href": "#energy-evaluation" }
+            "cta": {
+              "label": "Request Energy Evaluation",
+              "href": "#energy-evaluation"
+            }
           },
           {
             "icon": "document",
             "title": "Download Catalogue",
             "description": "Get our commercial solution brochure",
-            "cta": { "label": "Download Catalogue", "href": "#catalogue" }
+            "cta": {
+              "label": "Download Catalogue",
+              "href": "#catalogue"
+            }
           },
           {
             "icon": "headset",
             "title": "Talk to a Consultant",
             "description": "Speak with our building performance specialist",
-            "cta": { "label": "Talk to a Consultant", "href": "#consultant" }
+            "cta": {
+              "label": "Talk to a Consultant",
+              "href": "#consultant"
+            }
           }
         ]
       }

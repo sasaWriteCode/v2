@@ -53,12 +53,26 @@ export interface TechPillarGridContent {
   columns?: 3 | 4 | 5 | 6;
 }
 
+/**
+ * PhilosophyFlow — a step-to-step "road" of value pillars (mindmap/journey
+ * treatment of the protection philosophy). Steps reuse the TechPillar
+ * shape; order in the array IS the journey order.
+ */
+export interface PhilosophyFlowContent {
+  heading?: string;
+  lede?: string;
+  steps: TechPillar[];
+}
+
 export interface ProofStatBarContent {
   stats: StatItem[];
   variant?: 'light' | 'dark';
 }
 
 export interface ProjectStripContent {
+  heading?: string;
+  subhead?: string;
+  lede?: string;
   projects: ProjectItem[];
   filters?: boolean;
   scrollable?: boolean;
@@ -168,6 +182,10 @@ export interface CategoryItem {
   href: string;
   /** e.g. "12 articles" */
   count?: string;
+  /** Background image for hover zoom effect */
+  image?: string | MediaContent;
+  /** Custom icon color (e.g. hex or color key) */
+  iconColor?: string;
 }
 
 export interface CategoryGridContent {
@@ -349,6 +367,7 @@ export type Section = SectionBase &
     | { type: 'protection-level-selector'; data: PrioritySelectorContent }
     | { type: 'spectrum-diagram'; data: SpectrumDiagramContent }
     | { type: 'tech-pillar-grid'; data: TechPillarGridContent }
+    | { type: 'philosophy-flow'; data: PhilosophyFlowContent }
     | { type: 'proof-stat-bar'; data: ProofStatBarContent }
     | { type: 'project-strip'; data: ProjectStripContent }
     | { type: 'series-card-set'; data: SeriesCardSetContent }

@@ -45,6 +45,7 @@ import CategoryGrid from '@/components/sections/CategoryGrid.astro';
 import VideoCarousel from '@/components/sections/VideoCarousel.astro';
 import LearningPath from '@/components/sections/LearningPath.astro';
 import ArticleGrid from '@/components/sections/ArticleGrid.astro';
+import PhilosophyFlow from '@/components/sections/PhilosophyFlow.astro';
 import FilmFinder from '@/components/sections/FilmFinder.astro';
 // React islands (Stage 3)
 import SearchBar from '@/components/islands/SearchBar';
@@ -79,7 +80,7 @@ export const SECTION_REGISTRY: Record<SectionType, SectionRegistryEntry> = {
   'series-comparison-table': { component: SeriesComparisonTable, hydration: 'none', chrome: 'band' },
   'guide-chapter-list': { component: GuideChapterList, hydration: 'none', chrome: 'band' }, // native <details>
   'cta-bar': { component: CTABar, hydration: 'none', chrome: 'band' },
-  'certification-strip': { component: CertificationStrip, hydration: 'none', chrome: 'band' },
+  'certification-strip': { component: CertificationStrip, hydration: 'visible', chrome: 'full' },
   'ask-irispro-ai': { component: AskIrisProAI, hydration: 'visible', chrome: 'band' }, // interactive shell
 
   /* ── Stage 3 static sections (.astro, 0KB) ── */
@@ -94,6 +95,7 @@ export const SECTION_REGISTRY: Record<SectionType, SectionRegistryEntry> = {
   'learning-path': { component: LearningPath, hydration: 'none', chrome: 'band' },
   'article-grid': { component: ArticleGrid, hydration: 'none', chrome: 'band' },
   'film-finder': { component: FilmFinder, hydration: 'none', chrome: 'band' },
+  'philosophy-flow': { component: PhilosophyFlow, hydration: 'none', chrome: 'band' }, // dashed-road journey, pure CSS/SVG
 
   /* ── Stage 3 islands ── */
   'search-bar': { component: SearchBar, hydration: 'visible', chrome: 'band' }, // GET form works no-JS

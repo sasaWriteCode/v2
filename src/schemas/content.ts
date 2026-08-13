@@ -183,6 +183,7 @@ export const techPillarSchema = z.object({
   title: z.string(),
   description: z.string(),
   link: ctaLinkSchema.optional(),
+  image: z.union([z.string(), mediaContentSchema]).optional(),
 }) satisfies z.ZodType<TechPillar>;
 
 /* ── 6. ProofStatBar ── */

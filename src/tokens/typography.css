@@ -2,12 +2,10 @@
    IRISPRO V2 — TYPOGRAPHY TOKENS
    ═══════════════════════════════════════════════════════════════════════════
 
-   Families extracted from V1 (src/styles/global.css + index.html):
-     display → 'Playfair Display' (V1 --font-display)
-     ui      → 'Inter'            (V1 --font-body)
-     (Montserrat is also loaded in V1 and used ad-hoc with !important on the
-      products/projects/support pages; V2 consolidates the utility zone on
-      Inter — flagged in the Stage 1 report.)
+   Families per the IrisPro Brand Guidelines (received 2026-08-12):
+     Montserrat everywhere — Bold for headlines, SemiBold/Medium for
+     subheads, Regular for body. (Supersedes the V1-derived Playfair
+     Display + Inter pairing; EN-only site so Noto Sans FC is not loaded.)
 
    Two fluid scales, clamp()-based, resolved between 360px and 1440px
    viewports. Every clamp is linear-interpolated so nothing jumps.
@@ -22,9 +20,10 @@
    ═══════════════════════════════════════════════════════════════════════ */
 
 :root {
-  /* ── Families ── */
-  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  /* ── Families (Brand Guidelines: Montserrat) ── */
+  --font-display: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, sans-serif;
+  --font-ui: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, sans-serif;
 
   /* ── Display scale (hero/cinematic) ── */
