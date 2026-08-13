@@ -40,8 +40,13 @@ import type {
   Crumb,
   CtaBarContent,
   EditorialPageContent,
+  FaqContent,
+  FaqItem,
   FilmFinderContent,
   FilmFinderOption,
+  MythFactContent,
+  MythFactPair,
+  SplitMediaContent,
   GuideChapterListContent,
   GuidePageContent,
   GuideRailContent,
@@ -147,7 +152,7 @@ export const guideChapterListContentSchema = z.object({
 }) satisfies z.ZodType<GuideChapterListContent>;
 
 export const ctaBarContentSchema = z.object({
-  headline: z.string(),
+  headline: z.string().optional(),
   subhead: z.string().optional(),
   actions: z.array(ctaActionSchema),
   variant: z.enum(['showroom', 'workshop']).optional(),
@@ -312,6 +317,40 @@ export const filmFinderContentSchema = z.object({
   options: z.array(filmFinderOptionSchema),
 }) satisfies z.ZodType<FilmFinderContent>;
 
+export const faqItemSchema = z.object({
+  question: z.string(),
+  answer: z.string(),
+}) satisfies z.ZodType<FaqItem>;
+
+export const faqContentSchema = z.object({
+  heading: z.string().optional(),
+  lede: z.string().optional(),
+  items: z.array(faqItemSchema),
+}) satisfies z.ZodType<FaqContent>;
+
+export const mythFactPairSchema = z.object({
+  myth: z.string(),
+  fact: z.string(),
+  explanation: z.string().optional(),
+}) satisfies z.ZodType<MythFactPair>;
+
+export const mythFactContentSchema = z.object({
+  heading: z.string().optional(),
+  lede: z.string().optional(),
+  pairs: z.array(mythFactPairSchema),
+}) satisfies z.ZodType<MythFactContent>;
+
+export const splitMediaContentSchema = z.object({
+  heading: z.string().optional(),
+  lede: z.string().optional(),
+  body: z.array(z.string()).optional(),
+  bullets: z.array(z.string()).optional(),
+  media: mediaContentSchema,
+  mediaSide: z.enum(['left', 'right']).optional(),
+  footnote: z.string().optional(),
+  cta: ctaLinkSchema.optional(),
+}) satisfies z.ZodType<SplitMediaContent>;
+
 export const productFilterOptionSchema = z.object({
   value: z.string(),
   label: z.string(),
@@ -401,6 +440,9 @@ export const sectionSchema = z.discriminatedUnion('type', [
   sectionVariant('article-grid', articleGridContentSchema),
   sectionVariant('module-browser', moduleBrowserContentSchema),
   sectionVariant('film-finder', filmFinderContentSchema),
+  sectionVariant('faq', faqContentSchema),
+  sectionVariant('myth-fact', mythFactContentSchema),
+  sectionVariant('split-media', splitMediaContentSchema),
   sectionVariant('product-browser', productBrowserContentSchema),
 ]) satisfies z.ZodType<Section>;
 

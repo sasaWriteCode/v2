@@ -6,9 +6,17 @@
  * renderer (and exposed as --accent-current* CSS vars); sustainability has
  * no comparison table and personal-protection has no project strip — this
  * file cannot tell and must never care.
+ *
+ * Funnel additions (client ruling 2026-08-13, educative one-page funnels):
+ *  - FunnelNav: sticky wayfinding built from sections carrying a `label`
+ *    (labels ARE the funnel steps — authoring order = journey order).
+ *  - FAQPage JSON-LD lifted from any `faq` sections' items, same builder
+ *    the guides use.
  */
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import SectionRenderer from '@/components/SectionRenderer.astro';
+import FunnelNav from '@/components/nav/FunnelNav.astro';
+import { faqSchema } from '@/lib/seo/schema';
 import type { SolutionPageContent } from '@/types/sections';
 import { resolvePathsInObject } from '@/lib/paths';
 
@@ -16,9 +24,20 @@ interface Props {
   content: SolutionPageContent;
 }
 const content = resolvePathsInObject(Astro.props.content);
+
+const funnelItems = [...content.sections]
+  .sort((a, b) => a.order - b.order)
+  .filter((section) => section.label && section.type !== 'cinematic-hero')
+  .map((section) => ({ id: section.id, label: section.label! }));
+
+const faqItems = content.sections
+  .filter((section) => section.type === 'faq')
+  .flatMap((section) => section.data.items);
+const jsonLd = faqItems.length > 0 ? [faqSchema(faqItems)] : [];
 ---
 
-<BaseLayout seo={content.seo} crumbs={content.breadcrumbs}>
+<BaseLayout seo={content.seo} crumbs={content.breadcrumbs} jsonLd={jsonLd}>
+  <FunnelNav items={funnelItems} ariaLabel="Your journey on this page" />
   <SectionRenderer
     sections={content.sections}
     defaultZone={content.defaultZone ?? 'showroom-dark'}

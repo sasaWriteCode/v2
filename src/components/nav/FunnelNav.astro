@@ -1,0 +1,137 @@
+---
+/**
+ * FunnelNav — sticky on-page wayfinding for solution pages. Renders the
+ * funnel steps (sections that carry a `label`) as a horizontal chip rail
+ * pinned under the site header, so the visitor always sees where they are
+ * in the journey: Why → Science → Proof → Products → Projects → FAQ.
+ *
+ * Same philosophy as MobileNav: real anchor links, server-rendered, works
+ * with zero JS; a ~0.5KB vanilla script adds the scroll-spy highlight
+ * (aria-current) — no React, no island.
+ */
+interface Item {
+  id: string;
+  label: string;
+}
+interface Props {
+  items: Item[];
+  ariaLabel?: string;
+}
+const { items, ariaLabel = 'On this page' } = Astro.props;
+---
+
+{items.length > 1 && (
+  <nav class="funnel-nav" aria-label={ariaLabel} data-funnel-nav>
+    <div class="container">
+      <ol class="funnel-nav-rail">
+        {items.map((item, i) => (
+          <li>
+            <a href={`#${item.id}`} class="type-body-sm funnel-nav-link">
+              <span class="funnel-nav-index" aria-hidden="true">{i + 1}</span>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </nav>
+)}
+
+<style>
+  .funnel-nav {
+    position: sticky;
+    top: var(--header-height, 4rem);
+    z-index: 40;
+    background: var(--surface-base);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* Anchored scrolls must clear header + this rail (overrides the global
+     header-only offset while a FunnelNav is on the page). */
+  :global(main .section-band),
+  :global(main .section-full) {
+    scroll-margin-top: calc(var(--header-height, 4rem) + 3.25rem + var(--space-4));
+  }
+  .funnel-nav-rail {
+    display: flex;
+    gap: 0.375rem;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .funnel-nav-rail::-webkit-scrollbar {
+    display: none;
+  }
+  .funnel-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    white-space: nowrap;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: color 150ms ease, border-color 150ms ease;
+  }
+  .funnel-nav-index {
+    display: grid;
+    place-items: center;
+    width: 1.15rem;
+    height: 1.15rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-default);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-muted);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .funnel-nav-link:hover {
+      color: var(--text-primary);
+      border-color: var(--border-default);
+    }
+  }
+  .funnel-nav-link[aria-current='true'] {
+    color: var(--text-primary);
+    border-color: var(--color-red-brand);
+  }
+  .funnel-nav-link[aria-current='true'] .funnel-nav-index {
+    background: var(--color-red-brand);
+    border-color: var(--color-red-brand);
+    color: #fff;
+  }
+</style>
+
+<script>
+  const nav = document.querySelector('[data-funnel-nav]');
+  if (nav && 'IntersectionObserver' in window) {
+    const links = [...nav.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')];
+    const byId = new Map(links.map((link) => [link.getAttribute('href')!.slice(1), link]));
+    const setActive = (id: string) => {
+      for (const [key, link] of byId) {
+        if (key === id) {
+          link.setAttribute('aria-current', 'true');
+          link.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      }
+    };
+    const targets = [...byId.keys()]
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) setActive(visible[0].target.id);
+      },
+      { rootMargin: '-20% 0px -60% 0px' },
+    );
+    for (const target of targets) observer.observe(target);
+  }
+</script>

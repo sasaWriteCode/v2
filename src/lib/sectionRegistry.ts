@@ -47,6 +47,9 @@ import LearningPath from '@/components/sections/LearningPath.astro';
 import ArticleGrid from '@/components/sections/ArticleGrid.astro';
 import PhilosophyFlow from '@/components/sections/PhilosophyFlow.astro';
 import FilmFinder from '@/components/sections/FilmFinder.astro';
+import FaqSection from '@/components/sections/FaqSection.astro';
+import MythFact from '@/components/sections/MythFact.astro';
+import SplitMedia from '@/components/sections/SplitMedia.astro';
 // React islands (Stage 3)
 import SearchBar from '@/components/islands/SearchBar';
 import ModuleBrowser from '@/components/islands/ModuleBrowser';
@@ -79,7 +82,7 @@ export const SECTION_REGISTRY: Record<SectionType, SectionRegistryEntry> = {
   /* ── Workshop primitives — pure markup, SSR-only, 0KB ── */
   'series-comparison-table': { component: SeriesComparisonTable, hydration: 'none', chrome: 'band' },
   'guide-chapter-list': { component: GuideChapterList, hydration: 'none', chrome: 'band' }, // native <details>
-  'cta-bar': { component: CTABar, hydration: 'none', chrome: 'band' },
+  'cta-bar': { component: CTABar, hydration: 'visible', chrome: 'full' },
   'certification-strip': { component: CertificationStrip, hydration: 'visible', chrome: 'full' },
   'ask-irispro-ai': { component: AskIrisProAI, hydration: 'visible', chrome: 'band' }, // interactive shell
 
@@ -96,6 +99,9 @@ export const SECTION_REGISTRY: Record<SectionType, SectionRegistryEntry> = {
   'article-grid': { component: ArticleGrid, hydration: 'none', chrome: 'band' },
   'film-finder': { component: FilmFinder, hydration: 'none', chrome: 'band' },
   'philosophy-flow': { component: PhilosophyFlow, hydration: 'none', chrome: 'band' }, // dashed-road journey, pure CSS/SVG
+  'faq': { component: FaqSection, hydration: 'none', chrome: 'band' }, // native <details>; FAQPage JSON-LD via template
+  'myth-fact': { component: MythFact, hydration: 'none', chrome: 'band' }, // funnel teachable moment
+  'split-media': { component: SplitMedia, hydration: 'none', chrome: 'band' }, // prose + image band
 
   /* ── Stage 3 islands ── */
   'search-bar': { component: SearchBar, hydration: 'visible', chrome: 'band' }, // GET form works no-JS

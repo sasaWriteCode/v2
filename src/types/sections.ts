@@ -91,7 +91,7 @@ export interface GuideChapterListContent {
 }
 
 export interface CtaBarContent {
-  headline: string;
+  headline?: string;
   subhead?: string;
   actions: CtaAction[];
   variant?: 'showroom' | 'workshop';
@@ -280,6 +280,47 @@ export interface FilmFinderContent {
   options: FilmFinderOption[];
 }
 
+/* ── FaqSection (native <details>; feeds FAQPage JSON-LD on solutions) ── */
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface FaqContent {
+  heading?: string;
+  lede?: string;
+  items: FaqItem[];
+}
+
+/* ── MythFact (funnel education: the myth they arrived with, corrected) ── */
+export interface MythFactPair {
+  myth: string;
+  fact: string;
+  /** One-sentence why — the teachable moment. */
+  explanation?: string;
+}
+
+export interface MythFactContent {
+  heading?: string;
+  lede?: string;
+  pairs: MythFactPair[];
+}
+
+/* ── SplitMedia (text + image band — the long-missing prose/media type) ── */
+export interface SplitMediaContent {
+  heading?: string;
+  lede?: string;
+  /** Paragraphs. */
+  body?: string[];
+  /** Check-bulleted points after the body. */
+  bullets?: string[];
+  media: MediaContent;
+  /** Which side the media sits on at desktop. Default 'right'. */
+  mediaSide?: 'left' | 'right';
+  footnote?: string;
+  cta?: CtaLink;
+}
+
 /* ── ProductBrowser (filters + grid + compare, URL state) ── */
 export interface ProductFilterOption {
   value: string;
@@ -388,6 +429,9 @@ export type Section = SectionBase &
     | { type: 'article-grid'; data: ArticleGridContent }
     | { type: 'module-browser'; data: ModuleBrowserContent }
     | { type: 'film-finder'; data: FilmFinderContent }
+    | { type: 'faq'; data: FaqContent }
+    | { type: 'myth-fact'; data: MythFactContent }
+    | { type: 'split-media'; data: SplitMediaContent }
     | { type: 'product-browser'; data: ProductBrowserContent }
   );
 

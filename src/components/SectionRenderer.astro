@@ -27,6 +27,7 @@ import { TechPillarGrid } from '@/components/showroom/TechPillarGrid';
 import { ProofStatBar } from '@/components/showroom/ProofStatBar';
 import { ProjectStrip } from '@/components/showroom/ProjectStrip';
 import { CertificationStrip } from '@/components/global/CertificationStrip';
+import { CTABar } from '@/components/global/CTABar';
 import { AskIrisProAI } from '@/components/workshop/AskIrisProAI';
 import SearchBar from '@/components/islands/SearchBar';
 import ModuleBrowser from '@/components/islands/ModuleBrowser';
@@ -111,6 +112,8 @@ const accentStyle = accent
               <ProjectStrip client:visible {...(props as any)} />
             ) : section.type === 'certification-strip' ? (
               <CertificationStrip client:visible {...(props as any)} />
+            ) : section.type === 'cta-bar' ? (
+              <CTABar client:visible {...(props as any)} />
             ) : section.type === 'ask-irispro-ai' ? (
               <AskIrisProAI client:visible {...(props as any)} />
             ) : section.type === 'search-bar' ? (

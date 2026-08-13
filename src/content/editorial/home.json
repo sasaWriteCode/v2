@@ -310,7 +310,8 @@
       "order": 80,
       "zone": "showroom-dark",
       "data": {
-        "headline": "",
+        "headline": "Nationwide Coverage",
+        "subhead": "Over 50+ Authorized IrisPro Dealer Branches & Installers Across Malaysia",
         "actions": [
           {
             "icon": "pin",

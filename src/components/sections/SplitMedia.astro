@@ -1,0 +1,74 @@
+---
+/**
+ * SplitMedia — prose + image band (fills the schema gap logged in the
+ * Stage 4a report: "no prose/split-media section type"). Static, zero JS.
+ * Funnel role: the "teach why" and "how we test" bands, where a diagram
+ * or photo carries half the explanation. Honors the placeholder-image
+ * convention via ImageOrPlaceholder.
+ */
+import ImageOrPlaceholder from '@/components/base/ImageOrPlaceholder.astro';
+import { Icon } from '@/components/global/Icon';
+import type { SplitMediaContent } from '@/types/sections';
+
+type Props = SplitMediaContent;
+const { heading, lede, body = [], bullets = [], media, mediaSide = 'right', footnote, cta } = Astro.props;
+---
+
+<div
+  class:list={[
+    'grid items-center gap-8 lg:gap-12 lg:grid-cols-2',
+  ]}
+>
+  <div class:list={[mediaSide === 'left' && 'lg:order-2']}>
+    {heading && <h2 class="type-heading-lg">{heading}</h2>}
+    {lede && (
+      <p class="type-body-lg mt-3" style="color: var(--text-secondary)">
+        {lede}
+      </p>
+    )}
+    {body.map((paragraph) => (
+      <p class="type-body-md mt-4 max-w-article" style="color: var(--text-secondary)">
+        {paragraph}
+      </p>
+    ))}
+    {bullets.length > 0 && (
+      <ul class="mt-5 grid gap-2.5">
+        {bullets.map((bullet) => (
+          <li class="type-body-md flex items-start gap-2.5">
+            <span class="mt-0.5 flex-none" style="color: var(--color-red-brand)" aria-hidden="true">
+              <Icon name="check" size={18} />
+            </span>
+            {bullet}
+          </li>
+        ))}
+      </ul>
+    )}
+    {cta && (
+      <a
+        href={cta.href}
+        class="btn-press type-body-sm mt-6 inline-block rounded-md px-6 py-3 font-semibold"
+        style={
+          cta.variant === 'secondary' || cta.variant === 'ghost'
+            ? 'border: 1px solid var(--border-strong); color: var(--text-primary); text-decoration: none'
+            : 'background: var(--color-red); color: var(--color-white); text-decoration: none'
+        }
+      >
+        {cta.label}
+      </a>
+    )}
+    {footnote && (
+      <p class="type-caption mt-5" style="color: var(--text-muted)">
+        {footnote}
+      </p>
+    )}
+  </div>
+  <div class:list={[mediaSide === 'left' && 'lg:order-1']}>
+    <ImageOrPlaceholder
+      src={media.src}
+      alt={media.alt}
+      width={media.width}
+      height={media.height}
+      class="w-full rounded-lg object-cover"
+    />
+  </div>
+</div>

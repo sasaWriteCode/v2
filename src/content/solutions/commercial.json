@@ -1,10 +1,10 @@
 {
   "title": "Commercial Solutions",
   "accent": "commercial",
-  "defaultZone": "showroom-dark",
+  "defaultZone": "workshop-light",
   "seo": {
-    "title": "Commercial Solutions",
-    "description": "Improve comfort, increase productivity and achieve your ESG goals."
+    "title": "Commercial Window Film Solutions",
+    "description": "Learn how solar heat drives up your building's cooling cost — and how the right window film cuts energy bills, improves comfort and supports your ESG goals. Everything a building owner needs, on one page."
   },
   "breadcrumbs": [
     {
@@ -19,6 +19,7 @@
       "label": "Commercial Solutions"
     }
   ],
+  "_status": "FUNNEL PROTOTYPE (2026-08-13) — the canonical educative one-page funnel, built for client preview. Stat values, projects and testimonials are ILLUSTRATIVE and marked; swap in verified test data, real project list and real client quotes when supplied.",
   "sections": [
     {
       "id": "hero",
@@ -26,13 +27,609 @@
       "order": 10,
       "zone": "showroom-dark",
       "data": {
+        "eyebrow": "Commercial Solutions",
         "headlineLines": [
-          "Commercial Solutions"
+          "Your Building Is Paying",
+          "for Heat It Never Ordered."
         ],
-        "subhead": "Improve comfort, increase productivity and achieve your ESG goals.",
+        "subhead": "Five minutes on this page and you'll know exactly how to evaluate any window film — what the numbers mean, what actually cools a building, and why the measurements put IrisPro ahead.",
+        "benefits": [
+          {
+            "icon": "bolt",
+            "label": "Lower Energy Cost"
+          },
+          {
+            "icon": "users",
+            "label": "Comfort & Productivity"
+          },
+          {
+            "icon": "leaf",
+            "label": "ESG & GBI Contribution"
+          },
+          {
+            "icon": "shield",
+            "label": "Protected Assets"
+          }
+        ],
+        "ctas": [
+          {
+            "label": "Start With the Why",
+            "href": "#the-problem",
+            "variant": "primary"
+          },
+          {
+            "label": "Skip to Recommendations",
+            "href": "#your-options",
+            "variant": "secondary"
+          }
+        ],
+        "media": {
+          "src": "placeholder:commercial-hero",
+          "alt": "Glass office tower facade at midday under harsh tropical sun, heat shimmer visible — or a bright open-plan office where staff near the windows shield their eyes.",
+          "width": 1600,
+          "height": 900
+        },
         "accent": "commercial"
       }
+    },
+    {
+      "id": "the-problem",
+      "type": "split-media",
+      "order": 20,
+      "label": "The Problem",
+      "data": {
+        "heading": "Why does your building cost so much to cool?",
+        "lede": "Because glass is your facade's biggest energy leak — and most of what comes through it isn't light.",
+        "body": [
+          "Of the solar energy hitting your windows, only about a third is the visible light your tenants actually want. Roughly half is infrared heat, and the rest is UV — both invisible, both working against you: heating the floor plate, fading the fit-out and driving your chillers harder every afternoon."
+        ],
+        "bullets": [
+          "≈53% infrared heat — the cooling load you pay for",
+          "≈30% visible light — the only part you want",
+          "≈17% UV & HEV — fades interiors, affects occupant health"
+        ],
+        "media": {
+          "src": "placeholder:solar-through-glass-diagram",
+          "alt": "Clean diagram: sun → glass facade cross-section with three labelled arrows (infrared 53%, visible light 30%, UV 17%) entering the building.",
+          "width": 900,
+          "height": 700
+        },
+        "footnote": "Source basis: Lawrence Berkeley National Laboratory — windows are the largest contributor to unwanted indoor heat gain."
+      }
+    },
+    {
+      "id": "pain-points",
+      "type": "problem-card-grid",
+      "order": 30,
+      "data": {
+        "columns": 3,
+        "cards": [
+          {
+            "icon": "thermometer",
+            "title": "Hot zones by the glass",
+            "description": "West-facing floors turn uncomfortable by mid-afternoon — the desks nobody wants."
+          },
+          {
+            "icon": "wallet",
+            "title": "Electricity bills that keep climbing",
+            "description": "Cooling is typically the single largest cost on a Malaysian commercial building's power bill."
+          },
+          {
+            "icon": "users",
+            "title": "Glare on every screen",
+            "description": "Blinds go down, lights go on — and you pay for lighting to fight the sun you just blocked."
+          },
+          {
+            "icon": "sun",
+            "title": "Fading fit-outs and stock",
+            "description": "UV quietly destroys flooring, furniture, artwork and merchandise near the glass line."
+          },
+          {
+            "icon": "leaf",
+            "title": "ESG targets with no easy wins",
+            "description": "Reporting season arrives and the building has no measurable efficiency story to tell."
+          },
+          {
+            "icon": "building",
+            "title": "An ageing facade you can't replace",
+            "description": "Re-glazing costs millions and takes years. Doing nothing costs you every single month."
+          }
+        ]
+      }
+    },
+    {
+      "id": "the-science",
+      "type": "split-media",
+      "order": 40,
+      "label": "The Science",
+      "data": {
+        "mediaSide": "left",
+        "heading": "What is window film, actually?",
+        "lede": "A precision optical filter for your facade — not a roll of dark plastic.",
+        "body": [
+          "High-performance window film is engineered, layer by microscopic layer, to sort sunlight: reflect the infrared heat, block the UV, and let the visible light through. The measurement that matters is not how dark a film looks — it's how much total solar energy it rejects.",
+          "That's why the industry-standard numbers on this page are worth learning once: you'll be able to evaluate any film, from any brand, in about thirty seconds."
+        ],
+        "bullets": [
+          "VLT — Visible Light Transmission: how much daylight comes through",
+          "IRR — Infrared Rejection: how much heat radiation is stopped",
+          "TSER — Total Solar Energy Rejected: the number that predicts your bill",
+          "UV+420™ — IrisPro's patented cut-off: beyond UV400, into HEV blue light"
+        ],
+        "media": {
+          "src": "placeholder:film-layers-macro",
+          "alt": "Macro/exploded view of multi-layer sputtered film structure — 6 labelled layers over glass, premium technical render.",
+          "width": 900,
+          "height": 700
+        },
+        "cta": {
+          "label": "Deep-dive: Technology Explained",
+          "href": "/knowledge/technology-explained",
+          "variant": "secondary"
+        }
+      }
+    },
+    {
+      "id": "spectrum",
+      "type": "spectrum-diagram",
+      "order": 50,
+      "data": {
+        "title": "What IrisPro film does to each part of sunlight",
+        "variant": "full",
+        "showFilm": true,
+        "bands": [
+          {
+            "id": "uv",
+            "name": "UV",
+            "fromNm": 100,
+            "toNm": 400,
+            "behavior": "blocked",
+            "annotation": "Blocked 99.9% — protects people and interiors",
+            "hue": "var(--accent-personal-protection-bright)"
+          },
+          {
+            "id": "hev",
+            "name": "HEV Blue Light",
+            "fromNm": 380,
+            "toNm": 420,
+            "behavior": "blocked",
+            "annotation": "Blocked by patented UV+420™ — beyond ordinary UV400 films",
+            "hue": "var(--accent-commercial-bright)"
+          },
+          {
+            "id": "visible",
+            "name": "Visible Light",
+            "fromNm": 400,
+            "toNm": 780,
+            "behavior": "transmitted",
+            "annotation": "Transmitted — daylight stays, glare drops",
+            "hue": "var(--accent-sustainability-bright)"
+          },
+          {
+            "id": "infrared",
+            "name": "Infrared Heat",
+            "fromNm": 780,
+            "toNm": 2500,
+            "behavior": "reduced",
+            "annotation": "Rejected up to 98% (1400nm) — the cooling-cost band",
+            "hue": "#e85d3a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "myths",
+      "type": "myth-fact",
+      "order": 60,
+      "label": "Myths, Corrected",
+      "data": {
+        "heading": "Three beliefs that cost building owners money",
+        "lede": "If a film supplier has told you any of these, you already know more than they think you do.",
+        "pairs": [
+          {
+            "myth": "Window film will make our office dark and gloomy.",
+            "fact": "Spectrally-selective films reject up to 85% of solar heat while keeping up to 70% of visible light.",
+            "explanation": "Heat lives mostly in the invisible infrared band — a film can target it precisely without darkening the room. Darkness is a design choice, not a requirement."
+          },
+          {
+            "myth": "The darker the film, the cooler the building.",
+            "fact": "Heat rejection is measured by TSER, not by tint darkness — a light film can outperform a dark one.",
+            "explanation": "A dyed dark film absorbs light but can still pass infrared heat. Always compare TSER and IRR numbers, never shade."
+          },
+          {
+            "myth": "Film is an expense — re-glazing is the real upgrade.",
+            "fact": "Film delivers a comparable thermal upgrade at a fraction of re-glazing cost, with payback typically measured in a few years.",
+            "explanation": "Illustrative example pending verified project data: a 10,000m² office saving ~28% cooling energy can recover the installation cost in roughly 2–3 years — with no facade downtime."
+          }
+        ]
+      }
+    },
+    {
+      "id": "proven-results",
+      "type": "proof-stat-bar",
+      "order": 70,
+      "zone": "showroom-dark",
+      "label": "Proven Results",
+      "data": {
+        "variant": "dark",
+        "stats": [
+          {
+            "value": "85",
+            "unit": "%",
+            "label": "Solar heat reduction",
+            "footnote": "Up to — illustrative, pending verified test report"
+          },
+          {
+            "value": "30",
+            "unit": "%",
+            "label": "Lower cooling energy cost",
+            "footnote": "Up to — illustrative, pending verified test report"
+          },
+          {
+            "value": "10",
+            "unit": "°C",
+            "label": "Indoor temperature reduction",
+            "footnote": "Up to — illustrative, pending verified test report"
+          },
+          {
+            "value": "99.9",
+            "unit": "%",
+            "label": "UV400 rejection",
+            "footnote": "SIRIM MS 2669:2017 certified"
+          }
+        ]
+      }
+    },
+    {
+      "id": "how-we-test",
+      "type": "split-media",
+      "order": 80,
+      "zone": "showroom-dark",
+      "data": {
+        "heading": "Don't take our word for it. Take the measurements.",
+        "lede": "Every claim on this page is the kind you can test — and we test all of them.",
+        "body": [
+          "IrisPro films are certified and independently tested, and we measure real buildings before and after installation: spot IR readings, thermal imaging and cooling-energy tracking. When we say a number, there's a report behind it."
+        ],
+        "bullets": [
+          "SIRIM Certified — MS 2669:2017, Certification No. PC011290",
+          "SGS tested — independent international laboratory",
+          "On-site thermal audits before and after installation",
+          "eWarranty — every installation registered, up to 10 years"
+        ],
+        "media": {
+          "src": "placeholder:thermal-before-after",
+          "alt": "Side-by-side thermal camera image of the same office window bay, before (red/orange) and after IrisPro installation (blue/green), with temperature scale.",
+          "width": 900,
+          "height": 620
+        },
+        "footnote": "This band will carry the client's verified comparison test results — the strongest content on the page once supplied."
+      }
+    },
+    {
+      "id": "your-options",
+      "type": "series-card-set",
+      "order": 90,
+      "label": "Your Options",
+      "data": {
+        "heading": "Which film series fits your building?",
+        "lede": "Three tiers, one technology platform. Every series blocks 99.9% UV and carries SIRIM Grade A certification — they differ in heat-rejection ceiling and warranty length.",
+        "cards": [
+          {
+            "id": "comfort",
+            "name": "Comfort Series",
+            "tagline": "Great comfort. Great value.",
+            "features": [
+              "IRR up to 90%",
+              "6-Layer Hotmelt™ construction",
+              "5-year performance warranty",
+              "Best for: offices, shops, schools"
+            ],
+            "accent": "neutral",
+            "cta": {
+              "label": "View Comfort films",
+              "href": "/products/building-commercial?series=comfort"
+            }
+          },
+          {
+            "id": "plus",
+            "name": "Plus Series",
+            "tagline": "Enhanced performance for working buildings.",
+            "badge": "Recommended",
+            "features": [
+              "IRR up to 95% (1400nm)",
+              "Titanium multi-layer sputter",
+              "7-year performance warranty",
+              "Best for: corporate offices, hotels, healthcare"
+            ],
+            "accent": "commercial",
+            "cta": {
+              "label": "View Plus films",
+              "href": "/products/building-commercial?series=plus"
+            }
+          },
+          {
+            "id": "signature",
+            "name": "Signature Series",
+            "tagline": "Maximum performance. Premium buildings.",
+            "features": [
+              "IRR up to 98% (1400nm)",
+              "Silver multi-layer sputter",
+              "10-year performance warranty",
+              "Best for: premium towers, high-rise, strict specs"
+            ],
+            "accent": "neutral",
+            "cta": {
+              "label": "View Signature films",
+              "href": "/products/building-commercial?series=signature"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "compare-series",
+      "type": "series-comparison-table",
+      "order": 100,
+      "data": {
+        "caption": "Commercial film series compared — the thirty-second evaluation you just learned, applied.",
+        "series": [
+          {
+            "id": "comfort",
+            "name": "Comfort",
+            "tagline": "Value"
+          },
+          {
+            "id": "plus",
+            "name": "Plus",
+            "tagline": "Recommended",
+            "accent": "commercial"
+          },
+          {
+            "id": "signature",
+            "name": "Signature",
+            "tagline": "Maximum"
+          }
+        ],
+        "rows": [
+          {
+            "label": "UV+420™ protection",
+            "values": {
+              "comfort": true,
+              "plus": true,
+              "signature": true
+            }
+          },
+          {
+            "label": "IRR (heat rejection)",
+            "values": {
+              "comfort": "Up to 90%",
+              "plus": "Up to 95% (1400nm)",
+              "signature": "Up to 98% (1400nm)"
+            }
+          },
+          {
+            "label": "Technology",
+            "values": {
+              "comfort": "6-Layer Hotmelt™",
+              "plus": "+ Titanium sputter",
+              "signature": "+ Multi-layer silver sputter"
+            }
+          },
+          {
+            "label": "SIRIM certification",
+            "values": {
+              "comfort": "Grade A",
+              "plus": "Grade A",
+              "signature": "Grade A"
+            }
+          },
+          {
+            "label": "Performance warranty",
+            "values": {
+              "comfort": "5 years",
+              "plus": "7 years",
+              "signature": "10 years"
+            }
+          },
+          {
+            "label": "Best for",
+            "values": {
+              "comfort": "Offices · shops · schools",
+              "plus": "Corporate · hotels · healthcare",
+              "signature": "Premium & high-rise"
+            }
+          }
+        ],
+        "highlight": {
+          "columnId": "plus",
+          "label": "Most chosen by building owners"
+        }
+      }
+    },
+    {
+      "id": "commercial-projects",
+      "type": "project-strip",
+      "order": 110,
+      "label": "Real Buildings",
+      "data": {
+        "heading": "Buildings that measured the difference",
+        "lede": "Placeholder project cards — to be replaced with the client's real commercial project list, photos and measured outcomes.",
+        "scrollable": true,
+        "projects": [
+          {
+            "name": "Corporate Office Tower",
+            "location": "Kuala Lumpur",
+            "category": "Office",
+            "badge": {
+              "label": "Placeholder",
+              "tone": "progress"
+            },
+            "image": {
+              "src": "placeholder:project-office-tower",
+              "alt": "Real client project photo: corporate office tower exterior, ideally with visible glass facade.",
+              "width": 560,
+              "height": 360
+            },
+            "productsUsed": [
+              "Signature Series"
+            ],
+            "benefit": "Slot for measured outcome — e.g. cooling load reduction %"
+          },
+          {
+            "name": "Specialist Hospital",
+            "location": "Selangor",
+            "category": "Healthcare",
+            "badge": {
+              "label": "Placeholder",
+              "tone": "progress"
+            },
+            "image": {
+              "src": "placeholder:project-hospital",
+              "alt": "Real client project photo: hospital building or patient-room interior with treated glazing.",
+              "width": 560,
+              "height": 360
+            },
+            "productsUsed": [
+              "Plus Series"
+            ],
+            "benefit": "Slot for measured outcome — e.g. patient comfort / heat reduction"
+          },
+          {
+            "name": "Resort Hotel",
+            "location": "Langkawi",
+            "category": "Hospitality",
+            "badge": {
+              "label": "Placeholder",
+              "tone": "progress"
+            },
+            "image": {
+              "src": "placeholder:project-hotel",
+              "alt": "Real client project photo: hotel exterior or lobby with large glazing.",
+              "width": 560,
+              "height": 360
+            },
+            "productsUsed": [
+              "Signature Series"
+            ],
+            "benefit": "Slot for measured outcome — e.g. guest comfort & energy saving"
+          },
+          {
+            "name": "Retail Mall",
+            "location": "Johor",
+            "category": "Retail",
+            "badge": {
+              "label": "Placeholder",
+              "tone": "progress"
+            },
+            "image": {
+              "src": "placeholder:project-mall",
+              "alt": "Real client project photo: shopping mall skylight or storefront glazing.",
+              "width": 560,
+              "height": 360
+            },
+            "productsUsed": [
+              "Plus Series"
+            ],
+            "benefit": "Slot for measured outcome — e.g. merchandise fading prevention"
+          }
+        ]
+      }
+    },
+    {
+      "id": "testimonials",
+      "type": "testimonial-panel",
+      "order": 120,
+      "label": "What Clients Say",
+      "data": {
+        "heading": "From the people who manage the buildings",
+        "lede": "Placeholder quotes shaped for the client's review — to be replaced with real commercial testimonials, names used only with permission.",
+        "testimonials": [
+          {
+            "quote": "[Placeholder testimonial — commercial client] The west wing was our problem floor for years. After installation the afternoon complaints simply stopped, and the energy report finally moved in the right direction.",
+            "author": "Facilities Manager",
+            "role": "Corporate office tower, Kuala Lumpur",
+            "rating": 5
+          },
+          {
+            "quote": "[Placeholder testimonial — commercial client] We evaluated three brands on TSER and warranty terms. IrisPro won on the numbers, and the installation team worked around our operating hours.",
+            "author": "Building Owner",
+            "role": "Commercial property, Penang",
+            "rating": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "faq",
+      "type": "faq",
+      "order": 130,
+      "label": "Common Questions",
+      "data": {
+        "heading": "Before you decide — the questions every building owner asks",
+        "items": [
+          {
+            "question": "Will window film make our interior noticeably darker?",
+            "answer": "Not unless you want it to. Spectrally-selective films target invisible infrared heat, so you can keep up to 70% of visible light while rejecting most of the heat. Your consultant will show you samples on your actual glass before you commit."
+          },
+          {
+            "question": "How long does installation take, and do we need to close?",
+            "answer": "Most commercial installations are done zone by zone, outside operating hours if needed — no facade works, no scaffolding for interior application, and each area is usable again the same day."
+          },
+          {
+            "question": "What is the realistic payback period?",
+            "answer": "It depends on your glass area, orientation and tariff. As an illustrative example, buildings saving around 30% of cooling energy typically see payback in a few years — we'll calculate yours from your actual electricity bill during the free assessment. (Verified figures to be supplied.)"
+          },
+          {
+            "question": "Does window film contribute to GBI or other green building certifications?",
+            "answer": "Yes — high-performance film can contribute points under energy efficiency and indoor environmental quality categories. We provide the documentation your certification consultant needs."
+          },
+          {
+            "question": "What happens if the film fails or bubbles years later?",
+            "answer": "Every installation is registered in the IrisPro eWarranty system with up to 10 years of performance warranty, honoured through our authorised dealer network — not a verbal promise."
+          }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta-bar",
+      "order": 140,
+      "zone": "showroom-dark",
+      "label": "Take Action",
+      "data": {
+        "headline": "Now you know what to measure. Let's measure your building.",
+        "subhead": "A free assessment gives you the numbers for your own facade — glass area, heat load, projected savings — with zero obligation.",
+        "actions": [
+          {
+            "icon": "document",
+            "title": "Request a Building Assessment",
+            "description": "On-site evaluation and a savings estimate from your actual electricity bill.",
+            "cta": {
+              "label": "Request Assessment",
+              "href": "/contact"
+            }
+          },
+          {
+            "icon": "pin",
+            "title": "Find an Authorised Dealer",
+            "description": "Certified commercial installers across Malaysia.",
+            "cta": {
+              "label": "Find a Dealer",
+              "href": "/contact#dealer-heading"
+            }
+          },
+          {
+            "icon": "layers",
+            "title": "Browse Commercial Films",
+            "description": "Full specifications, VLT options and the two-film comparison tool.",
+            "cta": {
+              "label": "View All Films",
+              "href": "/products/building-commercial"
+            }
+          }
+        ]
+      }
     }
-  ],
-  "_status": "AWAITING SOURCE — the commercial solution screen was not in the Stage 4a screenshot batch. Only the home-page solution-card copy is transcribed (as the subhead); the interim h1 is the route title (launch audit B3); the real hero headline is still needed. Author fully when the screen arrives in the next batch."
+  ]
 }

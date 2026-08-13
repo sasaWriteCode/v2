@@ -1,0 +1,69 @@
+---
+/**
+ * MythFact — the funnel's teachable moment: the belief the visitor
+ * arrived with (✗, red) corrected by the measured truth (✓, dark panel).
+ * Static, zero JS. Red stays an accent (brand ratio: 5–10%).
+ */
+import type { MythFactContent } from '@/types/sections';
+
+type Props = MythFactContent;
+const { heading, lede, pairs } = Astro.props;
+---
+
+<div>
+  {heading && <h2 class="type-heading-lg">{heading}</h2>}
+  {lede && (
+    <p class="type-body-md mt-2 max-w-article" style="color: var(--text-secondary)">
+      {lede}
+    </p>
+  )}
+  <div class:list={['grid gap-5', (heading || lede) && 'mt-8']}>
+    {pairs.map((pair) => (
+      <div
+        class="myth-fact overflow-hidden rounded-lg"
+        style="border: 1px solid var(--border-subtle); box-shadow: var(--elevation-1)"
+      >
+        <div class="grid md:grid-cols-2">
+          <div class="p-6" style="background: var(--surface-raised)">
+            <p class="type-overline flex items-center gap-2" style="color: var(--color-red-strong)">
+              <span class="mf-badge" style="border-color: var(--color-red-strong); color: var(--color-red-strong)" aria-hidden="true">✗</span>
+              The Myth
+            </p>
+            <p class="type-heading-sm mt-3" style="color: var(--text-primary)">
+              “{pair.myth}”
+            </p>
+          </div>
+          <div class="p-6" data-zone="showroom">
+            <p class="type-overline flex items-center gap-2" style="color: var(--color-red-bright)">
+              <span class="mf-badge" style="border-color: var(--color-red-bright); color: var(--color-red-bright)" aria-hidden="true">✓</span>
+              The Fact
+            </p>
+            <p class="type-heading-sm mt-3" style="color: var(--text-primary)">
+              {pair.fact}
+            </p>
+          </div>
+        </div>
+        {pair.explanation && (
+          <p
+            class="type-body-sm px-6 py-4"
+            style="background: var(--surface-sunken); color: var(--text-secondary); border-top: 1px solid var(--border-subtle)"
+          >
+            {pair.explanation}
+          </p>
+        )}
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .mf-badge {
+    display: grid;
+    place-items: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 999px;
+    border: 1.5px solid;
+    font-size: 0.8rem;
+  }
+</style>
