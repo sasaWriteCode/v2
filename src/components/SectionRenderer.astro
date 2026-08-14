@@ -26,6 +26,8 @@ import { SpectrumDiagram } from '@/components/showroom/SpectrumDiagram';
 import { TechPillarGrid } from '@/components/showroom/TechPillarGrid';
 import { ProofStatBar } from '@/components/showroom/ProofStatBar';
 import { ProjectStrip } from '@/components/showroom/ProjectStrip';
+import { OurStoryPanel } from '@/components/showroom/OurStoryPanel';
+import { WhyUsReviewPanel } from '@/components/showroom/WhyUsReviewPanel';
 import { CertificationStrip } from '@/components/global/CertificationStrip';
 import { CTABar } from '@/components/global/CTABar';
 import { AskIrisProAI } from '@/components/workshop/AskIrisProAI';
@@ -110,6 +112,10 @@ const accentStyle = accent
               <ProofStatBar client:visible {...(props as any)} />
             ) : section.type === 'project-strip' ? (
               <ProjectStrip client:visible {...(props as any)} />
+            ) : section.type === 'our-story-panel' ? (
+              <OurStoryPanel client:visible {...(props as any)} />
+            ) : section.type === 'why-us-review-panel' ? (
+              <WhyUsReviewPanel client:visible {...(props as any)} />
             ) : section.type === 'certification-strip' ? (
               <CertificationStrip client:visible {...(props as any)} />
             ) : section.type === 'cta-bar' ? (

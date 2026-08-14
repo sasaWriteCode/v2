@@ -31,6 +31,8 @@ import { SpectrumDiagram } from '@/components/showroom/SpectrumDiagram';
 import { TechPillarGrid } from '@/components/showroom/TechPillarGrid';
 import { ProofStatBar } from '@/components/showroom/ProofStatBar';
 import { ProjectStrip } from '@/components/showroom/ProjectStrip';
+import { OurStoryPanel } from '@/components/showroom/OurStoryPanel';
+import { WhyUsReviewPanel } from '@/components/showroom/WhyUsReviewPanel';
 import { SeriesComparisonTable } from '@/components/workshop/SeriesComparisonTable';
 import { GuideChapterList } from '@/components/workshop/GuideChapterList';
 import { AskIrisProAI } from '@/components/workshop/AskIrisProAI';
@@ -48,6 +50,7 @@ import ArticleGrid from '@/components/sections/ArticleGrid.astro';
 import PhilosophyFlow from '@/components/sections/PhilosophyFlow.astro';
 import FilmFinder from '@/components/sections/FilmFinder.astro';
 import FaqSection from '@/components/sections/FaqSection.astro';
+import SolutionCardGrid from '@/components/sections/SolutionCardGrid.astro';
 import MythFact from '@/components/sections/MythFact.astro';
 import SplitMedia from '@/components/sections/SplitMedia.astro';
 // React islands (Stage 3)
@@ -78,6 +81,8 @@ export const SECTION_REGISTRY: Record<SectionType, SectionRegistryEntry> = {
   'tech-pillar-grid': { component: TechPillarGrid, hydration: 'visible', chrome: 'band' }, // staggered Reveal
   'proof-stat-bar': { component: ProofStatBar, hydration: 'visible', chrome: 'band' }, // count-up at TIER_1+
   'project-strip': { component: ProjectStrip, hydration: 'visible', chrome: 'band' }, // category filters
+  'our-story-panel': { component: OurStoryPanel, hydration: 'visible', chrome: 'band' },
+  'why-us-review-panel': { component: WhyUsReviewPanel, hydration: 'visible', chrome: 'band' },
 
   /* ── Workshop primitives — pure markup, SSR-only, 0KB ── */
   'series-comparison-table': { component: SeriesComparisonTable, hydration: 'none', chrome: 'band' },
@@ -100,6 +105,7 @@ export const SECTION_REGISTRY: Record<SectionType, SectionRegistryEntry> = {
   'film-finder': { component: FilmFinder, hydration: 'none', chrome: 'band' },
   'philosophy-flow': { component: PhilosophyFlow, hydration: 'none', chrome: 'band' }, // dashed-road journey, pure CSS/SVG
   'faq': { component: FaqSection, hydration: 'none', chrome: 'band' }, // native <details>; FAQPage JSON-LD via template
+  'solution-card-grid': { component: SolutionCardGrid, hydration: 'none', chrome: 'band' }, // Solutions by Environment cards
   'myth-fact': { component: MythFact, hydration: 'none', chrome: 'band' }, // funnel teachable moment
   'split-media': { component: SplitMedia, hydration: 'none', chrome: 'band' }, // prose + image band
 

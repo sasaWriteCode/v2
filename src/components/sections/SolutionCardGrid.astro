@@ -1,0 +1,221 @@
+---
+/**
+ * SolutionCardGrid — "Solutions by Environment" as a BENTO mosaic
+ * (client request 2026-08-14, ref: magicui bento grid — the five-equal-
+ * columns version felt packed).
+ *
+ * Desktop (lg+): 4-cell grid, `grid-auto-flow: dense`. Cards with
+ * `span: 2` become wide features and lay their photo BESIDE the content;
+ * span-1 tiles stack photo above content. Which cards are wide is
+ * content (`span` in the JSON), not code — the default data makes
+ * Automotive, Commercial and Sustainability the features
+ * (2+1+1 / 2+2 = two balanced rows, dense-backfilled in content order).
+ *
+ * Accent system unchanged: title/CTA in --accent-<key>-text, badge and
+ * check dots in --accent-<key>. Static .astro, zero JS; placeholder
+ * convention honored via ImageOrPlaceholder.
+ */
+import ImageOrPlaceholder from '@/components/base/ImageOrPlaceholder.astro';
+import { Icon } from '@/components/global/Icon';
+import { resolveUrl } from '@/lib/paths';
+import type { SolutionCardGridContent } from '@/types/sections';
+
+type Props = SolutionCardGridContent;
+const { heading, lede, cards } = Astro.props;
+---
+
+<div>
+  {heading && <h2 class="type-heading-lg text-center">{heading}</h2>}
+  {lede && (
+    <p class="type-body-md mx-auto mt-2 max-w-article text-center" style="color: var(--text-secondary)">
+      {lede}
+    </p>
+  )}
+
+  <ul class:list={['solution-bento', (heading || lede) && 'mt-10']}>
+    {cards.map((card) => (
+      <li
+        class:list={['bento-card', (card.span ?? 1) === 2 && 'is-wide']}
+        style={`--card-accent: var(--accent-${card.key}); --card-accent-text: var(--accent-${card.key}-text);`}
+      >
+        <div class="bento-media">
+          <ImageOrPlaceholder
+            src={card.image.src}
+            alt={card.image.alt}
+            width={card.image.width}
+            height={card.image.height}
+            class="h-full w-full object-cover"
+          />
+        </div>
+
+        <div class="bento-body">
+          <span class="bento-badge" aria-hidden="true">
+            <Icon name={card.icon} size={24} />
+          </span>
+          <h3 class="type-heading-md bento-title">{card.title}</h3>
+          {card.tagline && (
+            <p class="type-body-sm mt-1 font-semibold" style="color: var(--text-primary)">
+              {card.tagline}
+            </p>
+          )}
+          <ul class="bento-points mt-4 grid gap-2">
+            {card.points.map((point) => (
+              <li class="type-body-sm flex items-start gap-2.5" style="color: var(--text-secondary)">
+                <span class="bento-check" aria-hidden="true">
+                  <Icon name="check" size={12} />
+                </span>
+                {point}
+              </li>
+            ))}
+          </ul>
+          <a href={resolveUrl(card.cta.href)} class="btn-press type-body-sm bento-cta">
+            {card.cta.label}
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .solution-bento {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    grid-auto-flow: dense;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  @media (min-width: 40rem) {
+    .solution-bento {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .bento-card.is-wide {
+      grid-column: span 2;
+    }
+  }
+  @media (min-width: 64rem) {
+    .solution-bento {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .bento-card {
+      grid-column: span 1;
+    }
+    .bento-card.is-wide {
+      grid-column: span 2;
+    }
+  }
+
+  .bento-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--surface-raised);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg, 14px);
+    box-shadow: var(--elevation-1);
+    transition: box-shadow 200ms ease, transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .bento-card:hover {
+      box-shadow: var(--elevation-2, 0 10px 28px rgba(10, 10, 10, 0.1));
+      transform: translateY(-3px);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bento-card,
+    .bento-card:hover {
+      transition: none;
+      transform: none;
+    }
+  }
+
+  /* ── Tile layout (span 1): photo on top, airy body below ── */
+  .bento-media {
+    flex: none;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  .bento-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.5rem;
+  }
+
+  /* ── Wide feature (span 2, desktop): content left, photo right ── */
+  @media (min-width: 64rem) {
+    .bento-card.is-wide {
+      flex-direction: row-reverse;
+    }
+    .bento-card.is-wide .bento-media {
+      width: 42%;
+      aspect-ratio: auto;
+      min-height: 100%;
+    }
+    .bento-card.is-wide .bento-body {
+      width: 58%;
+      padding: 2rem;
+    }
+    /* wide cards have room — points flow in two columns */
+    .bento-card.is-wide .bento-points {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.25rem;
+    }
+  }
+
+  .bento-badge {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--radius-md, 10px);
+    background: var(--card-accent);
+    color: #fff;
+    box-shadow: var(--elevation-1);
+    margin-bottom: 1rem;
+  }
+
+  .bento-title {
+    color: var(--card-accent-text);
+  }
+
+  .bento-check {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.2rem;
+    border-radius: 999px;
+    background: var(--card-accent);
+    color: #fff;
+  }
+
+  .bento-cta {
+    margin-top: auto;
+    padding-top: 1.25rem;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--card-accent-text);
+    text-decoration: none;
+  }
+  .bento-cta > span {
+    transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .bento-cta:hover > span {
+      transform: translateX(3px);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bento-cta > span {
+      transition: none;
+    }
+  }
+</style>

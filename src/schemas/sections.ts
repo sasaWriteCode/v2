@@ -46,6 +46,8 @@ import type {
   FilmFinderOption,
   MythFactContent,
   MythFactPair,
+  SolutionCard,
+  SolutionCardGridContent,
   SplitMediaContent,
   GuideChapterListContent,
   GuidePageContent,
@@ -317,6 +319,23 @@ export const filmFinderContentSchema = z.object({
   options: z.array(filmFinderOptionSchema),
 }) satisfies z.ZodType<FilmFinderContent>;
 
+export const solutionCardSchema = z.object({
+  key: solutionKeySchema,
+  icon: iconNameSchema,
+  title: z.string(),
+  tagline: z.string().optional(),
+  points: z.array(z.string()),
+  image: mediaContentSchema,
+  cta: ctaLinkSchema,
+  span: z.union([z.literal(1), z.literal(2)]).optional(),
+}) satisfies z.ZodType<SolutionCard>;
+
+export const solutionCardGridContentSchema = z.object({
+  heading: z.string().optional(),
+  lede: z.string().optional(),
+  cards: z.array(solutionCardSchema),
+}) satisfies z.ZodType<SolutionCardGridContent>;
+
 export const faqItemSchema = z.object({
   question: z.string(),
   answer: z.string(),
@@ -412,6 +431,37 @@ function sectionVariant<T extends string, D>(type: T, data: z.ZodType<D>) {
   return z.object({ ...sectionBaseFields, type: z.literal(type), data });
 }
 
+export const ourStoryStatSchema = z.object({
+  icon: z.string().optional(),
+  value: z.string(),
+  label: z.string(),
+}) satisfies z.ZodType<OurStoryStat>;
+
+export const ourStoryPanelContentSchema = z.object({
+  heading: z.string().optional(),
+  paragraphs: z.array(z.string()).optional(),
+  videoTitle: z.string().optional(),
+  videoSubtitle: z.string().optional(),
+  videoHref: z.string().optional(),
+  videoPoster: z.string().optional(),
+  stats: z.array(ourStoryStatSchema).optional(),
+}) satisfies z.ZodType<OurStoryPanelContent>;
+
+export const customerReviewSchema = z.object({
+  name: z.string(),
+  username: z.string(),
+  body: z.string(),
+  img: z.string(),
+  rating: z.number().optional(),
+}) satisfies z.ZodType<CustomerReview>;
+
+export const whyUsReviewPanelContentSchema = z.object({
+  heading: z.string().optional(),
+  marqueeTitle: z.string().optional(),
+  pillars: z.array(techPillarSchema).optional(),
+  reviews: z.array(customerReviewSchema).optional(),
+}) satisfies z.ZodType<WhyUsReviewPanelContent>;
+
 export const sectionSchema = z.discriminatedUnion('type', [
   sectionVariant('cinematic-hero', cinematicHeroContentSchema),
   sectionVariant('problem-card-grid', problemCardGridContentSchema),
@@ -440,10 +490,13 @@ export const sectionSchema = z.discriminatedUnion('type', [
   sectionVariant('article-grid', articleGridContentSchema),
   sectionVariant('module-browser', moduleBrowserContentSchema),
   sectionVariant('film-finder', filmFinderContentSchema),
+  sectionVariant('solution-card-grid', solutionCardGridContentSchema),
   sectionVariant('faq', faqContentSchema),
   sectionVariant('myth-fact', mythFactContentSchema),
   sectionVariant('split-media', splitMediaContentSchema),
   sectionVariant('product-browser', productBrowserContentSchema),
+  sectionVariant('our-story-panel', ourStoryPanelContentSchema),
+  sectionVariant('why-us-review-panel', whyUsReviewPanelContentSchema),
 ]) satisfies z.ZodType<Section>;
 
 /* ── Page content objects ── */

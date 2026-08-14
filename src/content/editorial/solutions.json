@@ -6,8 +6,13 @@
     "description": "Complete protection, better comfort and a greener future — IrisPro protection solutions for automotive, residential, commercial, personal protection and sustainability, engineered for ASEAN climate."
   },
   "breadcrumbs": [
-    { "label": "Home", "href": "/" },
-    { "label": "Protection Solutions" }
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Protection Solutions"
+    }
   ],
   "sections": [
     {
@@ -18,14 +23,33 @@
       "label": "Solutions hub hero",
       "data": {
         "eyebrow": "Protection Solutions",
-        "headlineLines": ["Complete Protection.", "Better Comfort.", "A Greener Future."],
+        "headlineLines": [
+          "Complete Protection.",
+          "Better Comfort.",
+          "A Greener Future."
+        ],
         "subhead": "IrisPro provides advanced protection solutions for people, properties and the planet — engineered for the intense sun and unique climate of ASEAN.",
         "benefits": [
-          { "icon": "users", "label": "Protect People" },
-          { "icon": "shield", "label": "Protect Property" },
-          { "icon": "thermometer", "label": "Improve Comfort" },
-          { "icon": "bolt", "label": "Save Energy" },
-          { "icon": "leaf", "label": "Protect Our Future" }
+          {
+            "icon": "users",
+            "label": "Protect People"
+          },
+          {
+            "icon": "shield",
+            "label": "Protect Property"
+          },
+          {
+            "icon": "thermometer",
+            "label": "Improve Comfort"
+          },
+          {
+            "icon": "bolt",
+            "label": "Save Energy"
+          },
+          {
+            "icon": "leaf",
+            "label": "Protect Our Future"
+          }
         ],
         "media": {
           "src": "placeholder:solutions-hub-hero",
@@ -37,42 +61,130 @@
     },
     {
       "id": "solutions-by-environment",
-      "type": "category-grid",
+      "type": "solution-card-grid",
       "order": 20,
       "label": "The five solution pages",
       "data": {
         "heading": "Solutions by Environment",
         "lede": "Wherever the sun reaches you — on the road, at home, at work — there is an IrisPro solution engineered for it.",
-        "categories": [
+        "cards": [
           {
+            "key": "automotive",
             "icon": "car",
             "title": "Automotive Solutions",
-            "description": "Cooler cabin, UV+420™ protection for skin and eyes, protected interiors and lower fuel or battery consumption.",
-            "href": "/solutions/automotive"
+            "tagline": "Advanced protection for every journey.",
+            "points": [
+              "Cooler cabin, more driving comfort",
+              "Protect skin & eyes with UV+420™",
+              "Protect car interior from fading & cracking",
+              "Save fuel (petrol) & extend EV driving range",
+              "Enhance safety with clearer visibility"
+            ],
+            "image": {
+              "src": "placeholder:env-card-automotive",
+              "alt": "Premium sedan on a scenic highway at golden hour, tinted glass visible.",
+              "width": 560,
+              "height": 350
+            },
+            "cta": {
+              "label": "Explore Automotive Solutions",
+              "href": "/solutions/automotive"
+            },
+            "span": 2
           },
           {
+            "key": "residential",
             "icon": "home",
             "title": "Residential Solutions",
-            "description": "Comfortable homes, lower electricity bills, protected family and interiors — healthier living every day.",
-            "href": "/solutions/residential"
+            "tagline": "Comfortable homes. Lower bills. Healthier living.",
+            "points": [
+              "Keep homes cooler & more comfortable",
+              "Reduce air-conditioning & electricity usage",
+              "Protect family's skin & eyes",
+              "Protect furniture, flooring & interiors",
+              "Increase privacy & home value"
+            ],
+            "image": {
+              "src": "placeholder:env-card-residential",
+              "alt": "Bright living room with large windows, city greenery outside, family-friendly warmth.",
+              "width": 560,
+              "height": 350
+            },
+            "cta": {
+              "label": "Explore Residential Solutions",
+              "href": "/solutions/residential"
+            }
           },
           {
+            "key": "commercial",
             "icon": "building",
             "title": "Commercial Solutions",
-            "description": "Reduce HVAC load and operating cost, improve employee comfort and productivity, support ESG and building value.",
-            "href": "/solutions/commercial"
+            "tagline": "Smarter buildings. Higher performance.",
+            "points": [
+              "Reduce HVAC load & operating cost",
+              "Improve employee comfort & productivity",
+              "Support ESG & green building goals",
+              "Protect assets, interiors & equipment",
+              "Achieve better ROI & building value"
+            ],
+            "image": {
+              "src": "placeholder:env-card-commercial",
+              "alt": "Modern open-plan office interior behind floor-to-ceiling glazing, daylight without glare.",
+              "width": 560,
+              "height": 350
+            },
+            "cta": {
+              "label": "Explore Commercial Solutions",
+              "href": "/solutions/commercial"
+            },
+            "span": 2
           },
           {
+            "key": "personal-protection",
             "icon": "person",
             "title": "Personal Protection",
-            "description": "Protect your skin and eyes from UV and HEV blue light — every day, everywhere you drive, live and work.",
-            "href": "/solutions/personal-protection"
+            "tagline": "Your skin. Your eyes. Every single day.",
+            "points": [
+              "Block UV400 & HEV blue light at the source",
+              "Help reduce premature skin ageing",
+              "Reduce eye strain & long-term eye risk",
+              "Protect children & elderly family members",
+              "Invisible protection while you drive, work & live"
+            ],
+            "image": {
+              "src": "placeholder:env-card-personal",
+              "alt": "Close portrait of a driver or office worker in soft daylight near glass, healthy skin emphasis.",
+              "width": 560,
+              "height": 350
+            },
+            "cta": {
+              "label": "Explore Personal Protection",
+              "href": "/solutions/personal-protection"
+            }
           },
           {
+            "key": "sustainability",
             "icon": "leaf",
             "title": "Sustainability Solutions",
-            "description": "Lower energy use, reduced carbon emissions and green building contribution — better planet tomorrow.",
-            "href": "/solutions/sustainability"
+            "tagline": "Lower impact today. Better planet tomorrow.",
+            "points": [
+              "Reduce energy consumption",
+              "Lower carbon emissions",
+              "Support sustainable mobility",
+              "Contribute to green building certifications",
+              "Build a better future for the next generation"
+            ],
+            "image": {
+              "src": "placeholder:env-card-sustainability",
+              "alt": "Lush green hills under morning sun, or a green-certified building with landscaping.",
+              "width": 560,
+              "height": 350
+            },
+            "cta": {
+              "label": "Explore Sustainability Solutions",
+              "href": "/solutions/sustainability"
+            },
+            "span": 2
           }
         ]
       }
@@ -122,13 +234,19 @@
             "icon": "chat",
             "title": "Talk to Our Experts",
             "description": "Free consultation, no obligation.",
-            "cta": { "label": "Request Consultation", "href": "/contact" }
+            "cta": {
+              "label": "Request Consultation",
+              "href": "/contact"
+            }
           },
           {
             "icon": "pin",
             "title": "Find a Dealer",
             "description": "Locate an authorised IrisPro dealer near you.",
-            "cta": { "label": "Find a Dealer", "href": "/contact#dealer-heading" }
+            "cta": {
+              "label": "Find a Dealer",
+              "href": "/contact#dealer-heading"
+            }
           }
         ]
       }

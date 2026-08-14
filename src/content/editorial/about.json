@@ -53,47 +53,41 @@
       }
     },
     {
-      "id": "our-story-video",
-      "type": "video-carousel",
+      "id": "our-story",
+      "type": "our-story-panel",
       "order": 20,
       "zone": "workshop-light",
       "label": "Our Story",
       "data": {
-        "videos": [
-          {
-            "title": "Our Journey",
-            "moduleLabel": "Watch Our Story",
-            "href": "#video-our-journey",
-            "poster": {
-              "src": "/images/calm-ending.png",
-              "alt": "Video: the IrisPro journey — headquarters building",
-              "width": 448,
-              "height": 252
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "our-story-stats",
-      "type": "proof-stat-bar",
-      "order": 30,
-      "zone": "workshop-light",
-      "data": {
+        "heading": "Our Story",
+        "paragraphs": [
+          "IrisPro was born from one simple belief:",
+          "Protection should be better, longer lasting and made for ASEAN.",
+          "We saw a need for window films that truly block harmful UV, reduce heat effectively and stand strong in our hot, humid climate.",
+          "Through continuous research, advanced materials and strict quality control, we developed patented technologies that deliver complete protection beyond what ordinary films can do.",
+          "Today, IrisPro is trusted by homeowners, businesses, architects and institutions across the region to create cooler, safer and more sustainable environments."
+        ],
+        "videoTitle": "Our Journey",
+        "videoSubtitle": "Watch Our Story",
+        "videoPoster": "/images/history_page_hero.png",
         "stats": [
           {
+            "icon": "clock",
             "value": "10+",
             "label": "Years of Expertise"
           },
           {
+            "icon": "building",
             "value": "1,000,000+",
             "label": "Vehicles & Buildings Protected"
           },
           {
+            "icon": "users",
             "value": "500+",
             "label": "Partners & Dealers Across ASEAN"
           },
           {
+            "icon": "globe",
             "value": "20+",
             "label": "Countries & Growing"
           }
@@ -102,12 +96,13 @@
     },
     {
       "id": "why-irispro",
-      "type": "tech-pillar-grid",
+      "type": "why-us-review-panel",
       "order": 40,
       "zone": "workshop-light",
       "label": "Why IrisPro",
       "data": {
-        "columns": 6,
+        "heading": "Why IrisPro",
+        "marqueeTitle": "Why us? Hear from our customers",
         "pillars": [
           {
             "icon": "sun",
@@ -138,6 +133,50 @@
             "icon": "leaf",
             "title": "Sustainable Choice",
             "description": "Contributing to energy efficiency and a better environment."
+          }
+        ],
+        "reviews": [
+          {
+            "name": "Ahmad Razak",
+            "username": "@ahmad_kl",
+            "body": "Huge difference in heat rejection. My car interior cools down in seconds under intense KL heat!",
+            "img": "https://avatar.vercel.sh/ahmad",
+            "rating": 5
+          },
+          {
+            "name": "Dr. Karen Tan",
+            "username": "@dr_karen",
+            "body": "Installed UV+420 film for my clinic glazing. Outstanding glare reduction and skin protection.",
+            "img": "https://avatar.vercel.sh/karen",
+            "rating": 5
+          },
+          {
+            "name": "Jason Lim",
+            "username": "@jason_pg",
+            "body": "Installed on my home floor-to-ceiling glass in Penang. Lowered aircon electricity bill significantly!",
+            "img": "https://avatar.vercel.sh/jason",
+            "rating": 5
+          },
+          {
+            "name": "Michelle Wong",
+            "username": "@michelle_w",
+            "body": "The optical clarity is unmatched. No haze, perfect vision at night, and 100% UV protection.",
+            "img": "https://avatar.vercel.sh/michelle",
+            "rating": 5
+          },
+          {
+            "name": "Syed Al-Attas",
+            "username": "@syed_jb",
+            "body": "Best tint decision for our commercial office building in JB. Exceptional warranty and service.",
+            "img": "https://avatar.vercel.sh/syed",
+            "rating": 5
+          },
+          {
+            "name": "David Chen",
+            "username": "@david_c",
+            "body": "6-Layer Hotmelt technology is super tough. 5 years in and zero peeling or bubbles!",
+            "img": "https://avatar.vercel.sh/david",
+            "rating": 5
           }
         ]
       }

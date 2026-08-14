@@ -280,6 +280,28 @@ export interface FilmFinderContent {
   options: FilmFinderOption[];
 }
 
+/* ── SolutionCardGrid ("Solutions by Environment" — 5 accent cards) ── */
+export interface SolutionCard {
+  /** Drives the card's accent color via --accent-<key> tokens. */
+  key: SolutionKey;
+  icon: IconName;
+  title: string;
+  /** Bold one-liner under the photo, e.g. "Smarter buildings. Higher performance." */
+  tagline?: string;
+  /** Point-form details, rendered with accent check icons. */
+  points: string[];
+  image: MediaContent;
+  cta: CtaLink;
+  /** Bento width in grid cells (desktop): 2 = wide feature card. Default 1. */
+  span?: 1 | 2;
+}
+
+export interface SolutionCardGridContent {
+  heading?: string;
+  lede?: string;
+  cards: SolutionCard[];
+}
+
 /* ── FaqSection (native <details>; feeds FAQPage JSON-LD on solutions) ── */
 export interface FaqItem {
   question: string;
@@ -400,6 +422,27 @@ interface SectionBase {
   label?: string;
 }
 
+export interface OurStoryStat {
+  icon?: string;
+  value: string;
+  label: string;
+}
+
+export interface CustomerReview {
+  name: string;
+  username: string;
+  body: string;
+  img: string;
+  rating?: number;
+}
+
+export interface WhyUsReviewPanelContent {
+  heading?: string;
+  marqueeTitle?: string;
+  pillars?: TechPillar[];
+  reviews?: CustomerReview[];
+}
+
 export type Section = SectionBase &
   (
     | { type: 'cinematic-hero'; data: CinematicHeroContent }
@@ -429,10 +472,13 @@ export type Section = SectionBase &
     | { type: 'article-grid'; data: ArticleGridContent }
     | { type: 'module-browser'; data: ModuleBrowserContent }
     | { type: 'film-finder'; data: FilmFinderContent }
+    | { type: 'solution-card-grid'; data: SolutionCardGridContent }
     | { type: 'faq'; data: FaqContent }
     | { type: 'myth-fact'; data: MythFactContent }
     | { type: 'split-media'; data: SplitMediaContent }
     | { type: 'product-browser'; data: ProductBrowserContent }
+    | { type: 'our-story-panel'; data: OurStoryPanelContent }
+    | { type: 'why-us-review-panel'; data: WhyUsReviewPanelContent }
   );
 
 export type SectionType = Section['type'];
