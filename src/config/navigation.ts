@@ -14,6 +14,8 @@ export interface NavItem {
   href: string;
   /** Sub-items — rendered in the footer and mobile nav (full IA). */
   children?: NavItem[];
+  /** Also surface this sub-item in the desktop header dropdown. */
+  headerMenu?: boolean;
   /** External destination — render with target="_blank" rel="noopener". */
   external?: boolean;
 }
@@ -40,13 +42,13 @@ export const PRIMARY_NAV: NavItem[] = [
     label: 'Products',
     href: '/products/building',
     children: [
-      { label: 'Building Window Films', href: '/products/building' },
+      { label: 'Building Window Films', href: '/products/building', headerMenu: true },
       { label: 'Building Films — For Homes', href: '/products/building-homes' },
       {
         label: 'Building Films — For Commercial',
         href: '/products/building-commercial',
       },
-      { label: 'Automotive Films', href: '/products/automotive' },
+      { label: 'Automotive Films', href: '/products/automotive', headerMenu: true },
     ],
   },
   { label: 'Sustainability', href: '/sustainability' },

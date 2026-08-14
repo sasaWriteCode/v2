@@ -621,43 +621,6 @@
       }
     },
     {
-      "id": "why-irispro",
-      "type": "tech-pillar-grid",
-      "order": 40,
-      "zone": "workshop-light",
-      "label": "Why IrisPro?",
-      "data": {
-        "columns": 5,
-        "pillars": [
-          {
-            "icon": "sun",
-            "title": "Patented UV+420™",
-            "description": "Complete UV & Blue Light Protection"
-          },
-          {
-            "icon": "layers",
-            "title": "6-Layer Hotmelt™",
-            "description": "Stronger, clearer & more durable"
-          },
-          {
-            "icon": "thermometer",
-            "title": "Multi-Layer Sputter",
-            "description": "Superior heat rejection"
-          },
-          {
-            "icon": "award",
-            "title": "SIRIM Certified Grade A1",
-            "description": "Quality you can trust"
-          },
-          {
-            "icon": "document",
-            "title": "eWarranty",
-            "description": "Up to 10 Years Performance Warranty"
-          }
-        ]
-      }
-    },
-    {
       "id": "real-projects",
       "type": "project-strip",
       "order": 50,
@@ -749,43 +712,6 @@
               "label": "View Case Study",
               "href": "#subang-airport"
             }
-          }
-        ]
-      }
-    },
-    {
-      "id": "one-technology",
-      "type": "tech-pillar-grid",
-      "order": 60,
-      "zone": "showroom-dark",
-      "label": "One Technology. Complete Protection.",
-      "data": {
-        "columns": 5,
-        "pillars": [
-          {
-            "icon": "sun",
-            "title": "Blocks UV400 & HEV Blue Light",
-            "description": ""
-          },
-          {
-            "icon": "thermometer",
-            "title": "Superior Heat Rejection",
-            "description": ""
-          },
-          {
-            "icon": "bolt",
-            "title": "Reduces Energy Cost",
-            "description": ""
-          },
-          {
-            "icon": "users",
-            "title": "Enhances Comfort & Productivity",
-            "description": ""
-          },
-          {
-            "icon": "leaf",
-            "title": "Sustainable Building Choice",
-            "description": ""
           }
         ]
       }

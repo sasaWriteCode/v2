@@ -7,7 +7,8 @@ import type { CategoryGridContent } from '@/types/sections';
 import { resolveUrl } from '@/lib/paths';
 
 type Props = CategoryGridContent;
-const { heading, lede, categories } = Astro.props;
+const { heading, lede, layout = 'grid', categories } = Astro.props;
+const masonry = layout === 'masonry';
 const gridColsClass =
   categories.length === 5
     ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5'
@@ -39,8 +40,7 @@ const DEFAULT_COLORS: Record<string, string> = {
   )}
   <ul
     class:list={[
-      'grid gap-5',
-      gridColsClass,
+      masonry ? 'category-masonry' : `grid gap-5 ${gridColsClass}`,
       (heading || lede) && 'mt-8',
     ]}
   >
@@ -54,7 +54,10 @@ const DEFAULT_COLORS: Record<string, string> = {
         <li>
           <a
             href={href}
-            class="group relative flex flex-col items-center justify-between text-center min-h-[370px] rounded-2xl p-6 overflow-hidden transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-1"
+            class:list={[
+              'group relative flex flex-col items-center justify-between text-center rounded-2xl p-6 overflow-hidden transition-all duration-300 ease-out hover:shadow-2xl hover:-translate-y-1',
+              !masonry && 'min-h-[370px]',
+            ]}
             style="background: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1); color: inherit; text-decoration: none"
           >
             {/* Background Image Layer */}
@@ -120,3 +123,41 @@ const DEFAULT_COLORS: Record<string, string> = {
     })}
   </ul>
 </div>
+
+<style>
+  /* ── Masonry variant (layout: 'masonry') ──
+     Pure CSS columns — items flow down each column, zero JS. A repeating
+     4-step height rhythm (tall/short/medium/tall) gives the staggered
+     Pinterest look; without it, equal cards would just look like a grid
+     with misaligned rows. */
+  .category-masonry {
+    columns: 1;
+    column-gap: 1.25rem;
+  }
+  @media (min-width: 40rem) {
+    .category-masonry {
+      columns: 2;
+    }
+  }
+  @media (min-width: 64rem) {
+    .category-masonry {
+      columns: 3;
+    }
+  }
+  .category-masonry > li {
+    break-inside: avoid;
+    margin-bottom: 1.25rem;
+  }
+  .category-masonry > li:nth-child(4n + 1) a {
+    min-height: 26rem;
+  }
+  .category-masonry > li:nth-child(4n + 2) a {
+    min-height: 18rem;
+  }
+  .category-masonry > li:nth-child(4n + 3) a {
+    min-height: 22rem;
+  }
+  .category-masonry > li:nth-child(4n + 4) a {
+    min-height: 30rem;
+  }
+</style>

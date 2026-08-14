@@ -18,24 +18,27 @@
  * never crash the build. (The content schemas make unknown types
  * unreachable from collections; this guards programmatic callers.)
  */
-import { SECTION_REGISTRY } from '@/lib/sectionRegistry';
-import { CinematicHero } from '@/components/showroom/CinematicHero';
-import { ProblemCardGrid } from '@/components/showroom/ProblemCardGrid';
-import { PrioritySelector } from '@/components/showroom/PrioritySelector';
-import { SpectrumDiagram } from '@/components/showroom/SpectrumDiagram';
-import { TechPillarGrid } from '@/components/showroom/TechPillarGrid';
-import { ProofStatBar } from '@/components/showroom/ProofStatBar';
-import { ProjectStrip } from '@/components/showroom/ProjectStrip';
-import { OurStoryPanel } from '@/components/showroom/OurStoryPanel';
-import { WhyUsReviewPanel } from '@/components/showroom/WhyUsReviewPanel';
-import { CertificationStrip } from '@/components/global/CertificationStrip';
-import { CTABar } from '@/components/global/CTABar';
-import { AskIrisProAI } from '@/components/workshop/AskIrisProAI';
-import SearchBar from '@/components/islands/SearchBar';
-import ModuleBrowser from '@/components/islands/ModuleBrowser';
-import ProductBrowser from '@/components/islands/ProductBrowser';
-import type { Section, SectionZone } from '@/types/sections';
-import type { SolutionKey } from '@/types/content';
+import { SECTION_REGISTRY } from "@/lib/sectionRegistry";
+import { CinematicHero } from "@/components/showroom/CinematicHero";
+import { ProblemCardGrid } from "@/components/showroom/ProblemCardGrid";
+import { PrioritySelector } from "@/components/showroom/PrioritySelector";
+import { SpectrumDiagram } from "@/components/showroom/SpectrumDiagram";
+import { TechPillarGrid } from "@/components/showroom/TechPillarGrid";
+import { ProofStatBar } from "@/components/showroom/ProofStatBar";
+import { ProjectStrip } from "@/components/showroom/ProjectStrip";
+import { OurStoryPanel } from "@/components/showroom/OurStoryPanel";
+import { WhyUsReviewPanel } from "@/components/showroom/WhyUsReviewPanel";
+import { PatentedTechFlow } from "@/components/showroom/PatentedTechFlow";
+import { AwardsCarousel } from "@/components/showroom/AwardsCarousel";
+import { MilestonesTimeline } from "@/components/showroom/MilestonesTimeline";
+import { CertificationStrip } from "@/components/global/CertificationStrip";
+import { CTABar } from "@/components/global/CTABar";
+import { AskIrisProAI } from "@/components/workshop/AskIrisProAI";
+import SearchBar from "@/components/islands/SearchBar";
+import ModuleBrowser from "@/components/islands/ModuleBrowser";
+import ProductBrowser from "@/components/islands/ProductBrowser";
+import type { Section, SectionZone } from "@/types/sections";
+import type { SolutionKey } from "@/types/content";
 
 interface Props {
   sections: Section[];
@@ -45,7 +48,7 @@ interface Props {
   accent?: SolutionKey;
 }
 
-const { sections, defaultZone = 'workshop-light', accent } = Astro.props;
+const { sections, defaultZone = "workshop-light", accent } = Astro.props;
 
 const ordered = [...sections].sort((a, b) => a.order - b.order);
 
@@ -64,7 +67,7 @@ for (const section of ordered) {
 }
 
 const zoneAttr = (zone: SectionZone) =>
-  zone === 'showroom-dark' ? 'showroom' : 'workshop';
+  zone === "showroom-dark" ? "showroom" : "workshop";
 
 const accentStyle = accent
   ? `--accent-current: var(--accent-${accent}); --accent-current-text: var(--accent-${accent}-text); --accent-current-bright: var(--accent-${accent}-bright);`
@@ -97,44 +100,51 @@ const accentStyle = accent
 
           /* Hydrated types: literal branches (see header comment). */
           const island =
-            entry.hydration === 'none' ? null : section.type === 'cinematic-hero' ? (
+            entry.hydration === "none" ? null : section.type ===
+              "cinematic-hero" ? (
               <CinematicHero client:visible {...(props as any)} />
-            ) : section.type === 'problem-card-grid' ? (
+            ) : section.type === "problem-card-grid" ? (
               <ProblemCardGrid client:visible {...(props as any)} />
-            ) : section.type === 'priority-selector' ||
-              section.type === 'protection-level-selector' ? (
+            ) : section.type === "priority-selector" ||
+              section.type === "protection-level-selector" ? (
               <PrioritySelector client:visible {...(props as any)} />
-            ) : section.type === 'spectrum-diagram' ? (
+            ) : section.type === "spectrum-diagram" ? (
               <SpectrumDiagram client:visible {...(props as any)} />
-            ) : section.type === 'tech-pillar-grid' ? (
+            ) : section.type === "tech-pillar-grid" ? (
               <TechPillarGrid client:visible {...(props as any)} />
-            ) : section.type === 'proof-stat-bar' ? (
+            ) : section.type === "proof-stat-bar" ? (
               <ProofStatBar client:visible {...(props as any)} />
-            ) : section.type === 'project-strip' ? (
+            ) : section.type === "project-strip" ? (
               <ProjectStrip client:visible {...(props as any)} />
-            ) : section.type === 'our-story-panel' ? (
+            ) : section.type === "our-story-panel" ? (
               <OurStoryPanel client:visible {...(props as any)} />
-            ) : section.type === 'why-us-review-panel' ? (
+            ) : section.type === "why-us-review-panel" ? (
               <WhyUsReviewPanel client:visible {...(props as any)} />
-            ) : section.type === 'certification-strip' ? (
+            ) : section.type === "patented-tech-flow" ? (
+              <PatentedTechFlow client:visible {...(props as any)} />
+            ) : section.type === "awards-carousel" ? (
+              <AwardsCarousel client:visible {...(props as any)} />
+            ) : section.type === "milestones-timeline" ? (
+              <MilestonesTimeline client:visible {...(props as any)} />
+            ) : section.type === "certification-strip" ? (
               <CertificationStrip client:visible {...(props as any)} />
-            ) : section.type === 'cta-bar' ? (
+            ) : section.type === "cta-bar" ? (
               <CTABar client:visible {...(props as any)} />
-            ) : section.type === 'ask-irispro-ai' ? (
+            ) : section.type === "ask-irispro-ai" ? (
               <AskIrisProAI client:visible {...(props as any)} />
-            ) : section.type === 'search-bar' ? (
+            ) : section.type === "search-bar" ? (
               <SearchBar client:visible {...(props as any)} />
-            ) : section.type === 'module-browser' ? (
+            ) : section.type === "module-browser" ? (
               <ModuleBrowser client:visible {...(props as any)} />
-            ) : section.type === 'product-browser' ? (
+            ) : section.type === "product-browser" ? (
               <ProductBrowser client:visible {...(props as any)} />
             ) : import.meta.env.DEV ? (
               <p
                 role="alert"
                 style="border: 2px dashed var(--color-red); color: var(--color-red); padding: var(--space-6); font-weight: 600"
               >
-                [SectionRenderer] “{section.type}” is registered as hydrated
-                but has no literal island branch — add one (renders static in
+                [SectionRenderer] “{section.type}” is registered as hydrated but
+                has no literal island branch — add one (renders static in
                 production).
               </p>
             ) : (
@@ -145,7 +155,7 @@ const accentStyle = accent
 
           /* Stable anchor id on the wrapper; band chrome adds container +
              rhythm, full chrome lets the component own its layout. */
-          return entry.chrome === 'band' ? (
+          return entry.chrome === "band" ? (
             <div id={section.id} class="section-band">
               <div class="container">{body}</div>
             </div>

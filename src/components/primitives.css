@@ -94,6 +94,27 @@ html[data-enhanced] .reveal:not(.is-revealed) .spectrum-ray {
 }
 
 /* ── PrioritySelector ── */
+/* Column count follows the data (--priority-cols set inline from
+   options.length) so 6- and 7-option pages both lay out evenly. */
+.priority-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 40rem) {
+  .priority-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 64rem) {
+  .priority-grid {
+    grid-template-columns: repeat(var(--priority-cols, 6), 1fr);
+  }
+}
+
 .priority-option {
   display: grid;
   justify-items: center;
@@ -108,6 +129,35 @@ html[data-enhanced] .reveal:not(.is-revealed) .spectrum-ray {
   transition:
     transform var(--duration-fast) var(--ease-decelerate),
     border-color var(--duration-fast) var(--ease-standard);
+}
+
+/* Photo-card variant (option carries an image): photo on top, icon in a
+   raised circular badge overlapping the photo's bottom edge (reference
+   design 2026-08-14). */
+.priority-option.has-media {
+  padding: 0 0 var(--space-3);
+  overflow: hidden;
+  align-content: start;
+}
+.priority-option-media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+.priority-option-icon {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-top: -1.625rem; /* overlap the photo's bottom edge */
+  border-radius: var(--radius-full, 999px);
+  background: var(--surface-raised);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--elevation-1);
+  position: relative;
+  z-index: 1;
 }
 .priority-option:hover {
   transform: translateY(calc(-2px * var(--motion-scale)));

@@ -33,6 +33,9 @@ import { ProofStatBar } from '@/components/showroom/ProofStatBar';
 import { ProjectStrip } from '@/components/showroom/ProjectStrip';
 import { OurStoryPanel } from '@/components/showroom/OurStoryPanel';
 import { WhyUsReviewPanel } from '@/components/showroom/WhyUsReviewPanel';
+import { PatentedTechFlow } from '@/components/showroom/PatentedTechFlow';
+import { AwardsCarousel } from '@/components/showroom/AwardsCarousel';
+import { MilestonesTimeline } from '@/components/showroom/MilestonesTimeline';
 import { SeriesComparisonTable } from '@/components/workshop/SeriesComparisonTable';
 import { GuideChapterList } from '@/components/workshop/GuideChapterList';
 import { AskIrisProAI } from '@/components/workshop/AskIrisProAI';
@@ -83,6 +86,9 @@ export const SECTION_REGISTRY: Record<SectionType, SectionRegistryEntry> = {
   'project-strip': { component: ProjectStrip, hydration: 'visible', chrome: 'band' }, // category filters
   'our-story-panel': { component: OurStoryPanel, hydration: 'visible', chrome: 'band' },
   'why-us-review-panel': { component: WhyUsReviewPanel, hydration: 'visible', chrome: 'band' },
+  'patented-tech-flow': { component: PatentedTechFlow, hydration: 'visible', chrome: 'band' },
+  'awards-carousel': { component: AwardsCarousel, hydration: 'visible', chrome: 'full' },
+  'milestones-timeline': { component: MilestonesTimeline, hydration: 'visible', chrome: 'band' },
 
   /* ── Workshop primitives — pure markup, SSR-only, 0KB ── */
   'series-comparison-table': { component: SeriesComparisonTable, hydration: 'none', chrome: 'band' },

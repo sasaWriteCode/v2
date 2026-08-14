@@ -59,11 +59,6 @@
             "variant": "primary"
           },
           {
-            "label": "View All Benefits",
-            "href": "#why-choose-irispro",
-            "variant": "secondary"
-          },
-          {
             "label": "Compare Films",
             "href": "#catalogue",
             "variant": "secondary"
@@ -812,71 +807,6 @@
           }
         ],
         "compareHint": "Tick “Compare” on any two films to see a side-by-side specification table."
-      }
-    },
-    {
-      "id": "technology",
-      "type": "tech-pillar-grid",
-      "order": 50,
-      "zone": "workshop-light",
-      "label": "Technology Behind Every Film",
-      "data": {
-        "columns": 6,
-        "pillars": [
-          {
-            "icon": "sun",
-            "title": "UV+420™ Optical Technology",
-            "description": "Blocks UV400 & HEV Blue Light"
-          },
-          {
-            "icon": "layers",
-            "title": "6-Layer Hotmelt™",
-            "description": "Stronger structure for long-lasting durability"
-          },
-          {
-            "icon": "thermometer",
-            "title": "Multi-Layer Sputter",
-            "description": "Superior heat rejection & optical clarity"
-          },
-          {
-            "icon": "award",
-            "title": "SIRIM Certified",
-            "description": "Grade A1 — Quality you can trust"
-          },
-          {
-            "icon": "check",
-            "title": "SGS Tested",
-            "description": "Independently tested for safety & performance"
-          },
-          {
-            "icon": "document",
-            "title": "eWarranty",
-            "description": "Up to 10 Years Performance Warranty"
-          }
-        ]
-      }
-    },
-    {
-      "id": "why-choose-irispro",
-      "type": "series-card-set",
-      "order": 60,
-      "zone": "workshop-light",
-      "label": "Why Choose IrisPro?",
-      "data": {
-        "cards": [
-          {
-            "id": "why-choose-irispro",
-            "name": "Why Choose IrisPro?",
-            "features": [
-              "Patented UV+420™ Complete Protection",
-              "Superior Heat Rejection up to 98% IRR (1400nm)",
-              "Protects Interior, Skin & Eyes",
-              "Save Fuel & Reduce Cooling Load",
-              "Clear Vision, Low Reflection",
-              "Long-Lasting Performance & Warranty"
-            ]
-          }
-        ]
       }
     },
     {

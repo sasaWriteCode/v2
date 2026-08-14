@@ -183,97 +183,93 @@
     },
     {
       "id": "patented-technology",
-      "type": "category-grid",
+      "type": "patented-tech-flow",
       "order": 50,
-      "zone": "showroom-dark",
+      "zone": "workshop-light",
       "label": "Our Patented Technology",
       "data": {
-        "heading": "Our Patented Technology",
-        "lede": "Innovation is at the heart of everything we do. Our patented UV+420™ Optical Solar Film and 6-Layer Hotmelt™ Base Film deliver complete protection beyond UV380, blocking harmful UV and HEV blue light while rejecting solar heat effectively.",
-        "categories": [
-          {
-            "icon": "sun",
-            "title": "UV+420™ Optical Technology",
-            "description": "Blocks UV400 and HEV Blue Light 380–420nm for better skin and eye protection.",
-            "href": "/technologies"
-          },
-          {
-            "icon": "layers",
-            "title": "6-Layer Hotmelt™ Base Film",
-            "description": "Stronger, clearer and more durable with advanced protection in one integrated film.",
-            "href": "/technologies"
-          }
-        ]
+        "headlineLines": [
+          "The first window film innovation on the market"
+        ],
+        "categoryTitle": "INNOVATION",
+        "categorySubtitle": "THE FIRST DUAL-PATENT SYSTEM OF ITS KIND ON THE MARKET",
+        "bullets": [
+          "Patented UV+420™ Optical Technology: The first optical construction on the market cutting 100% of UV400 and high-energy visible (HEV) blue light (380–420nm) for complete ocular and skin cellular defense.",
+          "6-Layer Hotmelt™ Base Film: Advanced co-extrusion matrix eliminates bubbling, adhesive oxidation, and delamination in intense ASEAN tropical heat.",
+          "Multi-Layer Sputter Engineering: Superior infrared solar heat rejection while maintaining maximum natural visible light transmission without GPS/RFID signal interference.",
+          "Zero Haze Optical Clarity: Crystal clear vision with zero distortion, glare reduction, and pristine optical transparency for night driving safety.",
+          "10-Year Backed Guarantee: Industry-leading warranty protection certified by SIRIM and recipient of the Asia Automotive Award."
+        ],
+        "ctaHref": "/technologies",
+        "ctaLabel": "Discover Our Technology"
       }
     },
     {
       "id": "milestones",
-      "type": "learning-path",
+      "type": "milestones-timeline",
       "order": 60,
       "zone": "workshop-light",
       "label": "Our Milestones",
       "data": {
         "heading": "Our Milestones",
+        "subhead": "A Decade of Breakthrough Protection & Optical Innovation",
+        "lede": "From our beginnings in Malaysia to expanding across ASEAN, explore the key milestones that shaped our patented optical technologies.",
         "steps": [
           {
-            "number": 2014,
-            "title": "IrisPro was founded in Malaysia."
+            "year": "2014",
+            "title": "IrisPro Founded in Malaysia",
+            "tag": "Foundation",
+            "description": "IrisPro was established in Malaysia with a bold vision: engineering superior, longer-lasting window films specifically formulated to master ASEAN’s extreme solar heat and humidity.",
+            "icon": "sun",
+            "highlight": false
           },
           {
-            "number": 2016,
-            "title": "Launched UV+380 technology."
+            "year": "2016",
+            "title": "Pioneered UV+380™ Technology",
+            "tag": "R&D Breakthrough",
+            "description": "Launched proprietary UV+380 high-performance optical film, setting a new industry benchmark for full-spectrum solar protection beyond standard automotive tints.",
+            "icon": "eye",
+            "highlight": false
           },
           {
-            "number": 2018,
-            "title": "Introduced 6-Layer Hotmelt™ technology."
+            "year": "2018",
+            "title": "Introduced 6-Layer Hotmelt™ Base Film",
+            "tag": "Patent Engineering",
+            "description": "Engineered our patented 6-Layer Hotmelt™ co-extrusion technology, permanently solving bubble formation, adhesive hazing, and delamination in tropical climates.",
+            "icon": "layers",
+            "highlight": true
           },
           {
-            "number": 2020,
-            "title": "Expanded to commercial and architectural market."
+            "year": "2020",
+            "title": "Architectural & Commercial Expansion",
+            "tag": "Market Expansion",
+            "description": "Expanded high-performance solar control solutions into commercial towers, corporate headquarters, and residential developments to reduce building cooling loads.",
+            "icon": "building",
+            "highlight": false
           },
           {
-            "number": 2022,
-            "title": "Achieved SIRIM certification."
+            "year": "2022",
+            "title": "Achieved Official SIRIM Certification",
+            "tag": "National Accreditation",
+            "description": "Attained national testing certification from SIRIM QAS International, verifying 99.99% UV400 blocking efficacy, thermal rejection, and structural endurance.",
+            "icon": "shield",
+            "highlight": false
           },
           {
-            "number": 2023,
-            "title": "Awarded Asia Automotive Award – Asia Best Tint Brand."
-          },
-          {
-            "number": 2024,
-            "title": "Growing across ASEAN and beyond."
-          }
-        ]
-      }
-    },
-    {
-      "id": "awards",
-      "type": "tech-pillar-grid",
-      "order": 70,
-      "zone": "workshop-light",
-      "label": "Awards & Recognition",
-      "data": {
-        "columns": 4,
-        "pillars": [
-          {
+            "year": "2023",
+            "title": "Awarded Asia Automotive Award – Asia Best Tint Brand",
+            "tag": "Industry Leadership",
+            "description": "Crowned Asia Best Tint Brand at the prestigious Asia Automotive Awards, recognized by regional industry leaders for exceptional optical innovation and warranty trust.",
             "icon": "award",
-            "title": "Asia Automotive Award",
-            "description": "Asia Best Tint Brand"
+            "highlight": true
           },
           {
-            "icon": "award",
-            "title": "Architect",
-            "description": "Best Product Award"
-          },
-          {
-            "icon": "award",
-            "title": "SIRIM",
-            "description": "Certified"
-          },
-          {
-            "icon": "award",
-            "title": "Malaysia Prestige",
-            "description": "Brand Award"
+            "year": "2024+",
+            "title": "Expanding Across ASEAN & Global Horizons",
+            "tag": "Regional Growth",
+            "description": "Surpassed 1,000,000+ protected vehicles and buildings across ASEAN, advancing next-generation sustainable optical films and expanding international dealer networks.",
+            "icon": "leaf",
+            "highlight": false
           }
         ]
       }
@@ -330,33 +326,63 @@
       }
     },
     {
-      "id": "our-promise",
-      "type": "tech-pillar-grid",
+      "id": "awards-recognition",
+      "type": "awards-carousel",
       "order": 90,
       "zone": "showroom-dark",
-      "label": "Our Promise",
+      "label": "Awards & Recognition",
       "data": {
-        "columns": 4,
-        "pillars": [
+        "heading": "Awards & Recognition",
+        "subhead": "Certified Excellence & ASEAN Industry Leadership",
+        "lede": "Our patented optical technologies and high-tensile film structures are rigorously tested and certified by premier automotive and architectural authorities across ASEAN.",
+        "awards": [
           {
-            "icon": "users",
-            "title": "Protect People",
-            "description": "Health & Wellbeing"
+            "id": "aaa-2025",
+            "title": "Asia Automotive Award",
+            "subtitle": "Asia Best Tint Brand 2025",
+            "organization": "Asia Automotive Awards Council",
+            "year": "2025",
+            "badge": "Automotive Excellence",
+            "category": "Industry Leadership",
+            "description": "Awarded the prestigious Asia Best Tint Brand in recognition of IrisPro’s patented optical protection, ASEAN climate durability, and market-leading heat rejection technology.",
+            "image": "/images/awards/AsiaAutomotiveAward2025.jpg",
+            "accent": "#ef4444"
           },
           {
-            "icon": "shield",
-            "title": "Protect Interiors",
-            "description": "Lasting Value"
+            "id": "sirim-certified",
+            "title": "SIRIM QAS Certified",
+            "subtitle": "National Standards & Quality Compliance",
+            "organization": "SIRIM QAS International",
+            "year": "Certified",
+            "badge": "Standard Compliance",
+            "category": "Quality & Safety",
+            "description": "Rigorous independent laboratory verification confirming 99.99% UV400 blocking efficacy, visible light transmittance compliance, and thermal aging stability.",
+            "image": "/images/awards/Sirim-IrisPro.jpg",
+            "accent": "#38bdf8"
           },
           {
-            "icon": "building",
-            "title": "Protect Buildings",
-            "description": "Better Performance"
+            "id": "archidex-award",
+            "title": "ARCHIDEX Award",
+            "subtitle": "Architectural Innovation & Best Product",
+            "organization": "ARCHIDEX International Building Exhibition",
+            "year": "Excellence",
+            "badge": "Building Innovation",
+            "category": "Architectural Glazing",
+            "description": "Honored by architects and property developers for significant cooling energy savings, carbon reduction, and zero-haze optical performance in architectural glass.",
+            "image": "/images/awards/archdex.jpg",
+            "accent": "#fbbf24"
           },
           {
-            "icon": "leaf",
-            "title": "Protect Our Future",
-            "description": "Sustainable Tomorrow"
+            "id": "mtpn-award",
+            "title": "MTPN Consumer Trust",
+            "subtitle": "National Consumer Action Council Award",
+            "organization": "Majlis Tindakan Pengguna Negara",
+            "year": "Consumer Choice",
+            "badge": "Consumer Protection",
+            "category": "Authenticity & Trust",
+            "description": "Recognized for exceptional customer advocacy, transparent product testing, and verified 10-year manufacturer warranty fulfillment across ASEAN.",
+            "image": "/images/awards/mtpn.jpg",
+            "accent": "#a855f7"
           }
         ]
       }

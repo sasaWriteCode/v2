@@ -35,7 +35,7 @@ export function OurStoryPanel({
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="w-full py-8 lg:py-16">
+    <div className="w-full py-2 sm:py-4">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left Column: Our Story Prose Content */}
         <div className="lg:col-span-5 space-y-6">

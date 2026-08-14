@@ -6,7 +6,13 @@ import ImageOrPlaceholder from '@/components/base/ImageOrPlaceholder.astro';
 import type { ArticleGridContent } from '@/types/sections';
 
 type Props = ArticleGridContent;
-const { heading, lede, articles } = Astro.props;
+const { heading, lede, columns = 3, articles } = Astro.props;
+
+const desktopCols = {
+  2: 'lg:grid-cols-2',
+  3: 'lg:grid-cols-3',
+  4: 'lg:grid-cols-4',
+}[columns];
 ---
 
 <div>
@@ -18,7 +24,8 @@ const { heading, lede, articles } = Astro.props;
   )}
   <ul
     class:list={[
-      'grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3',
+      'grid grid-cols-1 gap-5 sm:grid-cols-2',
+      desktopCols,
       (heading || lede) && 'mt-8',
     ]}
   >

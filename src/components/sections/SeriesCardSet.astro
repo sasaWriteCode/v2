@@ -14,6 +14,16 @@ const accentVar = (accent?: string) =>
   !accent || accent === 'neutral'
     ? 'var(--text-brand)'
     : `var(--accent-${accent}-text, var(--text-brand))`;
+
+/* Raw + bright accent pair drives the per-card hover gradient. */
+const accentBase = (accent?: string) =>
+  !accent || accent === 'neutral'
+    ? 'var(--color-red)'
+    : `var(--accent-${accent}, var(--color-red))`;
+const accentBright = (accent?: string) =>
+  !accent || accent === 'neutral'
+    ? 'var(--color-red-bright)'
+    : `var(--accent-${accent}-bright, var(--color-red-bright))`;
 ---
 
 <div>
@@ -27,8 +37,8 @@ const accentVar = (accent?: string) =>
     {cards.map((card) => (
       <li>
         <article
-          class="grid h-full content-start gap-3 rounded-lg p-6"
-          style="background: var(--surface-raised); border: 1px solid var(--border-subtle); box-shadow: var(--elevation-1); background-image: var(--depth-glow-subtle)"
+          class="series-card grid h-full content-start gap-3 rounded-lg p-6"
+          style={`--card-accent: ${accentBase(card.accent)}; --card-accent-bright: ${accentBright(card.accent)}`}
         >
           {card.badge && <span class="badge badge-brand w-fit">{card.badge}</span>}
           <div>
@@ -71,3 +81,93 @@ const accentVar = (accent?: string) =>
     ))}
   </ul>
 </div>
+
+<style>
+  /* Accent-driven hover: each card tints toward its own series color via
+     --card-accent / --card-accent-bright (set inline per card above). */
+  .series-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--surface-raised);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--elevation-1);
+    background-image: var(--depth-glow-subtle);
+    transition:
+      transform 300ms cubic-bezier(0.22, 0.8, 0.3, 1),
+      border-color 300ms ease,
+      box-shadow 300ms ease;
+  }
+  /* Keep card content above the gradient overlay. */
+  .series-card > :global(*) {
+    position: relative;
+    z-index: 1;
+  }
+  /* Gradient wash — fades in (background-image itself can't animate). */
+  .series-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--card-accent) 14%, transparent),
+      color-mix(in srgb, var(--card-accent-bright) 6%, transparent) 45%,
+      transparent 78%
+    );
+    opacity: 0;
+    transition: opacity 300ms ease;
+    pointer-events: none;
+  }
+  /* Gradient signature bar sweeping across the top edge. */
+  .series-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 2;
+    background: linear-gradient(
+      90deg,
+      var(--card-accent),
+      var(--card-accent-bright)
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 350ms cubic-bezier(0.22, 0.8, 0.3, 1);
+    pointer-events: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .series-card:hover {
+      transform: translateY(-5px);
+      border-color: color-mix(in srgb, var(--card-accent) 40%, var(--border-subtle));
+      box-shadow: 0 20px 40px -18px color-mix(in srgb, var(--card-accent) 45%, rgb(10 10 10 / 0.25));
+    }
+    .series-card:hover::before {
+      opacity: 1;
+    }
+    .series-card:hover::after {
+      transform: scaleX(1);
+    }
+  }
+
+  /* Keyboard users get the same affordance when tabbing to the card CTA. */
+  .series-card:focus-within::before {
+    opacity: 1;
+  }
+  .series-card:focus-within::after {
+    transform: scaleX(1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .series-card,
+    .series-card::before,
+    .series-card::after {
+      transition: none;
+    }
+    .series-card:hover {
+      transform: none;
+    }
+  }
+</style>

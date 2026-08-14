@@ -190,34 +190,303 @@
       }
     },
     {
-      "id": "protection-philosophy",
-      "type": "tech-pillar-grid",
-      "order": 30,
-      "label": "The IrisPro protection philosophy — 4 layers of value",
+      "id": "what-matters-most",
+      "type": "priority-selector",
+      "order": 25,
+      "label": "What Matters Most",
       "data": {
-        "columns": 4,
-        "pillars": [
+        "legend": "What matters most to you?",
+        "heading": "What Matters Most To You?",
+        "lede": "Tell us your priority and we'll recommend the best protection solution for you.",
+        "hint": "Tap a priority to see our recommendation — your choice is saved in the link, so you can share it.",
+        "options": [
           {
-            "icon": "users",
-            "title": "Protect People",
-            "description": "Blocks harmful UV+420, reduces heat and protects the health of your family, skin and eyes."
+            "id": "cooler-environment",
+            "icon": "snowflake",
+            "label": "Cooler Environment",
+            "accent": "automotive",
+            "image": {
+              "src": "placeholder:priority-cooler",
+              "alt": "Cool blue tones: frosted glass texture or air-conditioned interior feel.",
+              "width": 480,
+              "height": 330
+            },
+            "recommendation": {
+              "title": "Beat the heat at the glass, before it gets in.",
+              "body": "Whether it's your car cabin, living room or office floor, the fastest way to a cooler space is rejecting infrared heat at the window. Our multi-layer sputtered films reject up to 98% of infrared heat (1400nm) without darkening the room.",
+              "cta": {
+                "label": "Explore Automotive Solutions",
+                "href": "/solutions/automotive"
+              }
+            }
+          },
+          {
+            "id": "skin-eye-protection",
+            "icon": "eye",
+            "label": "Skin & Eye Protection",
+            "accent": "personal-protection",
+            "image": {
+              "src": "placeholder:priority-skin-eye",
+              "alt": "Close-up of a healthy eye or face in soft daylight near a window.",
+              "width": 480,
+              "height": 330
+            },
+            "recommendation": {
+              "title": "Block UV400 and HEV blue light — every day, invisibly.",
+              "body": "Daily exposure through car and building glass adds up. IrisPro's patented UV+420™ goes beyond ordinary UV400 films, cutting HEV blue light (380–420nm) that penetrates deeper into skin and eyes.",
+              "cta": {
+                "label": "Explore Personal Protection",
+                "href": "/solutions/personal-protection"
+              }
+            }
+          },
+          {
+            "id": "lower-energy-bills",
+            "icon": "wallet",
+            "label": "Lower Energy Bills",
+            "accent": "residential",
+            "image": {
+              "src": "placeholder:priority-energy-bills",
+              "alt": "Electricity bill with a falling bar chart and a piggy bank.",
+              "width": 480,
+              "height": 330
+            },
+            "recommendation": {
+              "title": "Less heat in means less cooling paid for.",
+              "body": "Cooling is the biggest line on most Malaysian electricity bills. Rejecting solar heat at the windows lowers air-conditioning load — typically up to 30% off cooling energy, at home or in a building.",
+              "cta": {
+                "label": "Explore Residential Solutions",
+                "href": "/solutions/residential"
+              }
+            }
+          },
+          {
+            "id": "protect-vehicle-interior",
+            "icon": "car",
+            "label": "Protect Vehicle Interior",
+            "accent": "automotive",
+            "image": {
+              "src": "placeholder:priority-vehicle-interior",
+              "alt": "Pristine leather car interior, dashboard and seats in good light.",
+              "width": 480,
+              "height": 330
+            },
+            "recommendation": {
+              "title": "Stop the fade, cracks and that baked-dashboard smell.",
+              "body": "UV and infrared heat quietly destroy leather, trim and electronics. Blocking 99.9% of UV and most solar heat keeps your interior — and your resale value — looking new for years.",
+              "cta": {
+                "label": "Explore Automotive Solutions",
+                "href": "/solutions/automotive"
+              }
+            }
+          },
+          {
+            "id": "comfortable-home",
+            "icon": "home",
+            "label": "Comfortable Home",
+            "accent": "residential",
+            "image": {
+              "src": "placeholder:priority-comfortable-home",
+              "alt": "Family relaxing together on a sofa in a bright, comfortable living room.",
+              "width": 480,
+              "height": 330
+            },
+            "recommendation": {
+              "title": "Every room comfortable, all day — even facing west.",
+              "body": "Home window films keep rooms cooler and glare-free while protecting your family's skin and your furniture, without blocking the view or the daylight.",
+              "cta": {
+                "label": "Explore Residential Solutions",
+                "href": "/solutions/residential"
+              }
+            }
+          },
+          {
+            "id": "productive-workplace",
+            "icon": "building",
+            "label": "Productive Workplace",
+            "accent": "commercial",
+            "image": {
+              "src": "placeholder:priority-productive-workplace",
+              "alt": "Team working comfortably in a bright office beside large windows.",
+              "width": 480,
+              "height": 330
+            },
+            "recommendation": {
+              "title": "Comfortable employees do better work.",
+              "body": "Heat zones and screen glare quietly tax productivity. Commercial films even out temperatures, cut glare and reduce HVAC cost — while contributing to your ESG story.",
+              "cta": {
+                "label": "Explore Commercial Solutions",
+                "href": "/solutions/commercial"
+              }
+            }
+          },
+          {
+            "id": "reduce-carbon",
+            "icon": "leaf",
+            "label": "Reduce Carbon Emissions",
+            "accent": "sustainability",
+            "image": {
+              "src": "placeholder:priority-reduce-carbon",
+              "alt": "Green globe or lush foliage — clean sustainability visual.",
+              "width": 480,
+              "height": 330
+            },
+            "recommendation": {
+              "title": "Lower energy demand is the easiest carbon win.",
+              "body": "Every kilowatt-hour of cooling you don't use is carbon you don't emit — up to 1.2 tons of CO₂ per building per year. Window film is one of the simplest efficiency upgrades there is.",
+              "cta": {
+                "label": "Explore Sustainability Solutions",
+                "href": "/solutions/sustainability"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "why-protection-essential",
+      "type": "philosophy-flow",
+      "order": 26,
+      "label": "Why Protection Is Essential",
+      "data": {
+        "heading": "Why Protection Is Essential",
+        "lede": "Without the right protection, you and your properties are exposed every day.",
+        "steps": [
+          {
+            "icon": "sun",
+            "title": "ASEAN Sun Intense Heat",
+            "description": "Year-round equatorial sunlight, among the strongest solar exposure in the world."
+          },
+          {
+            "icon": "eye",
+            "title": "UV & HEV Blue Light",
+            "description": "Invisible rays pass straight through ordinary glass, all day."
+          },
+          {
+            "icon": "thermometer",
+            "title": "Heat & Glare Penetrate",
+            "description": "Interiors heat up, screens glare, air-conditioning fights a losing battle."
+          },
+          {
+            "icon": "home",
+            "title": "Discomfort & Interior Damage",
+            "description": "Hot rooms and cabins; fading furniture, dashboards and fittings."
           },
           {
             "icon": "shield",
-            "title": "Protect Property",
-            "description": "Prevents fading, cracks and damage to vehicles, interiors, furniture and valuable assets."
-          },
-          {
-            "icon": "bolt",
-            "title": "Save Energy",
-            "description": "Reduces heat gain and lowers air-conditioning usage, saving energy and costs."
-          },
-          {
-            "icon": "leaf",
-            "title": "Protect Our Future",
-            "description": "Lower energy usage means reduced carbon emissions and a better planet for generations."
+            "title": "Health Risk & Energy Loss",
+            "description": "Skin and eye exposure adds up — and so does every cooling bill."
           }
         ]
+      }
+    },
+    {
+      "id": "advanced-technologies",
+      "type": "article-grid",
+      "order": 27,
+      "label": "Advanced Technologies",
+      "data": {
+        "heading": "IrisPro Advanced Technologies",
+        "lede": "The engineering behind every IrisPro film — patented, tested and installed to a strict standard.",
+        "articles": [
+          {
+            "title": "UV+420™ Optical Technology",
+            "href": "/technologies",
+            "description": "Blocks UV400 & HEV Blue Light (380–420nm) for complete protection.",
+            "image": {
+              "src": "placeholder:tech-uv420",
+              "alt": "Rainbow light spectrum passing through film — prismatic technical shot.",
+              "width": 560,
+              "height": 360
+            }
+          },
+          {
+            "title": "6-Layer Hotmelt™",
+            "href": "/technologies",
+            "description": "Patented 6-layer structure hotmelted into one for higher durability & performance.",
+            "image": {
+              "src": "placeholder:tech-hotmelt",
+              "alt": "Stacked film layers macro render, six layers visible.",
+              "width": 560,
+              "height": 360
+            }
+          },
+          {
+            "title": "Multi-layer Sputtering",
+            "href": "/technologies",
+            "description": "Advanced sputtering technology for superior heat rejection up to 98% (1400nm).",
+            "image": {
+              "src": "placeholder:tech-sputtering",
+              "alt": "Metallic sputtered film rolls or coating chamber, premium industrial shot.",
+              "width": 560,
+              "height": 360
+            }
+          },
+          {
+            "title": "Professional Installation",
+            "href": "/technologies",
+            "description": "Strict installation standard for maximum performance & warranty.",
+            "image": {
+              "src": "placeholder:tech-installation",
+              "alt": "Certified installer applying film to a window with squeegee, mid-installation.",
+              "width": 560,
+              "height": 360
+            }
+          }
+        ],
+        "columns": 4
+      }
+    },
+    {
+      "id": "where-applied",
+      "type": "category-grid",
+      "order": 28,
+      "label": "Where Our Solutions Are Applied",
+      "data": {
+        "heading": "Where Our Solutions Are Applied",
+        "lede": "From a single car to an entire campus — one technology platform, every glass surface.",
+        "categories": [
+          {
+            "icon": "car",
+            "title": "Cars & SUVs",
+            "href": "/solutions/automotive",
+            "image": "/images/automotive-tint.png"
+          },
+          {
+            "icon": "home",
+            "title": "Homes",
+            "href": "/solutions/residential",
+            "image": "/images/residential-glass.png"
+          },
+          {
+            "icon": "building",
+            "title": "Offices",
+            "href": "/solutions/commercial",
+            "image": "/images/commercial-building.png"
+          },
+          {
+            "icon": "layers",
+            "title": "Factories",
+            "href": "/solutions/commercial",
+            "image": "/images/commercial-building-2.png"
+          },
+          {
+            "icon": "shield",
+            "title": "Hospitals",
+            "href": "/solutions/commercial"
+          },
+          {
+            "icon": "star",
+            "title": "Hotels",
+            "href": "/solutions/commercial"
+          },
+          {
+            "icon": "document",
+            "title": "Schools",
+            "href": "/solutions/commercial"
+          }
+        ],
+        "layout": "masonry"
       }
     },
     {

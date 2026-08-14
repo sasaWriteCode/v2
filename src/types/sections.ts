@@ -44,6 +44,9 @@ export interface ProblemCardGridContent {
 
 export interface PrioritySelectorContent {
   legend: string;
+  /** Visible section heading, e.g. "What Matters Most To You?". */
+  heading?: string;
+  lede?: string;
   options: PriorityOption[];
   hint?: string;
 }
@@ -191,6 +194,9 @@ export interface CategoryItem {
 export interface CategoryGridContent {
   heading?: string;
   lede?: string;
+  /** 'masonry' = staggered CSS-columns layout with varied card heights
+      (Pinterest-style). Default 'grid' (uniform rows). */
+  layout?: 'grid' | 'masonry';
   categories: CategoryItem[];
 }
 
@@ -238,6 +244,9 @@ export interface ArticleItem {
 export interface ArticleGridContent {
   heading?: string;
   lede?: string;
+  /** Desktop column count. Default 3. Use 4 for short one-liner cards
+      (e.g. the four-pillar technologies band) so no orphan row appears. */
+  columns?: 2 | 3 | 4;
   articles: ArticleItem[];
 }
 
@@ -443,6 +452,83 @@ export interface WhyUsReviewPanelContent {
   reviews?: CustomerReview[];
 }
 
+export interface PatentedTechHighlight {
+  icon?: IconName;
+  title: string;
+  description: string;
+}
+
+export interface PatentedTechCardItem {
+  id: string;
+  patentNumber: string;
+  title: string;
+  subtitle: string;
+  badge?: string;
+  tagline?: string;
+  description: string;
+  keyMetric?: {
+    value: string;
+    label: string;
+  };
+  highlights?: PatentedTechHighlight[];
+  href: string;
+  ctaLabel?: string;
+  theme?: 'uv' | 'hotmelt' | 'blue' | 'red';
+}
+
+export interface PatentedTechFlowContent {
+  headlineLines?: string[];
+  heading?: string;
+  subhead?: string;
+  categoryTitle?: string;
+  categorySubtitle?: string;
+  bullets?: string[];
+  lede?: string;
+  centerpieceLabel?: string;
+  leftTech?: PatentedTechCardItem;
+  rightTech?: PatentedTechCardItem;
+  ctaHref?: string;
+  ctaLabel?: string;
+}
+
+export interface AwardItem {
+  id: string;
+  title: string;
+  subtitle?: string;
+  organization?: string;
+  year?: string | number;
+  description?: string;
+  image: string;
+  badge?: string;
+  accent?: string;
+  category?: string;
+}
+
+export interface AwardsCarouselContent {
+  heading?: string;
+  subhead?: string;
+  lede?: string;
+  awards: AwardItem[];
+}
+
+export interface MilestoneStepItem {
+  number?: number | string;
+  year?: number | string;
+  title: string;
+  tag?: string;
+  description?: string;
+  icon?: IconName;
+  highlight?: boolean;
+}
+
+export interface MilestonesTimelineContent {
+  heading?: string;
+  subhead?: string;
+  badge?: string;
+  lede?: string;
+  steps: MilestoneStepItem[];
+}
+
 export type Section = SectionBase &
   (
     | { type: 'cinematic-hero'; data: CinematicHeroContent }
@@ -479,6 +565,9 @@ export type Section = SectionBase &
     | { type: 'product-browser'; data: ProductBrowserContent }
     | { type: 'our-story-panel'; data: OurStoryPanelContent }
     | { type: 'why-us-review-panel'; data: WhyUsReviewPanelContent }
+    | { type: 'patented-tech-flow'; data: PatentedTechFlowContent }
+    | { type: 'awards-carousel'; data: AwardsCarouselContent }
+    | { type: 'milestones-timeline'; data: MilestonesTimelineContent }
   );
 
 export type SectionType = Section['type'];

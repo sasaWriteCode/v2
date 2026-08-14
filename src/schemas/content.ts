@@ -148,6 +148,7 @@ export const priorityOptionSchema = z.object({
   icon: iconNameSchema,
   label: z.string(),
   accent: solutionKeySchema.optional(),
+  image: mediaContentSchema.optional(),
   recommendation: priorityRecommendationSchema,
 }) satisfies z.ZodType<PriorityOption>;
 

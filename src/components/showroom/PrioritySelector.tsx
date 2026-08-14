@@ -14,16 +14,21 @@
 
 import { useEffect, useState } from 'react';
 import { Icon } from '@/components/global/Icon';
+import { Media } from '@/components/base/Media';
 import type { PriorityOption } from '@/types/content';
 
 const PARAM = 'priority';
 
 export function PrioritySelector({
   legend,
+  heading,
+  lede,
   options,
   hint,
 }: {
   legend: string;
+  heading?: string;
+  lede?: string;
   options: PriorityOption[];
   hint?: string;
 }) {
@@ -48,28 +53,52 @@ export function PrioritySelector({
 
   return (
     <section aria-label={legend}>
-      <div role="group" aria-label={legend}>
-        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+      {heading && <h2 className="type-heading-lg text-center">{heading}</h2>}
+      {lede && (
+        <p
+          className="type-body-md mx-auto mt-2 max-w-article text-center"
+          style={{ color: 'var(--text-secondary)' }}
+        >
+          {lede}
+        </p>
+      )}
+      <div role="group" aria-label={legend} className={heading || lede ? 'mt-8' : undefined}>
+        <ul
+          className="priority-grid"
+          style={{ '--priority-cols': options.length } as React.CSSProperties}
+        >
           {options.map((option) => (
             <li key={option.id}>
               <button
                 type="button"
-                className="priority-option h-full w-full"
+                className={`priority-option h-full w-full${option.image ? ' has-media' : ''}`}
                 aria-pressed={selectedId === option.id}
                 aria-expanded={selectedId === option.id}
                 aria-controls={`priority-rec-${option.id}`}
                 onClick={() => select(option.id)}
               >
+                {option.image && (
+                  <span className="priority-option-media" aria-hidden="true">
+                    <Media
+                      src={option.image.src}
+                      alt=""
+                      width={option.image.width}
+                      height={option.image.height}
+                      className="h-full w-full object-cover"
+                    />
+                  </span>
+                )}
                 <span
+                  className={option.image ? 'priority-option-icon' : undefined}
                   style={{
                     color: option.accent
-                      ? `var(--accent-${option.accent})`
+                      ? `var(--accent-${option.accent}-text)`
                       : 'var(--text-brand)',
                   }}
                 >
                   <Icon name={option.icon} size={26} />
                 </span>
-                <span className="type-body-sm font-semibold">{option.label}</span>
+                <span className="type-body-sm px-2 pb-1 font-semibold">{option.label}</span>
               </button>
             </li>
           ))}

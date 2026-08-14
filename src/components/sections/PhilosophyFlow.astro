@@ -4,13 +4,13 @@
  * (client request 2026-08-12): a winding dashed "road" connects the value
  * pillars in order, each a numbered milestone. Static .astro, zero JS.
  *
- * Desktop (lg+): four milestones alternate high/low along an S-curve dashed
- * road (SVG, stretch-scaled horizontally; node centers sit at 12.5% /
- * 37.5% / 62.5% / 87.5% of the row — the same centers the CSS grid gives
- * equal columns — so path and nodes stay aligned at any width).
- * Mobile: a vertical roadmap — dashed spine on the left, milestones down
- * the line. Zone-agnostic via semantic tokens; road + numbers use the
- * exact brand red (--color-red-brand, graphic accent only).
+ * Desktop (lg+): N milestones alternate high/low along an S-curve dashed
+ * road. The SVG path is GENERATED from steps.length (works for 3–7
+ * steps): node centers sit at (i+0.5)/N of the row — the same centers
+ * the CSS grid gives N equal columns (--flow-cols) — so path and nodes
+ * stay aligned at any width. Mobile: a vertical roadmap — dashed spine
+ * on the left, milestones down the line. Zone-agnostic via semantic
+ * tokens; road + numbers use the exact brand red (graphic accent only).
  */
 import { Icon } from '@/components/global/Icon';
 import type { PhilosophyFlowContent } from '@/types/sections';
@@ -19,6 +19,30 @@ type Props = PhilosophyFlowContent;
 const { heading, lede, steps } = Astro.props;
 
 const pad = (n: number) => String(n + 1).padStart(2, '0');
+
+/* Road geometry — viewBox 1200×176, high y=36 / low y=108, alternating. */
+const W = 1200;
+const HIGH = 36;
+const LOW = 108;
+const n = steps.length;
+const cx = (i: number) => ((i + 0.5) / n) * W;
+const cy = (i: number) => (i % 2 === 0 ? HIGH : LOW);
+const segs = steps.slice(1).map((_, k) => {
+  const x0 = cx(k);
+  const y0 = cy(k);
+  const x1 = cx(k + 1);
+  const y1 = cy(k + 1);
+  const dx = (x1 - x0) / 3;
+  return `C ${x0 + dx} ${y0} ${x1 - dx} ${y1} ${x1} ${y1}`;
+});
+const roadPath = n > 1 ? `M ${cx(0)} ${cy(0)} ${segs.join(' ')}` : '';
+/* Direction chevrons at each leg's midpoint (path tilts down on even
+   legs, up on odd — mirror the arrow to match). */
+const chevrons = steps.slice(1).map((_, k) => ({
+  x: (cx(k) + cx(k + 1)) / 2 - 6,
+  y: (HIGH + LOW) / 2 - 6,
+  down: k % 2 === 0,
+}));
 ---
 
 <div>
@@ -29,8 +53,11 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
     </p>
   )}
 
-  <ol class:list={['philosophy-flow', (heading || lede) && 'mt-10']}>
-    {/* The road — desktop only; equal-column node centers, S-curve between. */}
+  <ol
+    class:list={['philosophy-flow', (heading || lede) && 'mt-10']}
+    style={`--flow-cols: ${n}`}
+  >
+    {/* The road — desktop only; generated from the step count. */}
     <svg
       class="flow-road"
       viewBox="0 0 1200 176"
@@ -38,7 +65,7 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
       aria-hidden="true"
     >
       <path
-        d="M 150 36 C 250 36 350 108 450 108 C 550 108 650 36 750 36 C 850 36 950 108 1050 108"
+        d={roadPath}
         fill="none"
         stroke="var(--color-red-brand)"
         stroke-width="2.5"
@@ -46,11 +73,16 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
         stroke-linecap="round"
         vector-effect="non-scaling-stroke"
       />
-      {/* direction chevrons at the midpoint of each leg */}
       <g fill="var(--color-red-brand)">
-        <path d="M 296 68 l 12 6 l -12 6 z" />
-        <path d="M 596 80 l 12 -6 l -12 -6 z" transform="translate(0 -2)" />
-        <path d="M 896 68 l 12 6 l -12 6 z" />
+        {chevrons.map((c) => (
+          <path
+            d={
+              c.down
+                ? `M ${c.x} ${c.y} l 12 6 l -12 6 z`
+                : `M ${c.x} ${c.y + 12} l 12 -6 l -12 -6 z`
+            }
+          />
+        ))}
       </g>
     </svg>
 
@@ -141,7 +173,7 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
   /* ── Desktop: the winding road ── */
   @media (min-width: 64rem) {
     .philosophy-flow {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(var(--flow-cols, 4), 1fr);
       gap: 1.5rem;
       padding-top: 0.5rem;
     }

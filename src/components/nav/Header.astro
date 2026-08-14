@@ -37,17 +37,56 @@ import { resolveUrl } from "@/lib/paths";
     <nav aria-label={NAV_STRINGS.primaryNavLabel} class="hidden lg:block">
       <ul class="flex items-center gap-5">
         {
-          PRIMARY_NAV.map((item) => (
-            <li>
-              <a
-                href={resolveUrl(item.href)}
-                class="type-body-sm font-medium"
-                style="color: var(--text-secondary); text-decoration: none"
-              >
-                {item.label}
-              </a>
-            </li>
-          ))
+          PRIMARY_NAV.map((item) => {
+            const menuItems = (item.children ?? []).filter(
+              (child) => child.headerMenu,
+            );
+            return (
+              <li class={menuItems.length > 0 ? "nav-item has-menu" : "nav-item"}>
+                <a
+                  href={resolveUrl(item.href)}
+                  class="type-body-sm nav-item-link font-medium"
+                  style="color: var(--text-secondary); text-decoration: none"
+                >
+                  {item.label}
+                  {menuItems.length > 0 && (
+                    <svg
+                      class="nav-item-chevron"
+                      aria-hidden="true"
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  )}
+                </a>
+                {menuItems.length > 0 && (
+                  <div class="nav-menu">
+                    <ul class="nav-menu-panel">
+                      {menuItems.map((child) => (
+                        <li>
+                          <a
+                            href={resolveUrl(child.href)}
+                            class="type-body-sm nav-menu-link"
+                          >
+                            {child.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </li>
+            );
+          })
         }
       </ul>
     </nav>
@@ -75,3 +114,62 @@ import { resolveUrl } from "@/lib/paths";
     </div>
   </div>
 </header>
+
+<style>
+  .nav-item {
+    position: relative;
+  }
+  .nav-item-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .nav-item-chevron {
+    transition: transform 150ms ease;
+  }
+  .has-menu:hover .nav-item-chevron,
+  .has-menu:focus-within .nav-item-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* Dropdown — pure CSS, opens on hover and keyboard focus. The panel sits
+     inside a padded wrapper so the pointer never crosses a dead gap. */
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 0.75rem;
+    display: none;
+    z-index: 60;
+  }
+  .has-menu:hover .nav-menu,
+  .has-menu:focus-within .nav-menu {
+    display: block;
+  }
+  .nav-menu-panel {
+    list-style: none;
+    margin: 0;
+    min-width: 13.5rem;
+    padding: 0.4rem;
+    background: var(--surface-base);
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.6rem;
+    box-shadow: 0 12px 32px -8px rgb(0 0 0 / 0.18);
+  }
+  .nav-menu-link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 150ms ease, background-color 150ms ease;
+  }
+  .nav-menu-link:hover,
+  .nav-menu-link:focus-visible {
+    color: var(--text-primary);
+    background: var(--surface-sunken, rgb(0 0 0 / 0.04));
+  }
+</style>

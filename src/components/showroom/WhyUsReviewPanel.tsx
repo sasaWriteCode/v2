@@ -122,7 +122,7 @@ export function WhyUsReviewPanel({
   const secondRow = reviews.slice(Math.ceil(reviews.length / 2));
 
   return (
-    <div className="w-full py-8 lg:py-16">
+    <div className="w-full py-2 sm:py-4">
       <style>{`
         @keyframes marqueeVertical {
           0% { transform: translateY(0%); }

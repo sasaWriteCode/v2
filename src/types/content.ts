@@ -120,6 +120,8 @@ export interface PriorityOption {
   icon: IconName;
   label: string;
   accent?: SolutionKey;
+  /** Present = photo-card layout: image on top, icon in a badge over it. */
+  image?: MediaContent;
   recommendation: PriorityRecommendation;
 }
 
