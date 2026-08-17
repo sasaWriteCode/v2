@@ -71,16 +71,53 @@ import { resolveUrl } from "@/lib/paths";
                 {menuItems.length > 0 && (
                   <div class="nav-menu">
                     <ul class="nav-menu-panel">
-                      {menuItems.map((child) => (
-                        <li>
-                          <a
-                            href={resolveUrl(child.href)}
-                            class="type-body-sm nav-menu-link"
-                          >
-                            {child.label}
-                          </a>
-                        </li>
-                      ))}
+                      {menuItems.map((child) => {
+                        const subItems = child.children ?? [];
+                        return (
+                          <li class={subItems.length > 0 ? "nav-submenu-host" : undefined}>
+                            <a
+                              href={resolveUrl(child.href)}
+                              class={`type-body-sm nav-menu-link${subItems.length > 0 ? " nav-menu-link-parent" : ""}`}
+                            >
+                              {child.label}
+                              {subItems.length > 0 && (
+                                <svg
+                                  class="nav-submenu-chevron"
+                                  aria-hidden="true"
+                                  width="10"
+                                  height="10"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="2.5"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M9 5l7 7-7 7"
+                                  />
+                                </svg>
+                              )}
+                            </a>
+                            {subItems.length > 0 && (
+                              <div class="nav-submenu">
+                                <ul class="nav-menu-panel">
+                                  {subItems.map((sub) => (
+                                    <li>
+                                      <a
+                                        href={resolveUrl(sub.href)}
+                                        class="type-body-sm nav-menu-link"
+                                      >
+                                        {sub.label}
+                                      </a>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 )}
@@ -171,5 +208,30 @@ import { resolveUrl } from "@/lib/paths";
   .nav-menu-link:focus-visible {
     color: var(--text-primary);
     background: var(--surface-sunken, rgb(0 0 0 / 0.04));
+  }
+
+  /* Second-level flyout — opens to the right of its parent row. */
+  .nav-submenu-host {
+    position: relative;
+  }
+  .nav-menu-link-parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .nav-submenu-chevron {
+    flex-shrink: 0;
+  }
+  .nav-submenu {
+    position: absolute;
+    top: -0.4rem; /* aligns the flyout panel with the parent row */
+    left: 100%;
+    padding-left: 0.5rem; /* hover bridge — no dead gap for the pointer */
+    display: none;
+  }
+  .nav-submenu-host:hover > .nav-submenu,
+  .nav-submenu-host:focus-within > .nav-submenu {
+    display: block;
   }
 </style>

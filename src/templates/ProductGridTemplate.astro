@@ -22,11 +22,19 @@ const products = content.sections
   .flatMap((section) => section.data.items.map((item) => item.product));
 
 const jsonLd = products.length > 0 ? [productListSchema(products)] : [];
+
+/* film-compare sections pick films from the page's own catalogue — inject
+   it here so the film list is never authored twice. */
+const sections = content.sections.map((section) =>
+  section.type === 'film-compare' && !section.data.films?.length
+    ? { ...section, data: { ...section.data, films: products } }
+    : section,
+);
 ---
 
 <BaseLayout seo={content.seo} crumbs={content.breadcrumbs} jsonLd={jsonLd}>
   <SectionRenderer
-    sections={content.sections}
+    sections={sections}
     defaultZone={content.defaultZone ?? 'workshop-light'}
   />
 </BaseLayout>

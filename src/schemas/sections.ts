@@ -63,6 +63,10 @@ import type {
   PageSeo,
   PrioritySelectorContent,
   ProblemCardGridContent,
+  FilmCompareContent,
+  AudiencePanel,
+  AudiencePanelCard,
+  AudiencePanelGridContent,
   ProductBrowserContent,
   ProductBrowserItem,
   ProductFilter,
@@ -92,6 +96,7 @@ import type {
   AwardsCarouselContent,
   MilestoneStepItem,
   MilestonesTimelineContent,
+  TechPatentShowcaseContent,
 } from '@/types/sections';
 
 /* ── Zones ── */
@@ -104,6 +109,8 @@ export const sectionZoneSchema = z.enum([
 /* ── Stage 2 primitive prop envelopes ── */
 
 export const problemCardGridContentSchema = z.object({
+  heading: z.string().optional(),
+  lede: z.string().optional(),
   cards: z.array(problemCardSchema),
   columns: z.union([z.literal(2), z.literal(3), z.literal(6)]).optional(),
 }) satisfies z.ZodType<ProblemCardGridContent>;
@@ -121,6 +128,9 @@ export const spectrumDiagramSectionSchema = z.object({
   variant: z.enum(['full', 'compact']).optional(),
   showFilm: z.boolean().optional(),
   title: z.string().optional(),
+  headline: z.string().optional(),
+  subhead: z.string().optional(),
+  kicker: z.string().optional(),
 });
 
 export const techPillarGridContentSchema = z.object({
@@ -137,8 +147,11 @@ export const philosophyFlowContentSchema = z.object({
 }) satisfies z.ZodType<PhilosophyFlowContent>;
 
 export const proofStatBarContentSchema = z.object({
+  heading: z.string().optional(),
+  lede: z.string().optional(),
   stats: z.array(statItemSchema),
   variant: z.enum(['light', 'dark']).optional(),
+  footnote: z.string().optional(),
 }) satisfies z.ZodType<ProofStatBarContent>;
 
 export const projectStripContentSchema = z.object({
@@ -186,10 +199,14 @@ export const seriesCardSchema = z.object({
   accent: z.union([solutionKeySchema, z.literal('neutral')]).optional(),
   badge: z.string().optional(),
   cta: ctaLinkSchema.optional(),
+  image: z.union([mediaContentSchema, z.string()]).optional(),
+  placeholderLabel: z.string().optional(),
+  specs: z.array(z.object({ label: z.string(), value: z.string() })).optional(),
 }) satisfies z.ZodType<SeriesCard>;
 
 export const seriesCardSetContentSchema = z.object({
   heading: z.string().optional(),
+  subhead: z.string().optional(),
   lede: z.string().optional(),
   cards: z.array(seriesCardSchema),
 }) satisfies z.ZodType<SeriesCardSetContent>;
@@ -405,8 +422,44 @@ export const productBrowserContentSchema = z.object({
   items: z.array(productBrowserItemSchema),
   fallbackAction: z.string(),
   emptyLabel: z.string(),
-  compareHint: z.string().optional(),
 }) satisfies z.ZodType<ProductBrowserContent>;
+
+export const audiencePanelCardSchema = z.object({
+  overline: z.string(),
+  accent: z.union([solutionKeySchema, z.literal('neutral')]).optional(),
+  stat: z
+    .object({
+      prefix: z.string().optional(),
+      value: z.string(),
+      suffix: z.string().optional(),
+    })
+    .optional(),
+  tagline: z.string(),
+  image: mediaContentSchema.optional(),
+  points: z.array(z.string()),
+  note: z.string().optional(),
+}) satisfies z.ZodType<AudiencePanelCard>;
+
+export const audiencePanelSchema = z.object({
+  heading: z.string(),
+  lede: z.string().optional(),
+  cards: z.array(audiencePanelCardSchema),
+  columns: z.union([z.literal(2), z.literal(3)]).optional(),
+  footnote: z.string().optional(),
+}) satisfies z.ZodType<AudiencePanel>;
+
+export const audiencePanelGridContentSchema = z.object({
+  panels: z.array(audiencePanelSchema),
+}) satisfies z.ZodType<AudiencePanelGridContent>;
+
+export const filmCompareContentSchema = z.object({
+  heading: z.string().optional(),
+  lede: z.string().optional(),
+  /** Omit on product pages — ProductGridTemplate injects the catalogue. */
+  films: z.array(productItemSchema).optional(),
+  initialId: z.string().optional(),
+  slots: z.number().optional(),
+}) satisfies z.ZodType<FilmCompareContent>;
 
 export const railEpisodeSchema = z.object({
   title: z.string(),
@@ -552,6 +605,19 @@ export const milestonesTimelineContentSchema = z.object({
   steps: z.array(milestoneStepItemSchema),
 }) satisfies z.ZodType<MilestonesTimelineContent>;
 
+export const techPatentShowcaseContentSchema = z.object({
+  patent1Number: z.string().optional(),
+  patent1Badge: z.string().optional(),
+  patent1Title: z.string().optional(),
+  patent1Tagline: z.string().optional(),
+  patent1Lead: z.string().optional(),
+  patent2Number: z.string().optional(),
+  patent2Badge: z.string().optional(),
+  patent2Title: z.string().optional(),
+  patent2Tagline: z.string().optional(),
+  patent2Lead: z.string().optional(),
+}) satisfies z.ZodType<TechPatentShowcaseContent>;
+
 export const sectionSchema = z.discriminatedUnion('type', [
   sectionVariant('cinematic-hero', cinematicHeroContentSchema),
   sectionVariant('problem-card-grid', problemCardGridContentSchema),
@@ -585,11 +651,14 @@ export const sectionSchema = z.discriminatedUnion('type', [
   sectionVariant('myth-fact', mythFactContentSchema),
   sectionVariant('split-media', splitMediaContentSchema),
   sectionVariant('product-browser', productBrowserContentSchema),
+  sectionVariant('film-compare', filmCompareContentSchema),
+  sectionVariant('audience-panel-grid', audiencePanelGridContentSchema),
   sectionVariant('our-story-panel', ourStoryPanelContentSchema),
   sectionVariant('why-us-review-panel', whyUsReviewPanelContentSchema),
   sectionVariant('patented-tech-flow', patentedTechFlowContentSchema),
   sectionVariant('awards-carousel', awardsCarouselContentSchema),
   sectionVariant('milestones-timeline', milestonesTimelineContentSchema),
+  sectionVariant('tech-patent-showcase', techPatentShowcaseContentSchema),
 ]) satisfies z.ZodType<Section>;
 
 /* ── Page content objects ── */

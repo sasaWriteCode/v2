@@ -6,8 +6,13 @@
     "description": "Understand what sustainability and ESG mean for your daily life — and how reducing solar heat in vehicles, homes and buildings lowers energy use, cuts carbon emissions and builds a greener future."
   },
   "breadcrumbs": [
-    { "label": "Home", "href": "/" },
-    { "label": "Sustainability" }
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Sustainability"
+    }
   ],
   "sections": [
     {
@@ -18,17 +23,41 @@
       "label": "Sustainability showcase hero",
       "data": {
         "eyebrow": "Sustainability & ESG",
-        "headlineLines": ["Better Protection Today.", "A Sustainable Tomorrow."],
-        "subhead": "Sustainability is more than a buzzword — it is how the energy we use every day shapes our climate, our costs and our quality of life. Learn what ESG means and how one small change to your glass can make a measurable difference.",
+        "headlineLines": [
+          "Better Protection.",
+          "Lower Energy Use.",
+          "A Greener Future."
+        ],
+        "subhead": "IrisPro window films reduce solar heat gain in vehicles and buildings, lowering energy demand, improving comfort and helping create a more sustainable world for future generations.",
         "benefits": [
-          { "icon": "bolt", "label": "Lower Energy Consumption" },
-          { "icon": "leaf", "label": "Reduce Carbon Emissions" },
-          { "icon": "users", "label": "Better Comfort & Well-being" },
-          { "icon": "shield", "label": "Protect Our Future" }
+          {
+            "icon": "bolt",
+            "label": "Lower Energy Consumption"
+          },
+          {
+            "icon": "recycle",
+            "label": "Reduce Carbon Emissions"
+          },
+          {
+            "icon": "users",
+            "label": "Improve Comfort & Well-being"
+          },
+          {
+            "icon": "shield",
+            "label": "Protect People, Property & Planet"
+          }
         ],
         "ctas": [
-          { "label": "See the Impact Chain", "href": "#impact-chain", "variant": "primary" },
-          { "label": "Explore Sustainability Solutions", "href": "/solutions/sustainability", "variant": "secondary" }
+          {
+            "label": "See the Impact Chain",
+            "href": "#impact-chain",
+            "variant": "primary"
+          },
+          {
+            "label": "Explore Sustainability Solutions",
+            "href": "/solutions/sustainability",
+            "variant": "secondary"
+          }
         ],
         "media": {
           "src": "placeholder:sustainability-hero",
@@ -39,83 +68,537 @@
       }
     },
     {
-      "id": "what-is-esg",
-      "type": "tech-pillar-grid",
+      "id": "impact-stats",
+      "type": "proof-stat-bar",
       "order": 20,
-      "label": "What ESG means",
+      "label": "The sustainability impact at a glance",
       "data": {
-        "columns": 3,
-        "pillars": [
+        "variant": "dark",
+        "heading": "The Sustainability Impact at a Glance",
+        "footnote": "Up to figures — results may vary based on film type, vehicle model, building design, location and usage.",
+        "stats": [
           {
-            "icon": "leaf",
-            "title": "Environmental",
-            "description": "How our energy use, emissions and waste affect the planet. Cooling is one of the largest energy loads in ASEAN — reducing solar heat gain directly reduces electricity and fuel demand."
+            "icon": "bolt",
+            "accent": "sustainability",
+            "mark": true,
+            "value": "30",
+            "unit": "%",
+            "label": "Lower Cooling Energy Consumption"
           },
           {
-            "icon": "users",
-            "title": "Social",
-            "description": "How choices affect people — health, comfort and well-being. Blocking UV and HEV blue light protects skin and eyes; cooler cabins and rooms reduce heat stress for families and employees."
+            "icon": "recycle",
+            "accent": "sustainability",
+            "mark": true,
+            "value": "1.2",
+            "unit": "Tons",
+            "label": "CO₂ Reduction per Year / Building"
           },
           {
-            "icon": "building",
-            "title": "Governance",
-            "description": "How organisations commit to responsible, measurable practices. Energy-efficiency upgrades like window film contribute to ESG reporting and green building certifications such as GBI."
+            "icon": "thermometer",
+            "accent": "sustainability",
+            "mark": true,
+            "value": "10",
+            "unit": "°C",
+            "label": "Heat Reduction for Improved Comfort"
+          },
+          {
+            "icon": "sun",
+            "accent": "sustainability",
+            "value": "99.9",
+            "unit": "%",
+            "label": "UV400 Rejection — Protects People & Interiors"
           }
         ]
       }
     },
     {
-      "id": "impact-stats",
-      "type": "proof-stat-bar",
-      "order": 30,
-      "label": "Sustainability impact at a glance",
-      "data": {
-        "variant": "dark",
-        "stats": [
-          { "value": "30", "unit": "%", "label": "Lower cooling energy consumption", "footnote": "Up to — varies by film type, glass and building design" },
-          { "value": "1.2", "unit": "tons", "label": "CO₂ reduction per year, per building", "footnote": "Up to — indicative estimate" },
-          { "value": "10", "unit": "°C", "label": "Heat reduction for improved comfort", "footnote": "Up to — varies by conditions" },
-          { "value": "99.9", "unit": "%", "label": "UV400 rejection protecting people & interiors" }
-        ]
-      }
-    },
-    {
       "id": "impact-chain",
-      "type": "tech-pillar-grid",
-      "order": 40,
-      "label": "The sustainability impact chain",
+      "type": "philosophy-flow",
+      "order": 30,
+      "label": "The sustainability chain",
       "data": {
-        "columns": 6,
-        "pillars": [
-          { "icon": "sun", "title": "Solar Heat Reduced", "description": "Advanced films reject heat at the glass, before it enters." },
-          { "icon": "snowflake", "title": "Less Air-Conditioning", "description": "Cooler interiors need less cooling to stay comfortable." },
-          { "icon": "battery", "title": "Less Energy Used", "description": "Lower battery, fuel or electricity demand for cooling." },
-          { "icon": "wallet", "title": "Lower Operating Cost", "description": "Savings on electricity and fuel, month after month." },
-          { "icon": "recycle", "title": "Reduced Emissions", "description": "Less energy means a smaller carbon footprint." },
-          { "icon": "leaf", "title": "A Greener Future", "description": "Small changes at scale add up for the next generation." }
+        "heading": "The Sustainability Chain: How IrisPro Makes a Difference",
+        "lede": "Buildings: lower electricity demand · EVs: lower battery energy used for cooling · Petrol / Hybrid: lower fuel used for cooling demand.",
+        "steps": [
+          {
+            "icon": "sun",
+            "title": "Solar Heat Reduced",
+            "description": "Advanced films reject heat at the glass, before it enters."
+          },
+          {
+            "icon": "snowflake",
+            "title": "Less Air-Conditioning Demand",
+            "description": "Cooler interiors need less cooling to stay comfortable."
+          },
+          {
+            "icon": "bolt",
+            "title": "Lower Energy / Fuel Consumption",
+            "description": "Lower battery, fuel or electricity demand for cooling."
+          },
+          {
+            "icon": "wallet",
+            "title": "Lower Operating Cost",
+            "description": "Savings on electricity and fuel, month after month."
+          },
+          {
+            "icon": "recycle",
+            "title": "Reduced Carbon Emissions",
+            "description": "Less energy means a smaller carbon footprint."
+          },
+          {
+            "icon": "leaf",
+            "title": "A Greener, Sustainable Future",
+            "description": "Small changes at scale add up for the next generation."
+          }
         ]
       }
     },
     {
-      "id": "where-it-applies",
-      "type": "category-grid",
-      "order": 50,
-      "label": "Where sustainable protection applies",
+      "id": "mobility-buildings",
+      "type": "audience-panel-grid",
+      "order": 40,
+      "zone": "workshop-light",
+      "label": "Sustainable Mobility & Buildings",
       "data": {
-        "heading": "Where It Applies in Your Life",
-        "lede": "The same principle — reject solar heat at the glass — works across everything with windows.",
-        "categories": [
-          { "icon": "battery", "title": "EV Vehicles", "description": "Less battery used for cooling; more retained for driving.", "href": "/solutions/sustainability" },
-          { "icon": "car", "title": "Petrol / Hybrid Vehicles", "description": "Lower cooling load on the engine; potential fuel savings.", "href": "/solutions/automotive" },
-          { "icon": "home", "title": "Homes", "description": "Cooler rooms, lower electricity bills, better living comfort.", "href": "/solutions/residential" },
-          { "icon": "building", "title": "Commercial Buildings", "description": "Lower HVAC load, stronger ESG performance, GBI contribution.", "href": "/solutions/commercial" }
+        "panels": [
+          {
+            "heading": "Sustainable Mobility",
+            "lede": "Advanced protection for every journey.",
+            "cards": [
+              {
+                "overline": "EV Solution",
+                "accent": "sustainability",
+                "tagline": "Use Less Battery for Cooling. Keep More Energy for Driving.",
+                "image": {
+                  "src": "/images/family-car.png",
+                  "alt": "White EV at a charging station",
+                  "width": 900,
+                  "height": 560
+                },
+                "points": [
+                  "Reduces cabin heat by up to 10°C*",
+                  "Lower air-conditioning demand",
+                  "More battery energy available for propulsion",
+                  "Improves passenger comfort",
+                  "Helps support better real-world driving range"
+                ],
+                "note": "High-performance window film may help preserve EV battery energy by reducing the cooling load. Actual range improvement varies by vehicle, weather, driving conditions and air-conditioning settings."
+              },
+              {
+                "overline": "Petrol / Hybrid Solution",
+                "accent": "automotive",
+                "tagline": "Cool the Cabin with Less Air-Conditioning Demand.",
+                "image": {
+                  "src": "/images/hero-family-car.png",
+                  "alt": "Sedan driving on a sunlit country road",
+                  "width": 900,
+                  "height": 560
+                },
+                "points": [
+                  "Reduces cabin heat by up to 10°C*",
+                  "Lower cooling load on engine",
+                  "Potential fuel savings over time",
+                  "Reduced fuel-related carbon emissions",
+                  "Better comfort for every journey"
+                ],
+                "note": "By reducing solar heat entering the cabin, IrisPro may reduce air-conditioning demand and support better fuel efficiency over time."
+              }
+            ]
+          },
+          {
+            "heading": "Sustainable Buildings",
+            "lede": "Better buildings. Lower energy. Stronger future.",
+            "cards": [
+              {
+                "overline": "Residential Solution",
+                "accent": "sustainability",
+                "tagline": "Lower Bills. More Comfort. Healthier Living.",
+                "image": {
+                  "src": "/images/residential-glass.png",
+                  "alt": "Bright living room behind large glass windows",
+                  "width": 900,
+                  "height": 560
+                },
+                "points": [
+                  "Reduces indoor heat gain",
+                  "Lower air-conditioning usage",
+                  "Lower electricity bills",
+                  "Protects furniture, flooring and interiors",
+                  "Better comfort for your family"
+                ]
+              },
+              {
+                "overline": "Commercial Solution",
+                "accent": "commercial",
+                "tagline": "Lower Operating Cost. Higher Productivity.",
+                "image": {
+                  "src": "/images/commercial-building-2.png",
+                  "alt": "Open-plan office behind curtain-wall glazing",
+                  "width": 900,
+                  "height": 560
+                },
+                "points": [
+                  "Reduces HVAC energy demand",
+                  "Lower operating costs",
+                  "Enhances employee comfort and productivity",
+                  "Supports ESG and sustainability goals",
+                  "Green building certification support"
+                ]
+              }
+            ]
+          }
         ]
+      }
+    },
+    {
+      "id": "how-it-works",
+      "type": "spectrum-diagram",
+      "order": 44,
+      "zone": "showroom-dark",
+      "label": "How IrisPro reduces solar heat",
+      "data": {
+        "title": "How IrisPro Reduces Solar Heat",
+        "variant": "full",
+        "showFilm": true,
+        "bands": [
+          {
+            "id": "uv",
+            "name": "UV",
+            "fromNm": 100,
+            "toNm": 400,
+            "behavior": "blocked",
+            "annotation": "Blocks UV400 & HEV Blue Light",
+            "hue": "var(--accent-personal-protection-bright)"
+          },
+          {
+            "id": "hev",
+            "name": "HEV Blue Light",
+            "fromNm": 380,
+            "toNm": 420,
+            "behavior": "blocked",
+            "annotation": "Blocks up to 100% HEV Blue Light",
+            "hue": "var(--accent-commercial-bright)"
+          },
+          {
+            "id": "visible",
+            "name": "Visible Light",
+            "fromNm": 400,
+            "toNm": 780,
+            "behavior": "transmitted",
+            "annotation": "Maintains Visible Light Clarity",
+            "hue": "var(--accent-sustainability-bright)"
+          },
+          {
+            "id": "infrared",
+            "name": "Infrared Heat",
+            "fromNm": 780,
+            "toNm": 2500,
+            "behavior": "reduced",
+            "annotation": "Superior heat rejection without compromising visibility",
+            "hue": "#e85d3a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "energy-carbon-impact",
+      "type": "audience-panel-grid",
+      "order": 48,
+      "zone": "workshop-light",
+      "label": "Energy & carbon impact",
+      "data": {
+        "panels": [
+          {
+            "heading": "Energy & Carbon Impact",
+            "lede": "Measured difference. Meaningful impact.",
+            "columns": 3,
+            "footnote": "*Results may vary based on film type, glass type, usage pattern, building design and climate.",
+            "cards": [
+              {
+                "overline": "EV Vehicles",
+                "accent": "sustainability",
+                "stat": {
+                  "prefix": "Up to",
+                  "value": "10",
+                  "suffix": "%*"
+                },
+                "tagline": "Potential improvement in AC energy efficiency",
+                "points": [
+                  "More battery energy retained for driving"
+                ]
+              },
+              {
+                "overline": "Petrol / Hybrid",
+                "accent": "automotive",
+                "stat": {
+                  "prefix": "Up to",
+                  "value": "8",
+                  "suffix": "%*"
+                },
+                "tagline": "Potential reduction in fuel used for cooling demand",
+                "points": [
+                  "Lower fuel consumption and emissions"
+                ]
+              },
+              {
+                "overline": "Buildings",
+                "accent": "commercial",
+                "stat": {
+                  "prefix": "Up to",
+                  "value": "30",
+                  "suffix": "%*"
+                },
+                "tagline": "Reduction in cooling energy consumption",
+                "points": [
+                  "Lower electricity bills and carbon footprint"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lasting-benefits",
+      "type": "problem-card-grid",
+      "order": 60,
+      "zone": "workshop-light",
+      "label": "Comfort, health & long-term protection",
+      "data": {
+        "heading": "Comfort, Health & Long-Term Protection",
+        "columns": 3,
+        "cards": [
+          {
+            "icon": "eye",
+            "title": "Protects Skin & Eyes",
+            "description": "Blocks UV400 & HEV Blue Light that contribute to skin damage, pigmentation and eye strain."
+          },
+          {
+            "icon": "thermometer",
+            "title": "Better Thermal Comfort",
+            "description": "Keeps your space and cabin cooler, more comfortable all day long."
+          },
+          {
+            "icon": "home",
+            "title": "Protects Interiors",
+            "description": "Prevents fading and cracking of furniture, dashboards, flooring and fabrics."
+          },
+          {
+            "icon": "leaf",
+            "title": "Healthier Environment",
+            "description": "Reduces glare and heat stress, creating a healthier space for living and working."
+          },
+          {
+            "icon": "shield",
+            "title": "Long Lasting Performance",
+            "description": "Engineered for durability and consistent performance for many years."
+          }
+        ]
+      }
+    },
+    {
+      "id": "esg-contribution",
+      "type": "certification-strip",
+      "order": 70,
+      "label": "ESG & green building contribution",
+      "data": {
+        "heading": "Supports ESG & Green Building Goals — contribute to a sustainable future and gain points for green building certifications",
+        "variant": "row",
+        "certs": [
+          {
+            "id": "gbi",
+            "name": "GBI",
+            "label": "Green Building Index"
+          },
+          {
+            "id": "leed",
+            "name": "LEED",
+            "label": "Leadership in Energy & Environmental Design"
+          },
+          {
+            "id": "breeam",
+            "name": "BREEAM",
+            "label": "Building Research Establishment"
+          },
+          {
+            "id": "well",
+            "name": "WELL",
+            "label": "International WELL Building Institute"
+          },
+          {
+            "id": "sirim",
+            "name": "SIRIM",
+            "label": "Certified Grade A1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "real-projects",
+      "type": "project-strip",
+      "order": 75,
+      "zone": "workshop-light",
+      "label": "Real projects, real results",
+      "data": {
+        "heading": "Real Projects. Real Results.",
+        "lede": "Trusted by businesses, homeowners and fleets across ASEAN.",
+        "filters": false,
+        "scrollable": true,
+        "projects": [
+          {
+            "name": "Commercial Building",
+            "location": "Kuala Lumpur",
+            "category": "Commercial",
+            "badge": {
+              "label": "Cooling energy reduced by up to 28%*",
+              "tone": "achievement"
+            },
+            "image": {
+              "src": "/images/commercial-building.png",
+              "alt": "Glass-fronted commercial building in Kuala Lumpur",
+              "width": 560,
+              "height": 360
+            },
+            "cta": {
+              "label": "View More Projects",
+              "href": "/projects"
+            }
+          },
+          {
+            "name": "Residential Project",
+            "location": "Penang",
+            "category": "Residential",
+            "badge": {
+              "label": "Indoor temperature reduced by up to 9°C*",
+              "tone": "achievement"
+            },
+            "image": {
+              "src": "/images/residential-glass-2.png",
+              "alt": "Modern residence with large glass frontage in Penang",
+              "width": 560,
+              "height": 360
+            },
+            "cta": {
+              "label": "View More Projects",
+              "href": "/projects"
+            }
+          },
+          {
+            "name": "EV Fleet Project",
+            "location": "Singapore",
+            "category": "Automotive",
+            "badge": {
+              "label": "AC energy efficiency improved by up to 10%*",
+              "tone": "achievement"
+            },
+            "image": {
+              "src": "/images/family-car.png",
+              "alt": "Electric vehicle from a Singapore fleet",
+              "width": 560,
+              "height": 360
+            },
+            "cta": {
+              "label": "View More Projects",
+              "href": "/projects"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "trusted-by",
+      "type": "certification-strip",
+      "order": 80,
+      "label": "Trusted by leading organizations",
+      "data": {
+        "heading": "Trusted by Leading Organizations — proudly used in vehicles, homes and buildings across ASEAN",
+        "variant": "row",
+        "certs": [
+          {
+            "id": "petronas",
+            "name": "PETRONAS",
+            "label": "Energy"
+          },
+          {
+            "id": "tenaga-nasional",
+            "name": "Tenaga Nasional",
+            "label": "Utilities"
+          },
+          {
+            "id": "uem-sunrise",
+            "name": "UEM Sunrise",
+            "label": "Property"
+          },
+          {
+            "id": "wct",
+            "name": "WCT",
+            "label": "Construction"
+          },
+          {
+            "id": "sime-darby-property",
+            "name": "Sime Darby Property",
+            "label": "Property"
+          },
+          {
+            "id": "ocbc",
+            "name": "OCBC",
+            "label": "Banking"
+          },
+          {
+            "id": "public-bank",
+            "name": "Public Bank",
+            "label": "Banking"
+          },
+          {
+            "id": "honeywell",
+            "name": "Honeywell",
+            "label": "Technology"
+          },
+          {
+            "id": "faber-castell",
+            "name": "Faber-Castell",
+            "label": "Manufacturing"
+          },
+          {
+            "id": "kpj",
+            "name": "KPJ Healthcare",
+            "label": "Healthcare"
+          }
+        ]
+      }
+    },
+    {
+      "id": "save-energy",
+      "type": "split-media",
+      "order": 85,
+      "zone": "workshop-light",
+      "label": "Let us help you save energy",
+      "data": {
+        "heading": "Let Us Help You Save Energy",
+        "lede": "Get a personalised assessment for your vehicle fleet, home or building today.",
+        "bullets": [
+          "Energy Efficiency Assessment",
+          "Film Recommendation",
+          "ROI & Payback Analysis",
+          "Expert Consultation"
+        ],
+        "media": {
+          "src": "/images/calm-ending.png",
+          "alt": "Calm, cool interior protected by IrisPro window film",
+          "width": 900,
+          "height": 560
+        },
+        "mediaSide": "right",
+        "cta": {
+          "label": "Request Energy Assessment",
+          "href": "/contact"
+        }
       }
     },
     {
       "id": "learn-more",
       "type": "article-grid",
-      "order": 60,
+      "order": 90,
       "label": "Educational articles",
       "data": {
         "heading": "Learn More in the Knowledge Centre",
@@ -163,24 +646,30 @@
     {
       "id": "cta",
       "type": "cta-bar",
-      "order": 70,
+      "order": 100,
       "zone": "showroom-dark",
       "label": "Closing call to action",
       "data": {
-        "headline": "Small Changes Today. Big Impact Tomorrow.",
-        "subhead": "Choose a cooler, smarter and more sustainable way to live, drive and work.",
+        "headline": "Better Protection Today. A Sustainable Tomorrow.",
+        "subhead": "Let's work together for a cooler, more comfortable and greener world.",
         "actions": [
           {
             "icon": "leaf",
-            "title": "Explore Sustainability Solutions",
-            "description": "ESG-ready protection for vehicles, homes and buildings.",
-            "cta": { "label": "Explore Solutions", "href": "/solutions/sustainability" }
+            "title": "Explore Our Solutions",
+            "description": "Automotive | Residential | Commercial",
+            "cta": {
+              "label": "Explore Our Solutions",
+              "href": "/solutions"
+            }
           },
           {
             "icon": "chat",
             "title": "Request Consultation",
-            "description": "Talk to our experts about your energy-saving goals.",
-            "cta": { "label": "Request Now", "href": "/contact" }
+            "description": "Speak to Our Experts",
+            "cta": {
+              "label": "Request Consultation",
+              "href": "/contact"
+            }
           }
         ]
       }

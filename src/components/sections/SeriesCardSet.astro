@@ -1,173 +1,176 @@
 ---
 /**
- * SeriesCardSet — the good/better/best series cards (Comfort/Plus/Signature
- * or Essential/Advanced/Signature — the taxonomy is data, see
- * _conflicts.md §1). Static, zero JS.
+ * SeriesCardSet — the good/better/best series cards (Comfort/Plus/Signature).
+ * Enhanced with ImagePlaceholder slots, key spec chips, and modern automotive tier aesthetics.
  */
 import { Icon } from '@/components/global/Icon';
+import { ImagePlaceholder } from '@/components/base/ImagePlaceholder';
 import type { SeriesCardSetContent } from '@/types/sections';
 
 type Props = SeriesCardSetContent;
-const { heading, lede, cards } = Astro.props;
+const { heading, subhead, lede, cards } = Astro.props;
 
 const accentVar = (accent?: string) =>
   !accent || accent === 'neutral'
-    ? 'var(--text-brand)'
-    : `var(--accent-${accent}-text, var(--text-brand))`;
+    ? 'var(--text-brand, #ef4444)'
+    : `var(--accent-${accent}-text, var(--text-brand, #ef4444))`;
 
-/* Raw + bright accent pair drives the per-card hover gradient. */
 const accentBase = (accent?: string) =>
   !accent || accent === 'neutral'
-    ? 'var(--color-red)'
-    : `var(--accent-${accent}, var(--color-red))`;
+    ? 'var(--color-red, #ef4444)'
+    : `var(--accent-${accent}, var(--color-red, #ef4444))`;
+
 const accentBright = (accent?: string) =>
   !accent || accent === 'neutral'
-    ? 'var(--color-red-bright)'
-    : `var(--accent-${accent}-bright, var(--color-red-bright))`;
+    ? 'var(--color-red-bright, #ff6b6b)'
+    : `var(--accent-${accent}-bright, var(--color-red-bright, #ff6b6b))`;
 ---
 
-<div>
-  {heading && <h2 class="type-heading-lg">{heading}</h2>}
-  {lede && (
-    <p class="type-body-md mt-2 max-w-article" style="color: var(--text-secondary)">
-      {lede}
-    </p>
+<div class="w-full">
+  {(heading || subhead || lede) && (
+    <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+      {heading && <h2 class="type-heading-lg sm:text-4xl font-extrabold tracking-tight">{heading}</h2>}
+      {subhead && (
+        <p class="text-base sm:text-lg font-semibold mt-2" style="color: var(--text-secondary)">
+          {subhead}
+        </p>
+      )}
+      {lede && (
+        <p class="type-body-sm mt-1.5 max-w-article mx-auto" style="color: var(--text-muted)">
+          {lede}
+        </p>
+      )}
+    </div>
   )}
-  <ul class:list={['grid grid-cols-1 gap-5 md:grid-cols-3', (heading || lede) && 'mt-8']}>
-    {cards.map((card) => (
-      <li>
-        <article
-          class="series-card grid h-full content-start gap-3 rounded-lg p-6"
-          style={`--card-accent: ${accentBase(card.accent)}; --card-accent-bright: ${accentBright(card.accent)}`}
-        >
-          {card.badge && <span class="badge badge-brand w-fit">{card.badge}</span>}
-          <div>
-            <h3 class="type-heading-md">{card.name}</h3>
-            {card.tagline && (
-              <p class="type-body-sm" style={`color: ${accentVar(card.accent)}; font-weight: 600`}>
-                {card.tagline}
-              </p>
-            )}
-          </div>
-          {card.description && (
-            <p class="type-body-sm" style="color: var(--text-secondary)">
-              {card.description}
-            </p>
-          )}
-          <ul class="grid gap-1.5">
-            {card.features.map((feature) => (
-              <li
-                class="type-body-sm flex items-start gap-2"
-                style="color: var(--text-secondary)"
-              >
-                <span style="color: var(--data-positive-text)">
-                  <Icon name="check" size={16} />
-                </span>
-                {feature}
-              </li>
-            ))}
-          </ul>
-          {card.cta && (
-            <a
-              href={card.cta.href}
-              class="type-body-sm mt-1 font-semibold underline"
-              style="color: var(--text-brand)"
-            >
-              {card.cta.label}
-            </a>
-          )}
-        </article>
-      </li>
-    ))}
+
+  <ul class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+    {cards.map((card) => {
+      const isSignature = card.id === 'signature';
+      const isPlus = card.id === 'plus';
+      const accentKey = isSignature ? 'red' : isPlus ? 'blue' : 'slate';
+
+      return (
+        <li class="h-full">
+          <article
+            class:list={[
+              'series-card flex flex-col h-full rounded-2xl overflow-hidden border transition-all duration-300',
+              isSignature
+                ? 'bg-zinc-950 border-red-500/50 shadow-2xl shadow-red-950/20 ring-1 ring-red-500/20'
+                : 'bg-zinc-900/90 border-zinc-800/80 shadow-xl'
+            ]}
+            style={`--card-accent: ${accentBase(card.accent)}; --card-accent-bright: ${accentBright(card.accent)}`}
+          >
+            {/* Top Image / Placeholder Banner */}
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-black/60">
+              {card.image ? (
+                typeof card.image === 'string' ? (
+                  <img src={card.image} alt={card.name} class="w-full h-full object-cover" loading="lazy" />
+                ) : (
+                  <img src={card.image.src} alt={card.image.alt || card.name} class="w-full h-full object-cover" loading="lazy" />
+                )
+              ) : (
+                <ImagePlaceholder
+                  label={card.placeholderLabel || `${card.name} Showcase`}
+                  subtext={card.tagline}
+                  aspect="16/9"
+                  dimensions="900 × 560"
+                  accent={accentKey as any}
+                  className="w-full h-full rounded-none border-0"
+                />
+              )}
+
+              {/* Badge overlay on top image */}
+              {card.badge && (
+                <div class="absolute top-3 right-3 z-10">
+                  <span
+                    class:list={[
+                      'px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider shadow-lg border',
+                      isSignature
+                        ? 'bg-red-600 text-white border-red-400'
+                        : isPlus
+                        ? 'bg-sky-600 text-white border-sky-400'
+                        : 'bg-zinc-800 text-zinc-200 border-zinc-600'
+                    ]}
+                  >
+                    {card.badge}
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {/* Card Content Body */}
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                {/* Name & Tagline */}
+                <h3 class="text-2xl font-extrabold text-white tracking-tight">{card.name}</h3>
+                {card.tagline && (
+                  <p class="text-sm font-semibold mt-1" style={`color: ${accentVar(card.accent)}`}>
+                    {card.tagline}
+                  </p>
+                )}
+
+                {card.description && (
+                  <p class="text-xs sm:text-sm text-zinc-400 mt-2 leading-relaxed">
+                    {card.description}
+                  </p>
+                )}
+
+                {/* Optional Spec Pills */}
+                {card.specs && card.specs.length > 0 && (
+                  <div class="grid grid-cols-2 gap-2 my-4 pt-3 border-t border-zinc-800/80">
+                    {card.specs.map((spec) => (
+                      <div class="p-2 rounded-lg bg-zinc-900 border border-zinc-800/80 text-center">
+                        <span class="block text-[10px] text-zinc-500 uppercase font-medium">{spec.label}</span>
+                        <span class="block text-xs font-bold text-white mt-0.5">{spec.value}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Feature Bullet List */}
+                <ul class="grid gap-2 mt-4 pt-4 border-t border-zinc-800/60">
+                  {card.features.map((feature) => (
+                    <li class="text-xs sm:text-sm flex items-start gap-2.5 text-zinc-300">
+                      <span class="text-emerald-400 shrink-0 mt-0.5">
+                        <Icon name="check" size={15} />
+                      </span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Bottom CTA Button */}
+              {card.cta && (
+                <div class="mt-6 pt-4 border-t border-zinc-800/60">
+                  <a
+                    href={card.cta.href}
+                    class:list={[
+                      'btn-press w-full block text-center py-2.5 px-4 rounded-xl text-xs sm:text-sm font-bold tracking-wide transition-all shadow-md',
+                      isSignature
+                        ? 'bg-red-600 hover:bg-red-500 text-white shadow-red-950/50'
+                        : 'bg-zinc-800 hover:bg-zinc-700 text-white border border-zinc-700'
+                    ]}
+                  >
+                    {card.cta.label} →
+                  </a>
+                </div>
+              )}
+            </div>
+          </article>
+        </li>
+      );
+    })}
   </ul>
 </div>
 
 <style>
-  /* Accent-driven hover: each card tints toward its own series color via
-     --card-accent / --card-accent-bright (set inline per card above). */
   .series-card {
-    position: relative;
-    overflow: hidden;
-    background: var(--surface-raised);
-    border: 1px solid var(--border-subtle);
-    box-shadow: var(--elevation-1);
-    background-image: var(--depth-glow-subtle);
-    transition:
-      transform 300ms cubic-bezier(0.22, 0.8, 0.3, 1),
-      border-color 300ms ease,
-      box-shadow 300ms ease;
+    transition: transform 300ms cubic-bezier(0.22, 0.8, 0.3, 1), border-color 300ms ease, box-shadow 300ms ease;
   }
-  /* Keep card content above the gradient overlay. */
-  .series-card > :global(*) {
-    position: relative;
-    z-index: 1;
-  }
-  /* Gradient wash — fades in (background-image itself can't animate). */
-  .series-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background: linear-gradient(
-      165deg,
-      color-mix(in srgb, var(--card-accent) 14%, transparent),
-      color-mix(in srgb, var(--card-accent-bright) 6%, transparent) 45%,
-      transparent 78%
-    );
-    opacity: 0;
-    transition: opacity 300ms ease;
-    pointer-events: none;
-  }
-  /* Gradient signature bar sweeping across the top edge. */
-  .series-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    z-index: 2;
-    background: linear-gradient(
-      90deg,
-      var(--card-accent),
-      var(--card-accent-bright)
-    );
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 350ms cubic-bezier(0.22, 0.8, 0.3, 1);
-    pointer-events: none;
-  }
-
   @media (hover: hover) and (pointer: fine) {
     .series-card:hover {
       transform: translateY(-5px);
-      border-color: color-mix(in srgb, var(--card-accent) 40%, var(--border-subtle));
-      box-shadow: 0 20px 40px -18px color-mix(in srgb, var(--card-accent) 45%, rgb(10 10 10 / 0.25));
-    }
-    .series-card:hover::before {
-      opacity: 1;
-    }
-    .series-card:hover::after {
-      transform: scaleX(1);
-    }
-  }
-
-  /* Keyboard users get the same affordance when tabbing to the card CTA. */
-  .series-card:focus-within::before {
-    opacity: 1;
-  }
-  .series-card:focus-within::after {
-    transform: scaleX(1);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .series-card,
-    .series-card::before,
-    .series-card::after {
-      transition: none;
-    }
-    .series-card:hover {
-      transform: none;
     }
   }
 </style>

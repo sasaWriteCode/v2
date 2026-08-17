@@ -1,0 +1,122 @@
+---
+/**
+ * AudiencePanelGrid — side-by-side audience panels, each holding a centered
+ * heading + lede and a row of solution cards (accent overline, bold tagline,
+ * photo OR big stat, check bullets, optional footnote box). Built for the
+ * sustainability page's "Sustainable Mobility / Sustainable Buildings" and
+ * "Energy & Carbon Impact" bands. Static, 0KB.
+ *
+ * Panels stretch to equal height; card note boxes pin to the card bottom so
+ * neighbouring cards keep a common baseline.
+ */
+import { Icon } from '@/components/global/Icon';
+import type { AudiencePanelGridContent } from '@/types/sections';
+
+type Props = AudiencePanelGridContent;
+const { panels } = Astro.props;
+
+const accentText = (accent?: string) =>
+  !accent || accent === 'neutral'
+    ? 'var(--text-brand)'
+    : `var(--accent-${accent}-text, var(--text-brand))`;
+const accentBase = (accent?: string) =>
+  !accent || accent === 'neutral'
+    ? 'var(--color-red)'
+    : `var(--accent-${accent}, var(--color-red))`;
+
+const outerCols = panels.length > 1 ? 'lg:grid-cols-2' : '';
+const cardCols = (n?: number) => (n === 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2');
+---
+
+<div class:list={['grid items-stretch gap-6', outerCols]}>
+  {panels.map((panel) => (
+    <section
+      class="flex h-full flex-col rounded-xl p-6 sm:p-8"
+      style="background: var(--surface-raised); border: 1px solid var(--border-subtle); box-shadow: var(--elevation-1)"
+    >
+      <div class="text-center">
+        <h2 class="type-heading-md" style="text-transform: uppercase; letter-spacing: 0.04em">
+          {panel.heading}
+        </h2>
+        {panel.lede && (
+          <p class="type-body-md mt-1.5 font-semibold" style="color: var(--text-secondary)">
+            {panel.lede}
+          </p>
+        )}
+      </div>
+
+      <div class:list={['mt-6 grid flex-1 content-stretch gap-4', cardCols(panel.columns)]}>
+        {panel.cards.map((card) => (
+          <article
+            class="flex h-full flex-col gap-3 rounded-lg p-4 sm:p-5"
+            style={`background: color-mix(in srgb, ${accentBase(card.accent)} 3%, var(--surface-base)); border: 1px solid color-mix(in srgb, ${accentBase(card.accent)} 22%, var(--border-subtle))`}
+          >
+            <p class="type-overline" style={`color: ${accentText(card.accent)}`}>
+              {card.overline}
+            </p>
+
+            {card.stat ? (
+              <p class="leading-none">
+                {card.stat.prefix && (
+                  <span class="type-body-sm block font-semibold" style="color: var(--text-secondary)">
+                    {card.stat.prefix}
+                  </span>
+                )}
+                <span
+                  class="numeric text-4xl font-extrabold tracking-tight sm:text-5xl"
+                  style={`color: ${accentText(card.accent)}`}
+                >
+                  {card.stat.value}{card.stat.suffix}
+                </span>
+              </p>
+            ) : null}
+
+            <p class="type-body-md font-bold" style="color: var(--text-primary)">
+              {card.tagline}
+            </p>
+
+            {card.image && (
+              <img
+                src={card.image.src}
+                alt={card.image.alt}
+                width={card.image.width}
+                height={card.image.height}
+                loading="lazy"
+                class="aspect-[16/10] w-full rounded-md object-cover"
+              />
+            )}
+
+            <ul class="grid gap-1.5">
+              {card.points.map((point) => (
+                <li
+                  class="type-body-sm flex items-start gap-2"
+                  style="color: var(--text-secondary)"
+                >
+                  <span class="mt-0.5 shrink-0" style={`color: ${accentText(card.accent)}`}>
+                    <Icon name="check" size={15} />
+                  </span>
+                  {point}
+                </li>
+              ))}
+            </ul>
+
+            {card.note && (
+              <p
+                class="type-caption mt-auto rounded-md p-3"
+                style={`background: color-mix(in srgb, ${accentBase(card.accent)} 7%, var(--surface-base)); border-left: 3px solid color-mix(in srgb, ${accentBase(card.accent)} 45%, transparent); color: var(--text-muted)`}
+              >
+                {card.note}
+              </p>
+            )}
+          </article>
+        ))}
+      </div>
+
+      {panel.footnote && (
+        <p class="type-caption mt-4 text-center" style="color: var(--text-muted)">
+          {panel.footnote}
+        </p>
+      )}
+    </section>
+  ))}
+</div>

@@ -74,6 +74,10 @@ export interface BenefitItem {
 export interface HeroComparisonSide {
   label: string;
   points: string[];
+  /** Renders the panel as a link card (audience routing on /products/building). */
+  href?: string;
+  /** Affordance text when href is set. Default "Explore". */
+  linkLabel?: string;
 }
 
 export interface HeroComparison {
@@ -104,6 +108,8 @@ export interface ProblemCard {
   title: string;
   description: string;
   image?: MediaContent;
+  placeholderLabel?: string;
+  tag?: string;
 }
 
 /* ── 3. PrioritySelector ── */
@@ -148,6 +154,9 @@ export interface SpectrumDiagramContent {
   variant?: 'full' | 'compact';
   showFilm?: boolean;
   title?: string;
+  headline?: string;
+  subhead?: string;
+  kicker?: string;
 }
 
 /* ── 5. TechPillarGrid ── */
@@ -174,6 +183,12 @@ export interface StatItem {
   label: string;
   /** Marks the stat with * and renders the footnote below the bar. */
   footnote?: string;
+  /** Icon rendered in a tinted circle above the value. */
+  icon?: IconName;
+  /** Colors the value + icon via --accent-<key> tokens. Default: brand red. */
+  accent?: SolutionKey | 'neutral';
+  /** Marks the stat with * without a per-stat footnote (use the bar-level one). */
+  mark?: boolean;
 }
 
 /* ── 7. ProjectStrip ── */

@@ -55,12 +55,12 @@
         "ctas": [
           {
             "label": "Find Your Film",
-            "href": "#film-finder",
+            "href": "#catalogue",
             "variant": "primary"
           },
           {
             "label": "Compare Films",
-            "href": "#catalogue",
+            "href": "#film-comparison",
             "variant": "secondary"
           }
         ],
@@ -137,34 +137,15 @@
       }
     },
     {
-      "id": "film-finder",
-      "type": "film-finder",
+      "id": "film-comparison",
+      "type": "film-compare",
       "order": 30,
       "zone": "workshop-light",
-      "label": "Find Your Perfect IrisPro Film",
+      "label": "Compare Films",
       "data": {
-        "heading": "Find Your Perfect IrisPro Film",
-        "question": "Answer a few simple questions and we'll recommend the best series for you.",
-        "options": [
-          {
-            "icon": "car",
-            "label": "1. What do you drive?",
-            "description": "Select your vehicle",
-            "href": "#catalogue"
-          },
-          {
-            "icon": "shield",
-            "label": "2. What matters most?",
-            "description": "Select your priority",
-            "href": "#catalogue"
-          },
-          {
-            "icon": "wallet",
-            "label": "3. Your budget?",
-            "description": "Select your range",
-            "href": "#catalogue"
-          }
-        ]
+        "heading": "Compare Films Side by Side",
+        "lede": "Pick any films from our catalogue and see their full specifications side by side.",
+        "initialId": "titan-x"
       }
     },
     {
@@ -805,8 +786,7 @@
               ]
             }
           }
-        ],
-        "compareHint": "Tick “Compare” on any two films to see a side-by-side specification table."
+        ]
       }
     },
     {

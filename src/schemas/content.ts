@@ -107,6 +107,8 @@ export const benefitItemSchema = z.object({
 export const heroComparisonSideSchema = z.object({
   label: z.string(),
   points: z.array(z.string()),
+  href: z.string().optional(),
+  linkLabel: z.string().optional(),
 }) satisfies z.ZodType<HeroComparisonSide>;
 
 export const heroComparisonSchema = z.object({
@@ -132,6 +134,8 @@ export const problemCardSchema = z.object({
   title: z.string(),
   description: z.string(),
   image: mediaContentSchema.optional(),
+  placeholderLabel: z.string().optional(),
+  tag: z.string().optional(),
 }) satisfies z.ZodType<ProblemCard>;
 
 /* ── 3. PrioritySelector ── */
@@ -175,6 +179,9 @@ export const spectrumDiagramContentSchema = z.object({
   variant: z.enum(['full', 'compact']).optional(),
   showFilm: z.boolean().optional(),
   title: z.string().optional(),
+  headline: z.string().optional(),
+  subhead: z.string().optional(),
+  kicker: z.string().optional(),
 }) satisfies z.ZodType<SpectrumDiagramContent>;
 
 /* ── 5. TechPillarGrid ── */
@@ -194,6 +201,9 @@ export const statItemSchema = z.object({
   unit: z.string().optional(),
   label: z.string(),
   footnote: z.string().optional(),
+  icon: iconNameSchema.optional(),
+  accent: z.union([solutionKeySchema, z.literal('neutral')]).optional(),
+  mark: z.boolean().optional(),
 }) satisfies z.ZodType<StatItem>;
 
 /* ── 7. ProjectStrip ── */

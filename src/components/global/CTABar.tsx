@@ -218,72 +218,80 @@ export function CTABar({
   variant?: 'showroom' | 'workshop';
 }) {
   return (
-    <aside
-      data-zone={variant}
-      aria-label={headline || 'Nationwide Dealer Network & Support'}
-      className="rounded-2xl p-6 sm:p-8 md:p-10 border border-white/10"
-      style={{
-        backgroundColor: '#0a0a0a',
-        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.7)',
-      }}
-    >
-      <div className="space-y-6">
-        {/* Top Header Row: Title & Subhead without pill */}
-        <div className="space-y-2 max-w-3xl">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#fafaf8]">
-            {headline || 'Nationwide Coverage'}
-          </h2>
-          {subhead && (
-            <p className="text-base sm:text-lg text-[#c8c8d0] font-normal leading-relaxed">
-              {subhead}
-            </p>
-          )}
-        </div>
+    <section className="w-full py-10 sm:py-14 md:py-16">
+      <div className="container">
+        <aside
+          data-zone={variant}
+          aria-label={headline || 'Nationwide Dealer Network & Support'}
+          className="rounded-3xl p-6 sm:p-8 md:p-10 border border-white/20 relative overflow-hidden"
+          style={{
+            backgroundColor: '#0c0c0e',
+            boxShadow:
+              '0 0 50px -5px rgba(255, 255, 255, 0.16), 0 20px 40px -15px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.14)',
+          }}
+        >
+          {/* Subtle Ambient White Light Glow Effect */}
+          <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[500px] h-32 bg-white/[0.08] rounded-full blur-3xl pointer-events-none" />
 
-        {/* Main Section Grid: Left Map Container + Right 2x2 Card Grid aligned top to bottom */}
-        <div className="grid gap-6 lg:grid-cols-12 items-stretch">
-          {/* Left Column: Interactive Pulsing Map */}
-          <div className="lg:col-span-5 flex flex-col">
-            <MalaysiaBranchMap />
-          </div>
+          <div className="space-y-6 relative z-10">
+            {/* Top Header Row: Title & Subhead without pill */}
+            <div className="space-y-2 max-w-3xl">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#fafaf8]">
+                {headline || 'Nationwide Coverage'}
+              </h2>
+              {subhead && (
+                <p className="text-base sm:text-lg text-[#c8c8d0] font-normal leading-relaxed">
+                  {subhead}
+                </p>
+              )}
+            </div>
 
-          {/* Right Column: 4 Action Cards 2x2 Grid Matching Map Container Height */}
-          <div className="lg:col-span-7 flex flex-col">
-            <ul className="grid gap-4 sm:grid-cols-2 h-full">
-              {actions.map((action) => (
-                <li key={action.title} className="h-full">
-                  <a
-                    href={resolveUrl(action.cta.href)}
-                    className="group flex h-full flex-col justify-between rounded-xl p-5 sm:p-6 border border-white/10 bg-[#1a1a1e] hover:border-red-500/40 hover:bg-zinc-900 transition-all duration-300 shadow-lg hover:scale-[1.02]"
-                  >
-                    <div className="flex items-start gap-4">
-                      <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-500/10 text-red-500 border border-red-500/20 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
-                        <Icon name={action.icon} size={22} />
-                      </span>
-                      <div className="min-w-0 flex-1">
-                        <span className="text-base sm:text-lg font-bold text-[#fafaf8] block group-hover:text-white transition-colors">
-                          {action.title}
-                        </span>
-                        {action.description && (
-                          <span className="text-xs sm:text-sm text-[#c8c8d0] block mt-1 leading-relaxed font-normal">
-                            {action.description}
+            {/* Main Section Grid: Left Map Container + Right 2x2 Card Grid aligned top to bottom */}
+            <div className="grid gap-6 lg:grid-cols-12 items-stretch">
+              {/* Left Column: Interactive Pulsing Map */}
+              <div className="lg:col-span-5 flex flex-col">
+                <MalaysiaBranchMap />
+              </div>
+
+              {/* Right Column: 4 Action Cards 2x2 Grid Matching Map Container Height */}
+              <div className="lg:col-span-7 flex flex-col">
+                <ul className="grid gap-4 sm:grid-cols-2 h-full">
+                  {actions.map((action) => (
+                    <li key={action.title} className="h-full">
+                      <a
+                        href={resolveUrl(action.cta.href)}
+                        className="group flex h-full flex-col justify-between rounded-xl p-5 sm:p-6 border border-white/10 bg-[#1a1a1e] hover:border-red-500/40 hover:bg-zinc-900 transition-all duration-300 shadow-lg hover:scale-[1.02]"
+                      >
+                        <div className="flex items-start gap-4">
+                          <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-red-500/10 text-red-500 border border-red-500/20 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
+                            <Icon name={action.icon} size={22} />
                           </span>
-                        )}
-                      </div>
-                    </div>
-                    <span className="text-xs sm:text-sm font-bold text-red-500 block mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                      {action.cta.label}
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                      </svg>
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+                          <div className="min-w-0 flex-1">
+                            <span className="text-base sm:text-lg font-bold text-[#fafaf8] block group-hover:text-white transition-colors">
+                              {action.title}
+                            </span>
+                            {action.description && (
+                              <span className="text-xs sm:text-sm text-[#c8c8d0] block mt-1 leading-relaxed font-normal">
+                                {action.description}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                        <span className="text-xs sm:text-sm font-bold text-red-500 block mt-4 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                          {action.cta.label}
+                          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
+        </aside>
       </div>
-    </aside>
+    </section>
   );
 }

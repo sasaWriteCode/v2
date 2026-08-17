@@ -136,31 +136,55 @@ export function CinematicHero({
                   [comparison.without, 'var(--color-red-soft)', 'without'],
                   [comparison.with, 'var(--accent-sustainability-bright)', 'with'],
                 ] as const
-              ).map(([side, tone, key]) => (
-                <div
-                  key={key}
-                  className="grid content-start gap-2 p-5"
-                  style={{
-                    background:
-                      key === 'with' ? 'var(--surface-raised)' : 'transparent',
-                  }}
-                >
-                  <p className="type-overline" style={{ color: tone }}>
-                    {side.label}
-                  </p>
-                  <ul className="grid gap-1">
-                    {side.points.map((point) => (
-                      <li
-                        key={point}
-                        className="type-body-sm"
-                        style={{ color: 'var(--text-secondary)' }}
+              ).map(([side, tone, key]) => {
+                const inner = (
+                  <>
+                    <p className="type-overline" style={{ color: tone }}>
+                      {side.label}
+                    </p>
+                    <ul className="grid gap-1">
+                      {side.points.map((point) => (
+                        <li
+                          key={point}
+                          className="type-body-sm"
+                          style={{ color: 'var(--text-secondary)' }}
+                        >
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                    {side.href && (
+                      <span
+                        className="type-body-sm mt-1 inline-flex items-center gap-1.5 font-semibold"
+                        style={{ color: tone }}
                       >
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+                        {side.linkLabel ?? 'Explore'}
+                        <span aria-hidden="true">→</span>
+                      </span>
+                    )}
+                  </>
+                );
+                const style = {
+                  background:
+                    key === 'with' ? 'var(--surface-raised)' : 'transparent',
+                };
+                /* A side with an href is a link card — same layout, plus an
+                   affordance line and a brightness lift on hover. */
+                return side.href ? (
+                  <a
+                    key={key}
+                    href={side.href}
+                    className="grid content-start gap-2 p-5 transition-[filter] duration-200 hover:brightness-125"
+                    style={{ ...style, textDecoration: 'none' }}
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <div key={key} className="grid content-start gap-2 p-5" style={style}>
+                    {inner}
+                  </div>
+                );
+              })}
             </div>
           </Reveal>
         )}

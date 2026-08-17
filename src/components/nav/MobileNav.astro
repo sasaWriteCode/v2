@@ -69,6 +69,21 @@ import { resolveUrl } from '@/lib/paths';
                     >
                       {child.label}
                     </a>
+                    {child.children && (
+                      <ul class="grid gap-0.5 pl-3">
+                        {child.children.map((grandchild) => (
+                          <li>
+                            <a
+                              href={resolveUrl(grandchild.href)}
+                              class="type-body-sm block rounded-md px-3 py-1.5"
+                              style="color: var(--text-muted); text-decoration: none"
+                            >
+                              {grandchild.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </li>
                 ))}
               </ul>

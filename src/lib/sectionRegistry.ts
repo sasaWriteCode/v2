@@ -36,6 +36,7 @@ import { WhyUsReviewPanel } from '@/components/showroom/WhyUsReviewPanel';
 import { PatentedTechFlow } from '@/components/showroom/PatentedTechFlow';
 import { AwardsCarousel } from '@/components/showroom/AwardsCarousel';
 import { MilestonesTimeline } from '@/components/showroom/MilestonesTimeline';
+import { TechPatentShowcase } from '@/components/showroom/TechPatentShowcase';
 import { SeriesComparisonTable } from '@/components/workshop/SeriesComparisonTable';
 import { GuideChapterList } from '@/components/workshop/GuideChapterList';
 import { AskIrisProAI } from '@/components/workshop/AskIrisProAI';
@@ -54,12 +55,14 @@ import PhilosophyFlow from '@/components/sections/PhilosophyFlow.astro';
 import FilmFinder from '@/components/sections/FilmFinder.astro';
 import FaqSection from '@/components/sections/FaqSection.astro';
 import SolutionCardGrid from '@/components/sections/SolutionCardGrid.astro';
+import AudiencePanelGrid from '@/components/sections/AudiencePanelGrid.astro';
 import MythFact from '@/components/sections/MythFact.astro';
 import SplitMedia from '@/components/sections/SplitMedia.astro';
 // React islands (Stage 3)
 import SearchBar from '@/components/islands/SearchBar';
 import ModuleBrowser from '@/components/islands/ModuleBrowser';
 import ProductBrowser from '@/components/islands/ProductBrowser';
+import FilmCompare from '@/components/islands/FilmCompare';
 
 import type { SectionType } from '@/types/sections';
 
@@ -89,6 +92,7 @@ export const SECTION_REGISTRY: Record<SectionType, SectionRegistryEntry> = {
   'patented-tech-flow': { component: PatentedTechFlow, hydration: 'visible', chrome: 'band' },
   'awards-carousel': { component: AwardsCarousel, hydration: 'visible', chrome: 'full' },
   'milestones-timeline': { component: MilestonesTimeline, hydration: 'visible', chrome: 'band' },
+  'tech-patent-showcase': { component: TechPatentShowcase, hydration: 'visible', chrome: 'full' },
 
   /* ── Workshop primitives — pure markup, SSR-only, 0KB ── */
   'series-comparison-table': { component: SeriesComparisonTable, hydration: 'none', chrome: 'band' },
@@ -110,6 +114,7 @@ export const SECTION_REGISTRY: Record<SectionType, SectionRegistryEntry> = {
   'article-grid': { component: ArticleGrid, hydration: 'none', chrome: 'band' },
   'film-finder': { component: FilmFinder, hydration: 'none', chrome: 'band' },
   'philosophy-flow': { component: PhilosophyFlow, hydration: 'none', chrome: 'band' }, // dashed-road journey, pure CSS/SVG
+  'audience-panel-grid': { component: AudiencePanelGrid, hydration: 'none', chrome: 'band' }, // mobility/buildings panels
   'faq': { component: FaqSection, hydration: 'none', chrome: 'band' }, // native <details>; FAQPage JSON-LD via template
   'solution-card-grid': { component: SolutionCardGrid, hydration: 'none', chrome: 'band' }, // Solutions by Environment cards
   'myth-fact': { component: MythFact, hydration: 'none', chrome: 'band' }, // funnel teachable moment
@@ -119,4 +124,5 @@ export const SECTION_REGISTRY: Record<SectionType, SectionRegistryEntry> = {
   'search-bar': { component: SearchBar, hydration: 'visible', chrome: 'band' }, // GET form works no-JS
   'module-browser': { component: ModuleBrowser, hydration: 'visible', chrome: 'band' }, // ?module= URL state
   'product-browser': { component: ProductBrowser, hydration: 'visible', chrome: 'band' }, // filters + ?compare=
+  'film-compare': { component: FilmCompare, hydration: 'visible', chrome: 'band' }, // GSMArena-style slots
 };

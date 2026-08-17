@@ -38,6 +38,8 @@ export type SectionZone = 'showroom-dark' | 'workshop-light';
 /* ═══ Stage 2 primitives — prop shapes as named section data ═══ */
 
 export interface ProblemCardGridContent {
+  heading?: string;
+  lede?: string;
   cards: ProblemCard[];
   columns?: 2 | 3 | 6;
 }
@@ -68,8 +70,12 @@ export interface PhilosophyFlowContent {
 }
 
 export interface ProofStatBarContent {
+  heading?: string;
+  lede?: string;
   stats: StatItem[];
   variant?: 'light' | 'dark';
+  /** Single shared disclaimer under the bar (pairs with StatItem.mark). */
+  footnote?: string;
 }
 
 export interface ProjectStripContent {
@@ -119,10 +125,14 @@ export interface SeriesCard {
   accent?: SolutionKey | 'neutral';
   badge?: string;
   cta?: CtaLink;
+  image?: MediaContent | string;
+  placeholderLabel?: string;
+  specs?: { label: string; value: string }[];
 }
 
 export interface SeriesCardSetContent {
   heading?: string;
+  subhead?: string;
   lede?: string;
   cards: SeriesCard[];
 }
@@ -376,6 +386,52 @@ export interface ProductBrowserItem {
   facets: Record<string, string[]>;
 }
 
+/* ── AudiencePanelGrid (side-by-side audience panels, N cards each —
+      the sustainability Mobility/Buildings band) ── */
+export interface AudiencePanelCard {
+  /** Accent-colored overline, e.g. "EV Solution". */
+  overline: string;
+  accent?: SolutionKey | 'neutral';
+  /** Big accent number, e.g. { prefix: "Up to", value: "10", suffix: "%*" }. */
+  stat?: { prefix?: string; value: string; suffix?: string };
+  /** Bold pitch line under the overline. */
+  tagline: string;
+  image?: MediaContent;
+  /** Check-bulleted benefits. */
+  points: string[];
+  /** Small accent-tinted footnote box pinned to the card bottom. */
+  note?: string;
+}
+
+export interface AudiencePanel {
+  heading: string;
+  lede?: string;
+  cards: AudiencePanelCard[];
+  /** Card columns at desktop. Default 2. */
+  columns?: 2 | 3;
+  /** Shared disclaimer under the cards. */
+  footnote?: string;
+}
+
+export interface AudiencePanelGridContent {
+  panels: AudiencePanel[];
+}
+
+/* ── FilmCompare (GSMArena-style side-by-side film picker island) ── */
+export interface FilmCompareContent {
+  heading?: string;
+  lede?: string;
+  /**
+   * Candidate films. Omit on product pages — ProductGridTemplate injects
+   * the page's product-browser catalogue (single source of truth).
+   */
+  films?: ProductItem[];
+  /** Film id pre-selected in the first slot. */
+  initialId?: string;
+  /** Number of side-by-side slots. Default 3. */
+  slots?: number;
+}
+
 export interface ProductBrowserContent {
   heading?: string;
   lede?: string;
@@ -385,8 +441,6 @@ export interface ProductBrowserContent {
   fallbackAction: string;
   /** Shown when the active filters match nothing. */
   emptyLabel: string;
-  /** aria-live compare hint, mirrors the Stage 2 demo. */
-  compareHint?: string;
 }
 
 /* ── Guide right rail ── */
@@ -529,6 +583,19 @@ export interface MilestonesTimelineContent {
   steps: MilestoneStepItem[];
 }
 
+export interface TechPatentShowcaseContent {
+  patent1Number?: string;
+  patent1Badge?: string;
+  patent1Title?: string;
+  patent1Tagline?: string;
+  patent1Lead?: string;
+  patent2Number?: string;
+  patent2Badge?: string;
+  patent2Title?: string;
+  patent2Tagline?: string;
+  patent2Lead?: string;
+}
+
 export type Section = SectionBase &
   (
     | { type: 'cinematic-hero'; data: CinematicHeroContent }
@@ -563,11 +630,14 @@ export type Section = SectionBase &
     | { type: 'myth-fact'; data: MythFactContent }
     | { type: 'split-media'; data: SplitMediaContent }
     | { type: 'product-browser'; data: ProductBrowserContent }
+    | { type: 'film-compare'; data: FilmCompareContent }
+    | { type: 'audience-panel-grid'; data: AudiencePanelGridContent }
     | { type: 'our-story-panel'; data: OurStoryPanelContent }
     | { type: 'why-us-review-panel'; data: WhyUsReviewPanelContent }
     | { type: 'patented-tech-flow'; data: PatentedTechFlowContent }
     | { type: 'awards-carousel'; data: AwardsCarouselContent }
     | { type: 'milestones-timeline'; data: MilestonesTimelineContent }
+    | { type: 'tech-patent-showcase'; data: TechPatentShowcaseContent }
   );
 
 export type SectionType = Section['type'];

@@ -44,7 +44,9 @@
               "_verify",
               "Protect Family",
               "Save Energy"
-            ]
+            ],
+            "href": "/products/building-homes",
+            "linkLabel": "Explore Home Films"
           },
           "with": {
             "label": "For Commercial Buildings",
@@ -53,7 +55,9 @@
               "Reduce Energy Cost",
               "Enhance Comfort",
               "Earn GBI Points"
-            ]
+            ],
+            "href": "/products/building-commercial",
+            "linkLabel": "Explore Commercial Films"
           }
         }
       }
@@ -104,7 +108,6 @@
                 "69%",
                 "15%"
               ],
-              "compareable": false,
               "detailsHref": "#titan-x"
             },
             "facets": {
@@ -148,7 +151,6 @@
                 "65%",
                 "_verify"
               ],
-              "compareable": false,
               "detailsHref": "#diamond"
             },
             "facets": {
@@ -194,7 +196,6 @@
                 "72%",
                 "76%"
               ],
-              "compareable": false,
               "detailsHref": "#raypro"
             },
             "facets": {
@@ -240,7 +241,6 @@
                 "71%",
                 "76%"
               ],
-              "compareable": false,
               "detailsHref": "#anti-fade-90"
             },
             "facets": {
@@ -283,7 +283,6 @@
               "vltOptions": [
                 "84%"
               ],
-              "compareable": false,
               "detailsHref": "#uv420-silver-black"
             },
             "facets": {
@@ -326,7 +325,6 @@
               "vltOptions": [
                 "69%"
               ],
-              "compareable": false,
               "detailsHref": "#silver-black"
             },
             "facets": {
@@ -372,7 +370,6 @@
                 "69%",
                 "75%"
               ],
-              "compareable": false,
               "detailsHref": "#titanium-hr"
             },
             "facets": {
@@ -419,7 +416,6 @@
                 "72%",
                 "_verify"
               ],
-              "compareable": false,
               "detailsHref": "#color-stable-cs"
             },
             "facets": {
@@ -467,7 +463,6 @@
                 "48%",
                 "60%"
               ],
-              "compareable": false,
               "detailsHref": "#cs-pro"
             },
             "facets": {
@@ -514,7 +509,6 @@
               "vltOptions": [
                 "56%"
               ],
-              "compareable": false,
               "detailsHref": "#vanguard"
             },
             "facets": {
@@ -523,8 +517,7 @@
               ]
             }
           }
-        ],
-        "compareHint": "Tick “Compare” on any two films to see a side-by-side specification table."
+        ]
       }
     },
     {
@@ -618,6 +611,17 @@
             }
           }
         ]
+      }
+    },
+    {
+      "id": "film-comparison",
+      "type": "film-compare",
+      "order": 40,
+      "zone": "workshop-light",
+      "label": "Compare Films",
+      "data": {
+        "heading": "Compare Films Side by Side",
+        "lede": "Pick any films from our range and see their full specifications side by side."
       }
     },
     {

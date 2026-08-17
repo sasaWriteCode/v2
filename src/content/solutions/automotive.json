@@ -55,33 +55,45 @@
         "cards": [
           {
             "icon": "thermometer",
+            "tag": "HEAT BUILDUP",
             "title": "Extreme Cabin Heat",
-            "description": "Parked vehicles can become extremely hot under tropical sunlight."
+            "description": "Parked vehicles can exceed 68°C in direct tropical sun, creating an unbearable cabin greenhouse effect.",
+            "placeholderLabel": "Parked Cabin Thermal Heat Simulation (68°C)"
           },
           {
             "icon": "sun",
+            "tag": "RADIATION HAZARD",
             "title": "Harmful UV & HEV Blue Light",
-            "description": "Daily exposure affects your skin and eyes."
+            "description": "Daily driving exposure causes accelerated skin aging, dark spots, and eye fatigue from unprotected glass.",
+            "placeholderLabel": "Solar UV400 & HEV Blue Light Glass Penetration"
           },
           {
             "icon": "car",
-            "title": "Interior Fading",
-            "description": "Leather, dashboard, plastic and electronics fade and age faster."
+            "tag": "MATERIAL AGING",
+            "title": "Interior Fading & Cracking",
+            "description": "Unfiltered infrared rays degrade expensive leather seats, crack dashboards, and wear out vehicle electronics.",
+            "placeholderLabel": "Sun-Damaged Dashboard & Upholstery Degradation"
           },
           {
             "icon": "snowflake",
-            "title": "High Air-conditioning Usage",
-            "description": "Higher cooling demand means more fuel or battery consumption."
+            "tag": "FUEL SURGE",
+            "title": "High Air-conditioning Load",
+            "description": "Intense thermal load forces the compressor to run at maximum power, driving up daily fuel and energy costs.",
+            "placeholderLabel": "Automotive AC Compressor & Cabin Cooling Load"
           },
           {
             "icon": "battery",
+            "tag": "EV RANGE LOSS",
             "title": "EV Battery Consumption",
-            "description": "Air-conditioning uses battery energy that could otherwise be used for driving."
+            "description": "Air-conditioning consumes up to 20% of an electric vehicle's battery capacity in harsh equatorial traffic.",
+            "placeholderLabel": "EV Battery Kilowatt Drain for Cabin Heat Control"
           },
           {
             "icon": "users",
-            "title": "Family Comfort",
-            "description": "Children and elderly passengers are more sensitive to heat and UV exposure."
+            "tag": "FAMILY COMFORT",
+            "title": "Passenger Comfort & Glare",
+            "description": "Children and elderly family members in the rear cabin are particularly vulnerable to blinding glare and solar heat.",
+            "placeholderLabel": "Rear Cabin Passenger Glare & Heat Shielding"
           }
         ]
       }
@@ -219,22 +231,26 @@
           {
             "icon": "sun",
             "title": "UV+420™ Optical Technology",
-            "description": "Blocks UV400 & HEV Blue Light (380–420nm) for complete protection."
+            "description": "Blocks UV400 & HEV Blue Light (380–420nm) at the source for total optical protection.",
+            "image": "/images/hero-sunlight.png"
           },
           {
             "icon": "layers",
             "title": "6-Layer Hotmelt™ Technology",
-            "description": "Patented 6-layer structure for long-lasting durability and optimal performance."
+            "description": "Patented 6-layer co-extrusion structure permanently eliminates bubbling, hazing and delamination.",
+            "image": "/images/tinted_film_roll.png"
           },
           {
             "icon": "thermometer",
-            "title": "Multi-layer Sputtering",
-            "description": "Reflects up to 98% of solar heat (1400nm) for superior heat rejection."
+            "title": "Multi-layer Metal Sputtering",
+            "description": "Precious titanium and multi-layer silver reflect up to 98% of solar heat (1400nm) without hazing.",
+            "image": "/images/sputtered_film_roll.png"
           },
           {
             "icon": "check",
-            "title": "Professional Installation",
-            "description": "Strict installation standards for maximum performance & warranty support."
+            "title": "Professional Certified Fitting",
+            "description": "Precision dust-free installation backed by official SIRIM Grade A testing and up to 10-year warranty.",
+            "image": "/images/commercial-building-2.png"
           }
         ]
       }
@@ -247,54 +263,79 @@
       "label": "Which Film Series Is Right For You?",
       "data": {
         "heading": "Which Film Series Is Right For You?",
+        "subhead": "Engineered for Everyday Commuting, Modern EVs, and Flagship Luxury",
+        "lede": "Choose the perfect optical solar film tier engineered specifically for your vehicle and lifestyle.",
         "cards": [
           {
             "id": "comfort",
             "name": "Comfort Series",
-            "tagline": "Great Comfort. Great Value.",
+            "tagline": "Essential Protection. Daily Driving Comfort.",
             "accent": "sustainability",
             "badge": "BEST VALUE",
-            "description": "Best for: Daily driving · Families · Great value & comfort",
-            "features": [
-              "UV+420™ Protection",
-              "IRR up to 90%",
-              "6-Layer Hotmelt™ Technology",
-              "SIRIM Certified Grade A",
-              "5 Years Performance Warranty"
+            "placeholderLabel": "Comfort Series • Everyday Family Sedan & SUV Showcase",
+            "description": "Engineered for daily urban commuting and family vehicles seeking trusted heat protection and total UV safety.",
+            "specs": [
+              { "label": "IRR Heat Rejection", "value": "Up to 90%" },
+              { "label": "UV400 Defense", "value": "99.99%" },
+              { "label": "Warranty", "value": "5 Years" },
+              { "label": "Technology", "value": "6-Layer Hotmelt™" }
             ],
-            "cta": { "label": "View Comfort Series", "href": "/products/automotive?series=comfort" }
+            "features": [
+              "UV+420™ Optical Filtration (380–420nm)",
+              "IRR Heat Rejection Up to 90%",
+              "Patented 6-Layer Hotmelt™ Base Film",
+              "SIRIM Certified Grade A Testing",
+              "5-Year Official Performance Warranty"
+            ],
+            "cta": { "label": "Explore Comfort Series", "href": "/products/automotive?series=comfort" }
           },
           {
             "id": "plus",
             "name": "Plus Series",
-            "tagline": "Enhanced Comfort. Better Performance.",
+            "tagline": "Enhanced Comfort. EV & Long-Distance Drive.",
             "accent": "commercial",
-            "badge": "RECOMMENDED",
-            "description": "Best for: EV owners · Long-distance drivers · Enhanced cooling & protection",
-            "features": [
-              "UV+420™ Protection",
-              "IRR up to 95% (1400nm)",
-              "6-Layer Hotmelt™ + Titanium Sputter",
-              "SIRIM Certified Grade A",
-              "7 Years Performance Warranty"
+            "badge": "MOST POPULAR",
+            "placeholderLabel": "Plus Series • High-Efficiency Electric Vehicles (EV) Showcase",
+            "description": "Optimized for EV owners and long-distance commuters requiring high heat reflection and full GPS/RFID signal clarity.",
+            "specs": [
+              { "label": "IRR Heat Rejection", "value": "Up to 95%" },
+              { "label": "UV400 Defense", "value": "99.99%" },
+              { "label": "Warranty", "value": "7 Years" },
+              { "label": "Technology", "value": "Titanium Sputter" }
             ],
-            "cta": { "label": "View Plus Series", "href": "/products/automotive?series=plus" }
+            "features": [
+              "UV+420™ Optical Filtration (380–420nm)",
+              "IRR Heat Rejection Up to 95% (1400nm)",
+              "6-Layer Hotmelt™ + Titanium Sputter Matrix",
+              "SmartTag, RFID & GPS Signal Friendly",
+              "SIRIM Certified Grade A Testing",
+              "7-Year Official Performance Warranty"
+            ],
+            "cta": { "label": "Explore Plus Series", "href": "/products/automotive?series=plus" }
           },
           {
             "id": "signature",
             "name": "Signature Series",
-            "tagline": "Maximum Performance. Ultimate Protection.",
+            "tagline": "Maximum Performance. Flagship Luxury.",
             "accent": "automotive",
-            "badge": "PREMIUM CHOICE",
-            "description": "Best for: Luxury & premium vehicles · Maximum heat rejection · Demanding customers",
-            "features": [
-              "UV+420™ Protection",
-              "IRR up to 98% (1400nm)",
-              "6-Layer Hotmelt™ + Multi-layer Silver Sputter",
-              "SIRIM Certified Grade A",
-              "10 Years Performance Warranty"
+            "badge": "FLAGSHIP TIER",
+            "placeholderLabel": "Signature Series • Premium Luxury & Supercar Showcase",
+            "description": "Our pinnacle solar control technology for luxury sedans and supercars demanding maximum total solar energy rejection.",
+            "specs": [
+              { "label": "IRR Heat Rejection", "value": "Up to 98%" },
+              { "label": "UV400 Defense", "value": "99.99%" },
+              { "label": "Warranty", "value": "10 Years" },
+              { "label": "Technology", "value": "Silver Sputter" }
             ],
-            "cta": { "label": "View Signature Series", "href": "/products/automotive?series=signature" }
+            "features": [
+              "UV+420™ Complete Optical Defense",
+              "Maximum IRR Rejection Up to 98% (1400nm)",
+              "Multi-Layer Pure Silver Vacuum Sputter",
+              "Ultra-High Definition Optical Clarity",
+              "SIRIM Certified Grade A Testing",
+              "10-Year Comprehensive Performance Warranty"
+            ],
+            "cta": { "label": "Explore Signature Series", "href": "/products/automotive?series=signature" }
           }
         ]
       }

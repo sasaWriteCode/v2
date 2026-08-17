@@ -41,6 +41,9 @@ export function SpectrumDiagram({
   variant = 'full',
   showFilm = true,
   title,
+  headline,
+  subhead,
+  kicker,
 }: SpectrumDiagramContent) {
   const compact = variant === 'compact';
   const rowH = compact ? 44 : 62;
@@ -53,6 +56,23 @@ export function SpectrumDiagram({
     // min-w-0 so grid/flex parents can't min-content-size the figure wider
     // than the viewport — the inner div is the intentional scroll container.
     <Reveal as="figure" className="m-0 min-w-0 max-w-full">
+      {headline && (
+        <div className="mb-6 sm:mb-8 max-w-3xl">
+          {kicker && (
+            <span className="text-xs font-bold uppercase tracking-widest text-red-500 block mb-2">
+              {kicker}
+            </span>
+          )}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#fafaf8]">
+            {headline}
+          </h2>
+          {subhead && (
+            <p className="mt-2 text-base sm:text-lg text-[#c8c8d0] font-normal leading-relaxed">
+              {subhead}
+            </p>
+          )}
+        </div>
+      )}
       <div className="overflow-x-auto">
         <svg
           viewBox={`0 0 ${W} ${height}`}

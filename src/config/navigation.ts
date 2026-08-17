@@ -42,11 +42,22 @@ export const PRIMARY_NAV: NavItem[] = [
     label: 'Products',
     href: '/products/building',
     children: [
-      { label: 'Building Window Films', href: '/products/building', headerMenu: true },
-      { label: 'Building Films — For Homes', href: '/products/building-homes' },
       {
-        label: 'Building Films — For Commercial',
-        href: '/products/building-commercial',
+        label: 'Building Window Films',
+        href: '/products/building',
+        headerMenu: true,
+        /* Audience views derived from the building catalogue — nested so the
+           header renders them as a flyout under Building Window Films. */
+        children: [
+          {
+            label: 'Building Films — For Homes',
+            href: '/products/building-homes',
+          },
+          {
+            label: 'Building Films — For Commercial',
+            href: '/products/building-commercial',
+          },
+        ],
       },
       { label: 'Automotive Films', href: '/products/automotive', headerMenu: true },
     ],
@@ -94,6 +105,10 @@ export interface FooterGroup {
   items: NavItem[];
 }
 
+/** Depth-first flatten — the footer lists nested items as plain links. */
+const flattenNav = (items: NavItem[]): NavItem[] =>
+  items.flatMap((item) => [item, ...flattenNav(item.children ?? [])]);
+
 export const FOOTER_NAV: FooterGroup[] = [
   {
     heading: 'Protection Solutions',
@@ -101,7 +116,7 @@ export const FOOTER_NAV: FooterGroup[] = [
   },
   {
     heading: 'Products',
-    items: PRIMARY_NAV[1].children ?? [],
+    items: flattenNav(PRIMARY_NAV[1].children ?? []),
   },
   {
     heading: 'Knowledge Centre',

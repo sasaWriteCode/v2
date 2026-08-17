@@ -31,12 +31,14 @@ import { WhyUsReviewPanel } from "@/components/showroom/WhyUsReviewPanel";
 import { PatentedTechFlow } from "@/components/showroom/PatentedTechFlow";
 import { AwardsCarousel } from "@/components/showroom/AwardsCarousel";
 import { MilestonesTimeline } from "@/components/showroom/MilestonesTimeline";
+import { TechPatentShowcase } from "@/components/showroom/TechPatentShowcase";
 import { CertificationStrip } from "@/components/global/CertificationStrip";
 import { CTABar } from "@/components/global/CTABar";
 import { AskIrisProAI } from "@/components/workshop/AskIrisProAI";
 import SearchBar from "@/components/islands/SearchBar";
 import ModuleBrowser from "@/components/islands/ModuleBrowser";
 import ProductBrowser from "@/components/islands/ProductBrowser";
+import FilmCompare from "@/components/islands/FilmCompare";
 import type { Section, SectionZone } from "@/types/sections";
 import type { SolutionKey } from "@/types/content";
 
@@ -126,6 +128,8 @@ const accentStyle = accent
               <AwardsCarousel client:visible {...(props as any)} />
             ) : section.type === "milestones-timeline" ? (
               <MilestonesTimeline client:visible {...(props as any)} />
+            ) : section.type === "tech-patent-showcase" ? (
+              <TechPatentShowcase client:visible {...(props as any)} />
             ) : section.type === "certification-strip" ? (
               <CertificationStrip client:visible {...(props as any)} />
             ) : section.type === "cta-bar" ? (
@@ -138,6 +142,8 @@ const accentStyle = accent
               <ModuleBrowser client:visible {...(props as any)} />
             ) : section.type === "product-browser" ? (
               <ProductBrowser client:visible {...(props as any)} />
+            ) : section.type === "film-compare" ? (
+              <FilmCompare client:visible {...(props as any)} />
             ) : import.meta.env.DEV ? (
               <p
                 role="alert"
