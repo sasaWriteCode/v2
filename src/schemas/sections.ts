@@ -113,6 +113,7 @@ export const problemCardGridContentSchema = z.object({
   lede: z.string().optional(),
   cards: z.array(problemCardSchema),
   columns: z.union([z.literal(2), z.literal(3), z.literal(6)]).optional(),
+  variant: z.enum(['card', 'feature']).optional(),
 }) satisfies z.ZodType<ProblemCardGridContent>;
 
 export const prioritySelectorContentSchema = z.object({

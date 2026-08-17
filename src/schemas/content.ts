@@ -136,6 +136,7 @@ export const problemCardSchema = z.object({
   image: mediaContentSchema.optional(),
   placeholderLabel: z.string().optional(),
   tag: z.string().optional(),
+  accent: z.union([solutionKeySchema, z.literal('neutral')]).optional(),
 }) satisfies z.ZodType<ProblemCard>;
 
 /* ── 3. PrioritySelector ── */

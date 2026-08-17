@@ -42,6 +42,9 @@ export interface ProblemCardGridContent {
   lede?: string;
   cards: ProblemCard[];
   columns?: 2 | 3 | 6;
+  /** 'feature' = boxless centered icon-circle row (benefit strips).
+      Default 'card' — the classic elevated cards. */
+  variant?: 'card' | 'feature';
 }
 
 export interface PrioritySelectorContent {

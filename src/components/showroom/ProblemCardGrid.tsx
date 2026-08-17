@@ -18,12 +18,15 @@ export function ProblemCardGrid({
   lede,
   cards,
   columns = 3,
+  variant = 'card',
 }: {
   heading?: string;
   lede?: string;
   cards: ProblemCard[];
   /** Desktop column count; mobile is always 1, tablet 2. */
   columns?: 2 | 3 | 6;
+  /** 'feature' = boxless centered icon-circle row (benefit strips). */
+  variant?: 'card' | 'feature';
 }) {
   const desktopCols =
     columns === 6
@@ -32,22 +35,78 @@ export function ProblemCardGrid({
         ? 'lg:grid-cols-2'
         : 'lg:grid-cols-3';
 
+  const accentText = (accent?: string) =>
+    !accent || accent === 'neutral'
+      ? 'var(--text-brand)'
+      : `var(--accent-${accent}-text, var(--text-brand))`;
+  const accentRaw = (accent?: string) =>
+    !accent || accent === 'neutral'
+      ? 'var(--color-red)'
+      : `var(--accent-${accent}, var(--color-red))`;
+
+  const header = (heading || lede) && (
+    <div className="mx-auto mb-10 max-w-3xl text-center">
+      {heading && (
+        <h2 className="type-heading-lg" style={{ color: 'var(--text-primary)' }}>
+          {heading}
+        </h2>
+      )}
+      {lede && (
+        <p className="type-body-md mt-2" style={{ color: 'var(--text-secondary)' }}>
+          {lede}
+        </p>
+      )}
+    </div>
+  );
+
+  /* ── Feature strip: boxless, centered, accent icon circles ── */
+  if (variant === 'feature') {
+    return (
+      <div>
+        {header}
+        <ul className="flex flex-wrap justify-center gap-x-6 gap-y-10">
+          {cards.map((card, i) => (
+            <Reveal
+              as="li"
+              key={card.title}
+              index={i}
+              className="min-w-[11rem] max-w-[15rem] flex-1 basis-48"
+            >
+              <div className="grid justify-items-center gap-3 text-center">
+                <span
+                  aria-hidden="true"
+                  className="grid h-14 w-14 place-items-center rounded-full"
+                  style={{
+                    background: `color-mix(in srgb, ${accentRaw(card.accent)} 12%, transparent)`,
+                    border: `1px solid color-mix(in srgb, ${accentRaw(card.accent)} 28%, transparent)`,
+                    color: accentText(card.accent),
+                  }}
+                >
+                  <Icon name={card.icon} size={24} />
+                </span>
+                <h3
+                  className="type-body-md font-bold leading-snug"
+                  style={{ color: 'var(--text-primary)' }}
+                >
+                  {card.title}
+                </h3>
+                <p
+                  className="type-body-sm leading-relaxed"
+                  style={{ color: 'var(--text-secondary)' }}
+                >
+                  {card.description}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
   return (
     <div>
-    {(heading || lede) && (
-      <div className="mx-auto mb-8 max-w-3xl text-center">
-        {heading && (
-          <h2 className="type-heading-lg" style={{ color: 'var(--text-primary)' }}>
-            {heading}
-          </h2>
-        )}
-        {lede && (
-          <p className="type-body-md mt-2" style={{ color: 'var(--text-secondary)' }}>
-            {lede}
-          </p>
-        )}
-      </div>
-    )}
+    {header}
     <ul className={`grid grid-cols-1 gap-6 sm:grid-cols-2 ${desktopCols}`}>
       {cards.map((card, i) => (
         <Reveal as="li" key={card.title} index={i} className="h-full">

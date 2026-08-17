@@ -366,30 +366,35 @@
       "label": "Comfort, health & long-term protection",
       "data": {
         "heading": "Comfort, Health & Long-Term Protection",
-        "columns": 3,
+        "variant": "feature",
         "cards": [
           {
             "icon": "eye",
+            "accent": "personal-protection",
             "title": "Protects Skin & Eyes",
             "description": "Blocks UV400 & HEV Blue Light that contribute to skin damage, pigmentation and eye strain."
           },
           {
             "icon": "thermometer",
+            "accent": "commercial",
             "title": "Better Thermal Comfort",
             "description": "Keeps your space and cabin cooler, more comfortable all day long."
           },
           {
             "icon": "home",
+            "accent": "residential",
             "title": "Protects Interiors",
             "description": "Prevents fading and cracking of furniture, dashboards, flooring and fabrics."
           },
           {
             "icon": "leaf",
+            "accent": "sustainability",
             "title": "Healthier Environment",
             "description": "Reduces glare and heat stress, creating a healthier space for living and working."
           },
           {
             "icon": "shield",
+            "accent": "automotive",
             "title": "Long Lasting Performance",
             "description": "Engineered for durability and consistent performance for many years."
           }

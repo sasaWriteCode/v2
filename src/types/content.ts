@@ -110,6 +110,8 @@ export interface ProblemCard {
   image?: MediaContent;
   placeholderLabel?: string;
   tag?: string;
+  /** Colors the icon via --accent-<key> tokens (feature variant). */
+  accent?: SolutionKey | 'neutral';
 }
 
 /* ── 3. PrioritySelector ── */
