@@ -133,49 +133,54 @@
     },
     {
       "id": "in-action",
-      "type": "video-carousel",
+      "type": "video-showcase",
       "order": 30,
       "zone": "workshop-light",
       "label": "See IrisPro In Action",
       "data": {
         "heading": "See IrisPro In Action",
-        "lede": "Watch how IrisPro window films deliver real performance and real results.",
+        "lede": "Building and architectural tinting projects across Malaysia — homes, offices, hotels, schools and heritage sites.",
+        "layout": "featured",
+        "playlist": {
+          "label": "Watch all 68 site projects",
+          "href": "https://www.youtube.com/playlist?list=PLuFpqh0KVWW04Axo8DulcxyuHpUcwg5Dn"
+        },
         "videos": [
           {
-            "title": "IrisPro Titan X Installation",
-            "moduleLabel": "G63 Transformation",
-            "duration": "4:32",
-            "href": "#video-titan-x-installation",
-            "poster": {
-              "src": "/images/calm-ending.png",
-              "alt": "Video: IrisPro Titan X installation on a Mercedes-Benz G63",
-              "width": 448,
-              "height": 252
-            }
+            "youtubeId": "I_fjTfbZeSQ",
+            "title": "Full House Window Tinting in Subang Jaya — Heat, UV & Privacy Protection"
           },
           {
-            "title": "Commercial Building",
-            "moduleLabel": "Heat Rejection Test",
-            "duration": "3:58",
-            "href": "#video-commercial-building",
-            "poster": {
-              "src": "/images/calm-ending.png",
-              "alt": "Video: commercial building heat rejection test",
-              "width": 448,
-              "height": 252
-            }
+            "youtubeId": "pCd6xvXW_LY",
+            "title": "Reduce Heat, Glare & UV at Sri KDU International School"
           },
           {
-            "title": "RayPro for Homes",
-            "moduleLabel": "Comfort All Year Round",
-            "duration": "5:04",
-            "href": "#video-raypro-homes",
-            "poster": {
-              "src": "/images/iris-comfort.png",
-              "alt": "Video: RayPro residential film, comfort all year round",
-              "width": 448,
-              "height": 252
-            }
+            "youtubeId": "5jMjiawe3yo",
+            "title": "Berjaya Times Square Hotel"
+          },
+          {
+            "youtubeId": "Ry8cgP_dMAg",
+            "title": "Skylight Tinting the World's Tallest Pencil — Faber-Castell Malaysia"
+          },
+          {
+            "youtubeId": "zTWxzrRUr20",
+            "title": "KPJ Damansara Specialist Hospital — Color Stable 1590"
+          },
+          {
+            "youtubeId": "82P0PsTfdFw",
+            "title": "Xiamen University Malaysia — Titanium HR5095, Energy Saving"
+          },
+          {
+            "youtubeId": "yf7x353DNOw",
+            "title": "Perbadanan Putrajaya Goes Cool — Heat Rejection Tint"
+          },
+          {
+            "youtubeId": "XZuKbki30xk",
+            "title": "Showroom Tinting — 95% IR Test at Jaymuda HQ"
+          },
+          {
+            "youtubeId": "nO9Qg1Q9sOo",
+            "title": "Protecting Heritage: UV Defence at Malaysia's Oldest Temple"
           }
         ]
       }
@@ -213,35 +218,25 @@
       "order": 50,
       "zone": "workshop-light",
       "data": {
-        "headline": "Have a Project in Mind?",
-        "subhead": "Our experts are ready to help you choose the right IrisPro solution for your needs.",
+        "headline": "Start Your Project or Partner with IrisPro",
+        "subhead": "From custom tinting for your vehicle, home, or building to joining our nationwide dealer network — we are here to support you.",
         "actions": [
           {
             "icon": "headset",
             "title": "Request Consultation",
+            "description": "Speak with our window film experts for project planning, quotes, and product recommendations.",
             "cta": {
               "label": "Request Consultation",
               "href": "/contact"
             }
-          }
-        ]
-      }
-    },
-    {
-      "id": "become-our-partner",
-      "type": "cta-bar",
-      "order": 60,
-      "zone": "workshop-light",
-      "data": {
-        "headline": "Become Our Partner",
-        "subhead": "Join our network of authorised dealers and grow with IrisPro.",
-        "actions": [
+          },
           {
             "icon": "handshake",
             "title": "Partner With Us",
+            "description": "Join our authorized dealer and certified installer network to grow your business across Malaysia.",
             "cta": {
               "label": "Partner With Us",
-              "href": "#partner"
+              "href": "/contact#dealer-heading"
             }
           }
         ]

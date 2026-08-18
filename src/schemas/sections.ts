@@ -67,6 +67,8 @@ import type {
   AudiencePanel,
   AudiencePanelCard,
   AudiencePanelGridContent,
+  ShowcaseVideo,
+  VideoShowcaseContent,
   ProductBrowserContent,
   ProductBrowserItem,
   ProductFilter,
@@ -425,6 +427,21 @@ export const productBrowserContentSchema = z.object({
   emptyLabel: z.string(),
 }) satisfies z.ZodType<ProductBrowserContent>;
 
+export const showcaseVideoSchema = z.object({
+  youtubeId: z.string().length(11),
+  title: z.string(),
+  duration: z.string().optional(),
+  tag: z.string().optional(),
+}) satisfies z.ZodType<ShowcaseVideo>;
+
+export const videoShowcaseContentSchema = z.object({
+  heading: z.string().optional(),
+  lede: z.string().optional(),
+  layout: z.enum(['featured', 'grid', 'shorts']).optional(),
+  videos: z.array(showcaseVideoSchema),
+  playlist: ctaLinkSchema.optional(),
+}) satisfies z.ZodType<VideoShowcaseContent>;
+
 export const audiencePanelCardSchema = z.object({
   overline: z.string(),
   accent: z.union([solutionKeySchema, z.literal('neutral')]).optional(),
@@ -654,6 +671,7 @@ export const sectionSchema = z.discriminatedUnion('type', [
   sectionVariant('product-browser', productBrowserContentSchema),
   sectionVariant('film-compare', filmCompareContentSchema),
   sectionVariant('audience-panel-grid', audiencePanelGridContentSchema),
+  sectionVariant('video-showcase', videoShowcaseContentSchema),
   sectionVariant('our-story-panel', ourStoryPanelContentSchema),
   sectionVariant('why-us-review-panel', whyUsReviewPanelContentSchema),
   sectionVariant('patented-tech-flow', patentedTechFlowContentSchema),

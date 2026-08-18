@@ -389,6 +389,26 @@ export interface ProductBrowserItem {
   facets: Record<string, string[]>;
 }
 
+/* ── VideoShowcase (click-to-play YouTube embeds — featured/grid/shorts) ── */
+export interface ShowcaseVideo {
+  /** 11-char YouTube video id — thumbnail + embed derive from it. */
+  youtubeId: string;
+  title: string;
+  duration?: string;
+  /** Small overline on grid cards, e.g. "Customer Review". */
+  tag?: string;
+}
+
+export interface VideoShowcaseContent {
+  heading?: string;
+  lede?: string;
+  /** 'featured' = large player + episode rail (default). */
+  layout?: 'featured' | 'grid' | 'shorts';
+  videos: ShowcaseVideo[];
+  /** External "watch the full playlist" link. */
+  playlist?: CtaLink;
+}
+
 /* ── AudiencePanelGrid (side-by-side audience panels, N cards each —
       the sustainability Mobility/Buildings band) ── */
 export interface AudiencePanelCard {
@@ -635,6 +655,7 @@ export type Section = SectionBase &
     | { type: 'product-browser'; data: ProductBrowserContent }
     | { type: 'film-compare'; data: FilmCompareContent }
     | { type: 'audience-panel-grid'; data: AudiencePanelGridContent }
+    | { type: 'video-showcase'; data: VideoShowcaseContent }
     | { type: 'our-story-panel'; data: OurStoryPanelContent }
     | { type: 'why-us-review-panel'; data: WhyUsReviewPanelContent }
     | { type: 'patented-tech-flow'; data: PatentedTechFlowContent }

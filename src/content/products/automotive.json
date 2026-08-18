@@ -886,6 +886,54 @@
       }
     },
     {
+      "id": "customer-stories",
+      "type": "video-showcase",
+      "order": 75,
+      "zone": "workshop-light",
+      "label": "Real Experiences with IrisPro",
+      "data": {
+        "heading": "Real Experiences with IrisPro",
+        "lede": "Vehicle owners across Malaysia on why they chose IrisPro — and stayed.",
+        "layout": "grid",
+        "playlist": {
+          "label": "Watch all customer reviews",
+          "href": "https://www.youtube.com/playlist?list=PLuFpqh0KVWW2z6a8lnDwfwGCVJqWrZLwF"
+        },
+        "videos": [
+          {
+            "youtubeId": "IqL6x9mW96U",
+            "tag": "EV Owner",
+            "title": "Changed Tint 4 Times Before Choosing IrisPro Titan X"
+          },
+          {
+            "youtubeId": "nKXl5qTwth0",
+            "tag": "Customer Review",
+            "title": "GWM Haval H6 Tinting Review — Titan X Heat Rejection"
+          },
+          {
+            "youtubeId": "WTJlCY1_KOw",
+            "tag": "Customer Review",
+            "title": "“I Changed 3 Times Before I Used IrisPro”"
+          },
+          {
+            "youtubeId": "LfyWBnuACE4",
+            "tag": "Customer Review",
+            "title": "Tremendous Heat Reduction in the Afternoon"
+          },
+          {
+            "youtubeId": "Clp2qc6Ii5Y",
+            "tag": "Health Story",
+            "title": "IrisPro Window Film for Photophobia Relief After Eye Surgery"
+          },
+          {
+            "youtubeId": "N3HaO5onXEY",
+            "tag": "Customer Review",
+            "title": "Quality That Lasts, Protection That Performs — Review by Bryan"
+          }
+        ]
+      }
+    },
+    {
       "id": "cta",
       "type": "cta-bar",
       "order": 80,

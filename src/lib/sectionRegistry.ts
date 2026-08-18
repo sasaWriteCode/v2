@@ -63,6 +63,7 @@ import SearchBar from '@/components/islands/SearchBar';
 import ModuleBrowser from '@/components/islands/ModuleBrowser';
 import ProductBrowser from '@/components/islands/ProductBrowser';
 import FilmCompare from '@/components/islands/FilmCompare';
+import VideoShowcase from '@/components/islands/VideoShowcase';
 
 import type { SectionType } from '@/types/sections';
 
@@ -125,4 +126,5 @@ export const SECTION_REGISTRY: Record<SectionType, SectionRegistryEntry> = {
   'module-browser': { component: ModuleBrowser, hydration: 'visible', chrome: 'band' }, // ?module= URL state
   'product-browser': { component: ProductBrowser, hydration: 'visible', chrome: 'band' }, // filters + ?compare=
   'film-compare': { component: FilmCompare, hydration: 'visible', chrome: 'band' }, // GSMArena-style slots
+  'video-showcase': { component: VideoShowcase, hydration: 'visible', chrome: 'band' }, // click-to-play YouTube embeds
 };

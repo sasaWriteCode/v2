@@ -39,6 +39,7 @@ import SearchBar from "@/components/islands/SearchBar";
 import ModuleBrowser from "@/components/islands/ModuleBrowser";
 import ProductBrowser from "@/components/islands/ProductBrowser";
 import FilmCompare from "@/components/islands/FilmCompare";
+import VideoShowcase from "@/components/islands/VideoShowcase";
 import type { Section, SectionZone } from "@/types/sections";
 import type { SolutionKey } from "@/types/content";
 
@@ -144,6 +145,8 @@ const accentStyle = accent
               <ProductBrowser client:visible {...(props as any)} />
             ) : section.type === "film-compare" ? (
               <FilmCompare client:visible {...(props as any)} />
+            ) : section.type === "video-showcase" ? (
+              <VideoShowcase client:visible {...(props as any)} />
             ) : import.meta.env.DEV ? (
               <p
                 role="alert"

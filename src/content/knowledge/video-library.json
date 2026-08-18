@@ -6,9 +6,17 @@
     "description": "Watch IrisPro explainers, real demonstrations, installation walkthroughs and project stories — the fastest way to understand window film performance."
   },
   "breadcrumbs": [
-    { "label": "Home", "href": "/" },
-    { "label": "Knowledge Centre", "href": "/knowledge" },
-    { "label": "Video Library" }
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Knowledge Centre",
+      "href": "/knowledge"
+    },
+    {
+      "label": "Video Library"
+    }
   ],
   "sections": [
     {
@@ -20,68 +28,117 @@
         "title": "Video Library",
         "lede": "Explainers, live demonstrations and real project stories. Video content is being produced with the client — the shelf structure below is ready to fill.",
         "meta": [
-          { "icon": "play", "label": "Watch & Learn" },
-          { "icon": "thermometer", "label": "Real Demonstrations" },
-          { "icon": "star", "label": "Project Stories" }
-        ]
-      }
-    },
-    {
-      "id": "explainers",
-      "type": "video-carousel",
-      "order": 20,
-      "label": "Video slots — real videos pending from client",
-      "data": {
-        "heading": "Explainers",
-        "lede": "Short, clear answers to the most-asked questions.",
-        "videos": [
           {
-            "title": "Video slot: Why IRR99% Still Feels Hot?",
-            "href": "/knowledge/video-library",
-            "duration": "—",
-            "poster": { "src": "placeholder:video-irr99", "alt": "Thumbnail brief: thermal imagery of a hot cabin with bold title text.", "width": 560, "height": 320 }
+            "icon": "play",
+            "label": "Watch & Learn"
           },
           {
-            "title": "Video slot: UV99% vs UV+420 — What's the Difference?",
-            "href": "/knowledge/video-library",
-            "duration": "—",
-            "poster": { "src": "placeholder:video-uv420", "alt": "Thumbnail brief: split-face/spectrum visual contrasting UV400 vs UV+420 protection.", "width": 560, "height": 320 }
+            "icon": "thermometer",
+            "label": "Real Demonstrations"
           },
           {
-            "title": "Video slot: What is TSER? The Key to Real Comfort",
-            "href": "/knowledge/video-library",
-            "duration": "—",
-            "poster": { "src": "placeholder:video-tser", "alt": "Thumbnail brief: colourful solar spectrum graphic with TSER percentage callout.", "width": 560, "height": 320 }
+            "icon": "star",
+            "label": "Project Stories"
           }
         ]
       }
     },
     {
-      "id": "demonstrations",
-      "type": "video-carousel",
-      "order": 30,
-      "label": "Video slots — real videos pending from client",
+      "id": "explainers",
+      "type": "video-showcase",
+      "order": 20,
+      "zone": "workshop-light",
+      "label": "Educational & explainer videos",
       "data": {
-        "heading": "Real Demonstrations",
-        "lede": "Heat lamps, UV meters and thermal cameras — performance you can see.",
+        "heading": "Educational & Explainers",
+        "lede": "Understand UV400 + HEV protection, heat rejection and how to judge a quality film — straight from the IrisPro team.",
+        "layout": "featured",
+        "playlist": {
+          "label": "Watch the full playlist",
+          "href": "https://www.youtube.com/playlist?list=PLuFpqh0KVWW12OS8680AX9c9sAk-q6Yyf"
+        },
         "videos": [
           {
-            "title": "Video slot: Heat Rejection Test — Ceramic vs Sputter",
-            "href": "/knowledge/video-library",
-            "duration": "—",
-            "poster": { "src": "placeholder:video-heat-test", "alt": "Thumbnail brief: heat-lamp demo rig with two film samples and temperature readouts.", "width": 560, "height": 320 }
+            "youtubeId": "MHzzWNAHuoo",
+            "title": "What Sets Us Apart from Other Window Films"
           },
           {
-            "title": "Video slot: Before & After — Cabin Temperature",
-            "href": "/knowledge/video-library",
-            "duration": "—",
-            "poster": { "src": "placeholder:video-before-after", "alt": "Thumbnail brief: split thermal image of car cabin with and without IrisPro film.", "width": 560, "height": 320 }
+            "youtubeId": "7ImJozCEwkQ",
+            "title": "We Tested Dark Tint vs. IrisPro Window Film — the Results Speak for Themselves"
           },
           {
-            "title": "Video slot: Professional Installation Walkthrough",
-            "href": "/knowledge/video-library",
-            "duration": "—",
-            "poster": { "src": "placeholder:video-installation", "alt": "Thumbnail brief: installer applying film to a car or building window, mid-squeegee.", "width": 560, "height": 320 }
+            "youtubeId": "HwQEOYScWM8",
+            "title": "Expensive vs Cheap Car Tint — Both 99% UV Protection? The Truth About Window Films"
+          },
+          {
+            "youtubeId": "R2_qh-Xu2FE",
+            "title": "Is 80% Infrared Heat Rejection (IRR) Enough for You?"
+          },
+          {
+            "youtubeId": "NgjJMJXi-h0",
+            "title": "How Long Should Your Car's Window Film Last?"
+          },
+          {
+            "youtubeId": "BMAsW2wcip4",
+            "title": "Real UV400 Film vs Counterfeit UV400 Film"
+          },
+          {
+            "youtubeId": "It-agi5SAYw",
+            "title": "UV Index: Choose the Right Window Tint Protection Standard for You"
+          },
+          {
+            "youtubeId": "0XNbcztq0WE",
+            "title": "Non-Melanoma Skin Cancer Caused by Harmful UV — Why Protection Is Required"
+          },
+          {
+            "youtubeId": "_fnTuJ7x5AA",
+            "title": "Car UV Skin Test — With & Without IrisPro Film"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shorts",
+      "type": "video-showcase",
+      "order": 30,
+      "zone": "workshop-light",
+      "label": "IrisPro Shorts",
+      "data": {
+        "heading": "IrisPro Shorts",
+        "lede": "Quick tips, installs and highlights — bite-sized clips from our team.",
+        "layout": "shorts",
+        "playlist": {
+          "label": "Watch all Shorts",
+          "href": "https://www.youtube.com/playlist?list=PLuFpqh0KVWW2FgbumNq8k-X-wNvR20Tg8"
+        },
+        "videos": [
+          {
+            "youtubeId": "gLzQtXZ2Cjo",
+            "title": "Do You Know There's a Skin & Eye Care Solar Tint in Malaysia?"
+          },
+          {
+            "youtubeId": "TwiSk3aFNOs",
+            "title": "Feel Hot? No Privacy? Glaring While Driving? Your Tint Isn't Working"
+          },
+          {
+            "youtubeId": "NgjJMJXi-h0",
+            "title": "How Long Should Your Car's Window Film Last?"
+          },
+          {
+            "youtubeId": "R2_qh-Xu2FE",
+            "title": "Is 80% Infrared Heat Rejection Enough for You?"
+          },
+          {
+            "youtubeId": "1sD8-_ww0x4",
+            "title": "BMW i7 — Luxury Car of the Year, Tinted by IrisPro"
+          },
+          {
+            "youtubeId": "DoYROHmG25U",
+            "title": "BYD Atto 3 Interior — Build Your Dream"
+          },
+          {
+            "youtubeId": "0l0CD6Axrfk",
+            "title": "McLaren — Luxury Supercar, Beast of the Year"
           }
         ]
       }
@@ -97,13 +154,19 @@
             "icon": "chat",
             "title": "Request Consultation",
             "description": "Our experts will walk you through everything the videos cover.",
-            "cta": { "label": "Request Now", "href": "/contact" }
+            "cta": {
+              "label": "Request Now",
+              "href": "/contact"
+            }
           },
           {
             "icon": "document",
             "title": "Learn the Basics",
             "description": "Prefer reading? Start with the fundamentals.",
-            "cta": { "label": "Start Learning", "href": "/knowledge/learn-the-basics" }
+            "cta": {
+              "label": "Start Learning",
+              "href": "/knowledge/learn-the-basics"
+            }
           }
         ]
       }
